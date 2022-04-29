@@ -16009,6 +16009,244 @@ pool_decimals: [18, 18]
 
 </html>
 </div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_burns">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_burns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_burns" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
+<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>replace_symbols</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>verbose</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_decimals">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_decimals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_decimals" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>x_address</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>y_address</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_mints">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_mints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_mints" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
+<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>replace_symbols</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>verbose</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_state">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_state" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
+<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+<li><p><strong>fill_empty</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>&lt;class ‘uniswap_v2uniswap_v2PoolState’&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_state_by_block">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_state_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_state_by_block" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
+<li><p><strong>blocks</strong> (<em>Sequence</em><em>[</em><em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>&lt;class ‘uniswap_v2uniswap_v2PoolStateByBlock’&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_swaps">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_swaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_swaps" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
+<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>replace_symbols</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>verbose</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_symbols">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_symbols" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>x_address</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>y_address</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v2_utils.async_get_pool_tokens">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v2_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v2_utils.async_get_pool_tokens" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple[str, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.toolbox.amm_utils.cpmm.print_pool_summary">
+<span class="sig-prename descclassname"><span class="pre">ctc.toolbox.amm_utils.cpmm.</span></span><span class="sig-name descname"><span class="pre">print_pool_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_reserves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_reserves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lp_total_supply</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fee_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.toolbox.amm_utils.cpmm.print_pool_summary" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_reserves</strong> (<em>int</em><em> | </em><em>float</em>) – </p></li>
+<li><p><strong>y_reserves</strong> (<em>int</em><em> | </em><em>float</em>) – </p></li>
+<li><p><strong>lp_total_supply</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>x_name</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>y_name</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>fee_rate</strong> (<em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>indent</strong> (<em>int</em><em> | </em><em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>depths</strong> (<em>Sequence</em><em>[</em><em>float</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.toolbox.amm_utils.cpmm.print_trade_summary">
+<span class="sig-prename descclassname"><span class="pre">ctc.toolbox.amm_utils.cpmm.</span></span><span class="sig-name descname"><span class="pre">print_trade_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_holdings_before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_holdings_before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">trade_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.toolbox.amm_utils.cpmm.print_trade_summary" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_name</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>y_name</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>x_holdings_before</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>y_holdings_before</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>indent</strong> (<em>int</em><em> | </em><em>str</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>trade_kwargs</strong> (<em>Any</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.toolbox.amm_utils.cpmm.trade">
+<span class="sig-prename descclassname"><span class="pre">ctc.toolbox.amm_utils.cpmm.</span></span><span class="sig-name descname"><span class="pre">trade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_reserves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_reserves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_sold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_bought</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_sold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_bought</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_x_reserves</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_y_reserves</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fee_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.toolbox.amm_utils.cpmm.trade" title="Permalink to this definition"></a></dt>
+<dd><p>perform trade with AMM</p>
+<p>## Input Requirements
+- all input values must be positive
+- must always specify both x_reserves and y_reserves
+- must specify exactly one of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>x_sold</p></li>
+<li><p>x_bought</p></li>
+<li><p>y_sold</p></li>
+<li><p>y_bought</p></li>
+<li><p>new_x_reserves</p></li>
+<li><p>new_y_reserves</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>values in this list can be scalars or numpy arrays</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_reserves</strong> (<em>int</em><em> | </em><em>float</em>) – </p></li>
+<li><p><strong>y_reserves</strong> (<em>int</em><em> | </em><em>float</em>) – </p></li>
+<li><p><strong>x_sold</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>x_bought</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>y_sold</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>y_bought</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>new_x_reserves</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>new_y_reserves</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>fee_rate</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Trade</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 </div>
 
 

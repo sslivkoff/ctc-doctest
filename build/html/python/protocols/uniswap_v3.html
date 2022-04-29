@@ -15219,6 +15219,86 @@ loading events (5.42MB across 2 files)
 
 </html>
 </div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v3_utils.async_get_pool_metadata">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v3_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v3_utils.async_get_pool_metadata" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
+<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>&lt;class ‘uniswap_v3uniswap_v3UniswapV3PoolMetadata’&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v3_utils.async_get_pool_swaps">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v3_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_swaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_symbols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v3_utils.async_get_pool_swaps" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool_address</strong> (<em>Address</em>) – </p></li>
+<li><p><strong>start_block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>end_block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>replace_symbols</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v3_utils.async_quote_exact_input_single">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v3_utils.</span></span><span class="sig-name descname"><span class="pre">async_quote_exact_input_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fee</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqrt_price_limit_x96</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v3_utils.async_quote_exact_input_single" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token_in</strong> (<em>Address</em>) – </p></li>
+<li><p><strong>token_out</strong> (<em>Address</em>) – </p></li>
+<li><p><strong>fee</strong> (<em>int</em>) – </p></li>
+<li><p><strong>amount_in</strong> (<em>int</em>) – </p></li>
+<li><p><strong>sqrt_price_limit_x96</strong> (<em>int</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
+<li><p><strong>block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ctc.protocols.uniswap_v3_utils.async_quote_exact_output_single">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.uniswap_v3_utils.</span></span><span class="sig-name descname"><span class="pre">async_quote_exact_output_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fee</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqrt_price_limit_x96</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.uniswap_v3_utils.async_quote_exact_output_single" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token_in</strong> (<em>Address</em>) – </p></li>
+<li><p><strong>token_out</strong> (<em>Address</em>) – </p></li>
+<li><p><strong>fee</strong> (<em>int</em>) – </p></li>
+<li><p><strong>amount_out</strong> (<em>int</em>) – </p></li>
+<li><p><strong>sqrt_price_limit_x96</strong> (<em>int</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
+<li><p><strong>block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 </div>
 
 
