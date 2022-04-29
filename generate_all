@@ -1,0 +1,11 @@
+#!/bin/sh
+
+./generate_notebook_html
+./generate_subcommand_html
+./generate_subcommand_rsts
+
+make clean html
+
+echo ""
+echo "documentation generated"
+

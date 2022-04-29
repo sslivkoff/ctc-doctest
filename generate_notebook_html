@@ -1,0 +1,16 @@
+#!/bin/sh
+
+mkdir source/python/notebooks_html/datatypes
+cd source/python/notebooks/datatypes
+find *.ipynb | xargs jupyter nbconvert --to html
+find *.html | xargs sed -i -e 's/^body{/#examples {/g'
+mv *.html ../../notebooks_html/datatypes
+
+cd ../../../..
+
+mkdir source/python/notebooks_html/protocols
+cd source/python/notebooks/protocols
+find *.ipynb | xargs jupyter nbconvert --to html
+find *.html | xargs sed -i -e 's/^body{/#examples {/g'
+mv *.html ../../notebooks_html/protocols
+

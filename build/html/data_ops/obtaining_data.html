@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obtaining Data &mdash; Check the Chain (ctc)  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Storing Data" href="storing_data.html" />
+    <link rel="prev" title="FAQ" href="../overview/faq.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Check the Chain (ctc)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/faq.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Obtaining Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storing_data.html">Storing Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Command Line Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/basic_usage.html">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/subcommands.html">Subcommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/useful_aliases.html">Useful Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/similar_tools.html">Similar CLI tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/rpc_client.html">RPC Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/async_code.html">Asynchronous Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/datatypes.html">Datatypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/specific_protocols.html">Specific Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/similar_tools.html">Similar Python Tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../case_studies/under_construction.html">[Under Construction]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Check the Chain (ctc)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Obtaining Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/data_ops/obtaining_data.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="obtaining-data">
+<h1>Obtaining Data<a class="headerlink" href="#obtaining-data" title="Permalink to this headline"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects data from a variety of sources, including RPC nodes, metadata databases, block explorers, and crypto data aggregators. After initial collection, much of this data is then <a class="reference internal" href="storing_data.html"><span class="doc std std-doc">stored</span></a>.</p>
+<div class="section" id="sources-of-historical-data">
+<h2>Sources of Historical Data<a class="headerlink" href="#sources-of-historical-data" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects the majority of its data through RPC nodes using the EVM’s <a class="reference external" href="https://eth.wiki/json-rpc/API">standard JSON-RPC interface</a>. Collection of historical data (as opposed to recent chain data) requires use of an archive node.</p>
+<p>There are 3 main ways to gain access to an RPC node:</p>
+<ol class="arabic simple">
+<li><p><strong>Run your own node</strong> Although this requires more time, effort, and hardware than the other methods, it often leads to the best results. <a class="reference external" href="https://github.com/ledgerwatch/erigon">Erigon</a> is the most optimized client for running an archive node.</p></li>
+<li><p><strong>Use a 3rd-party private endpoint</strong> Private RPC providers (e.g. <a class="reference external" href="https://www.alchemy.com/">Alchemy</a>, <a class="reference external" href="https://www.quicknode.com/">Quicknode</a>, or <a class="reference external" href="https://moralis.io/speedy-nodes/">Moralis</a>)
+provide access to archive nodes, either through paid plans or sometimes even through free plans.</p></li>
+<li><p><strong>Use a 3rd-party public endpoint</strong> You can query data from public endpoints like Infura. This approach is not recommended for any significant data workloads, as it often suffers from rate-limiting and poor historical data availability.</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s RPC config is created and modified by running the <a class="reference internal" href="../overview/configuration.html"><span class="doc std std-doc">setup wizard</span></a>.</p>
+</div>
+<div class="section" id="other-types-of-data">
+<h2>Other types of data<a class="headerlink" href="#other-types-of-data" title="Permalink to this headline"></a></h2>
+<p>Beyond RPC data there are a few other types of data that <code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects, including:</p>
+<ul class="simple">
+<li><p><strong>ABIs of Contracts, Functions, and Events</strong> from <a class="reference external" href="https://etherscan.io/">Etherscan</a> and <a class="reference external" href="https://www.4byte.directory/">4byte</a></p></li>
+<li><p><strong>Market Data</strong> from <a class="reference external" href="https://coingecko.com/">CoinGecko</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../overview/faq.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="storing_data.html" class="btn btn-neutral float-right" title="Storing Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

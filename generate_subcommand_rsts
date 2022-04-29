@@ -1,0 +1,190 @@
+#!/bin/env python3
+
+import os
+import ctc.cli
+
+
+#
+# # paths
+#
+
+# html organization as output by
+html_dir = './subcommand_html'
+root_html = os.path.join(html_dir, 'root__help.html')
+category_html = os.path.join(html_dir, 'categories/{category}__help.html')
+subcommand_html = os.path.join(
+    html_dir,
+    'subcommands/{category}/{subcommand}__help.html',
+)
+
+# follow strict hierarchy because it becomes the url structure
+root_rst = './source/cli/subcommands.rst'
+category_rst = './source/cli/subcommands/{category}.rst'
+subcommand_rst = './source/cli/subcommands/{category}/{subcommand}.rst'
+
+#
+# # rst templates
+#
+
+root_template = """
+
+Subcommands
+===========
+
+.. note::
+   Click on a subcommand to view its documentation page.
+
+.. raw:: html
+   :file: {cli_html_root}
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+{toc_entries}
+
+"""
+
+category_template = """
+
+{category}
+{category_underline}
+
+.. note::
+   Click on a subcommand to view its documentation page.
+
+.. raw:: html
+   :file: {category_html_path}
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+{toc_entries}
+
+"""
+
+subcommand_template = """
+
+{header}
+{header_underline}
+
+.. raw:: html
+   :file: {subcommand_html_path}
+
+"""
+
+
+#
+# # rst creation
+#
+
+
+def get_subcommands_by_category():
+    subcommands_by_category = {}
+    root_dir = './source/cli/subcommand_html/subcommands'
+    for category in os.listdir(root_dir):
+        subcommands_by_category[category] = []
+        for subcommand_filename in os.listdir(os.path.join(root_dir, category)):
+            subcommand_str = subcommand_filename.split('__help.html')[0]
+            subcommand = tuple(subcommand_str.split('_'))
+            subcommands_by_category[category].append(subcommand)
+        subcommands_by_category[category] = sorted(subcommands_by_category[category])
+    return subcommands_by_category
+
+
+def create_rst_root(subcommands_by_category):
+
+    toc_entries = ''
+    for category in get_category_order():
+        toc_entries += '   ./subcommands/' + category + '\n'
+
+    content = root_template.format(
+        cli_html_root=root_html,
+        toc_entries=toc_entries,
+    )
+
+    with open(root_rst, 'w') as f:
+        f.write(content)
+
+
+def get_category_order():
+    category_order = list(ctc.cli.command_index_by_category.keys())
+    category_order.append('other')
+    return category_order
+
+
+def create_rst_categories(subcommands_by_category):
+
+    category_order = get_category_order()
+
+    for category in category_order:
+        subcommands = subcommands_by_category[category]
+
+        # collect category data
+        header = category.title() + ' Subcommands'
+        category_underline = '=' * len(header)
+        category_html_path = (
+            '../subcommand_html/categories/' + category + '__help.html'
+        )
+        toc_entries = ''
+        for subcommand in subcommands:
+            toc_entries += (
+                '   ./' + category + '/' + '_'.join(subcommand) + '\n'
+            )
+
+        # merge into content
+        content = category_template.format(
+            category=header,
+            category_underline=category_underline,
+            category_html_path=category_html_path,
+            toc_entries=toc_entries,
+        )
+
+        # write content
+        path = category_rst.format(category=category)
+        with open(path, 'w') as f:
+            f.write(content)
+
+
+def create_rst_subcommands(subcommands_by_category):
+    for category, subcommands in subcommands_by_category.items():
+        for subcommand in subcommands:
+
+            # collect subcommand data
+            header = ' '.join(subcommand)
+            header_underline = '=' * len(header)
+            subcommand_html_path = (
+                '../../subcommand_html/subcommands/'
+                + category
+                + '/'
+                + '_'.join(subcommand)
+                + '__help.html'
+            )
+
+            content = subcommand_template.format(
+                header=header,
+                header_underline=header_underline,
+                subcommand_html_path=subcommand_html_path,
+            )
+
+            path = subcommand_rst.format(
+                category=category,
+                subcommand='_'.join(subcommand),
+            )
+            parent = os.path.dirname(path)
+            os.makedirs(parent, exist_ok=True)
+            with open(path, 'w') as f:
+                f.write(content)
+
+
+def create_rsts():
+    subcommands_by_category = get_subcommands_by_category()
+    create_rst_subcommands(subcommands_by_category)
+    create_rst_categories(subcommands_by_category)
+    create_rst_root(subcommands_by_category)
+
+
+if __name__ == '__main__':
+    create_rsts()
+
