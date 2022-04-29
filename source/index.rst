@@ -45,35 +45,35 @@ Datatypes
    :header-rows: 1
 
    * - Datatype
-     - CLI Docs
-     - Python Docs
+     - CLI
+     - Python
    * - ABIs
-     - `CLI Docs <cli/subcommands/data/abi.html>`__
-     - `Python Docs <python/datatypes/abis.html>`__
+     - `CLI <cli/subcommands/data/abi.html>`__
+     - `Python <python/datatypes/abis.html>`__
    * - Binary Data
-     - `CLI Docs <cli/subcommands/compute.html>`__
-     - `Python Docs <python/datatypes/binary_data.html>`__
+     - `CLI <cli/subcommands/compute.html>`__
+     - `Python <python/datatypes/binary_data.html>`__
    * - Blocks
-     - `CLI Docs <cli/subcommands/data/blocks.html>`__
-     - `Python Docs <python/datatypes/blocks.html>`__
+     - `CLI <cli/subcommands/data/blocks.html>`__
+     - `Python <python/datatypes/blocks.html>`__
    * - Contracts
-     - `CLI Docs <cli/subcommands/data/address.html>`__
-     - `Python Docs <python/datatypes/contracts.html>`__
+     - `CLI <cli/subcommands/data/address.html>`__
+     - `Python <python/datatypes/contracts.html>`__
    * - Gas
-     - `CLI Docs <cli/subcommands/data/gas.html>`__
-     - `Python Docs <python/datatypes/gas.html>`__
+     - `CLI <cli/subcommands/data/gas.html>`__
+     - `Python <python/datatypes/gas.html>`__
    * - ERC20s
-     - `CLI Docs <cli/subcommands/data/erc20_balances.html>`__
-     - `Python Docs <python/datatypes/erc20s.html>`__
+     - `CLI <cli/subcommands/data/erc20_balances.html>`__
+     - `Python <python/datatypes/erc20s.html>`__
    * - ETH Balances
-     - `CLI Docs <cli/subcommands/data/eth_balances.html>`__
-     - `Python Docs <python/datatypes/eth_balances.html>`__
+     - `CLI <cli/subcommands/data/eth_balances.html>`__
+     - `Python <python/datatypes/eth_balances.html>`__
    * - Events
-     - `CLI Docs <cli/subcommands/data/events.html>`__
-     - `Python Docs <python/datatypes/events.html>`__
+     - `CLI <cli/subcommands/data/events.html>`__
+     - `Python <python/datatypes/events.html>`__
    * - Transactions
-     - `CLI Docs <cli/subcommands/data/transaction.html>`__
-     - `Python Docs <python/datatypes/transactions.html>`__
+     - `CLI <cli/subcommands/data/transaction.html>`__
+     - `Python <python/datatypes/transactions.html>`__
 
 
 Specific Protocols
@@ -86,48 +86,48 @@ Specific Protocols
    :header-rows: 1
 
    * - Protocol
-     - CLI Docs
-     - Python Docs
+     - CLI
+     - Python
      - Source
    * - Aave V2
-     - CLI Docs
-     - `Python Docs <python/protocols/aave_v2.html>`__
+     - \-
+     - `Python <python/protocols/aave_v2.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/aave_v2_utils/>`__
    * - Balancer
-     - CLI Docs
-     - `Python Docs <python/protocols/balancer.html>`__
+     - \-
+     - `Python <python/protocols/balancer.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/balancer_utils/>`__
    * - Chainlink
-     - CLI Docs
-     - `Python Docs <python/protocols/chainlink.html>`__
+     - `CLI <cli/subcommands/protocol/chainlink.html>`__
+     - `Python <python/protocols/chainlink.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/chainlink_utils>`__
    * - Compound
-     - CLI Docs
-     - `Python Docs <python/protocols/compound.html>`__
+     - \-
+     - `Python <python/protocols/compound.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/compound_utils/>`__
    * - Curve
-     - CLI Docs
-     - `Python Docs <python/protocols/curve.html>`__
+     - \-
+     - `Python <python/protocols/curve.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/curve_utils/>`__
    * - ENS
-     - CLI Docs
-     - `Python Docs <python/protocols/ens.html>`__
+     - `CLI <cli/subcommands/protocol/ens.html>`__
+     - `Python <python/protocols/ens.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/ens_utils/>`__
    * - Fei
-     - CLI Docs
-     - `Python Docs <python/protocols/fei.html>`__
+     - `CLI <cli/subcommands/protocol/fei_pcv.html>`__
+     - `Python <python/protocols/fei.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fei_utils/>`__
    * - Rari
-     - CLI Docs
-     - `Python Docs <python/protocols/rari.html>`__
+     - `CLI <cli/subcommands/protocol/rari.html>`__
+     - `Python <python/protocols/rari.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/rari_utils/>`__
    * - Uniswap V2
-     - CLI Docs
-     - `Python Docs <python/protocols/uniswap_v2.html>`__
+     - `CLI <cli/subcommands/protocol/uniswap_chart.html>`__
+     - `Python <python/protocols/uniswap_v2.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v2_utils/>`__
    * - Uniswap V3
-     - CLI Docs
-     - `Python Docs <python/protocols/uniswap_v3.html>`__
+     - `CLI <cli/subcommands/protocol/uniswap_chart.html>`__
+     - `Python <python/protocols/uniswap_v3.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v3_utils/>`__
 
 External Data Sources
@@ -140,15 +140,15 @@ External Data Sources
    :header-rows: 1
 
    * - Data Source
-     - CLI Docs
-     - Python Docs
+     - CLI
+     - Python
      - Source
    * - 4byte
-     - `CLI Docs <cli/subcommands/protocol/4byte.html>`__
-     - `Python Docs <python/protocols/4byte.html>`__
+     - `CLI <cli/subcommands/protocol/4byte.html>`__
+     - `Python <python/protocols/4byte.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fourbyte_utils>`__
    * - CoinGecko
-     - `CLI Docs <cli/subcommands/protocol/cg.html>`__
+     - `CLI <cli/subcommands/protocol/cg.html>`__
      - \-
      - `Source <https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/cli/commands/data/cg_command.py>`__
    * - Etherscan

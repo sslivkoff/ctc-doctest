@@ -20,7 +20,7 @@ For every method specified by the EVM JSON-RPC standard, `ctc.rpc` implements fi
 
 Unless otherwise specified, requests will be sent to the default RPC provider in `ctc`'s config. Functions in `ctc.rpc` that send RPC requests also take an optional `provider` argument that can be used to specify other RPC providers.
 
-For more details, see the RPC Provider section on the [Data Sources] page.
+For more details, see the RPC Provider section on the [Data Sources](../data_ops/obtaining_data) page.
 
 ## Typical RPC Request Lifecycle in `ctc`
 1. a constructor function encodes request metadata and parameters into a `RpcRequest` `dict`

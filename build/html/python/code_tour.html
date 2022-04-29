@@ -102,21 +102,31 @@
              
   <div class="section" id="codebase-tour">
 <h1>Codebase Tour<a class="headerlink" href="#codebase-tour" title="Permalink to this headline"></a></h1>
-<p>There are a few subpackages that you should acquiant yourself with:</p>
-<div class="section" id="ctc-spec">
-<h2>ctc.spec<a class="headerlink" href="#ctc-spec" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ctc.spec</span></code> is where most datatypes are specified. These datatypes are used for type annotations throughout the codebase. ctc relies almost entirely on basic python types and functions rather than using OOP.</p>
+<div class="section" id="architecture-and-api">
+<h2>Architecture and API<a class="headerlink" href="#architecture-and-api" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> does not use any custom types or OOP. Instead it emphasizes simple standard datatypes including python builtins, numpy arrays, and the occassional pandas dataframe. Effort is made to ensure that the users stay “close” to the data with minimal implicit magic going on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> is <a class="reference internal" href="async_code.html"><span class="doc std std-doc">asynchronous-first</span></a>, which allows it to efficiently orchestrate large numbers of interdependent queries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> is designed with historical data in mind. Throughout its API many functions take parameters such as <code class="docutils literal notranslate"><span class="pre">block</span></code>, <code class="docutils literal notranslate"><span class="pre">blocks</span></code>, <code class="docutils literal notranslate"><span class="pre">start_block</span></code>, or <code class="docutils literal notranslate"><span class="pre">end_block</span></code> to specify the relevant block ranges for each query.</p></li>
+</ul>
 </div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline"></a></h2>
+<p>There are a few subpackages that you should acquiant yourself with:</p>
 <div class="section" id="ctc-evm">
-<h2>ctc.evm<a class="headerlink" href="#ctc-evm" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ctc.evm</span></code> contains functions for working with EVM datatypes and it contains most of the functions that users will need on a day-to-day basis. These are the “porcelain” functions, whereas the other ctc subpackages are the plumbing.</p>
+<h3>ctc.evm<a class="headerlink" href="#ctc-evm" title="Permalink to this headline"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ctc.evm</span></code> defines high-level functions for working with EVM data, and it contains most of the functions that users will need on a day-to-day basis. These are the “porcelain” functions, whereas the other ctc subpackages are the plumbing.</p>
 </div>
 <div class="section" id="ctc-protocols">
-<h2>ctc.protocols<a class="headerlink" href="#ctc-protocols" title="Permalink to this headline"></a></h2>
+<h3>ctc.protocols<a class="headerlink" href="#ctc-protocols" title="Permalink to this headline"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ctc.protocols</span></code> contains functions specific to many different protocols such as Chainlink or Uniswap.</p>
 </div>
+<div class="section" id="ctc-spec">
+<h3>ctc.spec<a class="headerlink" href="#ctc-spec" title="Permalink to this headline"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ctc.spec</span></code> is where most annotation types are defined.</p>
+</div>
 <div class="section" id="other-subpackages">
-<h2>Other Subpackages<a class="headerlink" href="#other-subpackages" title="Permalink to this headline"></a></h2>
+<h3>Other Subpackages<a class="headerlink" href="#other-subpackages" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ctc.binary</span></code>: utilities for hashing and abi encoding/decoding</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ctc.cli</span></code>: ctc command line implementation</p></li>
@@ -125,6 +135,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">ctc.rpc</span></code>: utilities for communicating over rpc</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ctc.toolbox</span></code>: miscellaneous python utilities</p></li>
 </ul>
+</div>
 </div>
 </div>
 
