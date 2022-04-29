@@ -1,1 +1,4 @@
 git+https://github.com/fei-protocol/checkthechain.git@main#egg=checkthechain
+myst-parser
+sphinx-autodoc-typehints
+sphinx-copybutton
