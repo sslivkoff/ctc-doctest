@@ -9,7 +9,7 @@
 `async` is a natural fit for efficiently querying large amounts of data from an archive node. All `ctc` functions that fetch external data use `async`. For tips on using `async` see [this section](/python/async_code) in the docs. Future versions of `ctc` will include some wrappers for synchronous code.
 
 ## Do I need an archive node?
-If you want to query historical data, you will need an archive node. You can either [run one yourself](https://github.com/ledgerwatch/erigon) or use a third-party provider such as [Alchemy](https://www.alchemy.com/), [Quicknode](https://www.quicknode.com/) or [Moralis](https://moralis.io/speedy-nodes/). You can also use `ctc` to query current (non-historical) data using a non-archive node.
+If you want to query historical data, you will need an archive node. You can either [run one yourself](https://github.com/ledgerwatch/erigon) or use a third-party provider such as [Alchemy](https://www.alchemy.com/), [Quicknode](https://www.quicknode.com/), or [Moralis](https://moralis.io/speedy-nodes/). You can also use `ctc` to query current (non-historical) data using a non-archive node.
 
 ## Is `ctc` useful for recent, non-historical data?
 Yes, `ctc` has lots of functionality for querying the current state of the chain.

@@ -14898,15 +14898,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>blocks</strong> (<em>Optional</em><em>[</em><em>Sequence</em><em>[</em><em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
+<li><p><strong>blocks</strong> (<em>Sequence</em><em>[</em><em>BlockNumberReference</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>start_block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>end_block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘BlocksGasStats’&gt;</p>
+<dd class="field-even"><p><a class="reference internal" href="#ctc.evm.BlocksGasStats" title="ctc.evm.BlocksGasStats">BlocksGasStats</a></p>
 </dd>
 </dl>
 </dd></dl>
