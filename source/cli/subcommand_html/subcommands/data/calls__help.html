@@ -1,0 +1,25 @@
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls ARGS [options]</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    output the result of multiple calls</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    # Example usage:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    ## same call across multiple blocks</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    ctc calls &lt;address&gt; &lt;function_name&gt; [&lt;function_parameters&gt;] --blocks &lt;blocks&gt;</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    ## same call across multiple addresses</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    ctc calls &lt;function_name&gt; [&lt;function_parameters&gt;] --addresses &lt;addresses&gt; [--block block]</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ARGS</span>                     <span style="color: #b9f29f; text-decoration-color: #b9f29f">&lt;see above&gt;</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--addresses ADDRESSES</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">addresses to point calls toward</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks BLOCKS</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">block range for calls</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--block BLOCK</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">block number for calls</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--quiet</span>                  <span style="color: #b9f29f; text-decoration-color: #b9f29f">omit summary, only output function result</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--output OUTPUT</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>              <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--from FROM</span>              <span style="color: #b9f29f; text-decoration-color: #b9f29f">address that calls should come from</span>
+</pre>
