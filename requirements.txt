@@ -1,1 +1,1 @@
-git+https://github.com/fei-protocol/checkthechain.git@main#egg=ctc
+git+https://github.com/fei-protocol/checkthechain.git@main#egg=checkthechain
