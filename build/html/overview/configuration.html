@@ -102,19 +102,19 @@
              
   <div class="section" id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h1>
-<p>The behavior of <code class="docutils literal notranslate"><span class="pre">ctc</span></code> can be configured. This configuration is currently very simple and is mainly used to use specify custom RPC endpoints and data storage options.</p>
 <div class="admonition-tldr admonition">
 <p class="admonition-title">TLDR</p>
-<p>Run <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line to create the config. Run it again to edit the config</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line to create the config. Run it again to edit the config.</p>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses a simple configuration file to control its behavior.</p>
 <div class="section" id="config-parameters">
 <h2>Config Parameters<a class="headerlink" href="#config-parameters" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config consists of the following key-value pairs:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">config_spec_version</span></code></strong>: the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> version used to create the config</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">data_dir</span></code></strong>: the directory where <code class="docutils literal notranslate"><span class="pre">ctc</span></code> stores its data</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">providers</span></code></strong>: metadata about rpc providers</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">networks</span></code></strong>: metadata about custom networks including their names and chain_id’s</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">providers</span></code></strong>: metadata about RPC providers</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">networks</span></code></strong>: metadata about custom networks including their names and <code class="docutils literal notranslate"><span class="pre">chain_id</span></code>’s</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">network_defaults</span></code></strong>: specification of the default provider to use for each network, and the default network</p></li>
 </ul>
 <p>The main parameters of interest will usually be <code class="docutils literal notranslate"><span class="pre">providers</span></code> and <code class="docutils literal notranslate"><span class="pre">network</span> <span class="pre">defaults</span></code>.</p>
@@ -123,11 +123,11 @@
 <div class="section" id="setting-config-parameters">
 <h2>Setting Config Parameters<a class="headerlink" href="#setting-config-parameters" title="Permalink to this headline"></a></h2>
 <p>By default ctc will looks for a config file at <code class="docutils literal notranslate"><span class="pre">~/.config/ctc/config.json</span></code>. But if the <code class="docutils literal notranslate"><span class="pre">CTC_CONFIG_PATH</span></code> environment variable is set, it will use that path instead.</p>
-<p>Users do not need to directly create or edit <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config files. Instead, all config parameters can be adjusted by using the setup wizard, activating by entering <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line. This can be used both for creating new configs and modifying the current config.</p>
+<p>Users do not need to directly create or edit <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config files. Instead, all config parameters can be adjusted by using the setup wizard, activated by entering <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line. This can be used both for creating new configs and modifying the current config.</p>
 </div>
 <div class="section" id="reading-config-parameters">
 <h2>Reading Config Parameters<a class="headerlink" href="#reading-config-parameters" title="Permalink to this headline"></a></h2>
-<p>On the command line, using <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">config</span></code> will print information about the config, including its location on the filesystem and its current values.</p>
+<p>On the command line, using <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">config</span></code> will print information about the config including its location on the filesystem and its current values.</p>
 <p>In python, the <code class="docutils literal notranslate"><span class="pre">ctc.config</span></code> module has many functions for getting the current config path and its values:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">config</span>
 
@@ -174,7 +174,6 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>TH</p>
 </div>
 </div>
 

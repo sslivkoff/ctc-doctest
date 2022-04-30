@@ -1,5 +1,5 @@
 .. note::
-   :code:`ctc` is in beta, please report bugs to `the issue tracker <https://github.com/fei-protocol/checkthechain>`_
+   :code:`ctc` is in beta, please report bugs to `the issue tracker <https://github.com/fei-protocol/checkthechain/issues>`_
 
 
 Check the Chain (:code:`ctc`)
@@ -7,7 +7,7 @@ Check the Chain (:code:`ctc`)
 
 :code:`ctc` is a tool for historical data analysis of Ethereum and other EVM chains
 
-It can be used as either 1) a python package or 2) a cli tool
+It can be used as either 1) a cli tool or 2) a python package
 
 
 Features
@@ -33,47 +33,58 @@ Guide
 - To use ``ctc`` in python, see `Python Interface <python/code_tour.html>`_.
 - To use ``ctc`` with specific protocols like Uniswap or Chainlink, see the `Specific Protocols (cli) <cli/subcommands/protocol.html>`_ or `Specific Protocols (python) <python/specific_protocols.html>`_.
 - To see examples of what you can do with ``ctc``, see `Case Studies <case_studies/under_construction.html>`_.
+- To view the ``ctc`` source code, check out the `GitHub Repository <https://github.com/fei-protocol/checkthechain>`_.
 
 
 Datatypes
 ---------
 
 .. list-table::
-   :width: 55%
+   :width: 65%
    :align: center
-   :widths: 55 15 15
+   :widths: 55 15 15 15
    :header-rows: 1
 
    * - Datatype
      - CLI
      - Python
+     - Source
    * - ABIs
      - `CLI <cli/subcommands/data/abi.html>`__
      - `Python <python/datatypes/abis.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary/abis>`__
    * - Binary Data
      - `CLI <cli/subcommands/compute.html>`__
      - `Python <python/datatypes/binary_data.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary>`__
    * - Blocks
      - `CLI <cli/subcommands/data/blocks.html>`__
      - `Python <python/datatypes/blocks.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/block_utils>`__
    * - Contracts
      - `CLI <cli/subcommands/data/address.html>`__
      - `Python <python/datatypes/contracts.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_creations.py>`__
    * - Gas
      - `CLI <cli/subcommands/data/gas.html>`__
      - `Python <python/datatypes/gas.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_gas.py>`__
    * - ERC20s
      - `CLI <cli/subcommands/data/erc20_balances.html>`__
      - `Python <python/datatypes/erc20s.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/erc20_utils>`__
    * - ETH Balances
      - `CLI <cli/subcommands/data/eth_balances.html>`__
      - `Python <python/datatypes/eth_balances.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/eth_utils>`__
    * - Events
      - `CLI <cli/subcommands/data/events.html>`__
      - `Python <python/datatypes/events.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/event_utils>`__
    * - Transactions
      - `CLI <cli/subcommands/data/transaction.html>`__
      - `Python <python/datatypes/transactions.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/transaction_utils>`__
 
 
 Specific Protocols

@@ -20,9 +20,7 @@
         <script src="../_static/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Similar CLI tools" href="similar_tools.html" />
-    <link rel="prev" title="version" href="subcommands/other/version.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,10 +54,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../data_ops/monitoring.html">Monitoring</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Command Line Interface</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Basic Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="subcommands.html">Subcommands</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Useful Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_aliases.html">Useful Aliases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="similar_tools.html">Similar CLI tools</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
@@ -92,7 +90,7 @@
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Useful Aliases</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/cli/useful_aliases.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/cli/useful_aliases_template.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -108,44 +106,7 @@
 <p>To use these aliases, you need to include them in your shell config file (e.g. <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>). You can either copy paste the alias commands directly, or you can add a single line: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">&lt;PATH_TO_ALIAS_FILE&gt;</span></code>.</p>
 <div class="section" id="the-aliases-file">
 <h2>The Aliases File<a class="headerlink" href="#the-aliases-file" title="Permalink to this headline"></a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
-
-<span class="c1"># these commands allow you to call ctc subcommands without typing the &quot;ctc&quot; part</span>
-
-<span class="c1"># to use, either:</span>
-<span class="c1"># 1. add the contents of this file to the end of your terminal config file</span>
-<span class="c1"># 2. add `source PATH_TO_THIS_FILE` to the end of your terminal config file</span>
-
-<span class="c1"># to learn more about these commands, run `ctc help`</span>
-
-<span class="c1"># depending on preference can use all of these aliases or just a subset of them:</span>
-
-<span class="c1"># compute commands</span>
-<span class="nb">alias</span> <span class="nv">ascii</span><span class="o">=</span><span class="s2">&quot;ctc ascii&quot;</span>
-<span class="nb">alias</span> <span class="nv">hex</span><span class="o">=</span><span class="s2">&quot;ctc hex&quot;</span>
-<span class="nb">alias</span> <span class="nv">keccak</span><span class="o">=</span><span class="s2">&quot;ctc keccack&quot;</span>
-<span class="nb">alias</span> <span class="nv">lower</span><span class="o">=</span><span class="s2">&quot;ctc lower&quot;</span>
-
-<span class="c1"># data commands</span>
-<span class="nb">alias</span> <span class="nv">abi</span><span class="o">=</span><span class="s2">&quot;ctc abi&quot;</span>
-<span class="nb">alias</span> <span class="nv">address</span><span class="o">=</span><span class="s2">&quot;ctc address&quot;</span>
-<span class="nb">alias</span> <span class="nv">block</span><span class="o">=</span><span class="s2">&quot;ctc block&quot;</span>
-<span class="nb">alias</span> <span class="nv">blocks</span><span class="o">=</span><span class="s2">&quot;ctc blocks&quot;</span>
-<span class="nb">alias</span> <span class="nv">call</span><span class="o">=</span><span class="s2">&quot;ctc call&quot;</span>
-<span class="nb">alias</span> <span class="nv">calls</span><span class="o">=</span><span class="s2">&quot;ctc calls&quot;</span>
-<span class="nb">alias</span> <span class="nv">erc20</span><span class="o">=</span><span class="s2">&quot;ctc erc20&quot;</span>
-<span class="nb">alias</span> <span class="nv">eth</span><span class="o">=</span><span class="s2">&quot;ctc eth&quot;</span>
-<span class="nb">alias</span> <span class="nv">gas</span><span class="o">=</span><span class="s2">&quot;ctc gas&quot;</span>
-<span class="nb">alias</span> <span class="nv">transaction</span><span class="o">=</span><span class="s2">&quot;ctc transaction&quot;</span>
-
-<span class="c1"># protocol commands</span>
-<span class="nb">alias</span> <span class="nv">4byte</span><span class="o">=</span><span class="s2">&quot;ctc 4byte&quot;</span>
-<span class="nb">alias</span> <span class="nv">cg</span><span class="o">=</span><span class="s2">&quot;ctc cg&quot;</span>
-<span class="nb">alias</span> <span class="nv">chainlink</span><span class="o">=</span><span class="s2">&quot;ctc chainlink&quot;</span>
-<span class="nb">alias</span> <span class="nv">curve</span><span class="o">=</span><span class="s2">&quot;ctc curve&quot;</span>
-<span class="nb">alias</span> <span class="nv">ens</span><span class="o">=</span><span class="s2">&quot;ctc ens&quot;</span>
-<span class="nb">alias</span> <span class="nv">fei</span><span class="o">=</span><span class="s2">&quot;ctc fei&quot;</span>
-<span class="nb">alias</span> <span class="nv">rari</span><span class="o">=</span><span class="s2">&quot;ctc rari&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>aliases_file_content<span class="o">}</span>
 </pre></div>
 </div>
 </div>
@@ -154,10 +115,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="subcommands/other/version.html" class="btn btn-neutral float-left" title="version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="similar_tools.html" class="btn btn-neutral float-right" title="Similar CLI tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

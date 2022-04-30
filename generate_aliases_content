@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+import os
+
+import ctc
+
+
+ctc_path = os.path.dirname(os.path.dirname(ctc.__path__[0]))
+aliases_script_path = os.path.join(ctc_path, 'scripts/ctc_aliases.sh')
+aliases_template_path = './source/cli/useful_aliases_template.md'
+aliases_docs_path = './source/cli/useful_aliases.md'
+
+
+with open(aliases_template_path, 'r') as f:
+    template_content = f.read()
+with open(aliases_script_path, 'r') as f:
+    aliases_script_content = f.read()
+
+aliases_docs_content = template_content.replace('{aliases_file_content}', aliases_script_content)
+
+with open(aliases_docs_path, 'w') as f:
+    f.write(aliases_docs_content)
+

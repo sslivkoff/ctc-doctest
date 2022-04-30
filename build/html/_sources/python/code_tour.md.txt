@@ -14,7 +14,7 @@ There are a few subpackages that you should acquiant yourself with:
 
 ### ctc.evm
 
-`ctc.evm` defines high-level functions for working with EVM data, and it contains most of the functions that users will need on a day-to-day basis. These are the "porcelain" functions, whereas the other ctc subpackages are the plumbing.
+`ctc.evm` defines high-level functions for working with EVM data, and it contains most of the functions that users will need on a day-to-day basis. These are the "porcelain" functions, whereas the other `ctc` subpackages are the plumbing.
 
 ### ctc.protocols
 

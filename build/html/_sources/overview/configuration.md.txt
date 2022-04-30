@@ -1,19 +1,19 @@
 
 # Configuration
 
-The behavior of `ctc` can be configured. This configuration is currently very simple and is mainly used to use specify custom RPC endpoints and data storage options.
-
 ```{admonition} TLDR
-Run `ctc setup` on the command line to create the config. Run it again to edit the config
+Run `ctc setup` on the command line to create the config. Run it again to edit the config.
 ```
+
+`ctc` uses a simple configuration file to control its behavior.
 
 ## Config Parameters
 
 The `ctc` config consists of the following key-value pairs:
 - **`config_spec_version`**: the `ctc` version used to create the config
 - **`data_dir`**: the directory where `ctc` stores its data
-- **`providers`**: metadata about rpc providers
-- **`networks`**: metadata about custom networks including their names and chain_id's
+- **`providers`**: metadata about RPC providers
+- **`networks`**: metadata about custom networks including their names and `chain_id`'s
 - **`network_defaults`**: specification of the default provider to use for each network, and the default network
 
 The main parameters of interest will usually be `providers` and `network defaults`.
@@ -24,11 +24,11 @@ An exact specification for the config can be found in [the config typedefs](http
 
 By default ctc will looks for a config file at `~/.config/ctc/config.json`. But if the `CTC_CONFIG_PATH` environment variable is set, it will use that path instead.
 
-Users do not need to directly create or edit `ctc` config files. Instead, all config parameters can be adjusted by using the setup wizard, activating by entering `ctc setup` on the command line. This can be used both for creating new configs and modifying the current config.
+Users do not need to directly create or edit `ctc` config files. Instead, all config parameters can be adjusted by using the setup wizard, activated by entering `ctc setup` on the command line. This can be used both for creating new configs and modifying the current config.
 
 ## Reading Config Parameters
 
-On the command line, using `ctc config` will print information about the config, including its location on the filesystem and its current values.
+On the command line, using `ctc config` will print information about the config including its location on the filesystem and its current values.
 
 In python, the `ctc.config` module has many functions for getting the current config path and its values:
 ```python
@@ -77,5 +77,3 @@ providers = config.get_providers()
 }
 ```
 
-
-TH

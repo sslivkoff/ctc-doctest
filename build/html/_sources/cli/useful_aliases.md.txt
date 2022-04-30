@@ -9,6 +9,7 @@ These aliases make it so you do not need to type the `"ctc"` before a subcommand
 
 To use these aliases, you need to include them in your shell config file (e.g. `~/.profile`). You can either copy paste the alias commands directly, or you can add a single line: `source <PATH_TO_ALIAS_FILE>`.
 
+
 ## The Aliases File
 
 ```bash
@@ -31,23 +32,26 @@ alias keccak="ctc keccack"
 alias lower="ctc lower"
 
 # data commands
+alias abi="ctc abi"
 alias address="ctc address"
 alias block="ctc block"
 alias blocks="ctc blocks"
 alias call="ctc call"
 alias calls="ctc calls"
-alias eth="ctc eth"
 alias erc20="ctc erc20"
-alias transaction="ctc transaction"
+alias eth="ctc eth"
 alias gas="ctc gas"
+alias transaction="ctc transaction"
 
 # protocol commands
 alias 4byte="ctc 4byte"
-alias cg="ctc coingecko"
+alias cg="ctc cg"
 alias chainlink="ctc chainlink"
 alias curve="ctc curve"
 alias ens="ctc ens"
 alias fei="ctc fei"
 alias rari="ctc rari"
+
+
 ```
 

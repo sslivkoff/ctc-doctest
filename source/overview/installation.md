@@ -5,18 +5,20 @@
 
 Installing `ctc` takes two steps:
 1. `pip install checkthechain`
-2. run `ctc setup` in terminal to run setup wizard (see [Configuration](/overview/configuration) details)
+2. enter `ctc setup` in the terminal to run the setup wizard
 
-If your shell's `PATH` does not include python scripts you may need to do something like `python3 -m pip ...` and `python3 -m ctc ...`
+See [Configuration](configuration) for additional setup options.
 
-Installation requires `python >= 3.7`
+If your shell's `PATH` does not include python package scripts you may need to do something like `python3 -m pip ...` and `python3 -m ctc ...`
+
+Installation requires `python >= 3.7`. see [Dependencies](dependencies) for more information.
 
 
 ## Upgrading
 
 Upgrading to a new version of `ctc` takes two steps:
 1. `pip install checkthechain -U`
-2. run `ctc setup` to add any new data to the data directory (can skip most steps by pressing enter)
+2. Rerun the setup wizard by running `ctc setup` (can skip most steps by pressing enter)
 
 
 ## Alternative Installations

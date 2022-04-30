@@ -4,6 +4,14 @@
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    output ETH balance across blocks or addresses</span>
 
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># multiple wallets</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc eth balances 0xd8da6bf26964af9d7eed9e03e53415d37aa96045 </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">0xea674fdde714fd979de3edf0f56aa9716b898ec8 0xbe0eb53f46cd790cd13851d5eff43d12404d33e8</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># multiple blocks</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc eth balances 0xd8da6bf26964af9d7eed9e03e53415d37aa96045 --blocks [14000000, 14000100]</span>
+
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">WALLETS</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">wallet addresses to get balances of</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--block BLOCK</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">block number</span>

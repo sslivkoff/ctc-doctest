@@ -101,12 +101,12 @@
              
   <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="code docutils literal notranslate"><span class="pre">ctc</span></code> is in beta, please report bugs to <a class="reference external" href="https://github.com/fei-protocol/checkthechain">the issue tracker</a></p>
+<p><code class="code docutils literal notranslate"><span class="pre">ctc</span></code> is in beta, please report bugs to <a class="reference external" href="https://github.com/fei-protocol/checkthechain/issues">the issue tracker</a></p>
 </div>
 <div class="section" id="check-the-chain-ctc">
 <h1>Check the Chain (<code class="code docutils literal notranslate"><span class="pre">ctc</span></code>)<a class="headerlink" href="#check-the-chain-ctc" title="Permalink to this headline"></a></h1>
 <p><code class="code docutils literal notranslate"><span class="pre">ctc</span></code> is a tool for historical data analysis of Ethereum and other EVM chains</p>
-<p>It can be used as either 1) a python package or 2) a cli tool</p>
+<p>It can be used as either 1) a cli tool or 2) a python package</p>
 <div class="section" id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline"></a></h2>
 <table class="hlist"><tr><td><ul class="simple">
@@ -128,58 +128,70 @@
 <li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> in python, see <a class="reference external" href="python/code_tour.html">Python Interface</a>.</p></li>
 <li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> with specific protocols like Uniswap or Chainlink, see the <a class="reference external" href="cli/subcommands/protocol.html">Specific Protocols (cli)</a> or <a class="reference external" href="python/specific_protocols.html">Specific Protocols (python)</a>.</p></li>
 <li><p>To see examples of what you can do with <code class="docutils literal notranslate"><span class="pre">ctc</span></code>, see <a class="reference external" href="case_studies/under_construction.html">Case Studies</a>.</p></li>
+<li><p>To view the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> source code, check out the <a class="reference external" href="https://github.com/fei-protocol/checkthechain">GitHub Repository</a>.</p></li>
 </ul>
 </div>
 <div class="section" id="datatypes">
 <h2>Datatypes<a class="headerlink" href="#datatypes" title="Permalink to this headline"></a></h2>
-<table class="colwidths-given docutils align-center" style="width: 55%">
+<table class="colwidths-given docutils align-center" style="width: 65%">
 <colgroup>
-<col style="width: 65%" />
-<col style="width: 18%" />
-<col style="width: 18%" />
+<col style="width: 55%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Datatype</p></th>
 <th class="head"><p>CLI</p></th>
 <th class="head"><p>Python</p></th>
+<th class="head"><p>Source</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>ABIs</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/abi.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/abis.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary/abis">Source</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Binary Data</p></td>
 <td><p><a class="reference external" href="cli/subcommands/compute.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/binary_data.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary">Source</a></p></td>
 </tr>
 <tr class="row-even"><td><p>Blocks</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/blocks.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/blocks.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/block_utils">Source</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Contracts</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/address.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/contracts.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_creations.py">Source</a></p></td>
 </tr>
 <tr class="row-even"><td><p>Gas</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/gas.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/gas.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_gas.py">Source</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>ERC20s</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/erc20_balances.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/erc20s.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/erc20_utils">Source</a></p></td>
 </tr>
 <tr class="row-even"><td><p>ETH Balances</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/eth_balances.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/eth_balances.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/eth_utils">Source</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Events</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/events.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/events.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/event_utils">Source</a></p></td>
 </tr>
 <tr class="row-even"><td><p>Transactions</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/transaction.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/transactions.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/transaction_utils">Source</a></p></td>
 </tr>
 </tbody>
 </table>
