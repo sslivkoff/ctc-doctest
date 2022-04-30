@@ -1,19 +1,19 @@
 
 # Performance
 
-The performance of `ctc` can be optimized in a number of ways.
-
 ```{admonition} TLDR
 Even in suboptimal conditions, `ctc` uses lots of optimizations that allow running many types of workloads at acceptable levels of performance. This page is for those who wish to squeeze additional performance out of `ctc`.
 ```
 
 ## Optimizing Performance
 
+There are many levers and knobs available for tuning `ctc`'s performance.
+
 ### RPC Provider
 
 Different 3rd party RPC providers can vary significantly in their reliability and speed. For example, some providers have trouble with large historical queries.
 
-Operations in `ctc` that fetch external data are usually bottlenecked by the RPC provider, specifically the latency to the RPC provider. This latency can be reduced by running ctc as closely as possible to the archive node:
+Operations in `ctc` that fetch external data are usually bottlenecked by the RPC provider, specifically the latency to the RPC provider. This latency can be reduced by running `ctc` as closely as possible to the archive node:
 - Fastest = running ctc on the same server that is running the archive node
 - Fast = running ctc on the same local network as the archive node
 - Slower = running ctc in the same geographic region as the archive node
@@ -21,11 +21,11 @@ Operations in `ctc` that fetch external data are usually bottlenecked by the RPC
 
 If using a 3rd party RPC provider, you should inquire about where their nodes are located and plan accordingly.
 
-`ctc`'s default configuration assumes that the user is querying an rpc node on a remote network. This leads `ctc` to locally store lots of the data that it retrieves. However, it's possible that in heavily optimized setups (such as running `ctc` on the same server as an archive node) that a different set of tradeoffs would be prefered compared to the default. Cache settings are altered using `ctc setup` on the command line.
+`ctc`'s default configuration assumes that the user is querying an RPC node on a remote network. This leads `ctc` to locally store lots of the data that it retrieves. However, it's possible that different tradeoffs are relevant in heavily optimized setups. For example if `ctc` is run on the same server as an archive node, then some caches might hurt more than they help. Cache settings are altered using `ctc setup` on the command line.
 
 ### Python Versions
 
-More recent versions of python are generally faster. Upgrading to the latest python version is one of the easiest ways to improve code performance. In particular, the upcoming python 3.11 has much faster startup times and it shows improvement across many benchmarks. This makes `ctc`'s cli commands feel especially quick and responsive.
+More recent versions of python are generally faster. Upgrading to the latest python version is one of the easiest ways to improve code performance. In particular, the upcoming python 3.11 has much faster startup times and shows improvement across many benchmarks. This makes `ctc`'s cli commands feel especially quick and responsive.
 
 ### Python Packages
 
@@ -35,7 +35,7 @@ By default, `ctc` tries to minimize its dependencies and minimize the number of 
 pip install checkthechain[performance]
 ```
 
-If `ctc` detects that these performance packages are installed, it will use those instead of the default packages. This can produce a modest performance increase for some workloads.
+If `ctc` detects that these additional performance packages are installed, it will use those instead of the default packages. This can produce a modest performance increase for some workloads.
 
 ### Data Storage
 
@@ -58,6 +58,7 @@ async def create_data_payload(timestamps):
     ]
 
 
+# create an on-disk cache entry for each timestamp
 @toolcache.cache('disk')
 async def compute_timestamp_stats(timestamp):
     super_expensive_operation()
@@ -65,7 +66,7 @@ async def compute_timestamp_stats(timestamp):
 
 ### Logging
 
-Logging of RPC requests and SQL queries takes up a non-zero amount time. If you don't need logging, disabling it can squeeze out a bit of extra performance. This can be done by running the setup wizard `ctc setup`.
+Logging of RPC requests and SQL queries takes up a non-zero amount of resources. If you don't need logging, disabling it can squeeze out a bit of extra performance. This can be done by running the setup wizard `ctc setup`.
 
 ## Benchmarking Performance
 
@@ -81,5 +82,5 @@ Benchmarking speed of python code snippets is slightly more complicated but also
 
 ### Measuring Storage Usage
 
-It is also valuable to measure `ctc`'s storage usage to check whether it falls into an acceptable range for a given hardware setup. Storage usage in the `ctc` data folder can be found by running a storage profiling command like `du -h` or `dust`. Storage usage in databases can be found by running `ctc db storage`.
+It is also valuable to measure `ctc`'s storage usage to check whether it falls into an acceptable range for a given hardware setup. Storage usage in the `ctc` data folder can be found by running a storage profiling command like `du -h` or [`dust`](https://github.com/bootandy/dust). Storage usage in databases can be found by running `ctc db storage`.
 

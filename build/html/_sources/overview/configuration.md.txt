@@ -9,12 +9,13 @@ Run `ctc setup` on the command line to create the config. Run it again to edit t
 
 ## Config Parameters
 
-The `ctc` config consists of the following key-value pairs:
+The `ctc` config consists of key-value pairs. Keys include:
 - **`config_spec_version`**: the `ctc` version used to create the config
 - **`data_dir`**: the directory where `ctc` stores its data
 - **`providers`**: metadata about RPC providers
 - **`networks`**: metadata about custom networks including their names and `chain_id`'s
 - **`network_defaults`**: specification of the default provider to use for each network, and the default network
+- **`db_configs`**: database configuration information
 
 The main parameters of interest will usually be `providers` and `network defaults`.
 

@@ -109,13 +109,14 @@
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses a simple configuration file to control its behavior.</p>
 <div class="section" id="config-parameters">
 <h2>Config Parameters<a class="headerlink" href="#config-parameters" title="Permalink to this headline"></a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config consists of the following key-value pairs:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config consists of key-value pairs. Keys include:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">config_spec_version</span></code></strong>: the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> version used to create the config</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">data_dir</span></code></strong>: the directory where <code class="docutils literal notranslate"><span class="pre">ctc</span></code> stores its data</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">providers</span></code></strong>: metadata about RPC providers</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">networks</span></code></strong>: metadata about custom networks including their names and <code class="docutils literal notranslate"><span class="pre">chain_id</span></code>’s</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">network_defaults</span></code></strong>: specification of the default provider to use for each network, and the default network</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">db_configs</span></code></strong>: database configuration information</p></li>
 </ul>
 <p>The main parameters of interest will usually be <code class="docutils literal notranslate"><span class="pre">providers</span></code> and <code class="docutils literal notranslate"><span class="pre">network</span> <span class="pre">defaults</span></code>.</p>
 <p>An exact specification for the config can be found in <a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/spec/typedefs/config_types.py">the config typedefs</a> file.</p>

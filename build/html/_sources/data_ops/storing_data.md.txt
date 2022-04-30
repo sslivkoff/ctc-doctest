@@ -1,20 +1,20 @@
 
 # Storing Data
 
-`ctc` places much of the data that it retreives into local storage.  This significantly improves the speed at which this data can be retrieved in the future. It also reduces the future load on those RPC nodes.
+`ctc` places much of the data that it retreives into local storage.  This significantly improves the speed at which this data can be retrieved in the future and it also reduces the future load on those data sources.
 
-The model assumes that data is being queried from a remote RPC node. Some ultra performance-minded setups, such as running `ctc` on the same server as an archive node, might achieve better tradeoffs between speed and storage space by tweaking `ctc`'s local storage features.
+The default configuration assumes that most data is being queried from a remote RPC node. Some performance-minded setups, such as running `ctc` on the same server as an archive node, might achieve better tradeoffs between speed and storage space by tweaking `ctc`'s local storage features.
 
 
 ## Data Storage Backends
 
-`ctc` uses two main backends for storing data.
+`ctc` uses two main storage backends.
 
 ### Filesystem
 
-`ctc` uses a data directory on the filesystem to store many types of chain data.
+`ctc` stores lots of data on the filesystem.
 
-By default, `ctc` will place this folder in the user's home directory at `~/.ctc`. This is suitable for many setups. However, there are situations where it would be better to store data somewhere else, such as if the home directory is on a drive of limited size, or it the home directory is on a network drive with significant latency. The data directory can be moved by running the setup wizard `ctc setup`.
+By default, `ctc` will place its data folder in the user's home directory at `~/.ctc`. This is suitable for many setups. However, there are situations where it would be better to store data somewhere else, such as if the home directory is on a drive of limited size, or it the home directory is on a network drive with significant latency. The data directory can be moved by running the setup wizard `ctc setup`.
 
 
 ### SQL Databases

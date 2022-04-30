@@ -102,15 +102,15 @@
              
   <div class="section" id="storing-data">
 <h1>Storing Data<a class="headerlink" href="#storing-data" title="Permalink to this headline"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> places much of the data that it retreives into local storage.  This significantly improves the speed at which this data can be retrieved in the future. It also reduces the future load on those RPC nodes.</p>
-<p>The model assumes that data is being queried from a remote RPC node. Some ultra performance-minded setups, such as running <code class="docutils literal notranslate"><span class="pre">ctc</span></code> on the same server as an archive node, might achieve better tradeoffs between speed and storage space by tweaking <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s local storage features.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> places much of the data that it retreives into local storage.  This significantly improves the speed at which this data can be retrieved in the future and it also reduces the future load on those data sources.</p>
+<p>The default configuration assumes that most data is being queried from a remote RPC node. Some performance-minded setups, such as running <code class="docutils literal notranslate"><span class="pre">ctc</span></code> on the same server as an archive node, might achieve better tradeoffs between speed and storage space by tweaking <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s local storage features.</p>
 <div class="section" id="data-storage-backends">
 <h2>Data Storage Backends<a class="headerlink" href="#data-storage-backends" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses two main backends for storing data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses two main storage backends.</p>
 <div class="section" id="filesystem">
 <h3>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses a data directory on the filesystem to store many types of chain data.</p>
-<p>By default, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> will place this folder in the user’s home directory at <code class="docutils literal notranslate"><span class="pre">~/.ctc</span></code>. This is suitable for many setups. However, there are situations where it would be better to store data somewhere else, such as if the home directory is on a drive of limited size, or it the home directory is on a network drive with significant latency. The data directory can be moved by running the setup wizard <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> stores lots of data on the filesystem.</p>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> will place its data folder in the user’s home directory at <code class="docutils literal notranslate"><span class="pre">~/.ctc</span></code>. This is suitable for many setups. However, there are situations where it would be better to store data somewhere else, such as if the home directory is on a drive of limited size, or it the home directory is on a network drive with significant latency. The data directory can be moved by running the setup wizard <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code>.</p>
 </div>
 <div class="section" id="sql-databases">
 <h3>SQL Databases<a class="headerlink" href="#sql-databases" title="Permalink to this headline"></a></h3>

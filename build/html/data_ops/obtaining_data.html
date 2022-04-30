@@ -102,16 +102,16 @@
              
   <div class="section" id="obtaining-data">
 <h1>Obtaining Data<a class="headerlink" href="#obtaining-data" title="Permalink to this headline"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects data from a variety of sources, including RPC nodes, metadata databases, block explorers, and crypto data aggregators. After initial collection, much of this data is then <a class="reference internal" href="storing_data.html"><span class="doc std std-doc">stored</span></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects data from a variety of sources, including RPC nodes, metadata databases, block explorers, and market data aggregators. After initial collection, much of this data is then <a class="reference internal" href="storing_data.html"><span class="doc std std-doc">stored</span></a>.</p>
 <div class="section" id="sources-of-historical-data">
 <h2>Sources of Historical Data<a class="headerlink" href="#sources-of-historical-data" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects the majority of its data through RPC nodes using the EVM’s <a class="reference external" href="https://eth.wiki/json-rpc/API">standard JSON-RPC interface</a>. Collection of historical data (as opposed to recent chain data) requires use of an archive node.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects the majority of its data from RPC nodes using the EVM’s <a class="reference external" href="https://eth.wiki/json-rpc/API">standard JSON-RPC interface</a>. Collection of historical data (as opposed to recent chain data) requires use of an archive node.</p>
 <p>There are 3 main ways to gain access to an RPC node:</p>
 <ol class="arabic simple">
-<li><p><strong>Run your own node</strong> Although this requires more time, effort, and hardware than the other methods, it often leads to the best results. <a class="reference external" href="https://github.com/ledgerwatch/erigon">Erigon</a> is the most optimized client for running an archive node.</p></li>
-<li><p><strong>Use a 3rd-party private endpoint</strong> Private RPC providers (e.g. <a class="reference external" href="https://www.alchemy.com/">Alchemy</a>, <a class="reference external" href="https://www.quicknode.com/">Quicknode</a>, or <a class="reference external" href="https://moralis.io/speedy-nodes/">Moralis</a>)
+<li><p><strong>Run your own node:</strong> Although this requires more time, effort, and upfront cost than the other methods, it often leads to the best results. <a class="reference external" href="https://github.com/ledgerwatch/erigon">Erigon</a> is the most optimized client for running an archive node.</p></li>
+<li><p><strong>Use a 3rd-party private endpoint:</strong> Private RPC providers (e.g. <a class="reference external" href="https://www.alchemy.com/">Alchemy</a>, <a class="reference external" href="https://www.quicknode.com/">Quicknode</a>, or <a class="reference external" href="https://moralis.io/speedy-nodes/">Moralis</a>)
 provide access to archive nodes, either through paid plans or sometimes even through free plans.</p></li>
-<li><p><strong>Use a 3rd-party public endpoint</strong> You can query data from public endpoints like Infura. This approach is not recommended for any significant data workloads, as it often suffers from rate-limiting and poor historical data availability.</p></li>
+<li><p><strong>Use a 3rd-party public endpoint:</strong> You can query data from public endpoints like Infura. This approach is not recommended for any significant data workloads, as it often suffers from rate-limiting and poor historical data availability.</p></li>
 </ol>
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s RPC config is created and modified by running the <a class="reference internal" href="../overview/configuration.html"><span class="doc std std-doc">setup wizard</span></a>.</p>
 </div>
