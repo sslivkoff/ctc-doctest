@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cg &mdash; Check the Chain (ctc)  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="chainlink" href="chainlink.html" />
+    <link rel="prev" title="aave addresses" href="aave_addresses.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Check the Chain (ctc)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/faq.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/obtaining_data.html">Obtaining Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/storing_data.html">Storing Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/performance.html">Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/monitoring.html">Monitoring</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Command Line Interface</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../basic_usage.html">Basic Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../subcommands.html">Subcommands</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admin.html">Admin Subcommands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compute.html">Compute Subcommands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html">Data Subcommands</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../protocol.html">Protocol Subcommands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="4byte.html">4byte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4byte_build.html">4byte build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aave.html">aave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aave_addresses.html">aave addresses</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chainlink.html">chainlink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chainlink_ls.html">chainlink ls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="curve_pools.html">curve pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ens.html">ens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ens_exists.html">ens exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ens_hash.html">ens hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ens_owner.html">ens owner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ens_records.html">ens records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ens_resolve.html">ens resolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ens_reverse.html">ens reverse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="etherscan.html">etherscan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_analytics.html">fei analytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_depth.html">fei depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_dex.html">fei dex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_pcv.html">fei pcv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_pcv_assets.html">fei pcv assets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_pcv_deposits.html">fei pcv deposits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_psms.html">fei psms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gnosis.html">gnosis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama.html">llama</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_chain.html">llama chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_chains.html">llama chains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_pool.html">llama pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_pools.html">llama pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_protocol.html">llama protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_protocols.html">llama protocols</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rari.html">rari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rari_pools.html">rari pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uniswap_burns.html">uniswap burns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uniswap_chart.html">uniswap chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uniswap_mints.html">uniswap mints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uniswap_pool.html">uniswap pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uniswap_swaps.html">uniswap swaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="yearn.html">yearn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="yearn_addresses.html">yearn addresses</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html">Other Subcommands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful_aliases.html">Useful Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../similar_tools.html">Similar CLI tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/rpc_client.html">RPC Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/async_code.html">Asynchronous Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/datatypes.html">Datatypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/specific_protocols.html">Specific Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/similar_tools.html">Similar Python Tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../case_studies/under_construction.html">[Under Construction]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Check the Chain (ctc)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../subcommands.html">Subcommands</a> &raquo;</li>
+          <li><a href="../protocol.html">Protocol Subcommands</a> &raquo;</li>
+      <li>cg</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/cli/subcommands/protocol/cg.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="cg">
+<h1>cg<a class="headerlink" href="#cg" title="Permalink to this headline"></a></h1>
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc cg TOKENS [options]</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    output coingecko market data</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc cg </span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc cg CRV -t 100d</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc cg ETH / BTC</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc cg LINK / ETH -t 24h</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc cg --update</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">TOKENS</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">token to display information of</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-t, --time TIME</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">time of chart (e.g. 7d, 1y, max)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-n N</span>               <span style="color: #b9f29f; text-decoration-color: #b9f29f">number of entries to include in output</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose, -v</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">include extra data</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--height HEIGHT</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">height, number of rows per asset</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--width WIDTH</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">width of sparklines</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--update</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">update stored coingecko token db</span>
+</pre></div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aave_addresses.html" class="btn btn-neutral float-left" title="aave addresses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chainlink.html" class="btn btn-neutral float-right" title="chainlink" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

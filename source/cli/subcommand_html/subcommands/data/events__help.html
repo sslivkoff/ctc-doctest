@@ -6,14 +6,17 @@
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc events 0x956f47f50a910163d8bf957cf5846d573e7f87ca Transfer</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc events 0x956f47f50a910163d8bf957cf5846d573e7f87ca Transfer --blocks </span>
-<span style="color: #64aaaa; text-decoration-color: #64aaaa">[14000000, 14100000]</span>
+
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc events 0x956f47f50a910163d8bf957cf5846d573e7f87ca Transfer --blocks 14000000:14010000</span>
+
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc events 0x956f47f50a910163d8bf957cf5846d573e7f87ca Transfer --blocks 14000000:14010000 --include-timestamps</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">CONTRACT</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">contract address of event</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">EVENT</span>              <span style="color: #b9f29f; text-decoration-color: #b9f29f">event name or event hash</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks BLOCKS</span>    
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--output OUTPUT</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">display more event data</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">CONTRACT</span>                <span style="color: #b9f29f; text-decoration-color: #b9f29f">contract address of event</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">EVENT</span>                   <span style="color: #b9f29f; text-decoration-color: #b9f29f">event name or event hash</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks BLOCKS</span>         <span style="color: #b9f29f; text-decoration-color: #b9f29f">block range</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--include-timestamps</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">include timestamps</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--export EXPORT</span>         <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose, -v</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">display more event data</span>
 </pre>

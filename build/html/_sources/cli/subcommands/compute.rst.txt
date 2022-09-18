@@ -15,9 +15,16 @@ Compute Subcommands
 
    ./compute/ascii
    ./compute/checksum
+   ./compute/create_address
    ./compute/decode
+   ./compute/decode_call
+   ./compute/encode
    ./compute/hex
+   ./compute/int
    ./compute/keccak
+   ./compute/limits
    ./compute/lower
+   ./compute/rlp_encode
+   ./compute/selector
 
 

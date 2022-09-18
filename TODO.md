@@ -1,4 +1,25 @@
 
+## TODO
+
+- get a doc generation run working
+- do a high level overview of what highlevel org changes should happen
+    - make a list, add to todo
+- do a readthrough of all copy, see what needs to change
+    - make a list, add to todo
+- add to the docs readme for steps of how to develop and build the docs
+- fix help urls in ctc -h
+
+
+## Done
+
+
+
+
+
+
+## TODO After 0.3.0
+
+
 ## Rough Plan
 - go through old notes on meeting with rari where talked about ctc on high level
 - look at docs of other projects for inspiration

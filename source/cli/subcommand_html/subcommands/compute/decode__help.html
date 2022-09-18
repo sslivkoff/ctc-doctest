@@ -1,14 +1,28 @@
 <pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode ARGS [options]</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode TYPE DATA</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    decode EVM call data</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    decode encoded EVM datatypes</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    syntax is one of</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc CALL_DATA</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc CONTRACT_ADDRESS CALL_DATA</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    for simple datatypes, no quotes required</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    for nested datatypes, enclose in quotes and quote contained addresses</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode address 0x0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode &quot;(int64,int64,int64)&quot; 0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ARGS</span>        
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--nested</span>    
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">TYPE</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">type of data to decode</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">DATA</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">data to decode</span>
+
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage of subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode</span> <span style="color: #b9f29f; text-decoration-color: #b9f29f">can also be used to invoke subcommands</span>
+
+    <span style="color: #b9f29f; text-decoration-color: #b9f29f">to view help about a specific subcommand, run:</span>
+        <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode &lt;subcommand&gt; -h</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">available subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">call</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">decode EVM call data</span>
 </pre>

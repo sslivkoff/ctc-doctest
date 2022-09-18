@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="calls" href="calls.html" />
-    <link rel="prev" title="blocks" href="blocks.html" /> 
+    <link rel="next" title="call all" href="call_all.html" />
+    <link rel="prev" title="bytecode" href="bytecode.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -63,24 +63,35 @@
 <li class="toctree-l2"><a class="reference internal" href="../compute.html">Compute Subcommands</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../data.html">Data Subcommands</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="abi.html">abi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abi_diff.html">abi diff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="address.html">address</a></li>
-<li class="toctree-l3"><a class="reference internal" href="address_transactions.html">address transactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="address_txs.html">address txs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="block.html">block</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blocks.html">blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bytecode.html">bytecode</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call_all.html">call all</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calls.html">calls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="db_connect.html">db connect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="db_create_tables.html">db create tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chain.html">chain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="decompile.html">decompile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_chart.html">dex chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_pool.html">dex pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_pools.html">dex pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_trades.html">dex trades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erc20.html">erc20</a></li>
 <li class="toctree-l3"><a class="reference internal" href="erc20_balance.html">erc20 balance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="erc20_balances.html">erc20 balances</a></li>
 <li class="toctree-l3"><a class="reference internal" href="erc20_transfers.html">erc20 transfers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eth_balance.html">eth balance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eth_balances.html">eth balances</a></li>
 <li class="toctree-l3"><a class="reference internal" href="events.html">events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="find.html">find</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gas.html">gas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="transaction.html">transaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proxy.html">proxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proxy_register.html">proxy register</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="symbol.html">symbol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timestamp.html">timestamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tx.html">tx</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../protocol.html">Protocol Subcommands</a></li>
@@ -98,10 +109,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../python/datatypes.html">Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/similar_tools.html">Similar Python Tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../case_studies/under_construction.html">[Under Construction]</a></li>
 </ul>
 
         </div>
@@ -133,29 +140,41 @@
   <div class="section" id="call">
 <h1>call<a class="headerlink" href="#call" title="Permalink to this headline"></a></h1>
 <pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call ADDRESS FUNCTION_NAME ARGS [options]</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call ADDRESS FUNCTION ARGS [options]</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    output result of a call</span>
 
-<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">example:</span>
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call 0x956f47f50a910163d8bf957cf5846d573e7f87ca totalSupply</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call 0x956f47f50a910163d8bf957cf5846d573e7f87ca 0x18160ddd</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call 0x956f47f50a910163d8bf957cf5846d573e7f87ca &#x27;{&quot;name&quot;: &quot;totalSupply&quot;, &quot;inputs&quot;: [], &quot;outputs&quot;: [{&quot;type&quot;: &quot;uint256&quot;}]}&#x27;</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ADDRESS</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">address to point call toward</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">FUNCTION_NAME</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">name of function to call</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">FUNCTION</span>         <span style="color: #b9f29f; text-decoration-color: #b9f29f">function name, 4byte selector, or ABI</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ARGS</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">function arguments</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--quiet</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">hide summary and only output function result</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose, -v</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">show summary</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--from FROM</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">address where call should come from</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--block BLOCK</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">block number for call</span>
+
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage of subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call</span> <span style="color: #b9f29f; text-decoration-color: #b9f29f">can also be used to invoke subcommands</span>
+
+    <span style="color: #b9f29f; text-decoration-color: #b9f29f">to view help about a specific subcommand, run:</span>
+        <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call &lt;subcommand&gt; -h</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">available subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">all</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">display outputs of all contract&#x27;s read-only functions</span>
 </pre></div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="blocks.html" class="btn btn-neutral float-left" title="blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="calls.html" class="btn btn-neutral float-right" title="calls" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bytecode.html" class="btn btn-neutral float-left" title="bytecode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="call_all.html" class="btn btn-neutral float-right" title="call all" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

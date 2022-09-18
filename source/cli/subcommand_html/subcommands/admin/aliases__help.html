@@ -1,0 +1,37 @@
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc aliases  [options]</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    view and manage ctc shell aliases</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    these aliases allow you to call ctc subcommands without typing the &quot;ctc&quot; part</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        for example, you can type </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">4byte 0xa9059cbb</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> instead of </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc 4byte 0xa9059cbb</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    these aliases must go in your shell config file</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        this can be done using one of the following methods:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        1. use </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc aliases --append</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> to append to autodetected config files</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        2. use </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc aliases &gt;&gt; CONFIG_PATH</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> to append the aliases to config file</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        3. manually paste the aliases into your config file</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        the path to your terminal file depends on shell:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        - bash: </span><span style="color: #8be9fd; text-decoration-color: #8be9fd">~/.profile</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> or </span><span style="color: #8be9fd; text-decoration-color: #8be9fd">~/.bashrc</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        - zsh: </span><span style="color: #8be9fd; text-decoration-color: #8be9fd">~/.zshrc</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        - fish: </span><span style="color: #8be9fd; text-decoration-color: #8be9fd">~/.config/fish/config.fish</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    to learn more about the underlying commands, run </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc help</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    depending on preference, can use all aliases or just a subset of them</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc aliases </span>
+
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc aliases --raw</span>
+
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc aliases --install</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--raw</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">output aliases as raw script file</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--install</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">install/upgrade aliases in shell config (will ask for confirmation)</span>
+</pre>

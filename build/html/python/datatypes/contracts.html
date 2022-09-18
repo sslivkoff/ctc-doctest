@@ -82,10 +82,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../similar_tools.html">Similar Python Tools</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../case_studies/under_construction.html">[Under Construction]</a></li>
-</ul>
 
         </div>
       </div>
@@ -14777,22 +14773,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_contract_creation_block">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_contract_creation_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">search_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_contract_creation_block" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_contract_creation_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">search_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_contract_creation_block" title="Permalink to this definition"></a></dt>
 <dd><p>get block number of when contract was created</p>
 <ul class="simple">
 <li><p>caches result in local database</p></li>
 <li><p>behavior is undefined for functions that have undergone SELF-DESTRUCT(S)</p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>contract_address</strong> (<em>Address</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
-<li><p><strong>search_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int | None</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int | None</p>
 </dd>
 </dl>
 </dd></dl>

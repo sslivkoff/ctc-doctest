@@ -14,23 +14,34 @@ Data Subcommands
    :hidden:
 
    ./data/abi
+   ./data/abi_diff
    ./data/address
-   ./data/address_transactions
+   ./data/address_txs
    ./data/block
    ./data/blocks
+   ./data/bytecode
    ./data/call
+   ./data/call_all
    ./data/calls
-   ./data/db_connect
-   ./data/db_create_tables
+   ./data/chain
    ./data/decompile
+   ./data/dex_chart
+   ./data/dex_pool
+   ./data/dex_pools
+   ./data/dex_trades
+   ./data/erc20
    ./data/erc20_balance
    ./data/erc20_balances
    ./data/erc20_transfers
    ./data/eth_balance
    ./data/eth_balances
    ./data/events
-   ./data/find
    ./data/gas
-   ./data/transaction
+   ./data/proxy
+   ./data/proxy_register
+   ./data/storage
+   ./data/symbol
+   ./data/timestamp
+   ./data/tx
 
 

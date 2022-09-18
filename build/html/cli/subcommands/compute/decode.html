@@ -21,8 +21,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="hex" href="hex.html" />
-    <link rel="prev" title="checksum" href="checksum.html" /> 
+    <link rel="next" title="decode call" href="decode_call.html" />
+    <link rel="prev" title="create address" href="create_address.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -63,10 +63,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../compute.html">Compute Subcommands</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ascii.html">ascii</a></li>
 <li class="toctree-l3"><a class="reference internal" href="checksum.html">checksum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="create_address.html">create address</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">decode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="decode_call.html">decode call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encode.html">encode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hex.html">hex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="int.html">int</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keccak.html">keccak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limits.html">limits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lower.html">lower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rlp_encode.html">rlp encode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selector.html">selector</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Data Subcommands</a></li>
@@ -85,10 +92,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../python/datatypes.html">Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/similar_tools.html">Similar Python Tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../case_studies/under_construction.html">[Under Construction]</a></li>
 </ul>
 
         </div>
@@ -120,26 +123,40 @@
   <div class="section" id="decode">
 <h1>decode<a class="headerlink" href="#decode" title="Permalink to this headline"></a></h1>
 <pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode ARGS [options]</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode TYPE DATA</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    decode EVM call data</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    decode encoded EVM datatypes</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    syntax is one of</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc CALL_DATA</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc CONTRACT_ADDRESS CALL_DATA</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    for simple datatypes, no quotes required</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    for nested datatypes, enclose in quotes and quote contained addresses</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode address 0x0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode &quot;(int64,int64,int64)&quot; 0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ARGS</span>        
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--nested</span>    
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">TYPE</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">type of data to decode</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">DATA</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">data to decode</span>
+
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage of subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode</span> <span style="color: #b9f29f; text-decoration-color: #b9f29f">can also be used to invoke subcommands</span>
+
+    <span style="color: #b9f29f; text-decoration-color: #b9f29f">to view help about a specific subcommand, run:</span>
+        <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc decode &lt;subcommand&gt; -h</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">available subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">call</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">decode EVM call data</span>
 </pre></div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="checksum.html" class="btn btn-neutral float-left" title="checksum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="hex.html" class="btn btn-neutral float-right" title="hex" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="create_address.html" class="btn btn-neutral float-left" title="create address" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="decode_call.html" class="btn btn-neutral float-right" title="decode call" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

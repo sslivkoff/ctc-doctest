@@ -1,17 +1,29 @@
 <pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call ADDRESS FUNCTION_NAME ARGS [options]</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call ADDRESS FUNCTION ARGS [options]</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    output result of a call</span>
 
-<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">example:</span>
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call 0x956f47f50a910163d8bf957cf5846d573e7f87ca totalSupply</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call 0x956f47f50a910163d8bf957cf5846d573e7f87ca 0x18160ddd</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call 0x956f47f50a910163d8bf957cf5846d573e7f87ca &#x27;{&quot;name&quot;: &quot;totalSupply&quot;, &quot;inputs&quot;: [], &quot;outputs&quot;: [{&quot;type&quot;: &quot;uint256&quot;}]}&#x27;</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ADDRESS</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">address to point call toward</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">FUNCTION_NAME</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">name of function to call</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">FUNCTION</span>         <span style="color: #b9f29f; text-decoration-color: #b9f29f">function name, 4byte selector, or ABI</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ARGS</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">function arguments</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--quiet</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">hide summary and only output function result</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose, -v</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">show summary</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--from FROM</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">address where call should come from</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--block BLOCK</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">block number for call</span>
+
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage of subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call</span> <span style="color: #b9f29f; text-decoration-color: #b9f29f">can also be used to invoke subcommands</span>
+
+    <span style="color: #b9f29f; text-decoration-color: #b9f29f">to view help about a specific subcommand, run:</span>
+        <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc call &lt;subcommand&gt; -h</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">available subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">all</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">display outputs of all contract&#x27;s read-only functions</span>
 </pre>

@@ -15,7 +15,8 @@ Protocol Subcommands
 
    ./protocol/4byte
    ./protocol/4byte_build
-   ./protocol/4byte_path
+   ./protocol/aave
+   ./protocol/aave_addresses
    ./protocol/cg
    ./protocol/chainlink
    ./protocol/chainlink_ls
@@ -27,11 +28,22 @@ Protocol Subcommands
    ./protocol/ens_records
    ./protocol/ens_resolve
    ./protocol/ens_reverse
+   ./protocol/etherscan
    ./protocol/fei_analytics
    ./protocol/fei_depth
+   ./protocol/fei_dex
    ./protocol/fei_pcv
    ./protocol/fei_pcv_assets
    ./protocol/fei_pcv_deposits
+   ./protocol/fei_psms
+   ./protocol/gnosis
+   ./protocol/llama
+   ./protocol/llama_chain
+   ./protocol/llama_chains
+   ./protocol/llama_pool
+   ./protocol/llama_pools
+   ./protocol/llama_protocol
+   ./protocol/llama_protocols
    ./protocol/rari
    ./protocol/rari_pools
    ./protocol/uniswap_burns
@@ -39,5 +51,7 @@ Protocol Subcommands
    ./protocol/uniswap_mints
    ./protocol/uniswap_pool
    ./protocol/uniswap_swaps
+   ./protocol/yearn
+   ./protocol/yearn_addresses
 
 

@@ -84,10 +84,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../similar_tools.html">Similar Python Tools</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../case_studies/under_construction.html">[Under Construction]</a></li>
-</ul>
 
         </div>
       </div>
@@ -15422,139 +15418,80 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_address">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vault</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_address" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_address" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_id</strong> (<em>str</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>vault</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Address</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spec.Address</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_balances">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_balances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vault</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_balances" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_balances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vault</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_balances" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>pool_id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>vault</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[dict[str, int], dict[str, float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Union</em>[dict[spec.Address, int], dict[spec.Address, float]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_fees">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_fees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_fees" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_fees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_fees" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[int, float]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_id">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_id" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_id" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>Address</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_swaps">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_swaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vault</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_swaps" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_swaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_timestamps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_swaps" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>vault</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Any</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spec.DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_tokens">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vault</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_tokens" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_tokens" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>pool_id</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>vault</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[Address]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[spec.Address]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_weights">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_weights" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_weights" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[dict[str, int], dict[str, float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_get_pool_weights_by_block">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_weights_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_weights_by_block" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_weights_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_get_pool_weights_by_block" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>blocks</strong> (<em>Sequence</em><em>[</em><em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[dict[Union[SupportsRound, str, int, Literal[‘latest’], Literal[‘earliest’], Literal[‘pending’]], int], dict[Union[SupportsRound, str, int, Literal[‘latest’], Literal[‘earliest’], Literal[‘pending’]], float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsRound</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[‘latest’], <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[‘earliest’], <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[‘pending’]], <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsRound</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[‘latest’], <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[‘earliest’], <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[‘pending’]], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15563,14 +15500,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dt class="sig sig-object py" id="ctc.protocols.balancer_utils.async_summarize_pool_state">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.balancer_utils.</span></span><span class="sig-name descname"><span class="pre">async_summarize_pool_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.balancer_utils.async_summarize_pool_state" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘BalancerPoolState’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BalancerPoolState</span></code></p>
 </dd>
 </dl>
 </dd></dl>

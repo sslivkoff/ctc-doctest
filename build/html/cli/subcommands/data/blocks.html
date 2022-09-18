@@ -21,7 +21,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="call" href="call.html" />
+    <link rel="next" title="bytecode" href="bytecode.html" />
     <link rel="prev" title="block" href="block.html" /> 
 </head>
 
@@ -63,24 +63,35 @@
 <li class="toctree-l2"><a class="reference internal" href="../compute.html">Compute Subcommands</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../data.html">Data Subcommands</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="abi.html">abi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abi_diff.html">abi diff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="address.html">address</a></li>
-<li class="toctree-l3"><a class="reference internal" href="address_transactions.html">address transactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="address_txs.html">address txs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="block.html">block</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bytecode.html">bytecode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="call.html">call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call_all.html">call all</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calls.html">calls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="db_connect.html">db connect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="db_create_tables.html">db create tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chain.html">chain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="decompile.html">decompile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_chart.html">dex chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_pool.html">dex pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_pools.html">dex pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_trades.html">dex trades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erc20.html">erc20</a></li>
 <li class="toctree-l3"><a class="reference internal" href="erc20_balance.html">erc20 balance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="erc20_balances.html">erc20 balances</a></li>
 <li class="toctree-l3"><a class="reference internal" href="erc20_transfers.html">erc20 transfers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eth_balance.html">eth balance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eth_balances.html">eth balances</a></li>
 <li class="toctree-l3"><a class="reference internal" href="events.html">events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="find.html">find</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gas.html">gas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="transaction.html">transaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proxy.html">proxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proxy_register.html">proxy register</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="symbol.html">symbol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timestamp.html">timestamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tx.html">tx</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../protocol.html">Protocol Subcommands</a></li>
@@ -98,10 +109,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../python/datatypes.html">Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/similar_tools.html">Similar Python Tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../case_studies/under_construction.html">[Under Construction]</a></li>
 </ul>
 
         </div>
@@ -139,16 +146,23 @@
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    output information about blocks</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
-    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000100</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks [14000000, 14000100]</span>
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000010</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:14000010</span>
 
-    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000100</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks [14000000, 14000100] --attributes timestamp,number</span>
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 15000000, every 100000 blocks</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:15000000:100000</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 15000000, every 100000 blocks</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:15000000 -n 10</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000100, with specific attributes</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:14000100 --attributes timestamp,number</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">BLOCKS</span>                     <span style="color: #b9f29f; text-decoration-color: #b9f29f">block range to fetch</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-n N</span>                       <span style="color: #b9f29f; text-decoration-color: #b9f29f">number of blocks in block slice</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--attributes ATTRIBUTES</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">attributes to fetch from each block</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--output OUTPUT</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--export EXPORT</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>                <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--provider PROVIDER</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">rpc provider to use</span>
 </pre></div>
@@ -158,7 +172,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="block.html" class="btn btn-neutral float-left" title="block" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="call.html" class="btn btn-neutral float-right" title="call" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bytecode.html" class="btn btn-neutral float-right" title="bytecode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

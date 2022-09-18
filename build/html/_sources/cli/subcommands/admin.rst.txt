@@ -13,11 +13,11 @@ Admin Subcommands
    :maxdepth: 2
    :hidden:
 
+   ./admin/aliases
+   ./admin/chains
    ./admin/config
-   ./admin/config_path
-   ./admin/download-proxy-abi
+   ./admin/db
    ./admin/log
-   ./admin/rechunk-events
    ./admin/setup
 
 

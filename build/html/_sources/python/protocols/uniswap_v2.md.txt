@@ -19,8 +19,5 @@
 .. autofunction:: ctc.protocols.uniswap_v2_utils.async_get_pool_swaps
 .. autofunction:: ctc.protocols.uniswap_v2_utils.async_get_pool_symbols
 .. autofunction:: ctc.protocols.uniswap_v2_utils.async_get_pool_tokens
-.. autofunction:: ctc.toolbox.amm_utils.cpmm.print_pool_summary
-.. autofunction:: ctc.toolbox.amm_utils.cpmm.print_trade_summary
-.. autofunction:: ctc.toolbox.amm_utils.cpmm.trade
 ```
 

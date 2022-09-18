@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check the Chain (ctc) &mdash; Check the Chain (ctc)  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="overview/installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Check the Chain (ctc)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The Basics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/faq.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_ops/obtaining_data.html">Obtaining Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_ops/storing_data.html">Storing Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_ops/performance.html">Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_ops/monitoring.html">Monitoring</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Command Line Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/basic_usage.html">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli/subcommands.html">Subcommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli/useful_aliases.html">Useful Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli/similar_tools.html">Similar CLI tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/rpc_client.html">RPC Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/async_code.html">Asynchronous Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/datatypes.html">Datatypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/specific_protocols.html">Specific Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/similar_tools.html">Similar Python Tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="case_studies/under_construction.html">[Under Construction]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Check the Chain (ctc)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Check the Chain (<code class="code docutils literal notranslate"><span class="pre">ctc</span></code>)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="code docutils literal notranslate"><span class="pre">ctc</span></code> is in beta, please report bugs to <a class="reference external" href="https://github.com/fei-protocol/checkthechain/issues">the issue tracker</a></p>
+</div>
+<div class="section" id="check-the-chain-ctc">
+<h1>Check the Chain (<code class="code docutils literal notranslate"><span class="pre">ctc</span></code>)<a class="headerlink" href="#check-the-chain-ctc" title="Permalink to this headline"></a></h1>
+<p><code class="code docutils literal notranslate"><span class="pre">ctc</span></code> is a tool for historical data analysis of Ethereum and other EVM chains</p>
+<p>It can be used as either 1) a cli tool or 2) a python package</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline"></a></h2>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><strong>data collection</strong>: collects data from archive nodes robustly and efficiently</p></li>
+<li><p><strong>data storage</strong>: stores collected data on disk so that it only needs to be collected once</p></li>
+<li><p><strong>data coding</strong>: handles data encoding and decoding automatically by default</p></li>
+<li><p><strong>data analysis</strong>: computes derived metrics and other quantitative data summaries</p></li>
+<li><p><strong>data visualization</strong>: plots data to maximize data interpretability and sharing</p></li>
+<li><p><strong>protocol specificity</strong>: includes functionality for protocols like Chainlink and Uniswap</p></li>
+<li><p><strong>command line interface</strong>: performs many block explorer tasks in the terminal</p></li>
+</ul>
+</td></tr></table>
+</div>
+<div class="section" id="guide">
+<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>To install <code class="docutils literal notranslate"><span class="pre">ctc</span></code>, see <a class="reference external" href="overview/installation.html">Installation</a>.</p></li>
+<li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> from the command line, see <a class="reference external" href="cli/basic_usage.html">Command Line Interface</a>.</p></li>
+<li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> in python, see <a class="reference external" href="python/code_tour.html">Python Interface</a>.</p></li>
+<li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> with specific protocols like Uniswap or Chainlink, see the <a class="reference external" href="cli/subcommands/protocol.html">Specific Protocols (cli)</a> or <a class="reference external" href="python/specific_protocols.html">Specific Protocols (python)</a>.</p></li>
+<li><p>To see examples of what you can do with <code class="docutils literal notranslate"><span class="pre">ctc</span></code>, see <a class="reference external" href="case_studies/under_construction.html">Case Studies</a>.</p></li>
+<li><p>To view the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> source code, check out the <a class="reference external" href="https://github.com/fei-protocol/checkthechain">GitHub Repository</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="datatypes">
+<h2>Datatypes<a class="headerlink" href="#datatypes" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-center" style="width: 65%">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Datatype</p></th>
+<th class="head"><p>CLI</p></th>
+<th class="head"><p>Python</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ABIs</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/abi.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/abis.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary/abis">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Data</p></td>
+<td><p><a class="reference external" href="cli/subcommands/compute.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/binary_data.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Blocks</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/blocks.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/blocks.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/block_utils">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Contracts</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/address.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/contracts.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_creations.py">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Gas</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/gas.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/gas.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_gas.py">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ERC20s</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/erc20_balances.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/erc20s.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/erc20_utils">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>ETH Balances</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/eth_balances.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/eth_balances.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/eth_utils">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Events</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/events.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/events.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/event_utils">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Transactions</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/transaction.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/transactions.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/transaction_utils">Source</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="specific-protocols">
+<h2>Specific Protocols<a class="headerlink" href="#specific-protocols" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-center" style="width: 65%">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Protocol</p></th>
+<th class="head"><p>CLI</p></th>
+<th class="head"><p>Python</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aave V2</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference external" href="python/protocols/aave_v2.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/aave_v2_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Balancer</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference external" href="python/protocols/balancer.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/balancer_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Chainlink</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/chainlink.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/chainlink.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/chainlink_utils">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Compound</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference external" href="python/protocols/compound.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/compound_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Curve</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference external" href="python/protocols/curve.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/curve_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ENS</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/ens.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/ens.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/ens_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Fei</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/fei_pcv.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/fei.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fei_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Rari</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/rari.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/rari.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/rari_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Uniswap V2</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/uniswap_chart.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/uniswap_v2.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v2_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Uniswap V3</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/uniswap_chart.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/uniswap_v3.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v3_utils/">Source</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="external-data-sources">
+<h2>External Data Sources<a class="headerlink" href="#external-data-sources" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-center" style="width: 65%">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Source</p></th>
+<th class="head"><p>CLI</p></th>
+<th class="head"><p>Python</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>4byte</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/4byte.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/4byte.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fourbyte_utils">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CoinGecko</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/cg.html">CLI</a></p></td>
+<td><p>-</p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/cli/commands/data/cg_command.py">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Etherscan</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/abi_utils/abi_io/contract_abi_backends/etherscan_contract_abis.py">Source</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview/installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

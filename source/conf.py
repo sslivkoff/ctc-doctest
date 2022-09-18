@@ -14,12 +14,19 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# since cannot use TYPE_CHECKING=True, load type system
+# import typing
+# typing.TYPE_CHECKING = True
+# import ctc.spec.typedefs
+# for key, value in vars(ctc.spec.typedefs).items():
+#     setattr(ctc.spec, key, value)
+
 
 # -- Project information -----------------------------------------------------
 
 project = 'Check the Chain (ctc)'
-copyright = '2022, Fei Labs'
-author = 'Fei Labs'
+copyright = '2022'
+author = ''
 
 
 # -- General configuration ---------------------------------------------------
@@ -29,7 +36,7 @@ author = 'Fei Labs'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
+    # 'sphinx.ext.autosummary',
     'sphinx_autodoc_typehints',
     'myst_parser',
     # 'sphinx_rtd_dark_mode',  # for dark mode theme
@@ -37,11 +44,13 @@ extensions = [
     # 'nbsphinx'
 ]
 
-always_document_param_types = True
+# autodoc_typehints = "none"
+# always_document_param_types = True
+always_document_param_types = False
 typehints_fully_qualified = False
 
-from ctc.spec.formatting import typehints_formatter
-
+# from ctc.spec.formatting import typehints_formatter
+set_type_checking_flag = True
 
 # autodoc_type_aliases = True
 # autodoc_typehints = 'description'

@@ -15,11 +15,7 @@
 ```{eval-rst}
 
 .. autofunction:: ctc.evm.async_get_block_gas_stats
-.. autofunction:: ctc.evm.async_get_blocks_gas_stats
 .. autoclass:: ctc.evm.BlockGasStats
-   :members:
-   :undoc-members:
-.. autoclass:: ctc.evm.BlocksGasStats
    :members:
    :undoc-members:
 ```

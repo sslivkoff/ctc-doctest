@@ -82,10 +82,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../similar_tools.html">Similar Python Tools</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../case_studies/under_construction.html">[Under Construction]</a></li>
-</ul>
 
         </div>
       </div>
@@ -15288,255 +15284,58 @@ event_unindexed_types: [&#39;uint256&#39;]
 <div class="section" id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_event_hash">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_event_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_abi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_event_hash" title="Permalink to this definition"></a></dt>
-<dd><p>compute event hash from event’s abi</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>event_abi</strong> (<em>&lt;class 'EventABI'&gt;</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘str’&gt;</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_event_indexed_names">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_event_indexed_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_abi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_event_indexed_names" title="Permalink to this definition"></a></dt>
-<dd><p>get list of indexed names in signature of event</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>event_abi</strong> (<em>&lt;class 'EventABI'&gt;</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_event_indexed_types">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_event_indexed_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_abi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_event_indexed_types" title="Permalink to this definition"></a></dt>
-<dd><p>get list of indexed types in signature of event</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>event_abi</strong> (<em>&lt;class 'EventABI'&gt;</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_event_signature">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_event_signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_abi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_event_signature" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>event_abi</strong> (<em>&lt;class 'EventABI'&gt;</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘str’&gt;</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_event_unindexed_names">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_event_unindexed_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_abi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_event_unindexed_names" title="Permalink to this definition"></a></dt>
-<dd><p>get list of data names in signature of event</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>event_abi</strong> (<em>&lt;class 'EventABI'&gt;</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_event_unindexed_types">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_event_unindexed_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_abi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_event_unindexed_types" title="Permalink to this definition"></a></dt>
-<dd><p>get list of data types in signature of event</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>event_abi</strong> (<em>&lt;class 'EventABI'&gt;</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_function_output_names">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_function_output_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_abi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">human_readable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_function_output_names" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>function_abi</strong> (<em>&lt;class 'FunctionABI'&gt;</em>) – </p></li>
-<li><p><strong>human_readable</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[Optional[str]]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_function_output_types">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_function_output_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_abi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_function_output_types" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>function_abi</strong> (<em>&lt;class 'FunctionABI'&gt;</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_function_parameter_names">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_function_parameter_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_abi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ctc.spec.typedefs.abi_types.FunctionABI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">require_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="k"><span class="pre">True</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ctc.binary.get_function_parameter_names" title="Permalink to this definition"></a></dt>
-<dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_function_parameter_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_abi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ctc.spec.typedefs.abi_types.FunctionABI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">require_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="k"><span class="pre">False</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>function_abi</strong> (<em>&lt;class 'FunctionABI'&gt;</em>) – </p></li>
-<li><p><strong>require_names</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[list[str], list[Optional[str]]]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_function_parameter_types">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_function_parameter_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_signature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_function_parameter_types" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>function_abi</strong> (<em>FunctionABI</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>function_signature</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[ABIDatumType]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_function_selector">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_function_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_signature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_function_selector" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>function_abi</strong> (<em>Optional</em><em>[</em><em>FunctionABI</em><em>]</em>) – </p></li>
-<li><p><strong>function_signature</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘str’&gt;</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.binary.get_function_signature">
-<span class="sig-prename descclassname"><span class="pre">ctc.binary.</span></span><span class="sig-name descname"><span class="pre">get_function_signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.binary.get_function_signature" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>function_abi</strong> (<em>FunctionABI</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>parameter_types</strong> (<em>Optional</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>function_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>include_names</strong> (<em>bool</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_decompile_function_abis">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_decompile_function_abis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bytecode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_decompile_function_abis" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bytecode</strong> (<em>str</em>) – </p></li>
-<li><p><strong>sort</strong> (<em>str</em><em> | </em><em>None</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Sequence[Mapping]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Sequence</em>[<em>Mapping</em>[str, <em>Any</em>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_contract_abi">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_contract_abi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_contract_abi" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>query</strong> (<em>Any</em>) – </p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>List[Union[FunctionABI, EventABI, ErrorABI]]</p>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_contract_abi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_intake</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy_implementation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_contract_abi" title="Permalink to this definition"></a></dt>
+<dd><p>for addresses that change ABI’s over time, use db_query=False to skip cache</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spec.ContractABI</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_event_abi">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_event_abi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_hash</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_event_abi" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_event_abi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_hash</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_event_abi" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>contract_abi</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Union</em><em>[</em><em>FunctionABI</em><em>, </em><em>EventABI</em><em>, </em><em>ErrorABI</em><em>]</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>contract_address</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>event_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>event_hash</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>event_abi</strong> (<em>Optional</em><em>[</em><em>EventABI</em><em>]</em>) – </p></li>
-<li><p><strong>network</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘EventABI’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">EventABI</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_function_abi">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_function_abi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_selector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_function_abi" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_function_abi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_selector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_function_abi" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>function_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>contract_abi</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Union</em><em>[</em><em>FunctionABI</em><em>, </em><em>EventABI</em><em>, </em><em>ErrorABI</em><em>]</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>contract_address</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>n_parameters</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – </p></li>
-<li><p><strong>parameter_types</strong> (<em>Optional</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>function_selector</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>network</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘FunctionABI’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionABI</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
+<p>ctc.binary.get_event_hash
+ctc.binary.get_event_indexed_names
+ctc.binary.get_event_indexed_types
+ctc.binary.get_event_signature
+ctc.binary.get_event_unindexed_names
+ctc.binary.get_event_unindexed_types
+ctc.binary.get_function_output_names
+ctc.binary.get_function_output_types
+ctc.binary.get_function_parameter_names
+ctc.binary.get_function_parameter_types
+ctc.binary.get_function_selector
+ctc.binary.get_function_signature</p>
 </div>
 </div>
 

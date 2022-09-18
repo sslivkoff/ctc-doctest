@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitoring &mdash; Check the Chain (ctc)  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Basic Usage" href="../cli/basic_usage.html" />
+    <link rel="prev" title="Performance" href="performance.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Check the Chain (ctc)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/faq.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="obtaining_data.html">Obtaining Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storing_data.html">Storing Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">Performance</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Monitoring</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Command Line Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/basic_usage.html">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/subcommands.html">Subcommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/useful_aliases.html">Useful Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/similar_tools.html">Similar CLI tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/rpc_client.html">RPC Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/async_code.html">Asynchronous Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/datatypes.html">Datatypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/specific_protocols.html">Specific Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/similar_tools.html">Similar Python Tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../case_studies/under_construction.html">[Under Construction]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Check the Chain (ctc)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Monitoring</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/data_ops/monitoring.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="monitoring">
+<h1>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline"></a></h1>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> can log outgoing RPC requests and SQL queries. This functionality can be enabled or disabled using <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code>.</p>
+<p>Logs are stored in the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> data dir:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./logs/rpc_requests.md</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./logs/sql_queries.md</span></code></p></li>
+</ul>
+<p>Running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">log</span></code> in the terminal will start a watching script of the log files. This provides a detailed view of external queries as they happen, which can be useful for debugging and ensuring that external calls are happening as expected.</p>
+<p>Logs are written to disk using a non-blocking queue, making it suitable for async applications and imparting minimal impact on performance. These logs are also rotated once they reach a certain size (default = <code class="docutils literal notranslate"><span class="pre">10MB</span></code>). However, being non-blocking also means that the timestamps in the logs lose a bit of temporal precision, and so they do not provide a precise picture of event timing.</p>
+<p>Logs are managed by the <a class="reference external" href="https://github.com/Delgan/loguru">Loguru</a> package. Loguru must be installed for logging to be enabled (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">loguru</span></code>).</p>
+</div>
+<div class="section" id="other-monitoring">
+<h2>Other monitoring<a class="headerlink" href="#other-monitoring" title="Permalink to this headline"></a></h2>
+<p>Beyond the built-in logging, the best way to monitor <code class="docutils literal notranslate"><span class="pre">ctc</span></code> is through standard 3rd party tools.</p>
+<p>Recommended utilities for profiling resource usage:</p>
+<ul class="simple">
+<li><p><strong>CPU Usage</strong>: <a class="reference external" href="https://htop.dev/">htop</a>, <a class="reference external" href="https://github.com/aristocratos/btop">btop</a></p></li>
+<li><p><strong>Storage IO</strong>: <a class="reference external" href="https://man7.org/linux/man-pages/man8/iotop.8.html">iotop</a>, <a class="reference external" href="https://github.com/aristocratos/btop">btop</a></p></li>
+<li><p><strong>Storage Capacity</strong>: <a class="reference external" href="https://www.man7.org/linux/man-pages/man1/du.1.html">du</a>, <a class="reference external" href="https://github.com/bootandy/dust">dust</a>, <a class="reference external" href="https://github.com/aristocratos/btop">btop</a></p></li>
+<li><p><strong>Network Usage</strong>: <a class="reference external" href="https://github.com/raboof/nethogs">nethogs</a>, <a class="reference external" href="https://github.com/aristocratos/btop">btop</a></p></li>
+</ul>
+<p>If your situation calls for a more programmatic monitoring approach, then you probably already know what tools you need.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="performance.html" class="btn btn-neutral float-left" title="Performance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../cli/basic_usage.html" class="btn btn-neutral float-right" title="Basic Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

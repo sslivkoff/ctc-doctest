@@ -1,0 +1,19 @@
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc encode TYPE DATA [options]</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    encode data as EVM datatypes</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    for simple datatypes, no quotes required</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    for nested datatypes, enclose in quotes and quote contained addresses</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc encode address 0x6b175474e89094c44da98b954eedeac495271d0f</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc encode &quot;(int64,int64,int64)&quot; &quot;[1,2,3]&quot;</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">TYPE</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">datatype used for encoding</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">DATA</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">data to be encoded</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--packed</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">encode like solidity&#x27;s abi.encodePacked()</span>
+</pre>

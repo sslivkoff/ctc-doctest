@@ -25,4 +25,3 @@ pip install sphinx-autobuild
 pip install sphinx-rtd-theme
 pip install sphinx-copybutton
 ```
-

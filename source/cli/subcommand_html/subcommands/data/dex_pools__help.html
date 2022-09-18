@@ -1,0 +1,26 @@
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc dex pools TOKENS [options]</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    list dex pools</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc dex pools CRV</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc dex pools DAI --dex balancer</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc dex pools DAI --created 14000000:15000000</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">TOKENS</span>               <span style="color: #b9f29f; text-decoration-color: #b9f29f">token symbols or addresses (separate using spaces)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--update</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">run update to index all recently created pools</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--created CREATED</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify start and/or end of when pool was created</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--dex DEX</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">name of dex (e.g. balancer, curve, uniswap-v2)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--factory FACTORY</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">address of pool factory</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--all-pools</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">display all pools instead of just the first 1000</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--compact</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">use compact view for higher information density</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose, -v</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">show additional data</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--json</span>               <span style="color: #b9f29f; text-decoration-color: #b9f29f">output data as json</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--csv</span>                <span style="color: #b9f29f; text-decoration-color: #b9f29f">output data as json</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--export EXPORT</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path to save output to</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--sort SORT</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">column to sort pools by</span>
+</pre>

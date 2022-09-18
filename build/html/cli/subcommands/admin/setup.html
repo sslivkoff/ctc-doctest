@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Compute Subcommands" href="../compute.html" />
-    <link rel="prev" title="rechunk-events" href="rechunk-events.html" /> 
+    <link rel="prev" title="log" href="log.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,11 +60,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../basic_usage.html">Basic Usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../subcommands.html">Subcommands</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../admin.html">Admin Subcommands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="aliases.html">aliases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chains.html">chains</a></li>
 <li class="toctree-l3"><a class="reference internal" href="config.html">config</a></li>
-<li class="toctree-l3"><a class="reference internal" href="config_path.html">config path</a></li>
-<li class="toctree-l3"><a class="reference internal" href="download-proxy-abi.html">download-proxy-abi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="db.html">db</a></li>
 <li class="toctree-l3"><a class="reference internal" href="log.html">log</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rechunk-events.html">rechunk-events</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">setup</a></li>
 </ul>
 </li>
@@ -85,10 +85,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../python/datatypes.html">Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/similar_tools.html">Similar Python Tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../case_studies/under_construction.html">[Under Construction]</a></li>
 </ul>
 
         </div>
@@ -120,20 +116,47 @@
   <div class="section" id="setup">
 <h1>setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h1>
 <pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc setup </span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc setup  [options]</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    run ctc setup wizard</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    setup wizard sets up ctc config and ctc data directory</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    each step is optional</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    - by default, setup process will leave existing settings unchanged</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    - setup can be rerun multiple times idempotently</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    can run in headless mode (non-interactive mode) using `--headless`:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    - headless mode will use the default values for each unspecified parameter</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    - headless mode is useful in scripts when user input is not possible</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    - if config file already exists, headless mode must be run with `--overwrite`</span>
 
-<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">example:</span>
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc setup </span>
+
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc setup --headless</span>
+
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc setup --headless --overwrite</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--headless</span>                     <span style="color: #b9f29f; text-decoration-color: #b9f29f">run in headless mode</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--ignore-old-config</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">ignore settings specified in previous config</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--skip-networking</span>              <span style="color: #b9f29f; text-decoration-color: #b9f29f">skip network configuration steps</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--rpc-url RPC_URL</span>              <span style="color: #b9f29f; text-decoration-color: #b9f29f">url to use for RPC node</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--rpc-chain-id RPC_CHAIN_ID</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">chain id of RPC node given by `--rpc-url`</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--data-dir DATA_DIR</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">directory where to store ctc data</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--disable-logs</span>                 <span style="color: #b9f29f; text-decoration-color: #b9f29f">disable ctc logs</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--skip-db</span>                      <span style="color: #b9f29f; text-decoration-color: #b9f29f">skip creating db until it next time it is needed</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>                    <span style="color: #b9f29f; text-decoration-color: #b9f29f">overwrite old config file</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--skip-aliases</span>                 <span style="color: #b9f29f; text-decoration-color: #b9f29f">disable ctc logs</span>
 </pre></div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="rechunk-events.html" class="btn btn-neutral float-left" title="rechunk-events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="log.html" class="btn btn-neutral float-left" title="log" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../compute.html" class="btn btn-neutral float-right" title="Compute Subcommands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

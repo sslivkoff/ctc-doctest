@@ -1,6 +1,8 @@
 #!/bin/env python3
 
 import os
+import shutil
+
 import ctc.cli
 
 
@@ -19,8 +21,9 @@ subcommand_html = os.path.join(
 
 # follow strict hierarchy because it becomes the url structure
 root_rst = './source/cli/subcommands.rst'
-category_rst = './source/cli/subcommands/{category}.rst'
-subcommand_rst = './source/cli/subcommands/{category}/{subcommand}.rst'
+subcommands_root = './source/cli/subcommands'
+category_rst = '{subcommands_root}/{category}.rst'
+subcommand_rst = '{subcommands_root}/{category}/{subcommand}.rst'
 
 #
 # # rst templates
@@ -89,7 +92,9 @@ def get_subcommands_by_category():
             subcommand_str = subcommand_filename.split('__help.html')[0]
             subcommand = tuple(subcommand_str.split('_'))
             subcommands_by_category[category].append(subcommand)
-        subcommands_by_category[category] = sorted(subcommands_by_category[category])
+        subcommands_by_category[category] = sorted(
+            subcommands_by_category[category]
+        )
     return subcommands_by_category
 
 
@@ -142,7 +147,10 @@ def create_rst_categories(subcommands_by_category):
         )
 
         # write content
-        path = category_rst.format(category=category)
+        path = category_rst.format(
+            subcommands_root=subcommands_root,
+            category=category,
+        )
         with open(path, 'w') as f:
             f.write(content)
 
@@ -169,6 +177,7 @@ def create_rst_subcommands(subcommands_by_category):
             )
 
             path = subcommand_rst.format(
+                subcommands_root=subcommands_root,
                 category=category,
                 subcommand='_'.join(subcommand),
             )
@@ -179,6 +188,11 @@ def create_rst_subcommands(subcommands_by_category):
 
 
 def create_rsts():
+
+    if os.path.isdir(subcommands_root):
+        print('deleting old subcommand root')
+        shutil.rmtree(subcommands_root)
+
     subcommands_by_category = get_subcommands_by_category()
     create_rst_subcommands(subcommands_by_category)
     create_rst_categories(subcommands_by_category)
@@ -187,4 +201,3 @@ def create_rsts():
 
 if __name__ == '__main__':
     create_rsts()
-

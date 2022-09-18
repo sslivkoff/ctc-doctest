@@ -13,9 +13,7 @@
 
 .. autofunction:: ctc.protocols.fourbyte_utils.async_build_event_signatures_dataset
 .. autofunction:: ctc.protocols.fourbyte_utils.async_build_function_signatures_dataset
-.. autofunction:: ctc.protocols.fourbyte_utils.async_query_event_signature
-.. autofunction:: ctc.protocols.fourbyte_utils.async_query_function_signature
-.. autofunction:: ctc.protocols.fourbyte_utils.local_event_signatures_exist
-.. autofunction:: ctc.protocols.fourbyte_utils.local_function_signatures_exist
+.. autofunction:: ctc.protocols.fourbyte_utils.async_query_event_signatures
+.. autofunction:: ctc.protocols.fourbyte_utils.async_query_function_signatures
 ```
 

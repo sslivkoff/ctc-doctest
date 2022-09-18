@@ -1,0 +1,20 @@
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc proxy register PROXY_CONTRACT IMPLEMENTATION_CONTRACT [options]</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    register custom proxy implementation of a contract</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Implementation ABI will be downloaded for original contract</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Manual registration using this command is normally unnecessary</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    This command is useful for custom proxy implementations</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">example:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc proxy register 0xfb558ecd2d24886e8d2956775c619deb22f154ef 0xe16db319d9da7ce40b666dd2e365a4b8b3c18217 --confirm</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">PROXY_CONTRACT</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">contract that falls back to other contract</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">IMPLEMENTATION_CONTRACT</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">contract that implements proxy contract</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--confirm</span>                  <span style="color: #b9f29f; text-decoration-color: #b9f29f">confirm registration of proxy</span>
+</pre>

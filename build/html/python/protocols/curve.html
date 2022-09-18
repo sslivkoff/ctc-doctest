@@ -84,10 +84,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../similar_tools.html">Similar Python Tools</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../case_studies/under_construction.html">[Under Construction]</a></li>
-</ul>
 
         </div>
       </div>
@@ -16036,107 +16032,60 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.curve_utils.async_get_base_pools">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_base_pools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_base_pools" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_base_pools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_base_pools" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>verbose</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Any</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spec.DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.curve_utils.async_get_meta_pools">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_meta_pools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_meta_pools" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_meta_pools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_meta_pools" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>verbose</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Any</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spec.DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.curve_utils.async_get_plain_pools">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_plain_pools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_plain_pools" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_plain_pools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_plain_pools" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>verbose</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Any</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spec.DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.curve_utils.async_get_pool_metadata">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_pool_metadata" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_pool_metadata" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool</strong> (<em>Address</em>) – </p></li>
-<li><p><strong>n_tokens</strong> (<em>int</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>CurvePoolMetadata</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>curve_spec.CurvePoolMetadata</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.curve_utils.async_get_pool_state">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_pool_state" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_pool_state" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool</strong> (<em>Address</em>) – </p></li>
-<li><p><strong>n_tokens</strong> (<em>int</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>bool</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict[str, <em>Any</em>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.curve_utils.async_get_virtual_price">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_virtual_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_virtual_price" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.curve_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_virtual_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.curve_utils.async_get_virtual_price" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pool</strong> (<em>Address</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em><em> | </em><em>None</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>

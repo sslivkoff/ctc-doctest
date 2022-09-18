@@ -1,22 +1,38 @@
 <pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi ADDRESS [options]</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi ADDRESS NAMES [options]</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    display abi of contract</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x956f47f50a910163d8bf957cf5846d573e7f87ca</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x2b79b3c3c7b35463a28a76e0d332aab3e20aa337 Mint Burn Swap Sync</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x2b79b3c3c7b35463a28a76e0d332aab3e20aa337 -f</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x2b79b3c3c7b35463a28a76e0d332aab3e20aa337 -e</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x956f47f50a910163d8bf957cf5846d573e7f87ca --json</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x956f47f50a910163d8bf957cf5846d573e7f87ca --functions</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x956f47f50a910163d8bf957cf5846d573e7f87ca --functions --json</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x956f47f50a910163d8bf957cf5846d573e7f87ca --name Transfer</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi 0x956f47f50a910163d8bf957cf5846d573e7f87ca --map-names --python</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ADDRESS</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">address of contract</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--human</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">human readable only, no json</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--json</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">json only, no human readble</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--functions</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">display function abi&#x27;s only</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--events</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">display event abi&#x27;s only</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--name NAME</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">name of function or event abi</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">NAMES</span>              <span style="color: #b9f29f; text-decoration-color: #b9f29f">name of function or event</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--json</span>             <span style="color: #b9f29f; text-decoration-color: #b9f29f">json only</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--json-raw</span>         <span style="color: #b9f29f; text-decoration-color: #b9f29f">json only, without sorting or indentations</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--map-names</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">output ABI as map where names are the keys</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--map-selectors</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">output ABI as map where hash selectors are the keys</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-f, --functions</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">display function abi&#x27;s only</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-e, --events</span>       <span style="color: #b9f29f; text-decoration-color: #b9f29f">display event abi&#x27;s only</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--search SEARCH</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">query of name of function or event abi</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose, -v</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">include extra abi data</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--python</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">output data as pep8-formatted python syntax</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--update</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">re-import ABI from etherscan (e.g. if proxy has changed)</span>
+
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage of subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi</span> <span style="color: #b9f29f; text-decoration-color: #b9f29f">can also be used to invoke subcommands</span>
+
+    <span style="color: #b9f29f; text-decoration-color: #b9f29f">to view help about a specific subcommand, run:</span>
+        <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc abi &lt;subcommand&gt; -h</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">available subcommands:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">diff</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">display diff of two contract ABI&#x27;s</span>
 </pre>

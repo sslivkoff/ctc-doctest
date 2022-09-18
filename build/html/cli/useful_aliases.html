@@ -71,10 +71,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../python/specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/similar_tools.html">Similar Python Tools</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../case_studies/under_construction.html">[Under Construction]</a></li>
-</ul>
 
         </div>
       </div>
@@ -108,22 +104,14 @@
 <p>To use these aliases, you need to include them in your shell config file (e.g. <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>). You can either copy paste the alias commands directly, or you can add a single line: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">&lt;PATH_TO_ALIAS_FILE&gt;</span></code>.</p>
 <div class="section" id="the-aliases-file">
 <h2>The Aliases File<a class="headerlink" href="#the-aliases-file" title="Permalink to this headline"></a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
-
-<span class="c1"># these commands allow you to call ctc subcommands without typing the &quot;ctc&quot; part</span>
-
-<span class="c1"># to use, either:</span>
-<span class="c1"># 1. add the contents of this file to the end of your terminal config file</span>
-<span class="c1"># 2. add `source PATH_TO_THIS_FILE` to the end of your terminal config file</span>
-
-<span class="c1"># to learn more about these commands, run `ctc help`</span>
-
-<span class="c1"># depending on preference can use all of these aliases or just a subset of them:</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># # ctc aliases</span>
+<span class="c1">#</span>
 
 <span class="c1"># compute commands</span>
 <span class="nb">alias</span> <span class="nv">ascii</span><span class="o">=</span><span class="s2">&quot;ctc ascii&quot;</span>
 <span class="nb">alias</span> <span class="nv">hex</span><span class="o">=</span><span class="s2">&quot;ctc hex&quot;</span>
-<span class="nb">alias</span> <span class="nv">keccak</span><span class="o">=</span><span class="s2">&quot;ctc keccack&quot;</span>
+<span class="nb">alias</span> <span class="nv">keccak</span><span class="o">=</span><span class="s2">&quot;ctc keccak&quot;</span>
 <span class="nb">alias</span> <span class="nv">lower</span><span class="o">=</span><span class="s2">&quot;ctc lower&quot;</span>
 
 <span class="c1"># data commands</span>
@@ -131,21 +119,35 @@
 <span class="nb">alias</span> <span class="nv">address</span><span class="o">=</span><span class="s2">&quot;ctc address&quot;</span>
 <span class="nb">alias</span> <span class="nv">block</span><span class="o">=</span><span class="s2">&quot;ctc block&quot;</span>
 <span class="nb">alias</span> <span class="nv">blocks</span><span class="o">=</span><span class="s2">&quot;ctc blocks&quot;</span>
+<span class="nb">alias</span> <span class="nv">bytecode</span><span class="o">=</span><span class="s2">&quot;ctc bytecode&quot;</span>
 <span class="nb">alias</span> <span class="nv">call</span><span class="o">=</span><span class="s2">&quot;ctc call&quot;</span>
 <span class="nb">alias</span> <span class="nv">calls</span><span class="o">=</span><span class="s2">&quot;ctc calls&quot;</span>
+<span class="nb">alias</span> <span class="nv">dex</span><span class="o">=</span><span class="s2">&quot;ctc dex&quot;</span>
 <span class="nb">alias</span> <span class="nv">erc20</span><span class="o">=</span><span class="s2">&quot;ctc erc20&quot;</span>
 <span class="nb">alias</span> <span class="nv">eth</span><span class="o">=</span><span class="s2">&quot;ctc eth&quot;</span>
 <span class="nb">alias</span> <span class="nv">gas</span><span class="o">=</span><span class="s2">&quot;ctc gas&quot;</span>
-<span class="nb">alias</span> <span class="nv">transaction</span><span class="o">=</span><span class="s2">&quot;ctc transaction&quot;</span>
+<span class="nb">alias</span> <span class="nv">int</span><span class="o">=</span><span class="s2">&quot;ctc int&quot;</span>
+<span class="nb">alias</span> <span class="nv">rlp</span><span class="o">=</span><span class="s2">&quot;ctc rlp&quot;</span>
+<span class="nb">alias</span> <span class="nv">tx</span><span class="o">=</span><span class="s2">&quot;ctc tx&quot;</span>
 
 <span class="c1"># protocol commands</span>
 <span class="nb">alias</span> <span class="nv">4byte</span><span class="o">=</span><span class="s2">&quot;ctc 4byte&quot;</span>
+<span class="nb">alias</span> <span class="nv">aave</span><span class="o">=</span><span class="s2">&quot;ctc aave&quot;</span>
 <span class="nb">alias</span> <span class="nv">cg</span><span class="o">=</span><span class="s2">&quot;ctc cg&quot;</span>
 <span class="nb">alias</span> <span class="nv">chainlink</span><span class="o">=</span><span class="s2">&quot;ctc chainlink&quot;</span>
 <span class="nb">alias</span> <span class="nv">curve</span><span class="o">=</span><span class="s2">&quot;ctc curve&quot;</span>
+<span class="nb">alias</span> <span class="nv">es</span><span class="o">=</span><span class="s2">&quot;ctc etherscan&quot;</span>
 <span class="nb">alias</span> <span class="nv">ens</span><span class="o">=</span><span class="s2">&quot;ctc ens&quot;</span>
 <span class="nb">alias</span> <span class="nv">fei</span><span class="o">=</span><span class="s2">&quot;ctc fei&quot;</span>
+<span class="nb">alias</span> <span class="nv">gnosis</span><span class="o">=</span><span class="s2">&quot;ctc gnosis&quot;</span>
+<span class="nb">alias</span> <span class="nv">llama</span><span class="o">=</span><span class="s2">&quot;ctc llama&quot;</span>
 <span class="nb">alias</span> <span class="nv">rari</span><span class="o">=</span><span class="s2">&quot;ctc rari&quot;</span>
+<span class="nb">alias</span> <span class="nv">uniswap</span><span class="o">=</span><span class="s2">&quot;ctc uniswap&quot;</span>
+<span class="nb">alias</span> <span class="nv">yearn</span><span class="o">=</span><span class="s2">&quot;ctc yearn&quot;</span>
+
+<span class="c1">#</span>
+<span class="c1"># # end of ctc aliases</span>
+<span class="c1">#</span>
 </pre></div>
 </div>
 </div>

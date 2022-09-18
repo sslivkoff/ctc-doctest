@@ -5,16 +5,23 @@
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    output information about blocks</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
-    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000100</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks [14000000, 14000100]</span>
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000010</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:14000010</span>
 
-    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000100</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks [14000000, 14000100] --attributes timestamp,number</span>
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 15000000, every 100000 blocks</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:15000000:100000</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 15000000, every 100000 blocks</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:15000000 -n 10</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># get blocks 14000000 through 14000100, with specific attributes</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc blocks 14000000:14000100 --attributes timestamp,number</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">BLOCKS</span>                     <span style="color: #b9f29f; text-decoration-color: #b9f29f">block range to fetch</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-n N</span>                       <span style="color: #b9f29f; text-decoration-color: #b9f29f">number of blocks in block slice</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--attributes ATTRIBUTES</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">attributes to fetch from each block</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--output OUTPUT</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--export EXPORT</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>                <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--provider PROVIDER</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">rpc provider to use</span>
 </pre>

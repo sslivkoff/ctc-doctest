@@ -21,7 +21,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Other Subcommands" href="../other.html" />
+    <link rel="next" title="yearn" href="yearn.html" />
     <link rel="prev" title="uniswap pool" href="uniswap_pool.html" /> 
 </head>
 
@@ -65,7 +65,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../protocol.html">Protocol Subcommands</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="4byte.html">4byte</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4byte_build.html">4byte build</a></li>
-<li class="toctree-l3"><a class="reference internal" href="4byte_path.html">4byte path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aave.html">aave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aave_addresses.html">aave addresses</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cg.html">cg</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chainlink.html">chainlink</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chainlink_ls.html">chainlink ls</a></li>
@@ -77,11 +78,22 @@
 <li class="toctree-l3"><a class="reference internal" href="ens_records.html">ens records</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ens_resolve.html">ens resolve</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ens_reverse.html">ens reverse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="etherscan.html">etherscan</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fei_analytics.html">fei analytics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fei_depth.html">fei depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_dex.html">fei dex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fei_pcv.html">fei pcv</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fei_pcv_assets.html">fei pcv assets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fei_pcv_deposits.html">fei pcv deposits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fei_psms.html">fei psms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gnosis.html">gnosis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama.html">llama</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_chain.html">llama chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_chains.html">llama chains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_pool.html">llama pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_pools.html">llama pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_protocol.html">llama protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llama_protocols.html">llama protocols</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rari.html">rari</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rari_pools.html">rari pools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uniswap_burns.html">uniswap burns</a></li>
@@ -89,6 +101,8 @@
 <li class="toctree-l3"><a class="reference internal" href="uniswap_mints.html">uniswap mints</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uniswap_pool.html">uniswap pool</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">uniswap swaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="yearn.html">yearn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="yearn_addresses.html">yearn addresses</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../other.html">Other Subcommands</a></li>
@@ -105,10 +119,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../python/datatypes.html">Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/similar_tools.html">Similar Python Tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../case_studies/under_construction.html">[Under Construction]</a></li>
 </ul>
 
         </div>
@@ -145,10 +155,13 @@
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    output information about pool swaps</span>
 
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">example:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc uniswap swaps 0xae461ca67b15dc8dc81ce7615e0320da1a9ab8d5 --blocks 14000000:14001000</span>
+
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">POOL</span>               <span style="color: #b9f29f; text-decoration-color: #b9f29f">pool address</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks BLOCKS</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">block number range</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--output OUTPUT</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--export EXPORT</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
 </pre></div>
 
@@ -157,7 +170,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="uniswap_pool.html" class="btn btn-neutral float-left" title="uniswap pool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../other.html" class="btn btn-neutral float-right" title="Other Subcommands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="yearn.html" class="btn btn-neutral float-right" title="yearn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

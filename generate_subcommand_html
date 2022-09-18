@@ -2,8 +2,8 @@
 
 SUBCOMMAND_HTML_DIR="source/cli/subcommand_html"
 
-rm -rf SUBCOMMAND_HTML_DIR
+rm -rf $SUBCOMMAND_HTML_DIR
 mkdir $SUBCOMMAND_HTML_DIR
 cd $SUBCOMMAND_HTML_DIR
-ctc record help --all --overwrite
+python3 -m ctc record help --all --overwrite --debug
 

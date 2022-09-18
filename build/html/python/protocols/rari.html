@@ -84,10 +84,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../similar_tools.html">Similar Python Tools</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../case_studies/under_construction.html">[Under Construction]</a></li>
-</ul>
 
         </div>
       </div>
@@ -15338,68 +15334,38 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_all_pools">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_all_pools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_all_pools" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[list[Any]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_ctoken_state">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_ctoken_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eth_price</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_ctoken_state" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_ctoken_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eth_price</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_ctoken_state" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ctoken</strong> (<em>Address</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em>) – </p></li>
-<li><p><strong>metrics</strong> (<em>CTokenMetricSpec</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>eth_price</strong> (<em>Number</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>in_usd</strong> (<em>bool</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>CTokenMetrics</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>CTokenMetrics</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_ctoken_state_by_block">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_ctoken_state_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eth_price</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_ctoken_state_by_block" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_ctoken_state_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eth_price</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_ctoken_state_by_block" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ctoken</strong> (<em>Address</em>) – </p></li>
-<li><p><strong>blocks</strong> (<em>Sequence</em><em>[</em><em>BlockNumberReference</em><em>]</em>) – </p></li>
-<li><p><strong>metrics</strong> (<em>CTokenMetricSpec</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>eth_price</strong> (<em>Number</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>in_usd</strong> (<em>bool</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>CTokenMetricsByBlock</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>CTokenMetricsByBlock</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_pool_ctokens">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_ctokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comptroller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_pool_ctokens" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_ctokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comptroller</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_pool_ctokens" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>comptroller</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>tuple[str]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15408,17 +15374,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_pool_prices">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_prices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comptroller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_pool_prices" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>oracle</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>ctokens</strong> (<em>Sequence</em><em>[</em><em>Address</em><em>] </em><em>| </em><em>None</em>) – </p></li>
-<li><p><strong>comptroller</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em>) – </p></li>
-<li><p><strong>to_usd</strong> (<em>bool</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict[Address, Number]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict[spec.Address, spec.Number]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15427,16 +15384,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_pool_tvl_and_tvb">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_tvl_and_tvb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comptroller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_pool_tvl_and_tvb" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>comptroller</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>ctokens</strong> (<em>Sequence</em><em>[</em><em>Address</em><em>] </em><em>| </em><em>None</em>) – </p></li>
-<li><p><strong>oracle</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict[str, Number]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict[str, spec.Number]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15445,32 +15394,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_pool_underlying_tokens">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_pool_underlying_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comptroller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_pool_underlying_tokens" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ctokens</strong> (<em>Sequence</em><em>[</em><em>Address</em><em>] </em><em>| </em><em>None</em>) – </p></li>
-<li><p><strong>comptroller</strong> (<em>Address</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>block</strong> (<em>BlockNumberReference</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict[Address, Address]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Mapping</em>[spec.Address, spec.Address]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_get_token_multipool_stats">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_token_multipool_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_token_multipool_stats" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_get_token_multipool_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_get_token_multipool_stats" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>in_usd</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘dict’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15479,31 +15414,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_print_all_pool_summary">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_print_all_pool_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_print_all_pool_summary" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>n_display</strong> (<em>&lt;class 'int'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘NoneType’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.protocols.rari_utils.async_print_fuse_token_summary">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_print_fuse_token_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_print_fuse_token_summary" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.protocols.rari_utils.</span></span><span class="sig-name descname"><span class="pre">async_print_fuse_token_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_usd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.protocols.rari_utils.async_print_fuse_token_summary" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>in_usd</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘NoneType’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
 </dl>
 </dd></dl>

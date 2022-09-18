@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>calls &mdash; Check the Chain (ctc)  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="chain" href="chain.html" />
+    <link rel="prev" title="call all" href="call_all.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Check the Chain (ctc)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/faq.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/obtaining_data.html">Obtaining Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/storing_data.html">Storing Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/performance.html">Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_ops/monitoring.html">Monitoring</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Command Line Interface</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../basic_usage.html">Basic Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../subcommands.html">Subcommands</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../admin.html">Admin Subcommands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compute.html">Compute Subcommands</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../data.html">Data Subcommands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="abi.html">abi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abi_diff.html">abi diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="address.html">address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="address_txs.html">address txs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="block.html">block</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blocks.html">blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bytecode.html">bytecode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call.html">call</a></li>
+<li class="toctree-l3"><a class="reference internal" href="call_all.html">call all</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chain.html">chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="decompile.html">decompile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_chart.html">dex chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_pool.html">dex pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_pools.html">dex pools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex_trades.html">dex trades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erc20.html">erc20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erc20_balance.html">erc20 balance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erc20_balances.html">erc20 balances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erc20_transfers.html">erc20 transfers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eth_balance.html">eth balance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eth_balances.html">eth balances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="events.html">events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gas.html">gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proxy.html">proxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proxy_register.html">proxy register</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="symbol.html">symbol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timestamp.html">timestamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tx.html">tx</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../protocol.html">Protocol Subcommands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html">Other Subcommands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful_aliases.html">Useful Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../similar_tools.html">Similar CLI tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/rpc_client.html">RPC Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/async_code.html">Asynchronous Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/datatypes.html">Datatypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/specific_protocols.html">Specific Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/similar_tools.html">Similar Python Tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../case_studies/under_construction.html">[Under Construction]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Check the Chain (ctc)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../subcommands.html">Subcommands</a> &raquo;</li>
+          <li><a href="../data.html">Data Subcommands</a> &raquo;</li>
+      <li>calls</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/cli/subcommands/data/calls.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="calls">
+<h1>calls<a class="headerlink" href="#calls" title="Permalink to this headline"></a></h1>
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls ADDRESS_AND_OR_FUNCTION [options]</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    output the result of multiple contract eth_call&#x27;s</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    This command can be used in two ways:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">1) </span><span style="color: #64aaaa; text-decoration-color: #64aaaa; font-weight: bold">Multi-contract Calls</span><span style="color: #6272a4; text-decoration-color: #6272a4">:</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> same call across multiple contracts</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">    - </span><span style="color: #b9f29f; text-decoration-color: #b9f29f">This is indicated by the </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--addresses</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> parameter</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">    - </span><span style="color: #b9f29f; text-decoration-color: #b9f29f">Example: </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">call &lt;function&gt; --addresses &lt;addr1&gt; &lt;addr2&gt; &lt;addr3&gt;</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">2) </span><span style="color: #64aaaa; text-decoration-color: #64aaaa; font-weight: bold">Multi-block Calls</span><span style="color: #6272a4; text-decoration-color: #6272a4">:</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> same call across multiple blocks</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">    - </span><span style="color: #b9f29f; text-decoration-color: #b9f29f">This is indicated by either of the </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> or </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--time</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> parameters</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">    - </span><span style="color: #b9f29f; text-decoration-color: #b9f29f">Example: </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">call &lt;addr1&gt; &lt;function&gt; --time 30d</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #6272a4; text-decoration-color: #6272a4">in each case, </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">&lt;function&gt;</span><span style="color: #6272a4; text-decoration-color: #6272a4"> can be a name, a 4byte selector, or an ABI</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">## Multi-contract Calls</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Example use case: Get a wallet&#x27;s balances for many ERC20 tokens</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Can use </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--block</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> to select a specific block for calls</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    By default will use the first address&#x27;s function abi for all calls</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">(Retrieve separate ABI&#x27;s for each contract using </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--unique-abis</span><span style="color: #6272a4; text-decoration-color: #6272a4">)</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">## Multi-block Calls</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Example use case: Get the total supply of an ERC20 over time</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Can specify multi-block calls by blocks or by timestamps</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Ranges are inclusive of start and end boundaries</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">### Specifying multi-block calls using </span><span style="color: #64aaaa; text-decoration-color: #64aaaa; font-weight: bold">--blocks</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Example block specifications:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks 16000 16010 16020 16030</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks 16010:16030:10</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks 16010:16030 -n 4</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks 16030:-20:10</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks latest:-20:10</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">(each of these examples would specify the same set of 4 blocks,</span>
+<span style="color: #6272a4; text-decoration-color: #6272a4">         if the latest block were 16030)</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Can also specify a block range sampled over a regular time interval:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks 15000000:16000000:1d</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> --&gt; samples block range once per day</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    For block ranges with no interval specified, </span><span style="color: #b9f29f; text-decoration-color: #b9f29f; font-weight: bold">all</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> blocks are used</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">### Specifying multi-block calls using </span><span style="color: #64aaaa; text-decoration-color: #64aaaa; font-weight: bold">--times</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Example time specifications:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 20220701:20220730 -n 30</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 20220701:20220730:1d</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 20220701:29d -n 30</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 29d:20220701 -n 30</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">(each of these examples specifies the same set of 30 timestamps)</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Can also use the current time as an implicit default:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 100d::1d</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 100d -n 101</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 100d: -n 101</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--times 100d:: -n 101</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">(each of these examples specifies the same set of 100 timestamps)</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Can indicate timestamps using a variety of formats:</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">  timestamp formats</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">       meaning</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">           examples</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">───────────────────────┼──────────────────┼───────────────────────</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">    number + letter</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">      timelength  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">               100d</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">(one of {yMdhms})</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">                  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">                24h</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">───────────────────────┼──────────────────┼───────────────────────</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">               YYYY</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">   start of year  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">               2018</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">                   </span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">                  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">               2022</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">───────────────────────┼──────────────────┼───────────────────────</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">             YYYYMM</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  start of month  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">             201802</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">            YYYY-MM</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">                  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">            2022-06</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">───────────────────────┼──────────────────┼───────────────────────</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">           YYYYMMDD</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">    start of day  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">           20180228</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">         YYYY-MM-DD</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">                  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">         2022-06-01</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">───────────────────────┼──────────────────┼───────────────────────</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">    YYYYMMDD_HHMMSS</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">   minute in day  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">           20180228</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">   YYYY-MM-DD_HH:MM</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">                  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">   2022-06-01_04:30</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">───────────────────────┼──────────────────┼───────────────────────</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">    YYYYMMDD_HHMMSS</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">   second in day  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">           20180228</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">YYYY-MM-DD_HH:MM:SS</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">                  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">2022-06-01_04:30:40</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #6272a4; text-decoration-color: #6272a4">───────────────────────┼──────────────────┼───────────────────────</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">       large number</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  unix timestamp  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">         1600000000</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">          </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">                   </span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">                  </span><span style="color: #6272a4; text-decoration-color: #6272a4">│</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">         1700000000</span><span style="color: #b9f29f; text-decoration-color: #b9f29f">  </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    See the </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">tooltime</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> package for more information about time specifications</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    A default of </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">-n 25</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> is used if no </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">-n</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> is specified for time range</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">## Outputs</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    A table of outputs is displayed by default, omit with </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--no-table</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Numerical outputs of multi-block calls are charted, omit with </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--no-chart</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    Use </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">--export</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> to output data to a json or csv file</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    More data is included when exporting to a file</span>
+<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># 1) multi-contract template: same call across multiple addresses</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls &lt;function&gt; [&lt;function_parameters&gt;] --addresses &lt;addresses&gt;</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># 2) multi-block template: same call across multiple blocks</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls &lt;address&gt; &lt;function&gt; [&lt;function_parameters&gt;] --blocks &lt;blocks&gt;</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># Balance of DAI, USDC, and USDT in Curve 3pool</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls balanceOf 0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --addresses </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">0x6b175474e89094c44da98b954eedeac495271d0f 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">0xdac17f958d2ee523a2206206994597c13d831ec7 --normalize</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># Weekly balance of DAI in Curve 3pool throughout year 2021</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls 0x6b175474e89094c44da98b954eedeac495271d0f balanceOf </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --times 2021:2022:1w --normalize</span>
+
+    <span style="color: #6272a4; text-decoration-color: #6272a4"># Balance of DAI in Curve 3pool over the past 1 million blocks</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls 0x6b175474e89094c44da98b954eedeac495271d0f balanceOf </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --blocks latest:-1000000 -n 20 --normalize</span>
+
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ADDRESS_AND_OR_FUNCTION</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">&lt;see above&gt;</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-b, --blocks BLOCKS</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">block list or block range (see above)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-t, --times TIMES</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">timestamp list or time range (see above)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-n N</span>                         <span style="color: #b9f29f; text-decoration-color: #b9f29f">number of calls to make in given range</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">-a, --addresses ADDRESSES</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">addresses to point calls toward</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--block BLOCK</span>                <span style="color: #b9f29f; text-decoration-color: #b9f29f">block number for calls</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--unique-abis UNIQUE_ABIS</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">retrieve separate ABI for each address</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--export EXPORT</span>              <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>                  <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--no-table</span>                   <span style="color: #b9f29f; text-decoration-color: #b9f29f">do not output a table</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--no-chart</span>                   <span style="color: #b9f29f; text-decoration-color: #b9f29f">do not output a chart</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--from FROM</span>                  <span style="color: #b9f29f; text-decoration-color: #b9f29f">address that calls should come from</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--normalize NORMALIZE</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">normalize output by value, default is 1) erc20 decimals or 2) &quot;1e18&quot;</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks-gte-times</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">find the blocks &gt;= timestamps instead of &lt;=</span>
+</pre></div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="call_all.html" class="btn btn-neutral float-left" title="call all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chain.html" class="btn btn-neutral float-right" title="chain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 
+
 # Useful Aliases
 
 `ctc` makes it simple to perform many tasks from the command line. However, `ctc` can be made even more simple by using shell aliases that reduce the number of required keystrokes that must be typed.
@@ -13,22 +14,15 @@ To use these aliases, you need to include them in your shell config file (e.g. `
 ## The Aliases File
 
 ```bash
-#!/bin/sh
 
-# these commands allow you to call ctc subcommands without typing the "ctc" part
-
-# to use, either:
-# 1. add the contents of this file to the end of your terminal config file
-# 2. add `source PATH_TO_THIS_FILE` to the end of your terminal config file
-
-# to learn more about these commands, run `ctc help`
-
-# depending on preference can use all of these aliases or just a subset of them:
+#
+# # ctc aliases
+#
 
 # compute commands
 alias ascii="ctc ascii"
 alias hex="ctc hex"
-alias keccak="ctc keccack"
+alias keccak="ctc keccak"
 alias lower="ctc lower"
 
 # data commands
@@ -36,22 +30,35 @@ alias abi="ctc abi"
 alias address="ctc address"
 alias block="ctc block"
 alias blocks="ctc blocks"
+alias bytecode="ctc bytecode"
 alias call="ctc call"
 alias calls="ctc calls"
+alias dex="ctc dex"
 alias erc20="ctc erc20"
 alias eth="ctc eth"
 alias gas="ctc gas"
-alias transaction="ctc transaction"
+alias int="ctc int"
+alias rlp="ctc rlp"
+alias tx="ctc tx"
 
 # protocol commands
 alias 4byte="ctc 4byte"
+alias aave="ctc aave"
 alias cg="ctc cg"
 alias chainlink="ctc chainlink"
 alias curve="ctc curve"
+alias es="ctc etherscan"
 alias ens="ctc ens"
 alias fei="ctc fei"
+alias gnosis="ctc gnosis"
+alias llama="ctc llama"
 alias rari="ctc rari"
+alias uniswap="ctc uniswap"
+alias yearn="ctc yearn"
 
+#
+# # end of ctc aliases
+#
 
 ```
 

@@ -4,12 +4,20 @@
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
 <span style="color: #b9f29f; text-decoration-color: #b9f29f">    output Chainlink feed data</span>
 
+<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">examples:</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc chainlink DAI_USD</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc chainlink 0xaed0c38402a5d19df6e4c03f4e2dced6e29c1ee9</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc chainlink DAI_USD --blocks 14000000:14001000</span>
+
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">FEED</span>                   <span style="color: #b9f29f; text-decoration-color: #b9f29f">name or address of feed</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--verbose, -v</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">show additional information</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--blocks BLOCKS</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">block range of datapoints</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--output OUTPUT</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--time TIME</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">historical duration to show feed data</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--export EXPORT</span>        <span style="color: #b9f29f; text-decoration-color: #b9f29f">file path for output (.json or .csv)</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--overwrite</span>            <span style="color: #b9f29f; text-decoration-color: #b9f29f">specify that output path can be overwritten</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--provider PROVIDER</span>    <span style="color: #b9f29f; text-decoration-color: #b9f29f">rpc provider name or url</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">--network NETWORK</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">network name or chain_id</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--all-fields</span>           <span style="color: #b9f29f; text-decoration-color: #b9f29f">include all output fields</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--interpolate</span>          <span style="color: #b9f29f; text-decoration-color: #b9f29f">interpolate all blocks in range</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">--shell</span>                <span style="color: #b9f29f; text-decoration-color: #b9f29f">open shell with Chainlink data</span>

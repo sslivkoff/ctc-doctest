@@ -82,10 +82,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../similar_tools.html">Similar Python Tools</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../case_studies/under_construction.html">[Under Construction]</a></li>
-</ul>
 
         </div>
       </div>
@@ -15603,230 +15599,125 @@ Name: balance, Length: 19605, dtype: object</pre>
 <div class="section" id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balance_of">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balance_of</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balance_of" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balance">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balance" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[int, float]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balance_of_addresses">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balance_of_addresses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addresses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balance_of_addresses" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balances_of_addresses">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balances_of_addresses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balances_of_addresses" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>addresses</strong> (<em>Sequence</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[list[int], list[float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balance_of_by_block">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balance_of_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balance_of_by_block" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balance_by_block">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balance_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balance_by_block" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>blocks</strong> (<em>Sequence</em><em>[</em><em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>empty_token</strong> (<em>Any</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[list[int], list[float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_decimals">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_decimals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_decimals" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_decimals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_decimals" title="Permalink to this definition"></a></dt>
 <dd><p>get decimals of an erc20</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘int’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_holdings_from_transfers">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_holdings_from_transfers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transfers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_holdings_from_transfers" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balances_from_transfers">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balances_from_transfers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transfers</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balances_from_transfers" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>transfers</strong> (<em>Any</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>dtype</strong> (<em>Union</em><em>[</em><em>Type</em><em>[</em><em>int</em><em>]</em><em>, </em><em>Type</em><em>[</em><em>float</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Any</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_name">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_name" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_name" title="Permalink to this definition"></a></dt>
 <dd><p>get name of an erc20</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘str’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_symbol">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_symbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_symbol" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_symbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_symbol" title="Permalink to this definition"></a></dt>
 <dd><p>get symbol of an erc20</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘str’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_total_supply">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_total_supply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_total_supply" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_total_supply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_total_supply" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[int, float]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_total_supply_by_block">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_total_supply_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_total_supply_by_block" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_total_supply_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_total_supply_by_block" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>blocks</strong> (<em>Sequence</em><em>[</em><em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>]</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[list[int], list[float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_transfers">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_transfers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert_from_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">event_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_transfers" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_transfers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_timestamps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert_from_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">event_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_transfers" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token_address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>start_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>end_block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>convert_from_str</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>event_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Any</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spec.DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="ctc.evm.async_get_erc20s_balance_of">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_balance_of</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_balance_of" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ctc.evm.async_get_erc20s_balances">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_balances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_balances" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>address</strong> (<em>&lt;class 'str'&gt;</em>) – </p></li>
-<li><p><strong>tokens</strong> (<em>Sequence</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[list[int], list[float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20s_decimals">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_decimals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_decimals" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_decimals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_decimals" title="Permalink to this definition"></a></dt>
 <dd><p>get decimals of multiple erc20s</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tokens</strong> (<em>Iterable</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[int]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15836,91 +15727,50 @@ Name: balance, Length: 19605, dtype: object</pre>
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_names" title="Permalink to this definition"></a></dt>
 <dd><p>get name of multiple erc20s</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tokens</strong> (<em>Iterable</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[str]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20s_symbols">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_symbols" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_symbols" title="Permalink to this definition"></a></dt>
 <dd><p>get symbol of multiple erc20s</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tokens</strong> (<em>Iterable</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[str]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20s_total_supplies">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_total_supplies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_total_supplies" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_total_supplies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_total_supplies" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tokens</strong> (<em>Sequence</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>normalize</strong> (<em>&lt;class 'bool'&gt;</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>rpc_kwargs</strong> (<em>Any</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>Union[list[int], list[float]]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_normalize_erc20_quantities">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_normalize_erc20_quantities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_normalize_erc20_quantities" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_normalize_erc20_quantities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_normalize_erc20_quantities" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>quantities</strong> (<em>Sequence</em><em>[</em><em>SupportsInt</em><em>] </em><em>| </em><em>Series</em>) – </p></li>
-<li><p><strong>token</strong> (<em>ERC20Address</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>ProviderSpec</em>) – </p></li>
-<li><p><strong>decimals</strong> (<em>Optional</em><em>[</em><em>SupportsInt</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Optional</em><em>[</em><em>BlockNumberReference</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[float]</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[float]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_normalize_erc20_quantity">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_normalize_erc20_quantity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_normalize_erc20_quantity" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_normalize_erc20_quantity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_normalize_erc20_quantity" title="Permalink to this definition"></a></dt>
 <dd><p>convert raw erc20 quantity by adjusting radix by (10 ** decimals)</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>quantity</strong> (<em>&lt;class 'SupportsFloat'&gt;</em>) – </p></li>
-<li><p><strong>token</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – </p></li>
-<li><p><strong>provider</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>PartialProvider</em><em>, </em><em>Provider</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-<li><p><strong>decimals</strong> (<em>Optional</em><em>[</em><em>SupportsInt</em><em>]</em>) – </p></li>
-<li><p><strong>block</strong> (<em>Union</em><em>[</em><em>SupportsRound</em><em>, </em><em>str</em><em>, </em><em>int</em><em>, </em><em>Literal</em><em>[</em><em>'latest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'earliest'</em><em>]</em><em>, </em><em>Literal</em><em>[</em><em>'pending'</em><em>]</em><em>, </em><em>NoneType</em><em>]</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>&lt;class ‘float’&gt;</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
 </dd></dl>

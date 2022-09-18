@@ -21,7 +21,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="config" href="admin/config.html" />
+    <link rel="next" title="aliases" href="admin/aliases.html" />
     <link rel="prev" title="Subcommands" href="../subcommands.html" /> 
 </head>
 
@@ -60,11 +60,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../basic_usage.html">Basic Usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../subcommands.html">Subcommands</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Admin Subcommands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin/aliases.html">aliases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/chains.html">chains</a></li>
 <li class="toctree-l3"><a class="reference internal" href="admin/config.html">config</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin/config_path.html">config path</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin/download-proxy-abi.html">download-proxy-abi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/db.html">db</a></li>
 <li class="toctree-l3"><a class="reference internal" href="admin/log.html">log</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin/rechunk-events.html">rechunk-events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="admin/setup.html">setup</a></li>
 </ul>
 </li>
@@ -85,10 +85,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../python/datatypes.html">Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python/specific_protocols.html">Specific Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python/similar_tools.html">Similar Python Tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Case Studies</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../case_studies/under_construction.html">[Under Construction]</a></li>
 </ul>
 
         </div>
@@ -122,31 +118,7 @@
 <p class="admonition-title">Note</p>
 <p>Click on a subcommand to view its documentation page.</p>
 </div>
-<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">usage:</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc &lt;subcommand&gt; [options]</span>
-
-<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">description:</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    ctc is a tool for historical data analysis of Ethereum and other EVM chains</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    if using ctc for the first time, run:</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc setup</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    for quick lookups of an address, block, tx, or timestamp, run:</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc QUERY</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">    </span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        where </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">QUERY</span><span style="color: #b9f29f; text-decoration-color: #b9f29f"> is an address, block number, tx hash, or timestamp</span>
-
-    <span style="color: #b9f29f; text-decoration-color: #b9f29f">to view help about a specific subcommand run:</span>
-<span style="color: #b9f29f; text-decoration-color: #b9f29f">        </span><span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc &lt;subcommand&gt; -h</span>
-
-<span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">admin subcommands:</span>
-<a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config.html">    </a><span style="color: #64aaaa; text-decoration-color: #64aaaa"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config.html">config              </a></span><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config.html">    </a><span style="color: #b9f29f; text-decoration-color: #b9f29f"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config.html">print current config information</a></span>
-<a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config_path.html">    </a><span style="color: #64aaaa; text-decoration-color: #64aaaa"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config_path.html">config path         </a></span><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config_path.html">    </a><span style="color: #b9f29f; text-decoration-color: #b9f29f"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/config_path.html">print config path</a></span>
-<a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/download-proxy-abi.html">    </a><span style="color: #64aaaa; text-decoration-color: #64aaaa"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/download-proxy-abi.html">download-proxy-abi  </a></span><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/download-proxy-abi.html">    </a><span style="color: #b9f29f; text-decoration-color: #b9f29f"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/download-proxy-abi.html">download proxy abi for contract</a></span>
-<a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/log.html">    </a><span style="color: #64aaaa; text-decoration-color: #64aaaa"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/log.html">log                 </a></span><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/log.html">    </a><span style="color: #b9f29f; text-decoration-color: #b9f29f"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/log.html">display logs</a></span>
-<a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/rechunk-events.html">    </a><span style="color: #64aaaa; text-decoration-color: #64aaaa"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/rechunk-events.html">rechunk-events      </a></span><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/rechunk-events.html">    </a><span style="color: #b9f29f; text-decoration-color: #b9f29f"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/rechunk-events.html">rechunk events by specific chunk size</a></span>
-<a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/setup.html">    </a><span style="color: #64aaaa; text-decoration-color: #64aaaa"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/setup.html">setup               </a></span><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/setup.html">    </a><span style="color: #b9f29f; text-decoration-color: #b9f29f"><a href="https://ctc.readthedocs.io/en/latest/cli/subcommands/admin/setup.html">run ctc setup wizard</a></span>
-</pre><div class="toctree-wrapper compound">
+<pre class="terminal" style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre><div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -155,7 +127,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../subcommands.html" class="btn btn-neutral float-left" title="Subcommands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="admin/config.html" class="btn btn-neutral float-right" title="config" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="admin/aliases.html" class="btn btn-neutral float-right" title="aliases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

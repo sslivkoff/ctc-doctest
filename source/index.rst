@@ -211,14 +211,6 @@ External Data Sources
    ./python/specific_protocols
    ./python/similar_tools
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Case Studies
-
-   ./case_studies/under_construction
-
-
 .. other case studies
     gas monitoring
     crypto market state
