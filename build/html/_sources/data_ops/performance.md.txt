@@ -2,7 +2,7 @@
 # Performance
 
 ```{admonition} TLDR
-Even in suboptimal conditions, `ctc` uses lots of optimizations that allow running many types of workloads at acceptable levels of performance. This page is for those who wish to squeeze additional performance out of `ctc`.
+Even in suboptimal conditions, `ctc` uses optimizations that allow running many types of workloads at acceptable levels of performance. This page is for those who wish to squeeze additional performance out of `ctc`.
 ```
 
 ## Optimizing Performance

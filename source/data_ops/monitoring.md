@@ -5,11 +5,9 @@
 
 `ctc` can log outgoing RPC requests and SQL queries. This functionality can be enabled or disabled using `ctc setup`.
 
-Logs are stored in the `ctc` data dir:
-- `./logs/rpc_requests.md`
-- `./logs/sql_queries.md`
+Logs are stored in `logs` subdirectory of the `ctc` data dir (default = `~/ctc_data`).
 
-Running `ctc log` in the terminal will start a watching script of the log files. This provides a detailed view of external queries as they happen, which can be useful for debugging and ensuring that external calls are happening as expected.
+Running `ctc log` in the terminal will begin watching for changes to the log files. This provides a detailed view of external queries as they happen, which can be useful for debugging and ensuring that external calls are happening as expected.
 
 Logs are written to disk using a non-blocking queue, making it suitable for async applications and imparting minimal impact on performance. These logs are also rotated once they reach a certain size (default = `10MB`). However, being non-blocking also means that the timestamps in the logs lose a bit of temporal precision, and so they do not provide a precise picture of event timing.
 
@@ -27,4 +25,3 @@ Recommended utilities for profiling resource usage:
 - **Network Usage**: [nethogs](https://github.com/raboof/nethogs), [btop](https://github.com/aristocratos/btop)
 
 If your situation calls for a more programmatic monitoring approach, then you probably already know what tools you need.
-

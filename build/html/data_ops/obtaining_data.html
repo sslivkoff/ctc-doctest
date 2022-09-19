@@ -102,7 +102,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects data from a variety of sources, including RPC nodes, metadata databases, block explorers, and market data aggregators. After initial collection, much of this data is then <a class="reference internal" href="storing_data.html"><span class="doc std std-doc">stored</span></a>.</p>
 <div class="section" id="sources-of-historical-data">
 <h2>Sources of Historical Data<a class="headerlink" href="#sources-of-historical-data" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects the majority of its data from RPC nodes using the EVM’s <a class="reference external" href="https://eth.wiki/json-rpc/API">standard JSON-RPC interface</a>. Collection of historical data (as opposed to recent chain data) requires use of an archive node.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects the majority of its data from RPC nodes using the EVM’s <a class="reference external" href="https://eth.wiki/json-rpc/API">standard JSON-RPC interface</a>. Collection of historical data (as opposed to recent data) requires use of an archive node.</p>
 <p>There are 3 main ways to gain access to an RPC node:</p>
 <ol class="arabic simple">
 <li><p><strong>Run your own node:</strong> Although this requires more time, effort, and upfront cost than the other methods, it often leads to the best results. <a class="reference external" href="https://github.com/ledgerwatch/erigon">Erigon</a> is the most optimized client for running an archive node.</p></li>
@@ -114,10 +114,10 @@ provide access to archive nodes, either through paid plans or sometimes even thr
 </div>
 <div class="section" id="other-types-of-data">
 <h2>Other types of data<a class="headerlink" href="#other-types-of-data" title="Permalink to this headline"></a></h2>
-<p>Beyond RPC data there are a few other types of data that <code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects, including:</p>
+<p>Beyond RPC data there are other types of data that <code class="docutils literal notranslate"><span class="pre">ctc</span></code> collects, including:</p>
 <ul class="simple">
 <li><p><strong>ABIs of Contracts, Functions, and Events</strong> from <a class="reference external" href="https://etherscan.io/">Etherscan</a> and <a class="reference external" href="https://www.4byte.directory/">4byte</a></p></li>
-<li><p><strong>Market Data</strong> from <a class="reference external" href="https://coingecko.com/">CoinGecko</a></p></li>
+<li><p><strong>Market Data</strong> from <a class="reference external" href="https://defillama.com/">DefiLlama</a> and <a class="reference external" href="https://coingecko.com/">CoinGecko</a></p></li>
 </ul>
 </div>
 </div>

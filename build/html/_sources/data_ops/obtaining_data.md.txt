@@ -5,7 +5,7 @@
 
 ## Sources of Historical Data
 
-`ctc` collects the majority of its data from RPC nodes using the EVM's [standard JSON-RPC interface](https://eth.wiki/json-rpc/API). Collection of historical data (as opposed to recent chain data) requires use of an archive node.
+`ctc` collects the majority of its data from RPC nodes using the EVM's [standard JSON-RPC interface](https://eth.wiki/json-rpc/API). Collection of historical data (as opposed to recent data) requires use of an archive node.
 
 There are 3 main ways to gain access to an RPC node:
 
@@ -19,7 +19,6 @@ provide access to archive nodes, either through paid plans or sometimes even thr
 
 ## Other types of data
 
-Beyond RPC data there are a few other types of data that `ctc` collects, including:
+Beyond RPC data there are other types of data that `ctc` collects, including:
 - **ABIs of Contracts, Functions, and Events** from [Etherscan](https://etherscan.io/) and [4byte](https://www.4byte.directory/)
-- **Market Data** from [CoinGecko](https://coingecko.com/)
-
+- **Market Data** from [DefiLlama](https://defillama.com/) and [CoinGecko](https://coingecko.com/)
