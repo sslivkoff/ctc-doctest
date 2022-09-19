@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
     <link rel="prev" title="Dependencies" href="dependencies.html" /> 
 </head>
 
@@ -46,6 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
@@ -102,73 +103,37 @@
 <p class="admonition-title">TLDR</p>
 <p>Run <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line to create the config. Run it again to edit the config.</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses a simple configuration file to control its behavior.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses a configuration file to control its behavior.</p>
 <div class="section" id="config-parameters">
 <h2>Config Parameters<a class="headerlink" href="#config-parameters" title="Permalink to this headline"></a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config consists of key-value pairs. Keys include:</p>
+<p>The config file consists of key-value pairs. The keys:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">config_spec_version</span></code></strong>: the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> version used to create the config</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">data_dir</span></code></strong>: the directory where <code class="docutils literal notranslate"><span class="pre">ctc</span></code> stores its data</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">providers</span></code></strong>: metadata about RPC providers</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">networks</span></code></strong>: metadata about custom networks including their names and <code class="docutils literal notranslate"><span class="pre">chain_id</span></code>’s</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">network_defaults</span></code></strong>: specification of the default provider to use for each network, and the default network</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">networks</span></code></strong>: metadata about networks including their names and <code class="docutils literal notranslate"><span class="pre">chain_id</span></code>’s</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">default_network</span></code></strong>: default network to use</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">default_providers</span></code></strong>: default provider for each network</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">db_configs</span></code></strong>: database configuration information</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">log_rpc_calls</span></code></strong>: whether to log rpc calls</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">log_sql_queries</span></code></strong>: whether to log sql queries</p></li>
 </ul>
-<p>The main parameters of interest will usually be <code class="docutils literal notranslate"><span class="pre">providers</span></code> and <code class="docutils literal notranslate"><span class="pre">network</span> <span class="pre">defaults</span></code>.</p>
-<p>An exact specification for the config can be found in <a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/spec/typedefs/config_types.py">the config typedefs</a> file.</p>
+<p>A python type specification for the config can be found in <a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/spec/typedefs/config_types.py">the config typedefs</a> file.</p>
 </div>
 <div class="section" id="setting-config-parameters">
 <h2>Setting Config Parameters<a class="headerlink" href="#setting-config-parameters" title="Permalink to this headline"></a></h2>
 <p>By default ctc will looks for a config file at <code class="docutils literal notranslate"><span class="pre">~/.config/ctc/config.json</span></code>. But if the <code class="docutils literal notranslate"><span class="pre">CTC_CONFIG_PATH</span></code> environment variable is set, it will use that path instead.</p>
-<p>Users do not need to directly create or edit <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config files. Instead, all config parameters can be adjusted by using the setup wizard, activated by entering <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line. This can be used both for creating new configs and modifying the current config.</p>
+<p>Users do not need to directly create or edit <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config files. Instead, all config parameters can be adjusted by using the setup wizard by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line. This can be used both for creating new configs and modifying the current config.</p>
 </div>
 <div class="section" id="reading-config-parameters">
 <h2>Reading Config Parameters<a class="headerlink" href="#reading-config-parameters" title="Permalink to this headline"></a></h2>
-<p>On the command line, using <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">config</span></code> will print information about the config including its location on the filesystem and its current values.</p>
-<p>In python, the <code class="docutils literal notranslate"><span class="pre">ctc.config</span></code> module has many functions for getting the current config path and its values:</p>
+<p>On the command line, running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">config</span></code> will print information about the config including its location on the filesystem and its current values.</p>
+<p>In python, the <code class="docutils literal notranslate"><span class="pre">ctc.config</span></code> module has many functions for getting config data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">config</span>
 
 <span class="n">config_path</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_config_path</span><span class="p">()</span>
 <span class="n">data_dir</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_data_dir</span><span class="p">()</span>
 <span class="n">providers</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_providers</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-config">
-<h2>Example Config<a class="headerlink" href="#example-config" title="Permalink to this headline"></a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s1">&#39;config_spec_version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.2.10&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;data_dir&#39;</span><span class="p">:</span> <span class="s1">&#39;/home/storm/ctc_data&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;networks&#39;</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="s1">&#39;providers&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;alchemy_mainnet&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;alchemy_mainnet&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;network&#39;</span><span class="p">:</span> <span class="s1">&#39;mainnet&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;protocol&#39;</span><span class="p">:</span> <span class="s1">&#39;http&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://some-mainnet-rpc-url&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;session_kwargs&#39;</span><span class="p">:</span> <span class="p">{},</span>
-            <span class="s1">&#39;chunk_size&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="p">},</span>
-        <span class="s1">&#39;alchemy_arbitrum&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;alchemy_arbitrum&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;network&#39;</span><span class="p">:</span> <span class="s1">&#39;arbitrum&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;protocol&#39;</span><span class="p">:</span> <span class="s1">&#39;http&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://some-mainnet-rpc-url&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;session_kwargs&#39;</span><span class="p">:</span> <span class="p">{},</span>
-            <span class="s1">&#39;chunk_size&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="s1">&#39;network_defaults&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;default_network&#39;</span><span class="p">:</span> <span class="s1">&#39;mainnet&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;default_providers&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;mainnet&#39;</span><span class="p">:</span> <span class="s1">&#39;alchemy_mainnet&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;arbitrum&#39;</span><span class="p">:</span> <span class="s1">&#39;alchemy_arbitrum&#39;</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="s1">&#39;db_configs&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;main&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dbms&#39;</span><span class="p">:</span> <span class="s1">&#39;sqlite&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;/home/storm/ctc_data/ctc.db&#39;</span><span class="p">}</span>
-    <span class="p">},</span>
-<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -179,7 +144,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="dependencies.html" class="btn btn-neutral float-left" title="Dependencies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

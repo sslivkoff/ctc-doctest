@@ -177,6 +177,7 @@ External Data Sources
    ./overview/installation
    ./overview/dependencies
    ./overview/configuration
+   ./overview/changelog
    ./overview/faq
 
 .. toctree::

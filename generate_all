@@ -3,6 +3,7 @@
 ./generate_notebook_html
 ./generate_subcommand_html
 ./generate_subcommand_rsts
+./generate_changelog_content
 ./generate_aliases_content
 
 make clean html

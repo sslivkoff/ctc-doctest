@@ -107,3 +107,4 @@ html_show_sphinx = False
 # user starts in dark mode
 default_dark_mode = False
 
+suppress_warnings = ["myst.header"]

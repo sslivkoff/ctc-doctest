@@ -46,6 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
@@ -105,13 +106,12 @@
 </div>
 <div class="section" id="os-dependencies">
 <h2>OS Dependencies<a class="headerlink" href="#os-dependencies" title="Permalink to this headline"></a></h2>
-<p>Usage of <code class="docutils literal notranslate"><span class="pre">ctc</span></code> requires <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">&gt;=3.7,</span> <span class="pre">&lt;=</span> <span class="pre">3.10</span></code>.</p>
-<p>When using a fresh installation of Debian or Ubuntu, you may need to manually install <code class="docutils literal notranslate"><span class="pre">build-essential</span></code> and <code class="docutils literal notranslate"><span class="pre">python-dev</span></code>. These are libraries required by many python packages including <code class="docutils literal notranslate"><span class="pre">ctc</span></code>. If you are an active python user it’s likely that you already have these installed. If you are setting up a new machine or environment, you may need to install them according to your operating system and python version:</p>
-<p>To install on a fresh Debian / Ubuntu machine, can use the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-PYTHON_VERSION=$(python3 -c &quot;import sys; print(&#39;python&#39; + str(sys.version_info.major) + &#39;.&#39; + str(sys.version_info.minor))&quot;)
+<p>Usage of <code class="docutils literal notranslate"><span class="pre">ctc</span></code> requires python 3.7 or greater.</p>
+<p>When using a fresh installation of Debian or Ubuntu, you may need to manually install <code class="docutils literal notranslate"><span class="pre">build-essential</span></code> and <code class="docutils literal notranslate"><span class="pre">python-dev</span></code>. These are libraries required by many python packages including <code class="docutils literal notranslate"><span class="pre">ctc</span></code>. If you are an active python user it’s likely that these are already installed on your machine. If you are setting up a new machine or environment, you may need to install them according to your operating system and python version.</p>
+<p>To install these os dependencies on a fresh Debian / Ubuntu machine, can use the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="k">$(</span>python3 -c <span class="s2">&quot;import sys; print(&#39;python&#39; + str(sys.version_info.major) + &#39;.&#39; + str(sys.version_info.minor))&quot;</span><span class="k">)</span>
 
-python3 -m pip install $PYTHON_VERSION-dev
+python3 -m pip install <span class="nv">$PYTHON_VERSION</span>-dev
 sudo apt-get install build-essential
 </pre></div>
 </div>
@@ -120,7 +120,7 @@ sudo apt-get install build-essential
 <h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> depends on a few different types of external packages:</p>
 <ol class="arabic simple">
-<li><p><strong>data science dependencies</strong> include standard python library packages including <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
+<li><p><strong>data science dependencies</strong> include standard python library packages including <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
 <li><p><strong>IO dependencies</strong> include packages like <code class="docutils literal notranslate"><span class="pre">aiohttp</span></code> for network communication and <code class="docutils literal notranslate"><span class="pre">toml</span></code> for file io.</p></li>
 <li><p><strong>toolsuite dependencies</strong> are general python utilities coming the <code class="docutils literal notranslate"><span class="pre">toolsuite</span></code> set of repos. These are written by the same authors as <code class="docutils literal notranslate"><span class="pre">ctc</span></code>.</p></li>
 <li><p><strong>EVM/Cryptography dependencies</strong> include <code class="docutils literal notranslate"><span class="pre">pycryptodome</span></code>, <code class="docutils literal notranslate"><span class="pre">rlp</span></code>, and <code class="docutils literal notranslate"><span class="pre">eth_abi</span></code>.</p></li>

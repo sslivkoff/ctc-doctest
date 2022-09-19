@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+import os
+import shutil
+
+import ctc
+
+
+ctc_path = os.path.dirname(os.path.dirname(ctc.__path__[0]))
+changelog_repo_path = os.path.join(ctc_path, 'CHANGELOG.md')
+changelog_docs_path = './source/overview/changelog.md'
+
+shutil.copy(changelog_repo_path, changelog_docs_path)

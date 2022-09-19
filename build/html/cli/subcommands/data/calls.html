@@ -46,6 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../overview/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview/dependencies.html">Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview/faq.html">FAQ</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
@@ -250,13 +251,17 @@
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls &lt;address&gt; &lt;function&gt; [&lt;function_parameters&gt;] --blocks &lt;blocks&gt;</span>
 
     <span style="color: #6272a4; text-decoration-color: #6272a4"># Balance of DAI, USDC, and USDT in Curve 3pool</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls balanceOf 0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --addresses 0x6b175474e89094c44da98b954eedeac495271d0f 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 0xdac17f958d2ee523a2206206994597c13d831ec7 --normalize</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls balanceOf 0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --addresses </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">0x6b175474e89094c44da98b954eedeac495271d0f 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">0xdac17f958d2ee523a2206206994597c13d831ec7 --normalize</span>
 
     <span style="color: #6272a4; text-decoration-color: #6272a4"># Weekly balance of DAI in Curve 3pool throughout year 2021</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls 0x6b175474e89094c44da98b954eedeac495271d0f balanceOf 0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --times 2021:2022:1w --normalize</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls 0x6b175474e89094c44da98b954eedeac495271d0f balanceOf 0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --times </span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">2021:2022:1w --normalize</span>
 
     <span style="color: #6272a4; text-decoration-color: #6272a4"># Balance of DAI in Curve 3pool over the past 1 million blocks</span>
-    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls 0x6b175474e89094c44da98b954eedeac495271d0f balanceOf 0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --blocks latest:-1000000 -n 20 --normalize</span>
+    <span style="color: #64aaaa; text-decoration-color: #64aaaa">ctc calls 0x6b175474e89094c44da98b954eedeac495271d0f balanceOf 0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7 --blocks</span>
+<span style="color: #64aaaa; text-decoration-color: #64aaaa">latest:-1000000 -n 20 --normalize</span>
 
 <span style="color: #ce93f9; text-decoration-color: #ce93f9; font-weight: bold">arguments:</span>
     <span style="color: #64aaaa; text-decoration-color: #64aaaa">ADDRESS_AND_OR_FUNCTION</span>      <span style="color: #b9f29f; text-decoration-color: #b9f29f">&lt;see above&gt;</span>

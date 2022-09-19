@@ -46,6 +46,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
@@ -100,14 +101,14 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
 <div class="section" id="basic-installation">
 <h2>Basic Installation<a class="headerlink" href="#basic-installation" title="Permalink to this headline"></a></h2>
-<p>Installing <code class="docutils literal notranslate"><span class="pre">ctc</span></code> takes two steps:</p>
+<p>Installing <code class="docutils literal notranslate"><span class="pre">ctc</span></code> takes 2 steps:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">checkthechain</span></code></p></li>
-<li><p>enter <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> in the terminal to run the setup wizard</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> in the terminal to run the setup wizard (can skip most steps by pressing enter)</p></li>
 </ol>
 <p>See <a class="reference internal" href="configuration.html"><span class="doc std std-doc">Configuration</span></a> for additional setup options.</p>
-<p>If your shell’s <code class="docutils literal notranslate"><span class="pre">PATH</span></code> does not include python package scripts you may need to do something like <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">...</span></code> and <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">ctc</span> <span class="pre">...</span></code></p>
-<p>Installation requires <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">&gt;=</span> <span class="pre">3.7</span></code>. see <a class="reference internal" href="dependencies.html"><span class="doc std std-doc">Dependencies</span></a> for more information.</p>
+<p>If your shell’s <code class="docutils literal notranslate"><span class="pre">PATH</span></code> does not include python package scripts, you need to do something like <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">...</span></code> and <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">ctc</span> <span class="pre">...</span></code></p>
+<p>Installation requires python 3.7 or greater. see <a class="reference internal" href="dependencies.html"><span class="doc std std-doc">Dependencies</span></a> for more information.</p>
 </div>
 <div class="section" id="upgrading">
 <h2>Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline"></a></h2>
@@ -116,9 +117,27 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">checkthechain</span> <span class="pre">-U</span></code></p></li>
 <li><p>Rerun the setup wizard by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> (can skip most steps by pressing enter)</p></li>
 </ol>
+<p>To upgrade from a special installation, you may need to</p>
 </div>
-<div class="section" id="alternative-installations">
-<h2>Alternative Installations<a class="headerlink" href="#alternative-installations" title="Permalink to this headline"></a></h2>
+<div class="section" id="uninstalling">
+<h2>Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this headline"></a></h2>
+<p>Fully removing <code class="docutils literal notranslate"><span class="pre">ctc</span></code> from a machine takes three steps:</p>
+<ol class="arabic simple">
+<li><p>Uninstall the package <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">checkthechain</span></code></p></li>
+<li><p>Remove the config folder: <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/.config/ctc</span></code></p></li>
+<li><p>Remove the data folder: <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/ctc_data</span></code></p></li>
+</ol>
+<p>You can always check whether a package has been uninstalled from your python environment by attempting to import it in a fresh shell. If you see a <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code>, the package has been uninstalled.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ctc</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ModuleNotFoundError</span>: <span class="n">No module named &#39;ctc&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># ctc is not uninstalled</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="special-installations">
+<h2>Special Installations<a class="headerlink" href="#special-installations" title="Permalink to this headline"></a></h2>
 <div class="section" id="installing-from-source">
 <h3>Installing from source<a class="headerlink" href="#installing-from-source" title="Permalink to this headline"></a></h3>
 <p>If you would like to install the latest version of <code class="docutils literal notranslate"><span class="pre">ctc</span></code> you can clone the repo directly:</p>
@@ -129,7 +148,7 @@ python -m pip install ./
 </div>
 </div>
 <div class="section" id="installing-in-develop-mode-edit-mode">
-<h3>Installing in Develop Mode / Edit Mode<a class="headerlink" href="#installing-in-develop-mode-edit-mode" title="Permalink to this headline"></a></h3>
+<h3>Installing in develop mode / edit mode<a class="headerlink" href="#installing-in-develop-mode-edit-mode" title="Permalink to this headline"></a></h3>
 <p>If you would like to make edits to the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> codebase and actively use those edits in your python programs, you can install the package in developer mode with the <code class="docutils literal notranslate"><span class="pre">-e</span></code> flag:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone 
 <span class="nb">cd</span> checkthechain
@@ -140,7 +159,7 @@ python -m pip install -e ./
 </div>
 <div class="section" id="libraries">
 <h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline"></a></h2>
-<p>On a fresh installation of Ubuntu or Debian you may need to manually install the <code class="docutils literal notranslate"><span class="pre">build-essential</span></code> and <code class="docutils literal notranslate"><span class="pre">python-dev</span></code> packages:</p>
+<p>On a fresh installation of Ubuntu or Debian, you may need to manually install the <code class="docutils literal notranslate"><span class="pre">build-essential</span></code> and <code class="docutils literal notranslate"><span class="pre">python-dev</span></code> packages. Machines that are used for active python development probably already have these packages installed.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="k">$(</span>python3 -c <span class="s2">&quot;import sys; print(&#39;python&#39; + str(sys.version_info.major) + &#39;.&#39; + str(sys.version_info.minor))&quot;</span><span class="k">)</span>
 
 python3 -m pip install <span class="nv">$PYTHON_VERSION</span>-dev

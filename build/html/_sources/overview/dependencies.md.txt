@@ -9,13 +9,12 @@ If you just want to install `ctc` then check out the [Installation](/overview/in
 
 ## OS Dependencies
 
-Usage of `ctc` requires `python >=3.7, <= 3.10`.
+Usage of `ctc` requires python 3.7 or greater.
 
-When using a fresh installation of Debian or Ubuntu, you may need to manually install `build-essential` and `python-dev`. These are libraries required by many python packages including `ctc`. If you are an active python user it's likely that you already have these installed. If you are setting up a new machine or environment, you may need to install them according to your operating system and python version:
+When using a fresh installation of Debian or Ubuntu, you may need to manually install `build-essential` and `python-dev`. These are libraries required by many python packages including `ctc`. If you are an active python user it's likely that these are already installed on your machine. If you are setting up a new machine or environment, you may need to install them according to your operating system and python version.
 
-To install on a fresh Debian / Ubuntu machine, can use the following:
-```
-
+To install these os dependencies on a fresh Debian / Ubuntu machine, can use the following:
+```bash
 PYTHON_VERSION=$(python3 -c "import sys; print('python' + str(sys.version_info.major) + '.' + str(sys.version_info.minor))")
 
 python3 -m pip install $PYTHON_VERSION-dev
@@ -26,7 +25,7 @@ sudo apt-get install build-essential
 
 `ctc` depends on a few different types of external packages:
 
-1. **data science dependencies** include standard python library packages including `numpy`, and `pandas`.
+1. **data science dependencies** include standard python library packages including `numpy` and `pandas`.
 2. **IO dependencies** include packages like `aiohttp` for network communication and `toml` for file io.
 3. **toolsuite dependencies** are general python utilities coming the `toolsuite` set of repos. These are written by the same authors as `ctc`.
 4. **EVM/Cryptography dependencies** include `pycryptodome`, `rlp`, and `eth_abi`.
@@ -60,4 +59,3 @@ New python type annotation features will be used as they become available using 
 `ctc` stores much of the data it downloads in sql databases. Support for sqlite is currently in beta and support for postgresql is coming soon.
 
 For more details see [Data Storage](/data_ops/storing_data)
-

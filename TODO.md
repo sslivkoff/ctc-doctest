@@ -1,16 +1,25 @@
 
 ## TODO
 
-- get a doc generation run working
 - do a high level overview of what highlevel org changes should happen
     - make a list, add to todo
 - do a readthrough of all copy, see what needs to change
     - make a list, add to todo
 - add to the docs readme for steps of how to develop and build the docs
-- fix help urls in ctc -h
-
+- specific points
+    - The Basics
+        - Introduction
+            - update list of datatype, protocols, and external data sources
+        - Installation
+            - add note about installing from git commits
+        - Dependencies
+            - rewrite the libraries section
+            - add note about strict mode type checking
+        - create a Changelog page
 
 ## Done
+- fix help urls in ctc -h
+- get a doc generation run working
 
 
 

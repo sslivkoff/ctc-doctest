@@ -7,6 +7,15 @@ View the generated docs at https://checkthechain.github.io/docs
 
 ## Building
 
+In repo root run:
+```bash
+BUILDING_SPHINX=1 ./generate_all
+```
+
+This command generates many html files and then runs the standard sphinx build pipeline.
+
+Once the html is generated, the sphinx pipeline can be run in its own using:
+
 ```bash
 make clean html
 ```
