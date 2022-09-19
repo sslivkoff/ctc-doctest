@@ -65,7 +65,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Basic Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/rpc_client.html">RPC Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/datatypes.html">Datatypes</a></li>
@@ -99,17 +99,13 @@
              
   <div class="section" id="useful-aliases">
 <h1>Useful Aliases<a class="headerlink" href="#useful-aliases" title="Permalink to this headline"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> makes it simple to perform many tasks from the command line. However, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> can be made even more simple by using shell aliases that reduce the number of required keystrokes that must be typed.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">ctc</span></code> codebase includes an optional set of cli aliases for this purpose. These aliases can be found in <a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/scripts/ctc_aliases.sh">a script</a> in the repo, but they are also pasted below for convenience.</p>
-<p>These aliases make it so you do not need to type the <code class="docutils literal notranslate"><span class="pre">&quot;ctc&quot;</span></code> before a subcommand name. For example, instead of typing <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">keccak</span> <span class="pre">&lt;address&gt;</span></code>, you just type <code class="docutils literal notranslate"><span class="pre">keccak</span> <span class="pre">&lt;address&gt;</span></code>. Instead of typing <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">4byte</span> <span class="pre">&lt;query&gt;</span></code>, you just type <code class="docutils literal notranslate"><span class="pre">4byte</span> <span class="pre">&lt;query&gt;</span></code>. And so on, for many different <code class="docutils literal notranslate"><span class="pre">ctc</span></code> subcommands.</p>
-<p>To use these aliases, you need to include them in your shell config file (e.g. <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>). You can either copy paste the alias commands directly, or you can add a single line: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">&lt;PATH_TO_ALIAS_FILE&gt;</span></code>.</p>
-<div class="section" id="the-aliases-file">
-<h2>The Aliases File<a class="headerlink" href="#the-aliases-file" title="Permalink to this headline"></a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="c1"># # ctc aliases</span>
-<span class="c1">#</span>
-
-<span class="c1"># compute commands</span>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> makes it simple to perform many tasks from the command line. However, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> can be made even more simple by using shell aliases that reduce the number of required keystrokes that must be typed. The <code class="docutils literal notranslate"><span class="pre">ctc</span></code> codebase includes an optional set of cli aliases for this purpose.</p>
+<p>Such aliases make it so you do not need to type the “ctc” before a subcommand name. For example, instead of typing <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">keccak</span> <span class="pre">&lt;address&gt;</span></code>, you just type <code class="docutils literal notranslate"><span class="pre">keccak</span> <span class="pre">&lt;address&gt;</span></code>. Instead of typing <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">4byte</span> <span class="pre">&lt;query&gt;</span></code>, you just type <code class="docutils literal notranslate"><span class="pre">4byte</span> <span class="pre">&lt;query&gt;</span></code>. And so on, for many different <code class="docutils literal notranslate"><span class="pre">ctc</span></code> subcommands.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> wizard can add these aliases to your shell configuation.</p>
+<div class="section" id="the-aliases">
+<h2>The Aliases<a class="headerlink" href="#the-aliases" title="Permalink to this headline"></a></h2>
+<p>These aliases are chosen so as not to conflict with any common CLI tools.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute commands</span>
 <span class="nb">alias</span> <span class="nv">ascii</span><span class="o">=</span><span class="s2">&quot;ctc ascii&quot;</span>
 <span class="nb">alias</span> <span class="nv">hex</span><span class="o">=</span><span class="s2">&quot;ctc hex&quot;</span>
 <span class="nb">alias</span> <span class="nv">keccak</span><span class="o">=</span><span class="s2">&quot;ctc keccak&quot;</span>
@@ -145,10 +141,6 @@
 <span class="nb">alias</span> <span class="nv">rari</span><span class="o">=</span><span class="s2">&quot;ctc rari&quot;</span>
 <span class="nb">alias</span> <span class="nv">uniswap</span><span class="o">=</span><span class="s2">&quot;ctc uniswap&quot;</span>
 <span class="nb">alias</span> <span class="nv">yearn</span><span class="o">=</span><span class="s2">&quot;ctc yearn&quot;</span>
-
-<span class="c1">#</span>
-<span class="c1"># # end of ctc aliases</span>
-<span class="c1">#</span>
 </pre></div>
 </div>
 </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Codebase Tour &mdash; Check the Chain (ctc)  documentation</title>
+  <title>Basic Usage &mdash; Check the Chain (ctc)  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -65,7 +65,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Codebase Tour</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rpc_client.html">RPC Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datatypes.html">Datatypes</a></li>
@@ -87,7 +87,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Codebase Tour</li>
+      <li>Basic Usage</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/python/code_tour.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,42 +97,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="codebase-tour">
-<h1>Codebase Tour<a class="headerlink" href="#codebase-tour" title="Permalink to this headline"></a></h1>
-<div class="section" id="architecture-and-api">
-<h2>Architecture and API<a class="headerlink" href="#architecture-and-api" title="Permalink to this headline"></a></h2>
+  <div class="section" id="basic-usage">
+<h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline"></a></h1>
+<p>The top-level <code class="docutils literal notranslate"><span class="pre">ctc</span></code> module contains functions for generic EVM operations:</p>
+<p><strong>Example: Generic EVM Operations</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
+
+<span class="n">some_hash</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">keccak_text</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+
+<span class="n">encoded_data</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">abi_encode_packed</span><span class="p">((</span><span class="mi">400</span><span class="p">,</span> <span class="mi">6000</span><span class="p">),</span> <span class="s1">&#39;(int128,int128)&#39;</span><span class="p">)</span>
+
+<span class="n">eth_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_eth_balance</span><span class="p">(</span><span class="s1">&#39;0x6b175474e89094c44da98b954eedeac495271d0f&#39;</span><span class="p">)</span>
+
+<span class="n">erc20_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_balance</span><span class="p">(</span>
+    <span class="n">token</span><span class="o">=</span><span class="s1">&#39;0x6b175474e89094c44da98b954eedeac495271d0f&#39;</span><span class="p">,</span>
+    <span class="n">wallet</span><span class="o">=</span><span class="s1">&#39;0x6b175474e89094c44da98b954eedeac495271d0f&#39;</span><span class="p">],</span>
+    <span class="n">block</span><span class="o">=</span><span class="mi">15000000</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
+    <span class="s1">&#39;0xcbcdf9626bc03e24f779434178a73a0b4bad62ed&#39;</span><span class="p">,</span>
+    <span class="n">event_name</span><span class="o">=</span><span class="s1">&#39;Swap&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Some points to keep in mind while using <code class="docutils literal notranslate"><span class="pre">ctc</span></code>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> does not use any custom types or OOP. Instead it emphasizes simple standard datatypes including python builtins, numpy arrays, and the occassional pandas dataframe. Effort is made to ensure that the users stay “close” to the data with minimal implicit magic going on.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> is <a class="reference internal" href="async_code.html"><span class="doc std std-doc">asynchronous-first</span></a>, which allows it to efficiently orchestrate large numbers of interdependent queries.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> is designed with historical data in mind. Throughout its API many functions take parameters such as <code class="docutils literal notranslate"><span class="pre">block</span></code>, <code class="docutils literal notranslate"><span class="pre">blocks</span></code>, <code class="docutils literal notranslate"><span class="pre">start_block</span></code>, or <code class="docutils literal notranslate"><span class="pre">end_block</span></code> to specify the relevant block ranges for each query.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses functional programming. Instead of custom types or OOP, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses simple standard datatypes including python builtins and numpy arrays. There is no need to initialize any objects. Simply <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">ctc</span></code> and then call functions in the <code class="docutils literal notranslate"><span class="pre">ctc.*</span></code> namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> is asynchronous-first, which allows it to efficiently orchestrate large numbers of interdependent queries. <a class="reference internal" href="async_code.html"><span class="doc std std-doc">Special consideration</span></a> is needed to run code in an asynchronous context.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> is designed with historical data analysis in mind. For any query of EVM state, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> aims to support historical versions of that query. This includes both 1) querying specific moments in time, as well as 2) querying broad lengths of time.</p></li>
 </ul>
+<p>The top-level <code class="docutils literal notranslate"><span class="pre">ctc</span></code> package covers generic EVM operations. More specific functionality can be found in <code class="docutils literal notranslate"><span class="pre">ctc</span></code> submodules as described below.</p>
+<div class="section" id="rpc-client-subpackage-ctc-rpc">
+<h2>RPC Client Subpackage <code class="docutils literal notranslate"><span class="pre">ctc.rpc</span></code><a class="headerlink" href="#rpc-client-subpackage-ctc-rpc" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ctc.rpc</span></code> implements <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s custom RPC client. This client can be used for fine-grained control over RPC calls. Unless explcitly told not to do so.<code class="docutils literal notranslate"><span class="pre">ctc</span></code> will automatically encode requests to binary and decode requests from binary.</p>
+<p><strong>Example: get bytecode for contract, at specific block, using specific provider</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ctc.rpc</span>
+
+<span class="n">contract_bytecode</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">async_eth_get_code</span><span class="p">(</span>
+    <span class="s1">&#39;0x6b175474e89094c44da98b954eedeac495271d0f&#39;</span><span class="p">,</span>
+    <span class="n">block_number</span><span class="o">=</span><span class="mi">15000000</span><span class="p">,</span>
+    <span class="n">provider</span><span class="o">=</span><span class="s1">&#39;https://some_rpc_node/&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline"></a></h2>
-<p>There are a few subpackages that you should acquiant yourself with:</p>
-<div class="section" id="ctc-evm">
-<h3>ctc.evm<a class="headerlink" href="#ctc-evm" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">ctc.evm</span></code> defines high-level functions for working with EVM data, and it contains most of the functions that users will need on a day-to-day basis. These are the “porcelain” functions, whereas the other <code class="docutils literal notranslate"><span class="pre">ctc</span></code> subpackages are the plumbing.</p>
 </div>
-<div class="section" id="ctc-protocols">
-<h3>ctc.protocols<a class="headerlink" href="#ctc-protocols" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">ctc.protocols</span></code> contains functions specific to many different protocols such as Chainlink or Uniswap.</p>
+<div class="section" id="protocol-specific-subpackages-ctc-protocols">
+<h2>Protocol-specific Subpackages <code class="docutils literal notranslate"><span class="pre">ctc.protocols</span></code><a class="headerlink" href="#protocol-specific-subpackages-ctc-protocols" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ctc.protocols</span></code> contains functions specific to many different protocols such as Chainlink or Uniswap. See a full list <a class="reference internal" href="specific_protocols.html"><span class="doc std std-doc">here</span></a>.</p>
+<p><strong>Example: gather complete historical data for Chainlink’s RAI-USD feed</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ctc.protocols</span> <span class="kn">import</span> <span class="n">chainlink_utils</span>
+
+<span class="n">feed_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">chainlink_utils</span><span class="o">.</span><span class="n">async_get_feed_data</span><span class="p">(</span><span class="s1">&#39;RAI_USD&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="ctc-spec">
-<h3>ctc.spec<a class="headerlink" href="#ctc-spec" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">ctc.spec</span></code> is where most annotation types are defined.</p>
 </div>
 <div class="section" id="other-subpackages">
-<h3>Other Subpackages<a class="headerlink" href="#other-subpackages" title="Permalink to this headline"></a></h3>
+<h2>Other Subpackages<a class="headerlink" href="#other-subpackages" title="Permalink to this headline"></a></h2>
+<p>End users of <code class="docutils literal notranslate"><span class="pre">ctc</span></code> probably won’t need to use any of these directly.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc.binary</span></code>: utilities for hashing and abi encoding/decoding</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc.cli</span></code>: ctc command line implementation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc.config</span></code>: config loading and management</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc.directory</span></code>: token and contract addresses as well as chain_id’s</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ctc.rpc</span></code>: utilities for communicating over rpc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc.cli</span></code>: command line interface</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc.config</span></code>: configuration utilities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc.db</span></code>: local cache database</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctc.spec</span></code>: ctc specifications, mainly types for type annotations</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ctc.toolbox</span></code>: miscellaneous python utilities</p></li>
 </ul>
-</div>
 </div>
 </div>
 

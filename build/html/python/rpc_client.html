@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Asynchronous Code" href="async_code.html" />
-    <link rel="prev" title="Codebase Tour" href="code_tour.html" /> 
+    <link rel="prev" title="Basic Usage" href="code_tour.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -65,7 +65,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_tour.html">Basic Usage</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">RPC Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datatypes.html">Datatypes</a></li>
@@ -106,7 +106,7 @@
 <ol class="arabic simple">
 <li><p><strong>constructor function</strong>: create method requests</p></li>
 <li><p><strong>digestor function</strong>: process method responses</p></li>
-<li><p><strong>executor function</strong>: perform construction, , and digestion all in one step</p></li>
+<li><p><strong>executor function</strong>: perform construction, dispatching, and digestion all in one step</p></li>
 <li><p><strong>batch construct</strong>: create method requests in bulk</p></li>
 <li><p><strong>batch execute</strong>: execute method requests in bulk</p></li>
 </ol>
@@ -120,12 +120,12 @@
 <div class="section" id="typical-rpc-request-lifecycle-in-ctc">
 <h2>Typical RPC Request Lifecycle in <code class="docutils literal notranslate"><span class="pre">ctc</span></code><a class="headerlink" href="#typical-rpc-request-lifecycle-in-ctc" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
-<li><p>a constructor function encodes request metadata and parameters into a <code class="docutils literal notranslate"><span class="pre">RpcRequest</span></code> <code class="docutils literal notranslate"><span class="pre">dict</span></code></p></li>
+<li><p>a constructor function encodes request metadata and parameters into a <code class="docutils literal notranslate"><span class="pre">RpcRequest</span></code> python <code class="docutils literal notranslate"><span class="pre">dict</span></code></p></li>
 <li><p>the request is dispatched to an rpc provider using <code class="docutils literal notranslate"><span class="pre">rpc.async_send_http()</span></code></p></li>
 <li><p>the client <code class="docutils literal notranslate"><span class="pre">await</span></code>s until the rpc provider returns a response</p></li>
 <li><p>a digestor function decodes the response</p></li>
 </ol>
-<p>For requests that execute contract code (like <code class="docutils literal notranslate"><span class="pre">eth_call</span></code>) or retrieve events (like <code class="docutils literal notranslate"><span class="pre">getLogs</span></code>), <code class="docutils literal notranslate"><span class="pre">ctc</span></code> will encode/decode inputs/outputs using the relevant function abi’s and event abi’s.</p>
+<p>For requests that execute contract code (like <code class="docutils literal notranslate"><span class="pre">eth_call</span></code>) or retrieve events (like <code class="docutils literal notranslate"><span class="pre">eth_getLogs</span></code>), <code class="docutils literal notranslate"><span class="pre">ctc</span></code> will encode/decode inputs/outputs using the relevant function abi’s and event abi’s.</p>
 </div>
 </div>
 
@@ -133,7 +133,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="code_tour.html" class="btn btn-neutral float-left" title="Codebase Tour" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="code_tour.html" class="btn btn-neutral float-left" title="Basic Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="async_code.html" class="btn btn-neutral float-right" title="Asynchronous Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

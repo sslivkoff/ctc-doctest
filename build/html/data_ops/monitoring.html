@@ -65,7 +65,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Basic Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/rpc_client.html">RPC Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/datatypes.html">Datatypes</a></li>
@@ -102,12 +102,8 @@
 <div class="section" id="logging">
 <h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> can log outgoing RPC requests and SQL queries. This functionality can be enabled or disabled using <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code>.</p>
-<p>Logs are stored in the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> data dir:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">./logs/rpc_requests.md</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./logs/sql_queries.md</span></code></p></li>
-</ul>
-<p>Running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">log</span></code> in the terminal will start a watching script of the log files. This provides a detailed view of external queries as they happen, which can be useful for debugging and ensuring that external calls are happening as expected.</p>
+<p>Logs are stored in <code class="docutils literal notranslate"><span class="pre">logs</span></code> subdirectory of the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> data dir (default = <code class="docutils literal notranslate"><span class="pre">~/ctc_data</span></code>).</p>
+<p>Running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">log</span></code> in the terminal will begin watching for changes to the log files. This provides a detailed view of external queries as they happen, which can be useful for debugging and ensuring that external calls are happening as expected.</p>
 <p>Logs are written to disk using a non-blocking queue, making it suitable for async applications and imparting minimal impact on performance. These logs are also rotated once they reach a certain size (default = <code class="docutils literal notranslate"><span class="pre">10MB</span></code>). However, being non-blocking also means that the timestamps in the logs lose a bit of temporal precision, and so they do not provide a precise picture of event timing.</p>
 <p>Logs are managed by the <a class="reference external" href="https://github.com/Delgan/loguru">Loguru</a> package. Loguru must be installed for logging to be enabled (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">loguru</span></code>).</p>
 </div>

@@ -9,7 +9,7 @@ For every method specified by the EVM JSON-RPC standard, `ctc.rpc` implements fi
 
 1. **constructor function**: create method requests
 2. **digestor function**: process method responses
-3. **executor function**: perform construction, , and digestion all in one step
+3. **executor function**: perform construction, dispatching, and digestion all in one step
 4. **batch construct**: create method requests in bulk
 5. **batch execute**: execute method requests in bulk
 
@@ -17,16 +17,15 @@ For every method specified by the EVM JSON-RPC standard, `ctc.rpc` implements fi
 
 ## RPC Providers
 
-
 Unless otherwise specified, requests will be sent to the default RPC provider in `ctc`'s config. Functions in `ctc.rpc` that send RPC requests also take an optional `provider` argument that can be used to specify other RPC providers.
 
 For more details, see the RPC Provider section on the [Data Sources](../data_ops/obtaining_data) page.
 
 ## Typical RPC Request Lifecycle in `ctc`
-1. a constructor function encodes request metadata and parameters into a `RpcRequest` `dict`
+1. a constructor function encodes request metadata and parameters into a `RpcRequest` python `dict`
 2. the request is dispatched to an rpc provider using `rpc.async_send_http()`
 3. the client `await`s until the rpc provider returns a response
 4. a digestor function decodes the response
 
-For requests that execute contract code (like `eth_call`) or retrieve events (like `getLogs`), `ctc` will encode/decode inputs/outputs using the relevant function abi's and event abi's.
+For requests that execute contract code (like `eth_call`) or retrieve events (like `eth_getLogs`), `ctc` will encode/decode inputs/outputs using the relevant function abi's and event abi's.
 

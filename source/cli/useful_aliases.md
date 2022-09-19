@@ -2,23 +2,17 @@
 
 # Useful Aliases
 
-`ctc` makes it simple to perform many tasks from the command line. However, `ctc` can be made even more simple by using shell aliases that reduce the number of required keystrokes that must be typed.
+`ctc` makes it simple to perform many tasks from the command line. However, `ctc` can be made even more simple by using shell aliases that reduce the number of required keystrokes that must be typed. The `ctc` codebase includes an optional set of cli aliases for this purpose.
 
-The `ctc` codebase includes an optional set of cli aliases for this purpose. These aliases can be found in [a script](https://github.com/fei-protocol/checkthechain/blob/main/scripts/ctc_aliases.sh) in the repo, but they are also pasted below for convenience.
+Such aliases make it so you do not need to type the "ctc" before a subcommand name. For example, instead of typing `ctc keccak <address>`, you just type `keccak <address>`. Instead of typing `ctc 4byte <query>`, you just type `4byte <query>`. And so on, for many different `ctc` subcommands.
 
-These aliases make it so you do not need to type the `"ctc"` before a subcommand name. For example, instead of typing `ctc keccak <address>`, you just type `keccak <address>`. Instead of typing `ctc 4byte <query>`, you just type `4byte <query>`. And so on, for many different `ctc` subcommands.
+The `ctc setup` wizard can add these aliases to your shell configuation.
 
-To use these aliases, you need to include them in your shell config file (e.g. `~/.profile`). You can either copy paste the alias commands directly, or you can add a single line: `source <PATH_TO_ALIAS_FILE>`.
+## The Aliases
 
-
-## The Aliases File
+These aliases are chosen so as not to conflict with any common CLI tools.
 
 ```bash
-
-#
-# # ctc aliases
-#
-
 # compute commands
 alias ascii="ctc ascii"
 alias hex="ctc hex"
@@ -55,10 +49,4 @@ alias llama="ctc llama"
 alias rari="ctc rari"
 alias uniswap="ctc uniswap"
 alias yearn="ctc yearn"
-
-#
-# # end of ctc aliases
-#
-
 ```
-

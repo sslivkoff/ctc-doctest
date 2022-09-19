@@ -21,11 +21,11 @@ Operations in `ctc` that fetch external data are usually bottlenecked by the RPC
 
 If using a 3rd party RPC provider, you should inquire about where their nodes are located and plan accordingly.
 
-`ctc`'s default configuration assumes that the user is querying an RPC node on a remote network. This leads `ctc` to locally store lots of the data that it retrieves. However, it's possible that different tradeoffs are relevant in heavily optimized setups. For example if `ctc` is run on the same server as an archive node, then some caches might hurt more than they help. Cache settings are altered using `ctc setup` on the command line.
+`ctc`'s default configuration assumes that the user is querying an RPC node on a remote network. This leads `ctc` to locally store much of the data that it retrieves. However, it's possible that alternate settings might be optimal in different contexts. For example if `ctc` is run on the same server as an archive node, then it's possible that certain caches might hurt more than they help. Cache settings are altered using `ctc setup` on the command line.
 
 ### Python Versions
 
-More recent versions of python are generally faster. Upgrading to the latest python version is one of the easiest ways to improve code performance. In particular, the upcoming python 3.11 has much faster startup times and shows improvement across many benchmarks. This makes `ctc`'s cli commands feel especially quick and responsive.
+More recent versions of python are generally faster. Upgrading to the latest python version is one of the easiest ways to improve code performance. In particular, the upcoming python 3.11 has much faster startup times and shows improvement across many benchmarks. This will make `ctc`'s cli commands feel especially quick and responsive.
 
 ### Python Packages
 
@@ -66,7 +66,7 @@ async def compute_timestamp_stats(timestamp):
 
 ### Logging
 
-Logging of RPC requests and SQL queries takes up a non-zero amount of resources. If you don't need logging, disabling it can squeeze out a bit of extra performance. This can be done by running the setup wizard `ctc setup`.
+Logging of RPC requests and SQL queries consumes a non-zero amount of resources. If you don't need logging, disabling it can squeeze out a bit of extra performance. This can be done by running the setup wizard `ctc setup`.
 
 ## Benchmarking Performance
 
@@ -75,12 +75,12 @@ To truly optimize your environment and implementation, you will need to run your
 ### Benchmarking Speed
 
 The simplest way to benchmark the speed of a CLI command is `time`. Running `time <command>` will run a given command and report the run time. 
-Benchmarking speed of python code snippets is slightly more complicated but also has many tools available: 
+
+Benchmarking the speed of python code snippets is slightly more complicated but also has many tools available: 
 1. Synchronous code can be easily profiled used IPython's built-in magics `%timeit`, `%%timeit`, `%prun`, and `%%prun`
 2. If using a Jupyter notebook, the [Execute Time](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html) extension can be extremely useful for getting a crude estimate of how long each code cell takes to run. This works for both synchronous and asynchronous code.
 3. For a more programmatic approach you can use [python's built-in profilers](https://docs.python.org/3/library/profile.html) or 3rd party profilers such as [Scalene](https://github.com/plasma-umass/scalene) or [pyflame](https://github.com/uber-archive/pyflame).
 
 ### Measuring Storage Usage
 
-It is also valuable to measure `ctc`'s storage usage to check whether it falls into an acceptable range for a given hardware setup. Storage usage in the `ctc` data folder can be found by running a storage profiling command like `du -h` or [`dust`](https://github.com/bootandy/dust). Storage usage in databases can be found by running `ctc db storage`.
-
+It is also valuable to measure `ctc`'s storage usage to check whether it falls into an acceptable range for a given hardware setup. Storage usage in the `ctc` data folder can be found by running a storage profiling command like `du -h` or [`dust`](https://github.com/bootandy/dust). Storage usage in databases can be found by running `ctc db -v`.

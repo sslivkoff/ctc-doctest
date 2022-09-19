@@ -65,7 +65,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_tour.html">Basic Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rpc_client.html">RPC Client</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Asynchronous Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datatypes.html">Datatypes</a></li>
@@ -100,21 +100,21 @@
   <div class="section" id="asynchronous-code">
 <h1>Asynchronous Code<a class="headerlink" href="#asynchronous-code" title="Permalink to this headline"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses <code class="docutils literal notranslate"><span class="pre">async</span></code> functions for network calls and database calls. This allows for high levels of concurrency and makes it easy to dispatch large numbers of complex interdependent queries.</p>
-<p><code class="docutils literal notranslate"><span class="pre">async</span></code> is an intermediate-level python topic with a bit of a learning curve. If you’ve never used <code class="docutils literal notranslate"><span class="pre">async</span></code> before, you should probably read a tutorial or two before trying to use it in <code class="docutils literal notranslate"><span class="pre">ctc</span></code>.</p>
-<p>To use <code class="docutils literal notranslate"><span class="pre">async</span></code> functions, they must be run from an event loop. These functions can be called from synchronous code as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">async</span></code> is an intermediate-level python topic with a bit of a learning curve. If you’ve never used <code class="docutils literal notranslate"><span class="pre">async</span></code> before, you should probably read a tutorial or two before trying to use it in <code class="docutils literal notranslate"><span class="pre">ctc</span></code>. To use <code class="docutils literal notranslate"><span class="pre">async</span></code> functions, they must be run from an event loop. These functions can be called from synchronous code as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">some_async_function</span><span class="p">(</span><span class="n">input1</span><span class="p">,</span> <span class="n">input2</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>If you are using IPython or Jupyter notebooks, you can directly <code class="docutils literal notranslate"><span class="pre">await</span></code> the <code class="docutils literal notranslate"><span class="pre">async</span></code> functions inside code cells without using <code class="docutils literal notranslate"><span class="pre">asyncio.run()</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">some_async_function</span><span class="p">(</span><span class="n">input1</span><span class="p">,</span> <span class="n">input2</span><span class="p">)</span>
+<p><strong>Inside of IPython or Jupyter notebooks, <code class="docutils literal notranslate"><span class="pre">await</span></code> can be used directly, without <code class="docutils literal notranslate"><span class="pre">asyncio.run()</span></code></strong>. Many of the code examples in these docs assume this is the context and omit <code class="docutils literal notranslate"><span class="pre">asyncio.run()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># no asyncio.run() necessary inside of IPython / Jupyter</span>
+<span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">some_async_function</span><span class="p">(</span><span class="n">input1</span><span class="p">,</span> <span class="n">input2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If your code opens up network connections, you should also close those connections at the end of your scipt. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">rpc</span>
 
-<span class="k">await</span> <span class="n">rpc</span><span class="o">.</span><span class="n">async_close_http_session</span><span class="p">(</span><span class="n">provider</span><span class="o">=</span><span class="n">provider</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">rpc</span><span class="o">.</span><span class="n">async_close_http_session</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

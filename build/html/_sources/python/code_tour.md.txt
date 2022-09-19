@@ -1,35 +1,70 @@
 
-# Codebase Tour
+# Basic Usage
 
-## Architecture and API
+The top-level `ctc` module contains functions for generic EVM operations:
 
-- `ctc` does not use any custom types or OOP. Instead it emphasizes simple standard datatypes including python builtins, numpy arrays, and the occassional pandas dataframe. Effort is made to ensure that the users stay "close" to the data with minimal implicit magic going on.
-- `ctc` is [asynchronous-first](async_code), which allows it to efficiently orchestrate large numbers of interdependent queries.
-- `ctc` is designed with historical data in mind. Throughout its API many functions take parameters such as `block`, `blocks`, `start_block`, or `end_block` to specify the relevant block ranges for each query.
+**Example: Generic EVM Operations**
+```python
+import ctc
 
+some_hash = ctc.keccak_text('hello')
 
-## Subpackages
+encoded_data = ctc.abi_encode_packed((400, 6000), '(int128,int128)')
 
-There are a few subpackages that you should acquiant yourself with:
+eth_balance = await ctc.async_get_eth_balance('0x6b175474e89094c44da98b954eedeac495271d0f')
 
-### ctc.evm
+erc20_balance = await ctc.async_get_erc20_balance(
+    token='0x6b175474e89094c44da98b954eedeac495271d0f',
+    wallet='0x6b175474e89094c44da98b954eedeac495271d0f'],
+    block=15000000,
+)
 
-`ctc.evm` defines high-level functions for working with EVM data, and it contains most of the functions that users will need on a day-to-day basis. These are the "porcelain" functions, whereas the other `ctc` subpackages are the plumbing.
+events = await ctc.async_get_events(
+    '0xcbcdf9626bc03e24f779434178a73a0b4bad62ed',
+    event_name='Swap',
+)
+```
 
-### ctc.protocols
+Some points to keep in mind while using `ctc`:
+- `ctc` uses functional programming. Instead of custom types or OOP, `ctc` uses simple standard datatypes including python builtins and numpy arrays. There is no need to initialize any objects. Simply `import ctc` and then call functions in the `ctc.*` namespace.
+- `ctc` is asynchronous-first, which allows it to efficiently orchestrate large numbers of interdependent queries. [Special consideration](async_code) is needed to run code in an asynchronous context.
+- `ctc` is designed with historical data analysis in mind. For any query of EVM state, `ctc` aims to support historical versions of that query. This includes both 1) querying specific moments in time, as well as 2) querying broad lengths of time.
 
-`ctc.protocols` contains functions specific to many different protocols such as Chainlink or Uniswap.
+The top-level `ctc` package covers generic EVM operations. More specific functionality can be found in `ctc` submodules as described below.
 
-### ctc.spec
+#### RPC Client Subpackage `ctc.rpc`
 
-`ctc.spec` is where most annotation types are defined.
+`ctc.rpc` implements `ctc`'s custom RPC client. This client can be used for fine-grained control over RPC calls. Unless explcitly told not to do so.`ctc` will automatically encode requests to binary and decode requests from binary.
+
+**Example: get bytecode for contract, at specific block, using specific provider**
+```python
+import ctc.rpc
+
+contract_bytecode = await ctc.rpc.async_eth_get_code(
+    '0x6b175474e89094c44da98b954eedeac495271d0f',
+    block_number=15000000,
+    provider='https://some_rpc_node/',
+)
+```
+
+### Protocol-specific Subpackages `ctc.protocols`
+
+`ctc.protocols` contains functions specific to many different protocols such as Chainlink or Uniswap. See a full list [here](specific_protocols).
+
+**Example: gather complete historical data for Chainlink's RAI-USD feed**
+```python
+from ctc.protocols import chainlink_utils
+
+feed_data = await chainlink_utils.async_get_feed_data('RAI_USD')
+```
+
 
 ### Other Subpackages
 
-- `ctc.binary`: utilities for hashing and abi encoding/decoding
-- `ctc.cli`: ctc command line implementation
-- `ctc.config`: config loading and management
-- `ctc.directory`: token and contract addresses as well as chain_id's 
-- `ctc.rpc`: utilities for communicating over rpc
-- `ctc.toolbox`: miscellaneous python utilities
+End users of `ctc` probably won't need to use any of these directly.
 
+- `ctc.cli`: command line interface
+- `ctc.config`: configuration utilities
+- `ctc.db`: local cache database
+- `ctc.spec`: ctc specifications, mainly types for type annotations
+- `ctc.toolbox`: miscellaneous python utilities

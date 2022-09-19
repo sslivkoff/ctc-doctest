@@ -5,24 +5,23 @@
     - make a list, add to todo
 - do a readthrough of all copy, see what needs to change
     - make a list, add to todo
-- add to the docs readme for steps of how to develop and build the docs
+- update README
+    - add to the docs readme for steps of how to develop and build the docs
+- add note about environment variables, including ETH_RPC_NODE or whatever it's called
 - specific points
-    - The Basics
-        - Introduction
-            - update list of datatype, protocols, and external data sources
-        - Installation
-            - add note about installing from git commits
-        - Dependencies
-            - rewrite the libraries section
-            - add note about strict mode type checking
-        - create a Changelog page
+    - in Introduction update list of datatype, protocols, and external data sources
+- add note about new api to readme
 
 ## Done
 - fix help urls in ctc -h
 - get a doc generation run working
-
-
-
+- Overview section
+    - Installation
+        - add note about installing from git commits
+    - Dependencies
+        - rewrite the libraries section
+        - add note about strict mode type checking
+    - create a Changelog page
 
 
 

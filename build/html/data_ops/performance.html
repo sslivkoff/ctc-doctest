@@ -65,7 +65,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Basic Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/rpc_client.html">RPC Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/datatypes.html">Datatypes</a></li>
@@ -117,11 +117,11 @@
 <li><p>Slowest = running ctc in a different geographic region than the archive node</p></li>
 </ul>
 <p>If using a 3rd party RPC provider, you should inquire about where their nodes are located and plan accordingly.</p>
-<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s default configuration assumes that the user is querying an RPC node on a remote network. This leads <code class="docutils literal notranslate"><span class="pre">ctc</span></code> to locally store lots of the data that it retrieves. However, it’s possible that different tradeoffs are relevant in heavily optimized setups. For example if <code class="docutils literal notranslate"><span class="pre">ctc</span></code> is run on the same server as an archive node, then some caches might hurt more than they help. Cache settings are altered using <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s default configuration assumes that the user is querying an RPC node on a remote network. This leads <code class="docutils literal notranslate"><span class="pre">ctc</span></code> to locally store much of the data that it retrieves. However, it’s possible that alternate settings might be optimal in different contexts. For example if <code class="docutils literal notranslate"><span class="pre">ctc</span></code> is run on the same server as an archive node, then it’s possible that certain caches might hurt more than they help. Cache settings are altered using <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line.</p>
 </div>
 <div class="section" id="python-versions">
 <h3>Python Versions<a class="headerlink" href="#python-versions" title="Permalink to this headline"></a></h3>
-<p>More recent versions of python are generally faster. Upgrading to the latest python version is one of the easiest ways to improve code performance. In particular, the upcoming python 3.11 has much faster startup times and shows improvement across many benchmarks. This makes <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s cli commands feel especially quick and responsive.</p>
+<p>More recent versions of python are generally faster. Upgrading to the latest python version is one of the easiest ways to improve code performance. In particular, the upcoming python 3.11 has much faster startup times and shows improvement across many benchmarks. This will make <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s cli commands feel especially quick and responsive.</p>
 </div>
 <div class="section" id="python-packages">
 <h3>Python Packages<a class="headerlink" href="#python-packages" title="Permalink to this headline"></a></h3>
@@ -158,7 +158,7 @@
 </div>
 <div class="section" id="logging">
 <h3>Logging<a class="headerlink" href="#logging" title="Permalink to this headline"></a></h3>
-<p>Logging of RPC requests and SQL queries takes up a non-zero amount of resources. If you don’t need logging, disabling it can squeeze out a bit of extra performance. This can be done by running the setup wizard <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code>.</p>
+<p>Logging of RPC requests and SQL queries consumes a non-zero amount of resources. If you don’t need logging, disabling it can squeeze out a bit of extra performance. This can be done by running the setup wizard <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code>.</p>
 </div>
 </div>
 <div class="section" id="benchmarking-performance">
@@ -166,8 +166,8 @@
 <p>To truly optimize your environment and implementation, you will need to run your own benchmarks.</p>
 <div class="section" id="benchmarking-speed">
 <h3>Benchmarking Speed<a class="headerlink" href="#benchmarking-speed" title="Permalink to this headline"></a></h3>
-<p>The simplest way to benchmark the speed of a CLI command is <code class="docutils literal notranslate"><span class="pre">time</span></code>. Running <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">&lt;command&gt;</span></code> will run a given command and report the run time.
-Benchmarking speed of python code snippets is slightly more complicated but also has many tools available:</p>
+<p>The simplest way to benchmark the speed of a CLI command is <code class="docutils literal notranslate"><span class="pre">time</span></code>. Running <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">&lt;command&gt;</span></code> will run a given command and report the run time.</p>
+<p>Benchmarking the speed of python code snippets is slightly more complicated but also has many tools available:</p>
 <ol class="arabic simple">
 <li><p>Synchronous code can be easily profiled used IPython’s built-in magics <code class="docutils literal notranslate"><span class="pre">%timeit</span></code>, <code class="docutils literal notranslate"><span class="pre">%%timeit</span></code>, <code class="docutils literal notranslate"><span class="pre">%prun</span></code>, and <code class="docutils literal notranslate"><span class="pre">%%prun</span></code></p></li>
 <li><p>If using a Jupyter notebook, the <a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html">Execute Time</a> extension can be extremely useful for getting a crude estimate of how long each code cell takes to run. This works for both synchronous and asynchronous code.</p></li>
@@ -176,7 +176,7 @@ Benchmarking speed of python code snippets is slightly more complicated but also
 </div>
 <div class="section" id="measuring-storage-usage">
 <h3>Measuring Storage Usage<a class="headerlink" href="#measuring-storage-usage" title="Permalink to this headline"></a></h3>
-<p>It is also valuable to measure <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s storage usage to check whether it falls into an acceptable range for a given hardware setup. Storage usage in the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> data folder can be found by running a storage profiling command like <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-h</span></code> or <a class="reference external" href="https://github.com/bootandy/dust"><code class="docutils literal notranslate"><span class="pre">dust</span></code></a>. Storage usage in databases can be found by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">db</span> <span class="pre">storage</span></code>.</p>
+<p>It is also valuable to measure <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s storage usage to check whether it falls into an acceptable range for a given hardware setup. Storage usage in the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> data folder can be found by running a storage profiling command like <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-h</span></code> or <a class="reference external" href="https://github.com/bootandy/dust"><code class="docutils literal notranslate"><span class="pre">dust</span></code></a>. Storage usage in databases can be found by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">db</span> <span class="pre">-v</span></code>.</p>
 </div>
 </div>
 </div>

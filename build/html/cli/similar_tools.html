@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Codebase Tour" href="../python/code_tour.html" />
+    <link rel="next" title="Basic Usage" href="../python/code_tour.html" />
     <link rel="prev" title="Useful Aliases" href="useful_aliases.html" /> 
 </head>
 
@@ -65,7 +65,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Codebase Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/code_tour.html">Basic Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/rpc_client.html">RPC Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/datatypes.html">Datatypes</a></li>
@@ -101,8 +101,8 @@
 <h1>Similar CLI tools<a class="headerlink" href="#similar-cli-tools" title="Permalink to this headline"></a></h1>
 <div class="section" id="ethereum-etl">
 <h2>ethereum-etl<a class="headerlink" href="#ethereum-etl" title="Permalink to this headline"></a></h2>
-<p><a class="reference external" href="https://github.com/blockchain-etl/ethereum-etl">ethereum-etl</a> is a tool for collecting raw historical data from EVM chains, including blocks, transactions, erc20 transfers, and internal traces. Along with the rest of the <a class="reference external" href="https://github.com/blockchain-etl">blockchain-etl stack</a>, it powers the popular <a class="reference external" href="https://cloud.google.com/blog/products/data-analytics/introducing-six-new-cryptocurrencies-in-bigquery-public-datasets-and-how-to-analyze-them">BigQuery blockchain datasets</a>. The primary use case of <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code> and its associated repos is to index a significant portion of a chain’s history in preparation for large scale data analysis.</p>
-<p>Prior to creating <code class="docutils literal notranslate"><span class="pre">ctc</span></code>, <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code> was the primary data collection tool used by <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s authors. It was extensive use of <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code> that inspired much of <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s design. Compared to <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code>, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> aims fall closer to the porcelain end of the <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">plumbing-vs-porcelain</a> spectrum, with goals such as:</p>
+<p><a class="reference external" href="https://github.com/blockchain-etl/ethereum-etl">ethereum-etl</a> is a tool for collecting raw historical data from EVM chains, including blocks, transactions, erc20 transfers, and internal traces. Along with the rest of the <a class="reference external" href="https://github.com/blockchain-etl">blockchain-etl stack</a>, it powers the popular <a class="reference external" href="https://cloud.google.com/blog/products/data-analytics/introducing-six-new-cryptocurrencies-in-bigquery-public-datasets-and-how-to-analyze-them">BigQuery blockchain datasets</a>. The primary use case of <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code> and its associated stack is to index a significant portion of a chain’s history in preparation for large scale data analysis.</p>
+<p>Prior to creating <code class="docutils literal notranslate"><span class="pre">ctc</span></code>, <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code> was the primary data collection tool used by <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s authors. It was extensive use of <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code> that inspired much of <code class="docutils literal notranslate"><span class="pre">ctc</span></code>’s design. Compared to <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code>, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> falls closer to the porcelain end of the <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">plumbing-vs-porcelain</a> spectrum, with goals such as:</p>
 <ul class="simple">
 <li><p>create more diverse datasets, such as datasets that rely on <code class="docutils literal notranslate"><span class="pre">eth_call</span></code></p></li>
 <li><p>create more targeted datasets, such as datasets focused on specific protocols like Chainlink or Uniswap</p></li>
@@ -118,7 +118,7 @@
 </div>
 <div class="section" id="trueblocks">
 <h2>TrueBlocks<a class="headerlink" href="#trueblocks" title="Permalink to this headline"></a></h2>
-<p><a class="reference external" href="https://github.com/TrueBlocks/trueblocks-core">TrueBlocks</a> is a tool for managing optimized local copies of EVM chain data. TrueBlocks then makes these local data copies accessible through an enhanced RPC interface. TrueBlocks excels at tracing and querying all appearances of a given address throughout a chain’s history.</p>
+<p><a class="reference external" href="https://github.com/TrueBlocks/trueblocks-core">TrueBlocks</a> is a tool for managing optimized local indices of EVM chain data. TrueBlocks then makes these local data copies accessible through an enhanced RPC interface. TrueBlocks delivers some of the highest performance ways to query chain data and it excels at tracing and querying all appearances of a given address throughout a chain’s history. Since TrueBlocks can provide its data over RPC, it could be used as an ultra high performance RPC provider for <code class="docutils literal notranslate"><span class="pre">ctc</span></code>.</p>
 <p>There’s a decent amount of overlap between <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code>, TrueBlocks, and <code class="docutils literal notranslate"><span class="pre">ctc</span></code>. Relatively speaking, <code class="docutils literal notranslate"><span class="pre">ethereum-etl</span></code> is plumbing, TrueBlocks is mostly plumbing with some porcelain, and <code class="docutils literal notranslate"><span class="pre">ctc</span></code> is mostly porcelain with some plumbing.</p>
 </div>
 <div class="section" id="ethereal-seth-and-cast">
@@ -133,7 +133,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="useful_aliases.html" class="btn btn-neutral float-left" title="Useful Aliases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../python/code_tour.html" class="btn btn-neutral float-right" title="Codebase Tour" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../python/code_tour.html" class="btn btn-neutral float-right" title="Basic Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
