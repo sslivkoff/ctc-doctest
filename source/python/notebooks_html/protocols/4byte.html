@@ -14595,7 +14595,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Build-local-copy-of-4byte-database">Build local copy of 4byte database<a class="anchor-link" href="#Build-local-copy-of-4byte-database">&#182;</a></h2>
+<h2 id="Query-function-signature">Query function signature<a class="anchor-link" href="#Query-function-signature">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14607,8 +14607,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">fourbyte_utils</span><span class="o">.</span><span class="n">async_build_function_signatures_dataset</span><span class="p">()</span>
-<span class="k">await</span> <span class="n">fourbyte_utils</span><span class="o">.</span><span class="n">async_build_event_signatures_dataset</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">fourbyte_utils</span><span class="o">.</span><span class="n">async_query_function_signatures</span><span class="p">(</span><span class="s1">&#39;0x18160ddd&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14626,128 +14625,28 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>(building function signatures db from scratch, may take awhile
-scraped 10000 results
-scraped 20000 results
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CancelledError</span>                            Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> fourbyte_utils<span style="color: rgb(98,98,98)">.</span>async_build_function_signatures_dataset()
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> fourbyte_utils<span style="color: rgb(98,98,98)">.</span>async_build_event_signatures_dataset()
-
-File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/protocols/fourbyte_utils/fourbyte_scrape.py:23</span>, in <span class="ansi-cyan-fg">async_build_function_signatures_dataset</span><span class="ansi-blue-fg">(signature_data)</span>
-<span class="ansi-green-intense-fg ansi-bold">     20</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> signature_data <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-intense-fg ansi-bold">     21</span>     <span style="color: rgb(95,135,135)"># TODO: smarter detection of what is currently in database</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span>     <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">building function signatures db from scratch, may take awhile</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-fg">---&gt; 23</span>     signature_data <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> async_scrape_function_signatures()
-<span class="ansi-green-intense-fg ansi-bold">     25</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> fourbyte_db<span style="color: rgb(98,98,98)">.</span>async_intake_function_signatures(
-<span class="ansi-green-intense-fg ansi-bold">     26</span>     function_signatures<span style="color: rgb(98,98,98)">=</span>signature_data
-<span class="ansi-green-intense-fg ansi-bold">     27</span> )
-
-File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/protocols/fourbyte_utils/fourbyte_scrape.py:58</span>, in <span class="ansi-cyan-fg">async_scrape_function_signatures</span><span class="ansi-blue-fg">(wait_time, print_every, min_id)</span>
-<span class="ansi-green-intense-fg ansi-bold">     51</span> <span class="ansi-bold" style="color: rgb(0,135,0)">async</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">async_scrape_function_signatures</span>(
-<span class="ansi-green-intense-fg ansi-bold">     52</span>     <span style="color: rgb(98,98,98)">*</span>,
-<span class="ansi-green-intense-fg ansi-bold">     53</span>     wait_time: typing<span style="color: rgb(98,98,98)">.</span>Optional[<span style="color: rgb(0,135,0)">int</span>] <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>,
-<span class="ansi-green-intense-fg ansi-bold">     54</span>     print_every: typing<span style="color: rgb(98,98,98)">.</span>Optional[<span style="color: rgb(0,135,0)">int</span>] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">10000</span>,
-<span class="ansi-green-intense-fg ansi-bold">     55</span>     min_id: typing<span style="color: rgb(98,98,98)">.</span>Optional[<span style="color: rgb(0,135,0)">int</span>] <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>,
-<span class="ansi-green-intense-fg ansi-bold">     56</span> ) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> typing<span style="color: rgb(98,98,98)">.</span>Sequence[fourbyte_spec<span style="color: rgb(98,98,98)">.</span>Entry]:
-<span class="ansi-green-fg">---&gt; 58</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> async_scrape_set(
-<span class="ansi-green-intense-fg ansi-bold">     59</span>         url<span style="color: rgb(98,98,98)">=</span>fourbyte_spec<span style="color: rgb(98,98,98)">.</span>endpoints[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">functions</span><span style="color: rgb(175,0,0)">&#39;</span>],
-<span class="ansi-green-intense-fg ansi-bold">     60</span>         wait_time<span style="color: rgb(98,98,98)">=</span>wait_time,
-<span class="ansi-green-intense-fg ansi-bold">     61</span>         print_every<span style="color: rgb(98,98,98)">=</span>print_every,
-<span class="ansi-green-intense-fg ansi-bold">     62</span>         min_id<span style="color: rgb(98,98,98)">=</span>min_id,
-<span class="ansi-green-intense-fg ansi-bold">     63</span>     )
-
-File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/protocols/fourbyte_utils/fourbyte_scrape.py:101</span>, in <span class="ansi-cyan-fg">async_scrape_set</span><span class="ansi-blue-fg">(url, wait_time, print_every, min_id)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span> <span class="ansi-bold" style="color: rgb(0,135,0)">async</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> aiohttp<span style="color: rgb(98,98,98)">.</span>ClientSession() <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> session:
-<span class="ansi-green-intense-fg ansi-bold">     98</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">while</span> <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>:
-<span class="ansi-green-intense-fg ansi-bold">     99</span> 
-<span class="ansi-green-intense-fg ansi-bold">    100</span>         <span style="color: rgb(95,135,135)"># get page</span>
-<span class="ansi-green-fg">--&gt; 101</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">async</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> session<span style="color: rgb(98,98,98)">.</span>get(url) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> response_object:
-<span class="ansi-green-intense-fg ansi-bold">    102</span>             response <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> response_object<span style="color: rgb(98,98,98)">.</span>json()
-<span class="ansi-green-intense-fg ansi-bold">    103</span>             results<span style="color: rgb(98,98,98)">.</span>extend(response[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">results</span><span style="color: rgb(175,0,0)">&#39;</span>])
-
-File <span class="ansi-green-fg">~/.local/lib/python3.9/site-packages/aiohttp/client.py:1117</span>, in <span class="ansi-cyan-fg">_BaseRequestContextManager.__aenter__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1116</span> <span class="ansi-bold" style="color: rgb(0,135,0)">async</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">__aenter__</span>(<span style="color: rgb(0,135,0)">self</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> _RetType:
-<span class="ansi-green-fg">-&gt; 1117</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_resp <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_coro
-<span class="ansi-green-intense-fg ansi-bold">   1118</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_resp
-
-File <span class="ansi-green-fg">~/.local/lib/python3.9/site-packages/aiohttp/client.py:544</span>, in <span class="ansi-cyan-fg">ClientSession._request</span><span class="ansi-blue-fg">(self, method, str_or_url, params, data, json, cookies, headers, skip_auto_headers, auth, allow_redirects, max_redirects, compress, chunked, expect100, raise_for_status, read_until_eof, proxy, proxy_auth, timeout, verify_ssl, fingerprint, ssl_context, ssl, proxy_headers, trace_request_ctx, read_bufsize)</span>
-<span class="ansi-green-intense-fg ansi-bold">    542</span> resp <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> req<span style="color: rgb(98,98,98)">.</span>send(conn)
-<span class="ansi-green-intense-fg ansi-bold">    543</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; 544</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> resp<span style="color: rgb(98,98,98)">.</span>start(conn)
-<span class="ansi-green-intense-fg ansi-bold">    545</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> <span class="ansi-bold" style="color: rgb(215,95,95)">BaseException</span>:
-<span class="ansi-green-intense-fg ansi-bold">    546</span>     resp<span style="color: rgb(98,98,98)">.</span>close()
-
-File <span class="ansi-green-fg">~/.local/lib/python3.9/site-packages/aiohttp/client_reqrep.py:890</span>, in <span class="ansi-cyan-fg">ClientResponse.start</span><span class="ansi-blue-fg">(self, connection)</span>
-<span class="ansi-green-intense-fg ansi-bold">    887</span> <span class="ansi-bold" style="color: rgb(0,135,0)">while</span> <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>:
-<span class="ansi-green-intense-fg ansi-bold">    888</span>     <span style="color: rgb(95,135,135)"># read response</span>
-<span class="ansi-green-intense-fg ansi-bold">    889</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; 890</span>         message, payload <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_protocol<span style="color: rgb(98,98,98)">.</span>read()  <span style="color: rgb(95,135,135)"># type: ignore</span>
-<span class="ansi-green-intense-fg ansi-bold">    891</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> http<span style="color: rgb(98,98,98)">.</span>HttpProcessingError <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> exc:
-<span class="ansi-green-intense-fg ansi-bold">    892</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> ClientResponseError(
-<span class="ansi-green-intense-fg ansi-bold">    893</span>             <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>request_info,
-<span class="ansi-green-intense-fg ansi-bold">    894</span>             <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>history,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    897</span>             headers<span style="color: rgb(98,98,98)">=</span>exc<span style="color: rgb(98,98,98)">.</span>headers,
-<span class="ansi-green-intense-fg ansi-bold">    898</span>         ) <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">exc</span>
-
-File <span class="ansi-green-fg">~/.local/lib/python3.9/site-packages/aiohttp/streams.py:604</span>, in <span class="ansi-cyan-fg">DataQueue.read</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    602</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_waiter <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_loop<span style="color: rgb(98,98,98)">.</span>create_future()
-<span class="ansi-green-intense-fg ansi-bold">    603</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; 604</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_waiter
-<span class="ansi-green-intense-fg ansi-bold">    605</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> (asyncio<span style="color: rgb(98,98,98)">.</span>CancelledError, asyncio<span style="color: rgb(98,98,98)">.</span>TimeoutError):
-<span class="ansi-green-intense-fg ansi-bold">    606</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_waiter <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-
-<span class="ansi-red-fg">CancelledError</span>: </pre>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[{&#39;id&#39;: 179,
+  &#39;created_at&#39;: &#39;2016-07-09T03:58:45.230129Z&#39;,
+  &#39;hex_signature&#39;: &#39;0x18160ddd&#39;,
+  &#39;text_signature&#39;: &#39;totalSupply()&#39;,
+  &#39;bytes_signature&#39;: &#39;\x18\x16\rÝ&#39;},
+ {&#39;id&#39;: 166702,
+  &#39;created_at&#39;: &#39;2019-10-03T12:55:14.688679Z&#39;,
+  &#39;hex_signature&#39;: &#39;0x18160ddd&#39;,
+  &#39;text_signature&#39;: &#39;voting_var(address,uint256,int128,int128)&#39;,
+  &#39;bytes_signature&#39;: &#39;\x18\x16\rÝ&#39;}]</pre>
 </div>
 
 </div>
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Query-function-signature">Query function signature<a class="anchor-link" href="#Query-function-signature">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">fourbyte_utils</span><span class="o">.</span><span class="n">async_query_function_signatures</span><span class="p">(</span><span class="s1">&#39;0x18160ddd&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
@@ -14761,12 +14660,12 @@ File <span class="ansi-green-fg">~/.local/lib/python3.9/site-packages/aiohttp/st
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">event_hash</span> <span class="o">=</span> <span class="s1">&#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;</span>
@@ -14777,6 +14676,35 @@ File <span class="ansi-green-fg">~/.local/lib/python3.9/site-packages/aiohttp/st
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[{&#39;id&#39;: 1,
+  &#39;created_at&#39;: &#39;2020-11-30T22:38:00.801049Z&#39;,
+  &#39;hex_signature&#39;: &#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;,
+  &#39;text_signature&#39;: &#39;Transfer(address,address,uint256)&#39;,
+  &#39;bytes_signature&#39;: &#39;ÝòR\xad\x1bâÈ\x9biÂ°hü7\x8dª\x95+§ñcÄ¡\x16(õZMõ#³ï&#39;}]</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>

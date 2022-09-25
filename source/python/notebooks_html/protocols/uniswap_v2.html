@@ -14581,7 +14581,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc.protocols</span> <span class="kn">import</span> <span class="n">uniswap_v2_utils</span>
-<span class="kn">from</span> <span class="nn">ctc.toolbox.amm_utils</span> <span class="kn">import</span> <span class="n">cpmm</span>
+<span class="kn">from</span> <span class="nn">ctc.toolbox.defi_utils.dex_utils.amm_utils</span> <span class="kn">import</span> <span class="n">cpmm</span>
 </pre></div>
 
      </div>
@@ -14708,9 +14708,9 @@ pool_decimals: [18, 18]
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;x_reserves&#39;: 82010617.9348254,
- &#39;y_reserves&#39;: 164056747.1990849,
- &#39;lp_total_supply&#39;: 178771462.67467377}</pre>
+<pre>{&#39;x_reserves&#39;: 13430875.390003089,
+ &#39;y_reserves&#39;: 63585361.05796264,
+ &#39;lp_total_supply&#39;: 44686131.153790146}</pre>
 </div>
 
 </div>
@@ -14888,36 +14888,195 @@ pool_decimals: [18, 18]
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">- X reserves: 153.54M
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">- Y reserves: 125.89M
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">- total lp tokens: 215.05M
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">- X / Y price: 1.22
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">- Y / X price: 0.819891
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">- X / Y liquidity depth: 
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>- X reserves: 153.54M
-- Y reserves: 125.89M
-- total lp tokens: 215.05M
-- X / Y price: 1.22
-- Y / X price: 0.819891
-- X / Y liquidity depth:
+<pre>
+</pre>
+</div>
+</div>
 
-      depth  │  new price   │  X           │  Y           
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">      depth  │   new price  │           X  │           Y  
     ─────────┼──────────────┼──────────────┼──────────────
-      -10%   │  1.1 X / Y   │   buy 7.87M  │  sell 6.82M  
-      -5%    │  1.16 X / Y  │   buy 3.88M  │  sell 3.28M  
-      -2%    │  1.2 X / Y   │   buy 1.54M  │  sell 1.28M  
-       0%    │  1.22 X / Y  │       0.00   │       0.00   
-      +2%    │  1.24 X / Y  │  sell 1.53M  │   buy 1.24M  
-      +5%    │  1.28 X / Y  │  sell 3.8M   │   buy 3.03M  
-      +10%   │  1.34 X / Y  │  sell 7.51M  │   buy 5.85M  
+       -10%  │   1.1 X / Y  │   buy 7.87M  │  sell 6.82M  
+        -5%  │  1.16 X / Y  │   buy 3.88M  │  sell 3.28M  
+        -2%  │   1.2 X / Y  │   buy 1.54M  │  sell 1.28M  
+         0%  │  1.22 X / Y  │        0.00  │        0.00  
+        +2%  │  1.24 X / Y  │  sell 1.53M  │   buy 1.24M  
+        +5%  │  1.28 X / Y  │   sell 3.8M  │   buy 3.03M  
+       +10%  │  1.34 X / Y  │  sell 7.51M  │   buy 5.85M  
+</pre>
 
-- Y / X liquidity depth:
+</div>
 
-      depth  │  new price       │  Y           │  X           
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">- Y / X liquidity depth: 
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">      depth  │       new price  │           Y  │           X  
     ─────────┼──────────────────┼──────────────┼──────────────
-      -10%   │  0.737902 Y / X  │   buy 6.45M  │  sell 8.32M  
-      -5%    │  0.778896 Y / X  │   buy 3.18M  │  sell 3.99M  
-      -2%    │  0.803493 Y / X  │   buy 1.26M  │  sell 1.56M  
-       0%    │  0.819891 Y / X  │       0.00   │       0.00   
-      +2%    │  0.836289 Y / X  │  sell 1.25M  │   buy 1.51M  
-      +5%    │  0.860886 Y / X  │  sell 3.11M  │   buy 3.69M  
-      +10%   │  0.90188 Y / X   │  sell 6.15M  │   buy 7.14M  
+       -10%  │  0.737902 Y / X  │   buy 6.45M  │  sell 8.32M  
+        -5%  │  0.778896 Y / X  │   buy 3.18M  │  sell 3.99M  
+        -2%  │  0.803493 Y / X  │   buy 1.26M  │  sell 1.56M  
+         0%  │  0.819891 Y / X  │        0.00  │        0.00  
+        +2%  │  0.836289 Y / X  │  sell 1.25M  │   buy 1.51M  
+        +5%  │  0.860886 Y / X  │  sell 3.11M  │   buy 3.69M  
+       +10%  │   0.90188 Y / X  │  sell 6.15M  │   buy 7.14M  
+</pre>
 
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
 </pre>
 </div>
 </div>
@@ -15042,19 +15201,58 @@ pool_decimals: [18, 18]
 - fees: 1,500 FEI
 - prices:
 
-                 │ P_mean   │ P_start  │ P_end    │ mean slippage │ end slippage 
-    ─────────────┼──────────┼──────────┼──────────┼───────────────┼──────────────
-     FEI / TRIBE │ 1.23     │ 1.22     │ 1.23     │ 0.006266      │ 0.006514     
-     TRIBE / FEI │ 0.814786 │ 0.819891 │ 0.814585 │ -0.006226     │ -0.006472    
-
-- pool reserve sizes:
-
-           │ before        │ after          │ change    
-    ───────┼───────────────┼────────────────┼───────────
-     FEI   │ 153,539,933.1 │ 154,039,933.1  │ 0.003256  
-     TRIBE │ 125,886,010.4 │ 125,478,617.43 │ -0.003236 
 </pre>
 </div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">                 │   P_mean │  P_start │    P_end │ mean slippage │ end slippage 
+    ─────────────┼──────────┼──────────┼──────────┼───────────────┼──────────────
+     FEI / TRIBE │     1.23 │     1.22 │     1.23 │      0.006266 │     0.006514 
+     TRIBE / FEI │ 0.814786 │ 0.819891 │ 0.814585 │     -0.006226 │    -0.006472 
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+- pool reserve sizes:
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">           │        before │          after │    change 
+    ───────┼───────────────┼────────────────┼───────────
+       FEI │ 153,539,933.1 │  154,039,933.1 │  0.003256 
+     TRIBE │ 125,886,010.4 │ 125,478,617.43 │ -0.003236 
+</pre>
+
+</div>
+
 </div>
 
 </div>
@@ -15123,31 +15321,15 @@ pool_decimals: [18, 18]
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th></th>
-      <th></th>
-      <th>address</th>
-      <th>block_hash</th>
       <th>transaction_hash</th>
-      <th>contract_address</th>
-      <th>event_name</th>
-      <th>event_hash</th>
-      <th>arg__sender</th>
-      <th>arg__to</th>
-      <th>x_sold</th>
-      <th>y_sold</th>
-      <th>x_bought</th>
-      <th>y_bought</th>
+      <th>recipient</th>
+      <th>sold_id</th>
+      <th>bought_id</th>
+      <th>sold_amount</th>
+      <th>bought_amount</th>
     </tr>
     <tr>
       <th>block_number</th>
-      <th>transaction_index</th>
-      <th>log_index</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -15159,96 +15341,51 @@ pool_decimals: [18, 18]
   <tbody>
     <tr>
       <th>12168368</th>
-      <th>61</th>
-      <th>63</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
       <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x7d809969f6a04777f0a87ff94b57e56078e5fe0f</td>
       <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
-      <td>3.858783e+08</td>
-      <td>0.000000</td>
-      <td>0.000000e+00</td>
-      <td>1.192482e+08</td>
+      <td>0</td>
+      <td>1</td>
+      <td>385878266.886967</td>
+      <td>119248224.557418</td>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">12168369</th>
-      <th>0</th>
-      <th>7</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xe8b9e24b357d35647bd26523d1ddecebdf5530b5a2eb...</td>
+      <th>12168369</th>
       <td>0x641b95d1f76a4a9e0101df94aab04aee23f95bca349f...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>0x2ebd449e7b10b20135b6c1134b9e40c84f9fffde</td>
-      <td>0.000000e+00</td>
+      <td>1</td>
+      <td>0</td>
       <td>469310.538337</td>
-      <td>1.500859e+06</td>
-      <td>0.000000e+00</td>
+      <td>1500858.802284</td>
     </tr>
     <tr>
-      <th>3</th>
-      <th>26</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xe8b9e24b357d35647bd26523d1ddecebdf5530b5a2eb...</td>
+      <th>12168369</th>
       <td>0x59e7772688fe9966abfeba79408ca9aedbf316bf4761...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
-      <td>0.000000e+00</td>
+      <td>1</td>
+      <td>0</td>
       <td>305051.849919</td>
-      <td>9.663029e+05</td>
-      <td>0.000000e+00</td>
+      <td>966302.891883</td>
     </tr>
     <tr>
-      <th>7</th>
-      <th>53</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xe8b9e24b357d35647bd26523d1ddecebdf5530b5a2eb...</td>
+      <th>12168369</th>
       <td>0xb7dd780066a84cd1fc4716ed11673c64d8af03ca28ba...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>0x155ab90755eefc6f521cb3bccba4c5aedcd4cdb7</td>
-      <td>0.000000e+00</td>
-      <td>207200.000000</td>
-      <td>6.522322e+05</td>
-      <td>0.000000e+00</td>
+      <td>1</td>
+      <td>0</td>
+      <td>207200.0</td>
+      <td>652232.187339</td>
     </tr>
     <tr>
-      <th>10</th>
-      <th>65</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xe8b9e24b357d35647bd26523d1ddecebdf5530b5a2eb...</td>
+      <th>12168369</th>
       <td>0x3a3fdaaa52f99c3004370494e2b0852f9c6fb9b02a4f...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>0xe28b3058a2f7f251741a7289b633a902126260ea</td>
-      <td>0.000000e+00</td>
+      <td>1</td>
+      <td>0</td>
       <td>7587.187036</td>
-      <td>2.382049e+04</td>
-      <td>0.000000e+00</td>
+      <td>23820.490941</td>
     </tr>
     <tr>
       <th>...</th>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -15257,93 +15394,53 @@ pool_decimals: [18, 18]
       <td>...</td>
     </tr>
     <tr>
-      <th>14660449</th>
-      <th>3</th>
-      <th>20</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xb187e88d2b1df4e4f4b7c70311c75a3dd4c94b65612f...</td>
-      <td>0x2f511a657303912cced853fe087e70b80afe4baa471f...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0xdef1c0ded9bec7f1a1670819833240f027b25eff</td>
-      <td>0x9008d19f58aabd9ed0d60971565aa8510560ab41</td>
-      <td>4.389625e+04</td>
-      <td>0.000000</td>
-      <td>0.000000e+00</td>
-      <td>8.734199e+04</td>
+      <th>15612495</th>
+      <td>0x69ae33f8e505e9c1b5abaa8260869fb057cea9602749...</td>
+      <td>0xc6cf51f57969129654c5014748e44e2a8f6ebd81</td>
+      <td>1</td>
+      <td>0</td>
+      <td>5262.738555</td>
+      <td>1104.225943</td>
     </tr>
     <tr>
-      <th>14660612</th>
-      <th>32</th>
-      <th>72</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x7021c5564d85c46c553c2839055bec6f01cec03ee9f6...</td>
-      <td>0x93dd46968885a872e698e145914dac4d3eb1e4f833a2...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x220bda5c8994804ac96ebe4df184d25e5c2196d4</td>
-      <td>0x220bda5c8994804ac96ebe4df184d25e5c2196d4</td>
-      <td>0.000000e+00</td>
-      <td>136872.211725</td>
-      <td>6.835661e+04</td>
-      <td>0.000000e+00</td>
+      <th>15612612</th>
+      <td>0xc91f8451da0f12c22349bb2fbafd48789d4cab599d49...</td>
+      <td>0xdde3e2024e270d6022d1bb4e8745e9dc6d82e0bc</td>
+      <td>0</td>
+      <td>1</td>
+      <td>564.466359</td>
+      <td>2674.236899</td>
     </tr>
     <tr>
-      <th>14660626</th>
-      <th>138</th>
-      <th>262</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xb34f2415ffc5cf92b27d42e42046dcb6d8bd593d0edc...</td>
-      <td>0x0bde4fe148c7d73783066943d09fe571616803605463...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x1111111254fb6c44bac0bed2854e76f90643097d</td>
-      <td>0x6481659f0eb0faf4efa8adf4aae45a0b3358b3a1</td>
-      <td>0.000000e+00</td>
-      <td>54053.124285</td>
-      <td>2.696377e+04</td>
-      <td>0.000000e+00</td>
+      <th>15612742</th>
+      <td>0xbeb5c2ad1d9839abd58014bc04a817de82b51a232c1f...</td>
+      <td>0xcbf181784a00459a9d2dec643e63d9f1565a1cee</td>
+      <td>0</td>
+      <td>1</td>
+      <td>24990.752129</td>
+      <td>118172.509804</td>
     </tr>
     <tr>
-      <th>14661288</th>
-      <th>11</th>
-      <th>155</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x2c2c7b58aecca0fc55831b34f1ddf2205875c8dfb09f...</td>
-      <td>0x87d2d4f3a562293ac9a1f22cc8638ea593145f315796...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0xa1006d0051a35b0000f961a8000000009ea8d2db</td>
-      <td>0xa1006d0051a35b0000f961a8000000009ea8d2db</td>
-      <td>0.000000e+00</td>
-      <td>1378.080380</td>
-      <td>6.872070e+02</td>
-      <td>0.000000e+00</td>
+      <th>15613010</th>
+      <td>0xd5a6c5231f6f1a8b67ae6a5399ea1d827b0ad3edecd5...</td>
+      <td>0xf2f400c138f9fb900576263af0bc7fcde2b1b8a8</td>
+      <td>1</td>
+      <td>0</td>
+      <td>880.67771</td>
+      <td>185.469717</td>
     </tr>
     <tr>
-      <th>14661430</th>
-      <th>66</th>
-      <th>81</th>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x718cb65dd50768ba28ab3b2d3a9e51840443e1250471...</td>
-      <td>0xe898a334f7f0f1d5f7f9af24f81c4f224eb7a2316f84...</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>Swap</td>
-      <td>0xd78ad95fa46c994b6551d0da85fc275fe613ce37657f...</td>
-      <td>0x220bda5c8994804ac96ebe4df184d25e5c2196d4</td>
-      <td>0x220bda5c8994804ac96ebe4df184d25e5c2196d4</td>
-      <td>0.000000e+00</td>
-      <td>45058.000000</td>
-      <td>2.246272e+04</td>
-      <td>0.000000e+00</td>
+      <th>15613067</th>
+      <td>0x992111315f732cb36397113171f30b12ab177cea53c1...</td>
+      <td>0x9435f1085584764b081177944033d4ed2cfd23ee</td>
+      <td>1</td>
+      <td>0</td>
+      <td>561.167131</td>
+      <td>118.178479</td>
     </tr>
   </tbody>
 </table>
-<p>35778 rows × 12 columns</p>
+<p>42679 rows × 6 columns</p>
 </div>
 </div>
 
@@ -15417,15 +15514,15 @@ pool_decimals: [18, 18]
       <th></th>
       <th></th>
       <th></th>
+      <th>address</th>
       <th>block_hash</th>
       <th>transaction_hash</th>
       <th>contract_address</th>
       <th>event_name</th>
+      <th>event_hash</th>
       <th>arg__sender</th>
       <th>arg__amount0</th>
       <th>arg__amount1</th>
-      <th>address</th>
-      <th>event_hash</th>
     </tr>
     <tr>
       <th>block_number</th>
@@ -15447,71 +15544,71 @@ pool_decimals: [18, 18]
       <th>12168368</th>
       <th>61</th>
       <th>57</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
       <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
+      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>2.605227e+08</td>
       <td>2.000000e+08</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
     </tr>
     <tr>
       <th>12168392</th>
       <th>5</th>
       <th>9</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x650f7f511d4c36c5753e5c53a5a0a1be89c06ce04d88...</td>
       <td>0xf23c71488efbcc9f7bb065aef33862a23f163e3a3e20...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
+      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>1.673037e+04</td>
       <td>7.179388e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
     </tr>
     <tr>
       <th>12168405</th>
       <th>44</th>
       <th>48</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0xddd3da1acfddc7f772c6c80a3e765f88dd44f4037e08...</td>
       <td>0x7f302eeb37edd1a429b6dd8b6a29064b77a30b3a88cd...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
+      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>2.060025e+04</td>
       <td>9.973594e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
     </tr>
     <tr>
       <th>12168410</th>
       <th>32</th>
       <th>98</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x2f0a0bc05f1c8d1b846fac07d3b92d3fbb8f6d8f04f9...</td>
       <td>0xddd0c0cc624e7db2808217e98d37282e553f98e697f0...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
+      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>4.751617e+03</td>
       <td>2.356516e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
     </tr>
     <tr>
       <th>12168414</th>
       <th>222</th>
       <th>59</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x4989fc640b4044afa6ccaba2d25a5c6e3257cf9148c4...</td>
       <td>0x5258f324dfdc6c083e5802ae0045e3f4b86661f350f2...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
+      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
       <td>7.425795e+03</td>
       <td>3.770426e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
     </tr>
     <tr>
       <th>...</th>
@@ -15528,78 +15625,78 @@ pool_decimals: [18, 18]
       <td>...</td>
     </tr>
     <tr>
-      <th>14010995</th>
-      <th>116</th>
-      <th>137</th>
-      <td>0x24813e946c7916ad8fc8dc9cbfc12615c3850f73a1e6...</td>
-      <td>0x5abae9eb5e0f9432193fd38446ea66ac9f674a3e9832...</td>
+      <th>15121055</th>
+      <th>250</th>
+      <th>388</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x8c5a19294d630ad01ed205a8fdb662252bad819cc705...</td>
+      <td>0xe77d40f1798594ffc93241a4d790824c85bd4d0c8665...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>6.504461e+03</td>
-      <td>5.686750e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>4.277380e-01</td>
+      <td>2.793056e+00</td>
     </tr>
     <tr>
-      <th>14023993</th>
-      <th>73</th>
-      <th>44</th>
-      <td>0xc66f524901abca03ba81a38557eedfdd2ca5803bd626...</td>
-      <td>0x2958819677150e4ab2e67ee5df75904b464e3e92e0b8...</td>
+      <th>15153321</th>
+      <th>271</th>
+      <th>547</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x920636c5b77319c5539da8c407d255b7eced244e9a7b...</td>
+      <td>0xadc0361d11d36ebac3647006a307494f1ff7343ff44a...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>6.531191e+03</td>
-      <td>5.680791e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>1.430650e+01</td>
+      <td>9.364430e+01</td>
     </tr>
     <tr>
-      <th>14036910</th>
-      <th>70</th>
-      <th>83</th>
-      <td>0x8988dd212aa250ec5d3913669ce63b2ff54d327b90a2...</td>
-      <td>0x70fa382c6d941a8b4f657198c6350d9a52f4d5c71ced...</td>
+      <th>15328435</th>
+      <th>28</th>
+      <th>46</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x12342787e07e1f6423763e91c6a129248a7eb8175f76...</td>
+      <td>0x3716e7ebc7097737b96a67c1ab54241ff9022a8ec811...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>5.521641e+03</td>
-      <td>5.369273e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>4.986920e+03</td>
+      <td>3.119037e+04</td>
     </tr>
     <tr>
-      <th>14049875</th>
-      <th>135</th>
-      <th>156</th>
-      <td>0x02db824f4137b10f3f0dae6bedb583b22be6bb5af913...</td>
-      <td>0x7c5491328f5620d4486fbbd88c060c49ab2a0d60cfbb...</td>
+      <th>15397041</th>
+      <th>133</th>
+      <th>328</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x4508a1d5ec7c01c3b427c554c9d3c7802c8e744a9190...</td>
+      <td>0x1dd407108ac0de55406f3ceaab2b1e1594ed3a12688e...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>4.856067e+03</td>
-      <td>5.475152e+03</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>2.500589e+03</td>
+      <td>1.147334e+04</td>
     </tr>
     <tr>
-      <th>14477692</th>
-      <th>59</th>
-      <th>78</th>
-      <td>0xe6db8770f7cdf19815d2ca8363a5dd14b74d5bb8dd34...</td>
-      <td>0x970548d6aa14768bc817063d9e06ba968f7453c9ef96...</td>
+      <th>15557196</th>
+      <th>86</th>
+      <th>101</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0xbabc09363f96a7b99d1c6bec4d1bcf62572f21d4382d...</td>
+      <td>0x2470dcedbade0b9d7ee71677f1739211cf3520139555...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Mint</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>1.000000e+00</td>
-      <td>1.728602e+00</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>2.000000e+00</td>
+      <td>8.846706e+00</td>
     </tr>
   </tbody>
 </table>
-<p>10041 rows × 9 columns</p>
+<p>10049 rows × 9 columns</p>
 </div>
 </div>
 
@@ -15648,6 +15745,19 @@ pool_decimals: [18, 18]
 <div class="jp-OutputArea-child">
 
     
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>getting events from node, block range: [12125707, 15613506]
+saving events to file: /home/storm/ctc_data/evm/networks/mainnet/events/contract__0x9928e4046d7c6513326ccea028cd3e7a91c7590a/event__0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496/12125707__to__15613506.csv
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
@@ -15673,16 +15783,16 @@ pool_decimals: [18, 18]
       <th></th>
       <th></th>
       <th></th>
+      <th>address</th>
       <th>block_hash</th>
       <th>transaction_hash</th>
       <th>contract_address</th>
       <th>event_name</th>
+      <th>event_hash</th>
       <th>arg__sender</th>
+      <th>arg__to</th>
       <th>arg__amount0</th>
       <th>arg__amount1</th>
-      <th>arg__to</th>
-      <th>address</th>
-      <th>event_hash</th>
     </tr>
     <tr>
       <th>block_number</th>
@@ -15705,76 +15815,76 @@ pool_decimals: [18, 18]
       <th>12168478</th>
       <th>71</th>
       <th>92</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x9cbf1e47301905b3c876acc2c2db8762f333e3d1bbfa...</td>
       <td>0x71d8939b4edf07087a69fd646bfaf509527ed9211411...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
+      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0xc01b33ae2e3a4cb75d0e3bcee2f0cc3eb3fe668a</td>
       <td>148271.937203</td>
       <td>89795.087503</td>
-      <td>0xc01b33ae2e3a4cb75d0e3bcee2f0cc3eb3fe668a</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
     </tr>
     <tr>
       <th>12168483</th>
       <th>123</th>
       <th>157</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0xbd0256f088eeb51f8101a1b3b20d53fc35b532be0ebc...</td>
       <td>0xab4f3a45eab31aa9a75ee961afba7b2b5b3bef745bca...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
+      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0xd683b78e988ba4bdb9fa0e2012c4c36b7cc96aad</td>
       <td>4723.992545</td>
       <td>2879.302038</td>
-      <td>0xd683b78e988ba4bdb9fa0e2012c4c36b7cc96aad</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
     </tr>
     <tr>
       <th>12168529</th>
       <th>140</th>
       <th>297</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x0614693238887091262a3d86adddcd88e3020708ad1e...</td>
       <td>0xbd4f8703249967542414af4246fb3433c222deafc122...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
+      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0x18a5d209d58852499abc1ee73cbb27cc743dd317</td>
       <td>18653.702095</td>
       <td>9522.864220</td>
-      <td>0x18a5d209d58852499abc1ee73cbb27cc743dd317</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
     </tr>
     <tr>
       <th>12168537</th>
       <th>55</th>
       <th>35</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x7c3f742344556505b91508e12fe45183553c5d575224...</td>
       <td>0xd3bd1f7dc5453ac1ff625f8bfebbf2816e99f3bcc3ce...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
+      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0x4042f4142b026c9f980c7906060a80f57090d63b</td>
       <td>8471.241203</td>
       <td>4303.648906</td>
-      <td>0x4042f4142b026c9f980c7906060a80f57090d63b</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
     </tr>
     <tr>
       <th>12168561</th>
       <th>104</th>
       <th>149</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0x7dd20b35ff12825a70eb73bab51cbb5f3902c6cc5bb1...</td>
       <td>0xea3807c8e6a2a26e245c74a8f32f6b1834471549acf2...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
+      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
       <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0xbfe890aac8d9d8dd840115dcd2cff3c99089779d</td>
       <td>96329.571186</td>
       <td>44065.409781</td>
-      <td>0xbfe890aac8d9d8dd840115dcd2cff3c99089779d</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
     </tr>
     <tr>
       <th>...</th>
@@ -15792,83 +15902,83 @@ pool_decimals: [18, 18]
       <td>...</td>
     </tr>
     <tr>
-      <th>14648332</th>
-      <th>128</th>
-      <th>59</th>
-      <td>0xf9d65c5ea170d9fc0e14c5abc26ca1f3a2e39caf4002...</td>
-      <td>0x3f40714e4815ee73036058f885ced7ffc1400e4aa2ab...</td>
+      <th>15551821</th>
+      <th>71</th>
+      <th>136</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x901b3422c33ce7e6818a8432a4accfdc196cb400af4c...</td>
+      <td>0xcfa991c54911b7e355105bcf618e2d952093f0449ff7...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>159.694483</td>
-      <td>313.471058</td>
-      <td>0x308ef074598ab19e881d0e29d1dd1bada90309b3</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0x7e2e5d94f11f358345a4ee14c4f1a8521315c03b</td>
+      <td>85.255637</td>
+      <td>374.935175</td>
     </tr>
     <tr>
-      <th>14650542</th>
-      <th>135</th>
-      <th>241</th>
-      <td>0x6d7a7273fb7dd09dcc484eeee4ca4052ef923ccac08f...</td>
-      <td>0xb23e80e6ee4645c0f96b12c74720b865ef05dc804b19...</td>
+      <th>15559412</th>
+      <th>174</th>
+      <th>390</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0xddd9480f4feede79b255b19101cd3e4fc6b6e013702e...</td>
+      <td>0x03b721863a7419ebb4714c3764939763856e601d1f66...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>140.793767</td>
-      <td>277.951901</td>
-      <td>0xd8c84eac995150662cc052e6ac76ec184fcf1122</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0x885d26765a096136cfeb1d216713ade4289641e0</td>
+      <td>64.535703</td>
+      <td>285.569863</td>
     </tr>
     <tr>
-      <th>14658619</th>
-      <th>170</th>
-      <th>324</th>
-      <td>0x428fa8fa81e542568900da8dc6529c192aacacb66382...</td>
-      <td>0xf1434282f0aa2532cc6ee2b5d02155ab15d901fb8116...</td>
+      <th>15574518</th>
+      <th>215</th>
+      <th>386</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0xdccc0a9212e3f39ed6d48f5113bfa76b0ba9a02d7f79...</td>
+      <td>0x8e816ea1fe6abb4da0031f3ac9b5d617c310e23e384b...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>7435.083337</td>
-      <td>14922.841459</td>
-      <td>0x928baa371740e8ca4d5e49781e0edbe14eeda2a9</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0xdf632ea5ba8283488aae8538e17a2f802243a61a</td>
+      <td>596.256976</td>
+      <td>2739.482104</td>
     </tr>
     <tr>
-      <th>14659259</th>
-      <th>223</th>
-      <th>311</th>
-      <td>0x38c7ae2094e0edce11d0ab18aa85c4e876b39b2873cf...</td>
-      <td>0xc8cddd006acc6f79c98baa50f2ada3fd02495e118a88...</td>
+      <th>15612326</th>
+      <th>17</th>
+      <th>54</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x9debdfcc6e2dc0bbecc377447257cd2c2e13210a417c...</td>
+      <td>0x2f9d506a91b1b65b0bab47f2fe08109956fd3812e361...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>951.707370</td>
-      <td>1910.172795</td>
-      <td>0x63376d56fa3976a0f0477489bb278227eee828c9</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0xd2de083018d93c6a7c4fb154bf6f36e6f1833796</td>
+      <td>5756.744803</td>
+      <td>27333.163245</td>
     </tr>
     <tr>
-      <th>14660281</th>
-      <th>125</th>
-      <th>293</th>
-      <td>0xdf3e8bdbcede2586d0f433d64462f54cd7272bc958b4...</td>
-      <td>0x090fad87e0aacb355fb2c7701920d26fa0f0cecb263c...</td>
+      <th>15613063</th>
+      <th>96</th>
+      <th>266</th>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x18107b4cd7d0f7271fa0a7acff48b39d50c0b765e06a...</td>
+      <td>0x0a249e10c1e5e74a08cb1f34313eeccc8d0208c4de08...</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>Burn</td>
-      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
-      <td>242.228414</td>
-      <td>483.650326</td>
-      <td>0x19d6ce18df801a2ac35e0c8e45e63028fbdce9ca</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
       <td>0xdccd412f0b1252819cb1fd330b93224ca42612892bb3...</td>
+      <td>0x7a250d5630b4cf539739df2c5dacb4c659f2488d</td>
+      <td>0x9435f1085584764b081177944033d4ed2cfd23ee</td>
+      <td>82.440313</td>
+      <td>390.287643</td>
     </tr>
   </tbody>
 </table>
-<p>5125 rows × 10 columns</p>
+<p>5272 rows × 10 columns</p>
 </div>
 </div>
 
