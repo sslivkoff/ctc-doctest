@@ -14580,9 +14580,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">binary</span>
-<span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">evm</span>
-<span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">rpc</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
 </pre></div>
 
      </div>
@@ -14600,11 +14598,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">contract_address</span> <span class="o">=</span> <span class="s1">&#39;0x956f47f50a910163d8bf957cf5846d573e7f87ca&#39;</span>
 <span class="n">wallet_address</span> <span class="o">=</span> <span class="s1">&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;</span>
-
-<span class="n">function_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_function_abi</span><span class="p">(</span>
-    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
-    <span class="n">function_name</span><span class="o">=</span><span class="s1">&#39;balanceOf&#39;</span><span class="p">,</span>
-<span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14631,7 +14624,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binary</span><span class="o">.</span><span class="n">keccak</span><span class="p">(</span><span class="s1">&#39;0xdeadbeef&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ctc</span><span class="o">.</span><span class="n">keccak</span><span class="p">(</span><span class="s1">&#39;0xdeadbeef&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14683,7 +14676,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binary</span><span class="o">.</span><span class="n">keccak_text</span><span class="p">(</span><span class="s1">&#39;goodbye&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ctc</span><span class="o">.</span><span class="n">keccak_text</span><span class="p">(</span><span class="s1">&#39;goodbye&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14723,7 +14716,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Encode-typed-data">Encode typed data<a class="anchor-link" href="#Encode-typed-data">&#182;</a></h2>
+<h2 id="Convert-between-binary-formats">Convert between binary formats<a class="anchor-link" href="#Convert-between-binary-formats">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14735,9 +14728,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encoded</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">encode_types</span><span class="p">([</span><span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;hello there&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="s1">&#39;(int256,string,bool)&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encoded</span> <span class="o">=</span> <span class="s1">&#39;0xdeadbeef&#39;</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;prefix_hex:&#39;</span><span class="p">,</span> <span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;prefix_hex&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;raw_hex:&#39;</span><span class="p">,</span> <span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;raw_hex&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;integer:&#39;</span><span class="p">,</span> <span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;integer&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;binary:&#39;</span><span class="p">,</span> <span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;binary&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14759,7 +14758,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00{\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0bhello there\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&#39;
+<pre>prefix_hex: 0xdeadbeef
+
+raw_hex: deadbeef
+
+integer: 3735928559
+
+binary: b&#39;\xde\xad\xbe\xef&#39;
 </pre>
 </div>
 </div>
@@ -14775,11 +14780,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Convert-between-binary-formats">Convert between binary formats<a class="anchor-link" href="#Convert-between-binary-formats">&#182;</a></h2>
+<h2 id="ABI-Encoding-/-Decoding">ABI Encoding / Decoding<a class="anchor-link" href="#ABI-Encoding-/-Decoding">&#182;</a></h2>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14787,13 +14792,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;prefix_hex:&#39;</span><span class="p">,</span> <span class="n">binary</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;prefix_hex&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;raw_hex:&#39;</span><span class="p">,</span> <span class="n">binary</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;raw_hex&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;integer:&#39;</span><span class="p">,</span> <span class="n">binary</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;integer&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;binary:&#39;</span><span class="p">,</span> <span class="n">binary</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;binary&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_to_encode</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;int128&#39;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;int16&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+    <span class="p">[[</span><span class="s1">&#39;int128&#39;</span><span class="p">,</span> <span class="s1">&#39;int16&#39;</span><span class="p">],</span> <span class="p">(</span><span class="mi">4000</span><span class="p">,</span> <span class="mi">300</span><span class="p">)],</span>
+    <span class="p">[[</span><span class="s1">&#39;int16&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;bool&#39;</span><span class="p">],</span> <span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;hello there&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)],</span>
+<span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14801,46 +14805,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>prefix_hex: 0x000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b68656c6c6f207468657265000000000000000000000000000000000000000000
-
-raw_hex: 000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b68656c6c6f207468657265000000000000000000000000000000000000000000
-
-integer: 22111625558806485665070453846705004223501116840990370844631899982401119124076767507060003578713901232628666407469486044049674344438842593562270734860113209479553215218506004750868419833100194159720521674790690731748671185506526887811975872991948414941797278484713587557068986247767044397253250864347991559372800
-
-binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00{\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0bhello there\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&#39;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Decode-typed-data">Decode typed data<a class="anchor-link" href="#Decode-typed-data">&#182;</a></h2>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14849,9 +14813,14 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decoded</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">decode_types</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;(int256,string,bool)&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># encode</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">decoded</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">types</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">data_to_encode</span><span class="p">:</span>
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">abi_encode</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">types</span><span class="p">)</span>
+    <span class="n">as_hex</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;prefix_hex&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;original:&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;encoded:&#39;</span><span class="p">,</span> <span class="n">as_hex</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14873,8 +14842,301 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>(123, &#39;hello there&#39;, False)
+<pre>
+original: 4000
+encoded: 0x0000000000000000000000000000000000000000000000000000000000000fa0
+
+original: 300
+encoded: 0x000000000000000000000000000000000000000000000000000000000000012c
+
+original: (4000, 300)
+encoded: 0x0000000000000000000000000000000000000000000000000000000000000fa0000000000000000000000000000000000000000000000000000000000000012c
+
+original: (123, &#39;hello there&#39;, False)
+encoded: 0x000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b68656c6c6f207468657265000000000000000000000000000000000000000000
 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># encode packed</span>
+
+<span class="k">for</span> <span class="n">types</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">data_to_encode</span><span class="p">:</span>
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">abi_encode_packed</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">types</span><span class="p">)</span>
+    <span class="n">as_hex</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;prefix_hex&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;original:&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;encoded:&#39;</span><span class="p">,</span> <span class="n">as_hex</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+original: 4000
+encoded: 0x00000000000000000000000000000fa0
+
+original: 300
+encoded: 0x012c
+
+original: (4000, 300)
+encoded: 0x00000000000000000000000000000fa0012c
+
+original: (123, &#39;hello there&#39;, False)
+encoded: 0x007b68656c6c6f20746865726500
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># decode</span>
+
+<span class="k">for</span> <span class="n">types</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">data_to_encode</span><span class="p">:</span>
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">abi_encode</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">types</span><span class="p">)</span>
+    <span class="n">as_hex</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="s1">&#39;prefix_hex&#39;</span><span class="p">)</span>
+    <span class="n">decoded</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">abi_decode</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="n">types</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;original:&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;encoded:&#39;</span><span class="p">,</span> <span class="n">as_hex</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;decoded:&#39;</span><span class="p">,</span> <span class="n">decoded</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+original: 4000
+encoded: 0x0000000000000000000000000000000000000000000000000000000000000fa0
+decoded: 4000
+
+original: 300
+encoded: 0x000000000000000000000000000000000000000000000000000000000000012c
+decoded: 300
+
+original: (4000, 300)
+encoded: 0x0000000000000000000000000000000000000000000000000000000000000fa0000000000000000000000000000000000000000000000000000000000000012c
+decoded: (4000, 300)
+
+original: (123, &#39;hello there&#39;, False)
+encoded: 0x000000000000000000000000000000000000000000000000000000000000007b00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b68656c6c6f207468657265000000000000000000000000000000000000000000
+decoded: (123, &#39;hello there&#39;, False)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="RLP-encoding-/-decoding">RLP encoding / decoding<a class="anchor-link" href="#RLP-encoding-/-decoding">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">types</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">data_to_encode</span><span class="p">:</span>
+    
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">rlp_encode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    
+    <span class="n">decoded</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">rlp_decode</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="n">types</span><span class="p">)</span>
+<span class="c1">#     if isinstance(types, str):</span>
+<span class="c1">#         decoded = ctc.binary_convert(decoded, &#39;integer&#39;)</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;original:&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;encoded:&#39;</span><span class="p">,</span> <span class="n">encoded</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;decoded:&#39;</span><span class="p">,</span> <span class="n">decoded</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+original: 4000
+encoded: 0x820fa0
+decoded: 4000
+
+original: 300
+encoded: 0x82012c
+decoded: 300
+
+original: (4000, 300)
+encoded: 0xc6820fa082012c
+decoded: [4000, 300]
+
+original: (123, &#39;hello there&#39;, False)
+encoded: 0xce7b8b68656c6c6f20746865726580
+decoded: [123, &#39;hello there&#39;, False]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ctc</span><span class="o">.</span><span class="n">binary_convert</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;{&#39;</span><span class="p">,</span> <span class="s1">&#39;integer&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>123</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;{&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+Input <span class="ansi-green-fg">In [18]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">int</span>(<span style="color: rgb(175,0,0)">b</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">{</span><span style="color: rgb(175,0,0)">&#39;</span>, <span style="color: rgb(98,98,98)">2</span>)
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 2: b&#39;{&#39;</pre>
 </div>
 </div>
 
@@ -14893,15 +15155,34 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_function_abi</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
+    <span class="n">function_name</span><span class="o">=</span><span class="s1">&#39;balanceOf&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encoded_call_data</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">encode_call_data</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encoded_call_data</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">encode_call_data</span><span class="p">(</span>
     <span class="n">function_abi</span><span class="o">=</span><span class="n">function_abi</span><span class="p">,</span>
     <span class="n">parameters</span><span class="o">=</span><span class="p">[</span><span class="n">wallet_address</span><span class="p">],</span>
 <span class="p">)</span>
@@ -14924,7 +15205,7 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -14955,10 +15236,10 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decoded_call_data</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">decode_call_data</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decoded_call_data</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">decode_call_data</span><span class="p">(</span>
     <span class="n">encoded_call_data</span><span class="p">,</span>
     <span class="n">function_abi</span><span class="o">=</span><span class="n">function_abi</span><span class="p">,</span>
 <span class="p">)</span>
@@ -14981,7 +15262,7 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -14995,7 +15276,7 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
   &#39;stateMutability&#39;: &#39;view&#39;,
   &#39;type&#39;: &#39;function&#39;},
  &#39;function_selector&#39;: &#39;0x70a08231&#39;,
- &#39;parameters&#39;: (&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;,),
+ &#39;parameters&#39;: [&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;],
  &#39;named_parameters&#39;: {&#39;account&#39;: &#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;}}</pre>
 </div>
 
@@ -15016,6 +15297,22 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc.rpc</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15024,19 +15321,19 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_function_output</span> <span class="o">=</span> <span class="k">await</span> <span class="n">rpc</span><span class="o">.</span><span class="n">async_eth_call</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_function_output</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">async_eth_call</span><span class="p">(</span>
     <span class="n">to_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
     <span class="n">call_data</span><span class="o">=</span><span class="n">encoded_call_data</span><span class="p">,</span>
     <span class="n">decode_response</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">auto_decoded_function_output</span> <span class="o">=</span> <span class="k">await</span> <span class="n">rpc</span><span class="o">.</span><span class="n">async_eth_call</span><span class="p">(</span>
+<span class="n">auto_decoded_function_output</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">async_eth_call</span><span class="p">(</span>
     <span class="n">to_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
     <span class="n">call_data</span><span class="o">=</span><span class="n">encoded_call_data</span><span class="p">,</span>
     <span class="n">function_abi</span><span class="o">=</span><span class="n">function_abi</span><span class="p">,</span>
     <span class="n">decode_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">manually_decoded_function_output</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">decode_function_output</span><span class="p">(</span>
-    <span class="n">raw_function_output</span><span class="p">,</span>
+<span class="n">manually_decoded_function_output</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">decode_function_output</span><span class="p">(</span>
+    <span class="n">encoded_output</span><span class="o">=</span><span class="n">raw_function_output</span><span class="p">,</span>
     <span class="n">function_abi</span><span class="o">=</span><span class="n">function_abi</span><span class="p">,</span>
 <span class="p">)</span>
 
@@ -15064,9 +15361,9 @@ binary: b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>raw_function_output: 0x0000000000000000000000000000000000000000004308be532c389fd941d6f7
-auto_decoded_function_output: 81039319720644580001044215
-manually_decoded_function_output: 81039319720644580001044215
+<pre>raw_function_output: 0x00000000000000000000000000000000000000000000a6a56921378ef8c7a9f5
+auto_decoded_function_output: 786964124325658594093557
+manually_decoded_function_output: 786964124325658594093557
 </pre>
 </div>
 </div>

@@ -1,128 +1,9 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gas &mdash; Check the Chain (ctc)  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ERC20s" href="erc20s.html" />
-    <link rel="prev" title="Contracts" href="contracts.html" /> 
-</head>
-
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Check the Chain (ctc)
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">The Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/dependencies.html">Dependencies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/configuration.html">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/changelog.html">Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../overview/faq.html">FAQ</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Data &amp; Ops</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../data_ops/obtaining_data.html">Obtaining Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_ops/storing_data.html">Storing Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_ops/performance.html">Performance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_ops/monitoring.html">Monitoring</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Command Line Interface</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../cli/basic_usage.html">Basic Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cli/subcommands.html">Subcommands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cli/useful_aliases.html">Useful Aliases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cli/similar_tools.html">Similar CLI tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Python Interface</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../code_tour.html">Basic Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rpc_client.html">RPC Client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../async_code.html">Asynchronous Code</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../datatypes.html">Datatypes</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="abis.html">ABIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="binary_data.html">Binary Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contracts.html">Contracts</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="erc20s.html">ERC20s</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eth_balances.html">ETH Balances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="transactions.html">Transactions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../specific_protocols.html">Specific Protocols</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../similar_tools.html">Similar Python Tools</a></li>
-</ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Check the Chain (ctc)</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../datatypes.html">Datatypes</a> &raquo;</li>
-      <li>Gas</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/python/datatypes/gas.md.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <div class="section" id="gas">
-<h1>Gas<a class="headerlink" href="#gas" title="Permalink to this headline"></a></h1>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>These examples are a Jupyter notebook. Grab the original notebook <a class="reference external" href="https://www.google.com">here</a></p>
-</div>
-<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>gas</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>addresses</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14699,7 +14580,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">evm</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
 </pre></div>
 
      </div>
@@ -14707,18 +14588,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Get-Individual-Block-Gas-Stats">Get Individual Block Gas Stats<a class="anchor-link" href="#Get-Individual-Block-Gas-Stats">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14726,46 +14596,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block_gas_stats</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_block_gas_stats</span><span class="p">(</span><span class="mi">14000000</span><span class="p">)</span>
-
-<span class="n">block_gas_stats</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">address</span> <span class="o">=</span> <span class="s1">&#39;0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&#39;</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;base_fee&#39;: 139.541559304,
- &#39;min_gas_price&#39;: 140.0,
- &#39;median_gas_price&#39;: 142.203313325,
- &#39;mean_gas_price&#39;: 152.89720574486594,
- &#39;max_gas_price&#39;: 230.0,
- &#39;gas_used&#39;: 8119826,
- &#39;gas_limit&#39;: 30058561,
- &#39;n_transactions&#39;: 112}</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -14775,7 +14611,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Aggregate-Multiple-Block-Gas-Stats">Aggregate Multiple Block Gas Stats<a class="anchor-link" href="#Aggregate-Multiple-Block-Gas-Stats">&#182;</a></h2>
+<h2 id="Get-proxy-implementation">Get proxy implementation<a class="anchor-link" href="#Get-proxy-implementation">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14787,12 +14623,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">blocks_gas_stats</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_blocks_gas_stats</span><span class="p">(</span>
-    <span class="n">start_block</span><span class="o">=</span><span class="mi">14000000</span><span class="p">,</span>
-    <span class="n">end_block</span><span class="o">=</span><span class="mi">14000100</span>
-<span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">implementation</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_proxy_implementation</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
 
-<span class="n">blocks_gas_stats</span>
+<span class="n">implementation</span>
 </pre></div>
 
      </div>
@@ -14816,39 +14649,524 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;min_base_fee&#39;: 116.684032033,
- &#39;median_base_fee&#39;: 180.458274018,
- &#39;mean_base_fee&#39;: 5607626126.755782,
- &#39;max_base_fee&#39;: 212809153921,
- &#39;min_gas_price&#39;: 116.684032033,
- &#39;min_median_gas_price&#39;: 119.184032033,
- &#39;min_mean_gas_price&#39;: 133.06055913633344,
- &#39;min_max_gas_price&#39;: 136.014552098,
- &#39;median_min_gas_price&#39;: 180.43562949,
- &#39;median_median_gas_price&#39;: 181.55053352,
- &#39;median_mean_gas_price&#39;: 188.3772817841438,
- &#39;median_max_gas_price&#39;: 285.4267255985,
- &#39;mean_min_gas_price&#39;: 177.06014014478572,
- &#39;mean_median_gas_price&#39;: 178.64983315020413,
- &#39;mean_gas_price&#39;: 187.39525476608267,
- &#39;mean_max_gas_price&#39;: 587.4157569185102,
- &#39;max_min_gas_price&#39;: 237.755849363,
- &#39;max_median_gas_price&#39;: 238.255849363,
- &#39;max_mean_gas_price&#39;: 305.68400393096164,
- &#39;max_gas_price&#39;: 20263.608159707,
- &#39;min_gas_used&#39;: 0,
- &#39;median_gas_used&#39;: 14518894.0,
- &#39;mean_gas_used&#39;: 15731316.811881188,
- &#39;max_gas_used&#39;: 30099037,
- &#39;min_gas_limit&#39;: 29912200,
- &#39;median_gas_limit&#39;: 30029069.0,
- &#39;mean_gas_limit&#39;: 30029179.643564355,
- &#39;max_gas_limit&#39;: 30136881,
- &#39;min_n_transactions&#39;: 0,
- &#39;median_n_transactions&#39;: 191.0,
- &#39;mean_n_transactions&#39;: 201.12871287128712,
- &#39;max_n_transactions&#39;: 482,
- &#39;n_blocks&#39;: 101}</pre>
+<pre>&#39;0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_proxy_metadata</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;implementation&#39;: &#39;0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf&#39;,
+ &#39;proxy_type&#39;: &#39;openzeppelin&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Get-contract-creation-block">Get contract creation block<a class="anchor-link" href="#Get-contract-creation-block">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block_number</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_contract_creation_block</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+
+<span class="n">block_number</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>6082465</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Check-whether-address-is-a-contract">Check whether address is a contract<a class="anchor-link" href="#Check-whether-address-is-a-contract">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_is_contract_address</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Resolve-address">Resolve address<a class="anchor-link" href="#Resolve-address">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for more detailed tools, see ctc.protocols.ens_utils</span>
+
+<span class="n">address</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_resolve_address</span><span class="p">(</span><span class="s1">&#39;vitalik.eth&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+
+<span class="n">address</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_resolve_address</span><span class="p">(</span><span class="s1">&#39;vitalik.eth&#39;</span><span class="p">,</span> <span class="n">block</span><span class="o">=</span><span class="mi">14000000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0xd8da6bf26964af9d7eed9e03e53415d37aa96045
+0xd8da6bf26964af9d7eed9e03e53415d37aa96045
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_resolve_addresses</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;vitalik.eth&#39;</span><span class="p">,</span> <span class="s1">&#39;paradigm.eth&#39;</span><span class="p">,</span> <span class="s1">&#39;tetranode.eth&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;0xd8da6bf26964af9d7eed9e03e53415d37aa96045&#39;,
+ &#39;0xd61415f6c5d93027778ceab5f099f64c29f58fd7&#39;,
+ &#39;0x465e7c8cd7126dad1a905624ea5d85eb717ef41f&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_resolve_address_by_block</span><span class="p">(</span>
+    <span class="s1">&#39;tetranode.eth&#39;</span><span class="p">,</span>
+    <span class="n">blocks</span><span class="o">=</span><span class="p">[</span><span class="mi">13000000</span><span class="p">,</span> <span class="mi">14000000</span><span class="p">,</span> <span class="mi">14500000</span><span class="p">,</span> <span class="mi">15000000</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;0xf7832ae2ae254326c9fb9b7ea1e1fa74d867f05c&#39;,
+ &#39;0xf7832ae2ae254326c9fb9b7ea1e1fa74d867f05c&#39;,
+ &#39;0xf7832ae2ae254326c9fb9b7ea1e1fa74d867f05c&#39;,
+ &#39;0x465e7c8cd7126dad1a905624ea5d85eb717ef41f&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Get-transactions-from-address">Get transactions from address<a class="anchor-link" href="#Get-transactions-from-address">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">txs</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_transactions_from_address</span><span class="p">(</span><span class="s1">&#39;vitalik.eth&#39;</span><span class="p">)</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">txs</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>5</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/home/storm/repos/checkthechain/src/ctc/rpc/rpc_protocols/rpc_http_async.py:35: UserWarning: request failed with code 400 retrying in 64.21493633649644s
+  warnings.warn(
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Get-address-checksum">Get address checksum<a class="anchor-link" href="#Get-address-checksum">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ctc</span><span class="o">.</span><span class="n">get_address_checksum</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;0x956F47F50A910163D8BF957Cf5846D573E7f87CA&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Get-CREATE-and-CREATE2-addresses">Get CREATE and CREATE2 addresses<a class="anchor-link" href="#Get-CREATE-and-CREATE2-addresses">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># CREATE</span>
+
+<span class="n">ctc</span><span class="o">.</span><span class="n">get_created_address</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="n">address</span><span class="p">,</span> <span class="n">nonce</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;0xa25363249fba561e1fa346707580ab12e0c38cb6&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># CREATE2</span>
+
+<span class="n">ctc</span><span class="o">.</span><span class="n">get_created_address</span><span class="p">(</span>
+    <span class="n">sender</span><span class="o">=</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">salt</span><span class="o">=</span><span class="s1">&#39;0xdeadbeef&#39;</span><span class="p">,</span>
+    <span class="n">init_code</span><span class="o">=</span><span class="s1">&#39;0xdeadbeef&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;0x06e45478b9e242ebf8f6be3eecd57b17818cd307&#39;</pre>
 </div>
 
 </div>
@@ -14866,95 +15184,4 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 
-</html>
-</div>
-<div class="section" id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="ctc.evm.async_get_block_gas_stats">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_block_gas_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_block_gas_stats" title="Permalink to this definition"></a></dt>
-<dd><p>get gas statistics for a given block</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#ctc.evm.BlockGasStats" title="ctc.evm.BlockGasStats">BlockGasStats</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">BlockGasStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_typename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.BlockGasStats" title="Permalink to this definition"></a></dt>
-<dd><dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.base_fee">
-<span class="sig-name descname"><span class="pre">base_fee</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.base_fee" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.gas_limit">
-<span class="sig-name descname"><span class="pre">gas_limit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.gas_limit" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.gas_used">
-<span class="sig-name descname"><span class="pre">gas_used</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.gas_used" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.max_gas_price">
-<span class="sig-name descname"><span class="pre">max_gas_price</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.max_gas_price" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.mean_gas_price">
-<span class="sig-name descname"><span class="pre">mean_gas_price</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.mean_gas_price" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.median_gas_price">
-<span class="sig-name descname"><span class="pre">median_gas_price</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.median_gas_price" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.min_gas_price">
-<span class="sig-name descname"><span class="pre">min_gas_price</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.min_gas_price" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ctc.evm.BlockGasStats.n_transactions">
-<span class="sig-name descname"><span class="pre">n_transactions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#ctc.evm.BlockGasStats.n_transactions" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-</div>
-
-
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="contracts.html" class="btn btn-neutral float-left" title="Contracts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="erc20s.html" class="btn btn-neutral float-right" title="ERC20s" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p></p>
-  </div>
-
-   
-
-</footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(false);
-      });
-  </script> 
-
-</body>
 </html>

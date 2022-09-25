@@ -21,7 +21,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Contracts" href="contracts.html" />
+    <link rel="next" title="ERC20s" href="erc20s.html" />
     <link rel="prev" title="Binary Data" href="binary_data.html" /> 
 </head>
 
@@ -70,10 +70,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../datatypes.html">Datatypes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="abis.html">ABIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html">Contracts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="binary_data.html">Binary Data</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contracts.html">Contracts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gas.html">Gas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="erc20s.html">ERC20s</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eth_balances.html">ETH Balances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
@@ -113,6 +112,13 @@
 <h1>Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline"></a></h1>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>These examples are crafted as a <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>. You can download the original notebook file <a class="reference external" href="https://github.com/sslivkoff/ctc-doctest/blob/main/source/python/notebooks/datatypes/blocks.ipynb">here</a>.
+</br>
+</br>
+Also note that inside Jupyter notebooks, <code class="docutils literal notranslate"><span class="pre">await</span></code> can be used freely outside of <code class="docutils literal notranslate"><span class="pre">asyncio.run()</span></code>.</p>
+</div>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -14695,7 +14701,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">evm</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
 </pre></div>
 
      </div>
@@ -14722,7 +14728,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_block</span><span class="p">(</span><span class="mi">14000000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_block</span><span class="p">(</span><span class="mi">14000000</span><span class="p">)</span>
 
 <span class="n">block</span>
 </pre></div>
@@ -14748,8 +14754,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;number&#39;: 14000000,
- &#39;base_fee_per_gas&#39;: 139541559304,
+<pre>{&#39;base_fee_per_gas&#39;: 139541559304,
  &#39;difficulty&#39;: 12316581093827601,
  &#39;extra_data&#39;: &#39;0x6175737472616c69612d736f75746865617374312d31&#39;,
  &#39;gas_limit&#39;: 30058561,
@@ -14759,13 +14764,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
  &#39;miner&#39;: &#39;0xea674fdde714fd979de3edf0f56aa9716b898ec8&#39;,
  &#39;mix_hash&#39;: &#39;0xa832679fcf3e71f0b29bd5913955151be5bf1fc59e135e3c7eb6e30f8442a5df&#39;,
  &#39;nonce&#39;: &#39;0x31e7e99df18e0424&#39;,
+ &#39;number&#39;: 14000000,
  &#39;parent_hash&#39;: &#39;0x0c9ef41f038aa58a4aa2810fda03d9d82aac9082c80283230fd74cb1cceb4b00&#39;,
  &#39;receipts_root&#39;: &#39;0xf7b9f8e92a4b420a27302ab91084e5499d3d711183a021f4956ff32de246e14e&#39;,
  &#39;sha3_uncles&#39;: &#39;0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347&#39;,
  &#39;size&#39;: 58470,
  &#39;state_root&#39;: &#39;0xfb3df73e7a41d500a374ee236dd613bb24f1a5fa5b80615a7953ea75c26c6a6d&#39;,
  &#39;timestamp&#39;: 1642114795,
- &#39;total_difficulty&#39;: 38896129597749836221010,
+ &#39;total_difficulty&#39;: &#39;38896129597749836221010&#39;,
  &#39;transactions&#39;: [&#39;0x3dac2080b4c423029fcc9c916bc430cde441badfe736fc6d1fe9325348af80fd&#39;,
   &#39;0x82a6fdc276916a97a4723bb15ffc39b4e8efd2cd2044e7957b46a93c00e95b7c&#39;,
   &#39;0x1dc98e66e46d8bbb0936b5d57ef9685caf2be3a561ae232fe35cc91d2f1f49d3&#39;,
@@ -14907,7 +14913,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">blocks</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_blocks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">14000000</span><span class="p">,</span> <span class="mi">14000100</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">blocks</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_blocks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">14000000</span><span class="p">,</span> <span class="mi">14000100</span><span class="p">))</span>
 
 <span class="nb">len</span><span class="p">(</span><span class="n">blocks</span><span class="p">)</span>
 </pre></div>
@@ -14953,7 +14959,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14961,12 +14967,80 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_block</span><span class="p">(</span><span class="s1">&#39;latest&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_block</span><span class="p">(</span><span class="s1">&#39;latest&#39;</span><span class="p">)</span>
+
+<span class="n">block</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>15579448</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_latest_block_number</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>15579448</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14985,10 +15059,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block_number</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_block_of_timestamp</span><span class="p">(</span><span class="mi">1650946000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">block_number</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_block_of_timestamp</span><span class="p">(</span><span class="mi">1650946000</span><span class="p">)</span>
 
 <span class="n">block_number</span>
 </pre></div>
@@ -15008,7 +15082,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -15039,12 +15113,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">timestamps</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1650746000</span><span class="p">,</span> <span class="mi">1650946000</span><span class="p">,</span> <span class="mi">86400</span><span class="p">)</span>
 
-<span class="n">block_numbers</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_blocks_of_timestamps</span><span class="p">(</span><span class="n">timestamps</span><span class="p">)</span>
+<span class="n">block_numbers</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_blocks_of_timestamps</span><span class="p">(</span><span class="n">timestamps</span><span class="p">)</span>
 
 <span class="n">block_numbers</span>
 </pre></div>
@@ -15064,13 +15138,190 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>[14643250, 14649567, 14655946]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Gas-Statistics">Gas Statistics<a class="anchor-link" href="#Gas-Statistics">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_block_gas_stats</span><span class="p">(</span><span class="mi">14000000</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;base_fee&#39;: 139.541559304,
+ &#39;min_gas_price&#39;: 140.0,
+ &#39;median_gas_price&#39;: 142.203313325,
+ &#39;mean_gas_price&#39;: 152.89720574486594,
+ &#39;max_gas_price&#39;: 230.0,
+ &#39;gas_used&#39;: 8119826,
+ &#39;gas_limit&#39;: 30058561,
+ &#39;n_transactions&#39;: 112}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Predicting-future-blocks">Predicting future blocks<a class="anchor-link" href="#Predicting-future-blocks">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tooltime</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># predict timestamp of future block</span>
+
+<span class="n">block_number</span> <span class="o">=</span> <span class="mi">20000000</span>
+<span class="n">timestamp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_predict_block_timestamp</span><span class="p">(</span><span class="n">block_number</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;timestamp:&#39;</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;timestamp pretty:&#39;</span><span class="p">,</span> <span class="n">tooltime</span><span class="o">.</span><span class="n">timestamp_to_iso_pretty</span><span class="p">(</span><span class="n">timestamp</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>timestamp: 1722265079
+timestamp pretty: 2024-07-29 14:57:59Z
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># predict block of future timesatmp</span>
+
+<span class="n">block_number</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_predict_timestamp_block</span><span class="p">(</span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">)</span>
+
+<span class="n">block_number</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>18604699</pre>
 </div>
 
 </div>
@@ -15095,7 +15346,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_block">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_full_transactions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_block" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get block from local database or from RPC node</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Block</span></code></p>
 </dd>
@@ -15105,12 +15357,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_block_of_timestamp">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_block_of_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_timestamps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_timestamp_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_number_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db_assist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&gt;='</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_block_of_timestamp" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>search for the block that corresponds to a given timestamp</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_blocks">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_blocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_full_transactions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latest_block_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_blocks" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get blocks from local database or from RPC node</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list[spec.Block]</p>
 </dd>
@@ -15120,7 +15374,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_blocks_of_timestamps">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_blocks_of_timestamps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamps</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_timestamps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_number_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_timestamp_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&gt;='</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_blocks_of_timestamps" title="Permalink to this definition"></a></dt>
-<dd><p>once parallel node search created, use that</p>
+<dd><p>search for blocks corresponding to list of timestamps</p>
 </dd></dl>
 
 </div>
@@ -15131,7 +15385,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="binary_data.html" class="btn btn-neutral float-left" title="Binary Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="contracts.html" class="btn btn-neutral float-right" title="Contracts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="erc20s.html" class="btn btn-neutral float-right" title="ERC20s" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

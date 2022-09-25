@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="ETH Balances" href="eth_balances.html" />
-    <link rel="prev" title="Gas" href="gas.html" /> 
+    <link rel="prev" title="Blocks" href="blocks.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -70,10 +70,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../datatypes.html">Datatypes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="abis.html">ABIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html">Contracts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="binary_data.html">Binary Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contracts.html">Contracts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gas.html">Gas</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ERC20s</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eth_balances.html">ETH Balances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
@@ -117,6 +116,13 @@
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>These examples are crafted as a <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>. You can download the original notebook file <a class="reference external" href="https://github.com/sslivkoff/ctc-doctest/blob/main/source/python/notebooks/datatypes/erc20s.ipynb">here</a>.
+</br>
+</br>
+Also note that inside Jupyter notebooks, <code class="docutils literal notranslate"><span class="pre">await</span></code> can be used freely outside of <code class="docutils literal notranslate"><span class="pre">asyncio.run()</span></code>.</p>
+</div>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -14691,7 +14697,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="TODO">TODO<a class="anchor-link" href="#TODO">&#182;</a></h1><ul>
+<li>add allowances</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14699,7 +14719,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">evm</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
 </pre></div>
 
      </div>
@@ -14748,9 +14768,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_name</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
-<span class="n">symbol</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_symbol</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
-<span class="n">decimals</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_decimals</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_name</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
+<span class="n">symbol</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_symbol</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
+<span class="n">decimals</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_decimals</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;name:&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;symbol:&#39;</span><span class="p">,</span> <span class="n">symbol</span><span class="p">)</span>
@@ -14806,9 +14826,9 @@ decimals: 18
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20s_names</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
-<span class="n">symbols</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20s_symbols</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
-<span class="n">decimals</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20s_decimals</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20s_names</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
+<span class="n">symbols</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20s_symbols</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
+<span class="n">decimals</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20s_decimals</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;names:&#39;</span><span class="p">,</span> <span class="n">names</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;symbols:&#39;</span><span class="p">,</span> <span class="n">symbols</span><span class="p">)</span>
@@ -14864,8 +14884,8 @@ decimals: [18, 18, 18]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_total_supply</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
-<span class="n">address_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_balance_of</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_total_supply</span><span class="p">(</span><span class="n">erc20</span><span class="p">)</span>
+<span class="n">address_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_balance</span><span class="p">(</span>
     <span class="s1">&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;</span><span class="p">,</span>
     <span class="n">erc20</span><span class="p">,</span>
 <span class="p">)</span>
@@ -14893,8 +14913,8 @@ decimals: [18, 18, 18]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>total_supply: 559506382.6688191
-address_balance: 82013460.60914315
+<pre>total_supply: 99364749.68958248
+address_balance: 805579.0485472813
 </pre>
 </div>
 </div>
@@ -14922,11 +14942,11 @@ address_balance: 82013460.60914315
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_total_supply</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_total_supply</span><span class="p">(</span>
     <span class="n">erc20</span><span class="p">,</span>
     <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">raw_address_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_balance_of</span><span class="p">(</span>
+<span class="n">raw_address_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_balance</span><span class="p">(</span>
     <span class="s1">&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;</span><span class="p">,</span>
     <span class="n">erc20</span><span class="p">,</span>
     <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -14955,8 +14975,8 @@ address_balance: 82013460.60914315
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>raw_total_supply: 559506382668819036430800521
-raw_address_balance: 82013460609143161348292841
+<pre>raw_total_supply: 99364749689582484357213409
+raw_address_balance: 805579048547281286530026
 </pre>
 </div>
 </div>
@@ -14984,11 +15004,11 @@ raw_address_balance: 82013460609143161348292841
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">normalized_total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_normalize_erc20_quantity</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">normalized_total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_normalize_erc20_quantity</span><span class="p">(</span>
     <span class="n">raw_total_supply</span><span class="p">,</span>
     <span class="n">erc20</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">normalized_values</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_normalize_erc20_quantities</span><span class="p">(</span>
+<span class="n">normalized_values</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_normalize_erc20_quantities</span><span class="p">(</span>
     <span class="p">[</span><span class="n">raw_total_supply</span><span class="p">,</span> <span class="n">raw_address_balance</span><span class="p">],</span>
     <span class="n">erc20</span><span class="p">,</span>
 <span class="p">)</span>
@@ -15016,8 +15036,8 @@ raw_address_balance: 82013460609143161348292841
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>normalized_total_supply: 559506382.6688191
-normalized_values: [559506382.6688191, 82013460.60914317]
+<pre>normalized_total_supply: 99364749.68958248
+normalized_values: [99364749.68958248, 805579.0485472813]
 </pre>
 </div>
 </div>
@@ -15045,11 +15065,11 @@ normalized_values: [559506382.6688191, 82013460.60914317]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_total_supply</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_supply</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_total_supply</span><span class="p">(</span>
     <span class="n">erc20</span><span class="p">,</span>
     <span class="n">block</span><span class="o">=</span><span class="mi">14000000</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">address_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_balance_of</span><span class="p">(</span>
+<span class="n">address_balance</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_balance</span><span class="p">(</span>
     <span class="s1">&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;</span><span class="p">,</span>
     <span class="n">erc20</span><span class="p">,</span>
     <span class="n">block</span><span class="o">=</span><span class="mi">14000000</span><span class="p">,</span>
@@ -15109,11 +15129,11 @@ address_balance: 126538335.35590503
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">blocks</span> <span class="o">=</span> <span class="p">[</span><span class="mi">14000000</span><span class="p">,</span> <span class="mi">14100000</span><span class="p">,</span> <span class="mi">14200000</span><span class="p">]</span>
 
-<span class="n">total_supplies</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_total_supply_by_block</span><span class="p">(</span>
+<span class="n">total_supplies</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_total_supply_by_block</span><span class="p">(</span>
     <span class="n">erc20</span><span class="p">,</span>
     <span class="n">blocks</span><span class="o">=</span><span class="n">blocks</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">address_balances</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_balance_of_by_block</span><span class="p">(</span>
+<span class="n">address_balances</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_balance_by_block</span><span class="p">(</span>
     <span class="s1">&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;</span><span class="p">,</span>
     <span class="n">erc20</span><span class="p">,</span>
     <span class="n">blocks</span><span class="o">=</span><span class="n">blocks</span><span class="p">,</span>
@@ -15171,8 +15191,8 @@ address_balances: [126538335.35590503, 110223666.2844692, 122075790.9010594]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_supplies</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20s_total_supplies</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
-<span class="n">address_balances</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20s_balance_of</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_supplies</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20s_total_supplies</span><span class="p">(</span><span class="n">erc20s</span><span class="p">)</span>
+<span class="n">address_balances</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20s_balances</span><span class="p">(</span>
     <span class="s1">&#39;0x06cb22615ba53e60d67bf6c341a0fd5e718e1655&#39;</span><span class="p">,</span>
     <span class="n">erc20s</span><span class="p">,</span>
 <span class="p">)</span>
@@ -15200,8 +15220,8 @@ address_balances: [126538335.35590503, 110223666.2844692, 122075790.9010594]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>total_supplies: [559506382.6688191, 486343744.2968917, 8667121220.280003]
-address_balances: [82013460.60914317, 0.0, 0.0]
+<pre>total_supplies: [99364749.68958248, 170165188.03390792, 6413408014.199833]
+address_balances: [805579.0485472813, 0.0, 0.0]
 </pre>
 </div>
 </div>
@@ -15235,7 +15255,7 @@ address_balances: [82013460.60914317, 0.0, 0.0]
     <span class="s1">&#39;0x2a188f9eb761f70ecea083ba6c2a40145078dfc2&#39;</span><span class="p">,</span>
 <span class="p">]</span>
 
-<span class="n">addresses_balances</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_balance_of_addresses</span><span class="p">(</span>
+<span class="n">addresses_balances</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_balances_of_addresses</span><span class="p">(</span>
     <span class="n">addresses</span><span class="p">,</span>
     <span class="n">erc20</span><span class="p">,</span>
 <span class="p">)</span>
@@ -15262,7 +15282,7 @@ address_balances: [82013460.60914317, 0.0, 0.0]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>addresses_balances: [82013460.60914317, 81847315.3602611, 50080265.77634068]
+<pre>addresses_balances: [805579.0485472813, 13430681.756974604, 37295757.32505679]
 </pre>
 </div>
 </div>
@@ -15290,7 +15310,7 @@ address_balances: [82013460.60914317, 0.0, 0.0]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transfers</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_transfers</span><span class="p">(</span><span class="n">erc20</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transfers</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_transfers</span><span class="p">(</span><span class="n">erc20</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">transfers</span>
 </pre></div>
@@ -15336,8 +15356,8 @@ address_balances: [82013460.60914317, 0.0, 0.0]
       <th></th>
       <th></th>
       <th>address</th>
-      <th>transaction_hash</th>
       <th>block_hash</th>
+      <th>transaction_hash</th>
       <th>contract_address</th>
       <th>event_name</th>
       <th>event_hash</th>
@@ -15366,8 +15386,8 @@ address_balances: [82013460.60914317, 0.0, 0.0]
       <th rowspan="5" valign="top">61</th>
       <th>29</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
@@ -15378,8 +15398,8 @@ address_balances: [82013460.60914317, 0.0, 0.0]
     <tr>
       <th>32</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
@@ -15390,8 +15410,8 @@ address_balances: [82013460.60914317, 0.0, 0.0]
     <tr>
       <th>34</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
@@ -15402,8 +15422,8 @@ address_balances: [82013460.60914317, 0.0, 0.0]
     <tr>
       <th>42</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
@@ -15414,8 +15434,8 @@ address_balances: [82013460.60914317, 0.0, 0.0]
     <tr>
       <th>46</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
@@ -15438,74 +15458,74 @@ address_balances: [82013460.60914317, 0.0, 0.0]
       <td>...</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">14658112</th>
-      <th rowspan="2" valign="top">29</th>
-      <th>70</th>
+      <th rowspan="2" valign="top">15582485</th>
+      <th rowspan="2" valign="top">118</th>
+      <th>258</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x6380ed1ff7267489f6e0c3d911f5fb7b5eb5ed800505...</td>
-      <td>0x30aa8e2534a5871dd4b55b97c209a9b037ee9ac23121...</td>
+      <td>0x9e3ade47684f98364410e1d071478760c2263d34c23c...</td>
+      <td>0xb595cc5a8b7020b4a66ca9e4b6d5875bc571c4eb6157...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x81e289cdb4c163eda38a85d98e6e3e18106b0577</td>
-      <td>0x4188fbd7adc72853e3275f1c3503e170994888d7</td>
-      <td>214110.904466</td>
+      <td>0xdf50fbde8180c8785842c8e316ebe06f542d3443</td>
+      <td>0xf2f400c138f9fb900576263af0bc7fcde2b1b8a8</td>
+      <td>2792.856843</td>
     </tr>
     <tr>
-      <th>74</th>
+      <th>261</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x6380ed1ff7267489f6e0c3d911f5fb7b5eb5ed800505...</td>
-      <td>0x30aa8e2534a5871dd4b55b97c209a9b037ee9ac23121...</td>
+      <td>0x9e3ade47684f98364410e1d071478760c2263d34c23c...</td>
+      <td>0xb595cc5a8b7020b4a66ca9e4b6d5875bc571c4eb6157...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x4188fbd7adc72853e3275f1c3503e170994888d7</td>
-      <td>0xd8553552f8868c1ef160eedf031cf0bcf9686945</td>
-      <td>214110.904466</td>
+      <td>0xf2f400c138f9fb900576263af0bc7fcde2b1b8a8</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>2792.856843</td>
     </tr>
     <tr>
-      <th>14658180</th>
-      <th>312</th>
-      <th>472</th>
+      <th>15582497</th>
+      <th>5</th>
+      <th>4</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x5fbedf40dc8736edaa2dff2f0efecc67968e664e6961...</td>
-      <td>0x9b0d83344416e39e705b3b1bc94ad599282ce113739d...</td>
+      <td>0x3a697a967fc72d8b5ce620be953f09f09ce6f950bc94...</td>
+      <td>0xb956b399f870ff1ec956a3807e4e947fea1e62371a0b...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
-      <td>0xbc99c4bd93c24db1bf553f2c7f9348be639fe5b6</td>
-      <td>100.0</td>
+      <td>0x2028d7ef0223c45cadbf05e13f1823c1228012bf</td>
+      <td>0x0000e0ca771e21bd00057f54a68c30d400000000</td>
+      <td>4000.0</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">14658188</th>
-      <th rowspan="2" valign="top">27</th>
-      <th>75</th>
+      <th rowspan="2" valign="top">15582519</th>
+      <th rowspan="2" valign="top">47</th>
+      <th>81</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xd583165618e774fddd86ad295213d08b1555bba9baee...</td>
-      <td>0xfb587295db467998b8f66b97d4ca02d5478654586fb2...</td>
+      <td>0x4e0df9a008abadb90da31a2faa0b642a61e4eed19ab6...</td>
+      <td>0x9e3fbdc25ba497daba48c67fea6fb795ddae3fd978f3...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0xbc99c4bd93c24db1bf553f2c7f9348be639fe5b6</td>
-      <td>0x4188fbd7adc72853e3275f1c3503e170994888d7</td>
-      <td>100.0</td>
+      <td>0x2028d7ef0223c45cadbf05e13f1823c1228012bf</td>
+      <td>0x0000000000007f150bd6f54c40a34d7c3d5e9f56</td>
+      <td>11784.824</td>
     </tr>
     <tr>
-      <th>79</th>
+      <th>85</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xd583165618e774fddd86ad295213d08b1555bba9baee...</td>
-      <td>0xfb587295db467998b8f66b97d4ca02d5478654586fb2...</td>
+      <td>0x4e0df9a008abadb90da31a2faa0b642a61e4eed19ab6...</td>
+      <td>0x9e3fbdc25ba497daba48c67fea6fb795ddae3fd978f3...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x4188fbd7adc72853e3275f1c3503e170994888d7</td>
-      <td>0xd8553552f8868c1ef160eedf031cf0bcf9686945</td>
-      <td>100.0</td>
+      <td>0x0000000000007f150bd6f54c40a34d7c3d5e9f56</td>
+      <td>0xdf50fbde8180c8785842c8e316ebe06f542d3443</td>
+      <td>11784.824</td>
     </tr>
   </tbody>
 </table>
-<p>230803 rows × 9 columns</p>
+<p>275652 rows × 9 columns</p>
 </div>
 </div>
 
@@ -15522,7 +15542,7 @@ address_balances: [82013460.60914317, 0.0, 0.0]
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Get-ERC20-holdings-from-transfers">Get ERC20 holdings from transfers<a class="anchor-link" href="#Get-ERC20-holdings-from-transfers">&#182;</a></h2>
+<h2 id="Get-ERC20-balances-from-transfers">Get ERC20 balances from transfers<a class="anchor-link" href="#Get-ERC20-balances-from-transfers">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15534,12 +15554,12 @@ address_balances: [82013460.60914317, 0.0, 0.0]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transfers</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_transfers</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transfers</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_transfers</span><span class="p">(</span>
     <span class="n">erc20</span><span class="p">,</span>
     <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">holders</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_erc20_holdings_from_transfers</span><span class="p">(</span><span class="n">transfers</span><span class="p">)</span>
+<span class="n">holders</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_erc20_balances_from_transfers</span><span class="p">(</span><span class="n">transfers</span><span class="p">)</span>
 
 <span class="n">holders</span>
 </pre></div>
@@ -15566,18 +15586,18 @@ address_balances: [82013460.60914317, 0.0, 0.0]
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>address
-0x06cb22615ba53e60d67bf6c341a0fd5e718e1655      82013460609143161348292841
-0x9928e4046d7c6513326ccea028cd3e7a91c7590a      81847315360261096266963204
-0x2a188f9eb761f70ecea083ba6c2a40145078dfc2      50080265776340681042249402
-0xdf50fbde8180c8785842c8e316ebe06f542d3443      46065744752632102671172954
-0xbc9c084a12678ef5b516561df902fdc426d95483      39071315320916302703293699
-                                                          ...             
-0x5e8c6d1b31c681f0759e86f186c085b1e00195bc                               0
-0x5e8f0803d03dfbf397bf732c3232f6bebd2e0c0d                               0
-0x5e945fe1851a2bfc86d618e200708d6209bb9bb6                               0
-0x5e986b9794cba744d06299e214217ae5f926b244                               0
-0x0000000000000000000000000000000000000000    -559506382668819036430800521
-Name: balance, Length: 19605, dtype: object</pre>
+0x2a188f9eb761f70ecea083ba6c2a40145078dfc2     37295757325056792766954167
+0x3a24fea1509e1baeb2d2a7c819a191aa441825ea     23649097120164751841622097
+0x9928e4046d7c6513326ccea028cd3e7a91c7590a     13430681756974603200780032
+0xc69ddcd4dfef25d8a793241834d4cc4b3668ead6      3396966631011854590048258
+0xfafc562265a49975e8b20707eac966473795cf90      2634540334855403348554034
+                                                         ...             
+0x5d47e5d242a8f66a6286b0a2353868875f5d6068                              0
+0x5d45be1fb9c7251a90e970b5e20744496f29616f                              0
+0x5d430f475dcc5e47ec527cb9e07f59bbd377c583                              0
+0x5d41d6ab6d1e95d50f7f11234e503e5c8c6b5a0a                              0
+0x0000000000000000000000000000000000000000    -99364749689582484357213409
+Name: balance, Length: 20864, dtype: object</pre>
 </div>
 
 </div>
@@ -15602,7 +15622,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balance">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balance" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get ERC20 balance</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
 </dd>
@@ -15612,7 +15633,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balances_of_addresses">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balances_of_addresses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balances_of_addresses" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get ERC20 balance of multiple addresses</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
@@ -15622,7 +15644,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balance_by_block">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balance_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balance_by_block" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get historical ERC20 balance over multiple blocks</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
@@ -15643,7 +15666,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_balances_from_transfers">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_balances_from_transfers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transfers</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_balances_from_transfers" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>compute ERC20 balance of each wallet using Transfer events</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></p>
 </dd>
@@ -15675,7 +15699,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_total_supply">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_total_supply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_total_supply" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get total supply of ERC20</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
 </dd>
@@ -15685,7 +15710,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_total_supply_by_block">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_total_supply_by_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_total_supply_by_block" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get historical total supply of ERC20 across multiple blocks</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
@@ -15695,7 +15721,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20_transfers">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20_transfers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_timestamps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert_from_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">event_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20_transfers" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get transfer events of ERC20 token</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>spec.DataFrame</p>
 </dd>
@@ -15705,7 +15732,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20s_balances">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_balances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_balances" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get ERC20 balance of wallet for multiple tokens</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
@@ -15748,7 +15776,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_erc20s_total_supplies">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_erc20s_total_supplies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rpc_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_erc20s_total_supplies" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get total supplies of ERC20s</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</p>
 </dd>
@@ -15758,7 +15787,8 @@ Name: balance, Length: 19605, dtype: object</pre>
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_normalize_erc20_quantities">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_normalize_erc20_quantities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_normalize_erc20_quantities" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>normalize ERC20 quantites by adjusting radix by (10 ** decimals)</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list[float]</p>
 </dd>
@@ -15783,7 +15813,7 @@ Name: balance, Length: 19605, dtype: object</pre>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="gas.html" class="btn btn-neutral float-left" title="Gas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="blocks.html" class="btn btn-neutral float-left" title="Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="eth_balances.html" class="btn btn-neutral float-right" title="ETH Balances" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

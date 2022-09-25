@@ -14580,25 +14580,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">evm</span>
-<span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">binary</span>
-<span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">rpc</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">address</span> <span class="o">=</span> <span class="s1">&#39;0x956f47f50a910163d8bf957cf5846d573e7f87ca&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
 </pre></div>
 
      </div>
@@ -14617,6 +14599,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># example contract: LUSD</span>
+<span class="n">contract_address</span> <span class="o">=</span> <span class="s1">&#39;0x5f98805a4e8be255a32880fdec7f6728c6568ba0&#39;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14625,11 +14624,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">contract_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_contract_abi</span><span class="p">(</span><span class="n">contract_address</span><span class="o">=</span><span class="n">address</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">contract_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_contract_abi</span><span class="p">(</span><span class="n">contract_address</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">contract_abi</span><span class="p">),</span> <span class="s1">&#39;items&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;last item:&#39;</span><span class="p">,</span> <span class="n">contract_abi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ctc</span><span class="o">.</span><span class="n">summarize_contract_abi</span><span class="p">(</span><span class="n">contract_abi</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14650,12 +14647,201 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>38 items
 
-last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;outputs&#39;: [], &#39;stateMutability&#39;: &#39;nonpayable&#39;, &#39;type&#39;: &#39;function&#39;}
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┌────────────────────────┐
+│ Contract ABI Functions │
+└────────────────────────┘
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
 </pre>
 </div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">      │  selector  │                       name  │                     inputs  │  outputs  
+──────┼────────────┼─────────────────────────────┼─────────────────────────────┼───────────
+   1  │  dd62ed3e  │                  allowance  │           address, address  │  uint256  
+   2  │  095ea7b3  │                    approve  │           address, uint256  │     bool  
+   3  │  70a08231  │                  balanceOf  │                    address  │  uint256  
+   4  │  b7f8cf9b  │  borrowerOperationsAddress  │                          -  │  address  
+   5  │  9dc29fac  │                       burn  │           address, uint256  │        -  
+   6  │  313ce567  │                   decimals  │                          -  │    uint8  
+   7  │  a457c2d7  │          decreaseAllowance  │           address, uint256  │     bool  
+   8  │  f698da25  │            domainSeparator  │                          -  │  bytes32  
+   9  │  39509351  │          increaseAllowance  │           address, uint256  │     bool  
+  10  │  40c10f19  │                       mint  │           address, uint256  │        -  
+  11  │  06fdde03  │                       name  │                          -  │   string  
+  12  │  7ecebe00  │                     nonces  │                    address  │  uint256  
+  13  │  d505accf  │                     permit  │  address, address, uint...  │        -  
+  14  │  10ce43bd  │             permitTypeHash  │                          -  │  bytes32  
+  15  │  20c582be  │             returnFromPool  │  address, address, uint256  │        -  
+  16  │  bb997bac  │                 sendToPool  │  address, address, uint256  │        -  
+  17  │  0b622ab2  │       stabilityPoolAddress  │                          -  │  address  
+  18  │  95d89b41  │                     symbol  │                          -  │   string  
+  19  │  18160ddd  │                totalSupply  │                          -  │  uint256  
+  20  │  a9059cbb  │                   transfer  │           address, uint256  │     bool  
+  21  │  23b872dd  │               transferFrom  │  address, address, uint256  │     bool  
+  22  │  5a4d28bb  │        troveManagerAddress  │                          -  │  address  
+  23  │  54fd4d50  │                    version  │                          -  │   string  
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┌───────────────────────────┐
+│ Special Functions Present │
+└───────────────────────────┘
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">     function  │  present  
+───────────────┼───────────
+  constructor  │     True  
+      receive  │    False  
+     fallback  │    False  
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┌─────────────────────┐
+│ Contract ABI Events │
+└─────────────────────┘
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">                                 name                                   inputs    indexed       event_hash
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+1                            Approval                            address owner       ✓       0x8c5b...b925
+                                                               address spender       ✓                    
+                                                                 uint256 value                            
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+2    BorrowerOperationsAddressChanged    address _newBorrowerOperationsAddress               0x3ca6...d985
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+3             LUSDTokenBalanceUpdated                            address _user               0xe36d...5370
+                                                               uint256 _amount                            
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+4         StabilityPoolAddressChanged         address _newStabilityPoolAddress               0x8296...cc7f
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+5                            Transfer                             address from       ✓       0xddf2...b3ef
+                                                                    address to       ✓                    
+                                                                 uint256 value                            
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+6          TroveManagerAddressChanged             address _troveManagerAddress               0x1432...5678
+</pre>
+
+</div>
+
 </div>
 
 </div>
@@ -14681,10 +14867,12 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_function_abi</span><span class="p">(</span>
-    <span class="n">contract_address</span><span class="o">=</span><span class="n">address</span><span class="p">,</span>
-    <span class="n">function_name</span><span class="o">=</span><span class="s1">&#39;totalSupply&#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_function_abi</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
+    <span class="n">function_name</span><span class="o">=</span><span class="s1">&#39;balanceOf&#39;</span><span class="p">,</span>
 <span class="p">)</span>
+
+<span class="n">function_abi</span>
 </pre></div>
 
      </div>
@@ -14708,8 +14896,8 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;inputs&#39;: [],
- &#39;name&#39;: &#39;totalSupply&#39;,
+<pre>{&#39;inputs&#39;: [{&#39;internalType&#39;: &#39;address&#39;, &#39;name&#39;: &#39;account&#39;, &#39;type&#39;: &#39;address&#39;}],
+ &#39;name&#39;: &#39;balanceOf&#39;,
  &#39;outputs&#39;: [{&#39;internalType&#39;: &#39;uint256&#39;, &#39;name&#39;: &#39;&#39;, &#39;type&#39;: &#39;uint256&#39;}],
  &#39;stateMutability&#39;: &#39;view&#39;,
  &#39;type&#39;: &#39;function&#39;}</pre>
@@ -14740,9 +14928,9 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function_abi</span> <span class="o">=</span>  <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_function_abi</span><span class="p">(</span>
-    <span class="n">contract_address</span><span class="o">=</span><span class="n">address</span><span class="p">,</span>
-    <span class="n">function_selector</span><span class="o">=</span><span class="s1">&#39;0x18160ddd&#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_function_abi</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
+    <span class="n">function_selector</span><span class="o">=</span><span class="s1">&#39;0x70a08231&#39;</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">function_abi</span>
@@ -14769,8 +14957,8 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;inputs&#39;: [],
- &#39;name&#39;: &#39;totalSupply&#39;,
+<pre>{&#39;inputs&#39;: [{&#39;internalType&#39;: &#39;address&#39;, &#39;name&#39;: &#39;account&#39;, &#39;type&#39;: &#39;address&#39;}],
+ &#39;name&#39;: &#39;balanceOf&#39;,
  &#39;outputs&#39;: [{&#39;internalType&#39;: &#39;uint256&#39;, &#39;name&#39;: &#39;&#39;, &#39;type&#39;: &#39;uint256&#39;}],
  &#39;stateMutability&#39;: &#39;view&#39;,
  &#39;type&#39;: &#39;function&#39;}</pre>
@@ -14801,8 +14989,8 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">event_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_event_abi</span><span class="p">(</span>
-    <span class="n">contract_address</span><span class="o">=</span><span class="n">address</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">event_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_event_abi</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
     <span class="n">event_name</span><span class="o">=</span><span class="s1">&#39;Transfer&#39;</span><span class="p">,</span>
 <span class="p">)</span>
 
@@ -14874,8 +15062,8 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">event_hash</span> <span class="o">=</span> <span class="s1">&#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;</span>
 
-<span class="n">event_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_event_abi</span><span class="p">(</span>
-    <span class="n">contract_address</span><span class="o">=</span><span class="n">address</span><span class="p">,</span>
+<span class="n">event_abi</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_event_abi</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
     <span class="n">event_hash</span><span class="o">=</span><span class="n">event_hash</span><span class="p">,</span>
 <span class="p">)</span>
 
@@ -14945,12 +15133,12 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function_signature</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_function_signature</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
-<span class="n">function_selector</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_function_selector</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
-<span class="n">parameter_names</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_function_parameter_names</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
-<span class="n">parameter_types</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_function_parameter_types</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
-<span class="n">output_names</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_function_output_names</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
-<span class="n">output_types</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_function_output_types</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function_signature</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_function_signature</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
+<span class="n">function_selector</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_function_selector</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
+<span class="n">parameter_names</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_function_parameter_names</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
+<span class="n">parameter_types</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_function_parameter_types</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
+<span class="n">output_names</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_function_output_names</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
+<span class="n">output_types</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_function_output_types</span><span class="p">(</span><span class="n">function_abi</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;function_signature:&#39;</span><span class="p">,</span> <span class="n">function_signature</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;function_selector:&#39;</span><span class="p">,</span> <span class="n">function_selector</span><span class="p">)</span>
@@ -14979,10 +15167,10 @@ last item: {&#39;inputs&#39;: [], &#39;name&#39;: &#39;unpause&#39;, &#39;output
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>function_signature: totalSupply()
-function_selector: 18160ddd
-parameter_names: []
-parameter_types: []
+<pre>function_signature: balanceOf(address)
+function_selector: 70a08231
+parameter_names: [&#39;account&#39;]
+parameter_types: [&#39;address&#39;]
 output_names: [&#39;&#39;]
 output_types: [&#39;uint256&#39;]
 </pre>
@@ -15012,12 +15200,12 @@ output_types: [&#39;uint256&#39;]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">event_hash</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_event_hash</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
-<span class="n">event_signature</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_event_signature</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
-<span class="n">event_indexed_names</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_event_indexed_names</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
-<span class="n">event_indexed_types</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_event_indexed_types</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
-<span class="n">event_unindexed_names</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_event_unindexed_names</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
-<span class="n">event_unindexed_types</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">get_event_unindexed_types</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">event_hash</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_event_hash</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
+<span class="n">event_signature</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_event_signature</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
+<span class="n">event_indexed_names</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_event_indexed_names</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
+<span class="n">event_indexed_types</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_event_indexed_types</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
+<span class="n">event_unindexed_names</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_event_unindexed_names</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
+<span class="n">event_unindexed_types</span> <span class="o">=</span> <span class="n">ctc</span><span class="o">.</span><span class="n">get_event_unindexed_types</span><span class="p">(</span><span class="n">event_abi</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;event_hash:&#39;</span><span class="p">,</span> <span class="n">event_hash</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;event_signature:&#39;</span><span class="p">,</span> <span class="n">event_signature</span><span class="p">)</span>
@@ -15079,8 +15267,10 @@ event_unindexed_types: [&#39;uint256&#39;]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bytecode</span> <span class="o">=</span> <span class="k">await</span> <span class="n">rpc</span><span class="o">.</span><span class="n">async_eth_get_code</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
-<span class="n">function_abis</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_decompile_function_abis</span><span class="p">(</span><span class="n">bytecode</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc.rpc</span>
+
+<span class="n">bytecode</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">async_eth_get_code</span><span class="p">(</span><span class="n">contract_address</span><span class="p">)</span>
+<span class="n">function_abis</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_decompile_function_abis</span><span class="p">(</span><span class="n">bytecode</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">function_abi</span> <span class="ow">in</span> <span class="n">function_abis</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">function_abi</span><span class="p">[</span><span class="s1">&#39;hex_signature&#39;</span><span class="p">],</span> <span class="n">function_abi</span><span class="p">[</span><span class="s1">&#39;text_signature&#39;</span><span class="p">])</span>
@@ -15105,47 +15295,40 @@ event_unindexed_types: [&#39;uint256&#39;]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0xbc701e75 incentiveContract(address)
+<pre>0xa9059cbb transfer(address,uint256)
+0xa9059cbb many_msg_babbage(bytes1)
+0xa9059cbb transfer(bytes4[9],bytes5[6],int48[11])
+0xa9059cbb func_2093253501(bytes)
+0xb7f8cf9b borrowerOperationsAddress()
+0xbb997bac sendToPool(address,address,uint256)
 0xd505accf permit(address,address,uint256,uint256,uint8,bytes32,bytes32)
 0xdd62ed3e allowance(address,address)
 0xdd62ed3e remove_good(uint256[],bytes8,bool)
 0xdd62ed3e _func_5437782296(address,address)
-0xf2f4eb26 core()
-0xa9059cbb transfer(address,uint256)
-0xa9059cbb many_msg_babbage(bytes1)
-0xa9059cbb transfer(bytes4[9],bytes5[6],int48[11])
-0xa9059cbb func_2093253501(bytes)
-0xb4905897 feiBalance()
-0xb6232c99 setIncentiveContract(address,address)
-0xb86677fe tribe()
-0x8456cb59 pause()
-0x95d89b41 symbol()
-0x95d89b41 link_classic_internal(uint64,int64)
-0x9a9ba4da fei()
-0xa457c2d7 decreaseAllowance(address,uint256)
-0x79cc6790 burnFrom(address,uint256)
-0x7ecebe00 nonces(address)
-0x80009630 setCore(address)
-0x42966c68 burn(uint256)
-0x42966c68 collate_propagate_storage(bytes16)
-0x5c975abb paused()
-0x6b6dff0a tribeBalance()
+0xf698da25 domainSeparator()
+0x5a4d28bb troveManagerAddress()
 0x70a08231 balanceOf(address)
 0x70a08231 branch_passphrase_public(uint256,bytes8)
 0x70a08231 passphrase_calculate_transfer(uint64,address)
-0x39509351 increaseAllowance(address,uint256)
-0x3f4ba83a unpause()
-0x40c10f19 mint(address,uint256)
+0x7ecebe00 nonces(address)
+0x95d89b41 symbol()
+0x95d89b41 link_classic_internal(uint64,int64)
+0x9dc29fac burn(address,uint256)
+0xa457c2d7 decreaseAllowance(address,uint256)
+0x20c582be returnFromPool(address,address,uint256)
 0x23b872dd transferFrom(address,address,uint256)
 0x23b872dd gasprice_bit_ether(int128)
-0x30adf81f PERMIT_TYPEHASH()
 0x313ce567 decimals()
 0x313ce567 available_assert_time(uint16,uint64)
-0x3644e515 DOMAIN_SEPARATOR()
+0x39509351 increaseAllowance(address,uint256)
+0x40c10f19 mint(address,uint256)
+0x54fd4d50 version()
 0x06fdde03 name()
 0x06fdde03 message_hour(uint256,int8,uint16,bytes32)
 0x095ea7b3 approve(address,uint256)
 0x095ea7b3 sign_szabo_bytecode(bytes16,uint128)
+0x0b622ab2 stabilityPoolAddress()
+0x10ce43bd permitTypeHash()
 0x18160ddd totalSupply()
 0x18160ddd voting_var(address,uint256,int128,int128)
 </pre>

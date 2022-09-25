@@ -19,7 +19,7 @@ __Inside of IPython or Jupyter notebooks, `await` can be used directly, without 
 result = await some_async_function(input1, input2)
 ```
 
-If your code opens up network connections, you should also close those connections at the end of your scipt. For example:
+If your code opens up network connections, you should also close those connections at the end of your script. For example:
 
 ```python
 from ctc import rpc

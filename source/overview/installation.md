@@ -20,7 +20,9 @@ Upgrading to a new version of `ctc` takes two steps:
 1. `pip install checkthechain -U`
 2. Rerun the setup wizard by running `ctc setup` (can skip most steps by pressing enter)
 
-To upgrade from a special installation, you may need to 
+If you previously installed `ctc` directly from a git commit, you may need to first `pip uninstall checkthechain` before upgrading.
+
+When upgrading you should also check the [changelog](changelog) for 
 
 
 ## Uninstalling

@@ -1,6 +1,8 @@
 
 # ctc docs
 
+**note: This repository is the temporary home of the `ctc` docs. These docs will be moved into the [main ctc repository](https://github.com/fei-protocol/checkthechain).**
+
 These are the source files used to generate the ctc docs.
 
 View the generated docs at https://checkthechain.github.io/docs

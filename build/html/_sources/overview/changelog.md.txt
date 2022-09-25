@@ -1,13 +1,11 @@
 
 # Changelog
 
-[REPLACE `XX` tokens with proper]
-
 *until version `1.0.0` is reached, will use `0.X.Y` versioning where `X` is for breaking changes / major feature upgrades, and `Y` is for bug fixes / minor feature upgrades*
 
 ## 0.3.0
 
-**Sepember 19, 2022**
+**September 25, 2022**
 
 This is a significant release that includes features such as: sql database integration, refactored documentation, streamlined syntax, performance optimizations, and many new types of data queries. This release also includes lots of small bug fixes and quality-of-life improvements not listed below.
 
@@ -65,7 +63,7 @@ This is a significant release that includes features such as: sql database integ
 - upgrade from `setuptools` / `setup.py` to `flit` / `pyproject.toml`
 - use black for all py files in repo
 - use strict mode for mypy typing annotations
-- reduce number of implicit package dependencies from XX to XX
+- reduce number of implicit package dependencies by more than 50%
     - fork `eth-abi` package as `eth-abi-lite` to remove dependence on `eth-abi`, `eth-utils`, `toolz` and `cytools`
     - specify min and max version of each dependency to prevent future backwards incompability
 
@@ -106,6 +104,7 @@ Version `0.3.0` contains some breaking changes to make the API more consistent a
     - `rari_utils.get_pool_tvl_and_tvb` --> `rari_utils.async_get_pool_tvl_and_tvb`
     - use for blockwise functions always use `by_block` rather than `per_block`
     - `uniswap_v2_utils.async_get_pool_swaps` --> `uniswap_v2_utils.async_get_pool_trades`
+    - functions for querying data from specific DEX's now all use unified a unified DEX syntax and API
 - `spec`
     - `ConfigSpec` --> `Config`
     - `PartialConfigSpec` --> `PartialConfig`
@@ -114,6 +113,7 @@ Version `0.3.0` contains some breaking changes to make the API more consistent a
     - move `toolbox.amm_utils`, `toolbox.twap_utils`, and `toolbox.lending_utils` under `toolbox.defi_utils`
 - `cli`
     - all commands are standardized on `--export` rather than `--output` to specify data export targets
+- for functions that print out summary information, instead of using a conventions of `print_<X>()` and `summarize_<X>`, use single convention `print_X()`
 - only allow positional arguments for the first two arguments of every function
 
 ## 0.2.10

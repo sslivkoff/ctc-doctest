@@ -107,10 +107,12 @@
 <div class="section" id="filesystem">
 <h3>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> stores some files on the filesystem. By default, <code class="docutils literal notranslate"><span class="pre">ctc</span></code> will place its data folder in the user’s home directory at <code class="docutils literal notranslate"><span class="pre">~/ctc_data</span></code>. This is suitable for many setups. However, there are situations where it would be better to store data somewhere else, such as if the home directory is on a drive of limited size, or it the home directory is on a network drive with significant latency. The data directory can be moved by running the setup wizard <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code>.</p>
+<p>Total storage usage of <code class="docutils literal notranslate"><span class="pre">ctc</span></code> on the filesystem can be found by checking the size of the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> data directory.</p>
 </div>
 <div class="section" id="sql-databases">
 <h3>SQL Databases<a class="headerlink" href="#sql-databases" title="Permalink to this headline"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> also stores lots of data in SQL database tables. Schemas for these tables can be found <a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/db/schemas">here</a>. <code class="docutils literal notranslate"><span class="pre">ctc</span></code> currently supports sqlite with Postgresql support coming soon.</p>
+<p>Total storage usage of <code class="docutils literal notranslate"><span class="pre">ctc</span></code> in the database can be found by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">db</span> <span class="pre">-v</span></code> in the terminal.</p>
 <p>You can connect to the currently configured database by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">db</span> <span class="pre">login</span></code> in the terminal. Don’t do this unless you know what you’re doing.</p>
 </div>
 </div>

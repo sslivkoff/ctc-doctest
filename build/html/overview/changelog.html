@@ -99,11 +99,10 @@
              
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline"></a></h1>
-<p>[REPLACE <code class="docutils literal notranslate"><span class="pre">XX</span></code> tokens with proper]</p>
 <p><em>until version <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> is reached, will use <code class="docutils literal notranslate"><span class="pre">0.X.Y</span></code> versioning where <code class="docutils literal notranslate"><span class="pre">X</span></code> is for breaking changes / major feature upgrades, and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is for bug fixes / minor feature upgrades</em></p>
 <div class="section" id="id1">
 <h2>0.3.0<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
-<p><strong>Sepember 19, 2022</strong></p>
+<p><strong>September 25, 2022</strong></p>
 <p>This is a significant release that includes features such as: sql database integration, refactored documentation, streamlined syntax, performance optimizations, and many new types of data queries. This release also includes lots of small bug fixes and quality-of-life improvements not listed below.</p>
 <div class="section" id="db">
 <h3>DB<a class="headerlink" href="#db" title="Permalink to this headline"></a></h3>
@@ -191,7 +190,7 @@
 <li><p>upgrade from <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> / <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> to <code class="docutils literal notranslate"><span class="pre">flit</span></code> / <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></p></li>
 <li><p>use black for all py files in repo</p></li>
 <li><p>use strict mode for mypy typing annotations</p></li>
-<li><p>reduce number of implicit package dependencies from XX to XX</p>
+<li><p>reduce number of implicit package dependencies by more than 50%</p>
 <ul>
 <li><p>fork <code class="docutils literal notranslate"><span class="pre">eth-abi</span></code> package as <code class="docutils literal notranslate"><span class="pre">eth-abi-lite</span></code> to remove dependence on <code class="docutils literal notranslate"><span class="pre">eth-abi</span></code>, <code class="docutils literal notranslate"><span class="pre">eth-utils</span></code>, <code class="docutils literal notranslate"><span class="pre">toolz</span></code> and <code class="docutils literal notranslate"><span class="pre">cytools</span></code></p></li>
 <li><p>specify min and max version of each dependency to prevent future backwards incompability</p></li>
@@ -250,6 +249,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">rari_utils.get_pool_tvl_and_tvb</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">rari_utils.async_get_pool_tvl_and_tvb</span></code></p></li>
 <li><p>use for blockwise functions always use <code class="docutils literal notranslate"><span class="pre">by_block</span></code> rather than <code class="docutils literal notranslate"><span class="pre">per_block</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uniswap_v2_utils.async_get_pool_swaps</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">uniswap_v2_utils.async_get_pool_trades</span></code></p></li>
+<li><p>functions for querying data from specific DEX’s now all use unified a unified DEX syntax and API</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spec</span></code></p>
@@ -269,6 +269,7 @@
 <li><p>all commands are standardized on <code class="docutils literal notranslate"><span class="pre">--export</span></code> rather than <code class="docutils literal notranslate"><span class="pre">--output</span></code> to specify data export targets</p></li>
 </ul>
 </li>
+<li><p>for functions that print out summary information, instead of using a conventions of <code class="docutils literal notranslate"><span class="pre">print_&lt;X&gt;()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarize_&lt;X&gt;</span></code>, use single convention <code class="docutils literal notranslate"><span class="pre">print_X()</span></code></p></li>
 <li><p>only allow positional arguments for the first two arguments of every function</p></li>
 </ul>
 </div>

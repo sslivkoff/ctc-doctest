@@ -111,7 +111,7 @@
 <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">some_async_function</span><span class="p">(</span><span class="n">input1</span><span class="p">,</span> <span class="n">input2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If your code opens up network connections, you should also close those connections at the end of your scipt. For example:</p>
+<p>If your code opens up network connections, you should also close those connections at the end of your script. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">rpc</span>
 
 <span class="k">await</span> <span class="n">rpc</span><span class="o">.</span><span class="n">async_close_http_session</span><span class="p">()</span>

@@ -19,7 +19,7 @@ Protocol Subcommands
    ./protocol/aave_addresses
    ./protocol/cg
    ./protocol/chainlink
-   ./protocol/chainlink_ls
+   ./protocol/chainlink_feeds
    ./protocol/curve_pools
    ./protocol/ens
    ./protocol/ens_exists

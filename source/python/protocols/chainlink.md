@@ -13,6 +13,6 @@
 
 .. autofunction:: ctc.protocols.chainlink_utils.async_get_feed_data
 .. autofunction:: ctc.protocols.chainlink_utils.async_get_feed_datum
-.. autofunction:: ctc.protocols.chainlink_utils.async_summarize_feed
+.. autofunction:: ctc.protocols.chainlink_utils.async_print_feed_summary
 ```
 

@@ -14596,7 +14596,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feed</span> <span class="o">=</span> <span class="s1">&#39;FEI_USD&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feed</span> <span class="o">=</span> <span class="s1">&#39;ETH_USD&#39;</span>
 </pre></div>
 
      </div>
@@ -14611,7 +14611,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Summarize-Feed">Summarize Feed<a class="anchor-link" href="#Summarize-Feed">&#182;</a></h2>
+<h2 id="Get-feed-address">Get feed address<a class="anchor-link" href="#Get-feed-address">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14623,7 +14623,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">chainlink_utils</span><span class="o">.</span><span class="n">async_summarize_feed</span><span class="p">(</span><span class="n">feed</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">chainlink_utils</span><span class="o">.</span><span class="n">async_resolve_feed_address</span><span class="p">(</span><span class="n">feed</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14641,36 +14641,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>┌───────────────────────────────────┐
-│ Chainlink Feed Summary: FEI / USD │
-└───────────────────────────────────┘
-- name: FEI / USD
-- address: 0x31e0a88fecb6ec0a411dbe0e9e76391498296ee9
-- aggregator: 0x1d244648d5a63618751d006886268ae3550d0dfd
-- decimals: 8
 
 
-Recent Updates
-──────────────
-
-      value       │  age         │  block     │  timestamp   │  time                  
-    ──────────────┼──────────────┼────────────┼──────────────┼────────────────────────
-      0.998108    │  15 minutes  │  14662123  │  1651003533  │  2022-04-26 20:05:33Z  
-      0.997365    │  1 hours     │  14661863  │  1650999925  │  2022-04-26 19:05:25Z  
-      0.995403    │  2 hours     │  14661614  │  1650996330  │  2022-04-26 18:05:30Z  
-      0.996719    │  3 hours     │  14661346  │  1650992723  │  2022-04-26 17:05:23Z  
-      0.996706    │  4 hours     │  14661090  │  1650989118  │  2022-04-26 16:05:18Z  
-      0.99725072  │  5 hours     │  14660817  │  1650985550  │  2022-04-26 15:05:50Z  
-      0.99548     │  6 hours     │  14660562  │  1650981933  │  2022-04-26 14:05:33Z  
-      0.996838    │  7 hours     │  14660312  │  1650978379  │  2022-04-26 13:06:19Z  
-      0.99830072  │  8 hours     │  14660046  │  1650974799  │  2022-04-26 12:06:39Z  
-      0.996877    │  9 hours     │  14659806  │  1650971206  │  2022-04-26 11:06:46Z  
-</pre>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419&#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -14720,7 +14699,7 @@ Recent Updates
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.998108</pre>
+<pre>1310.71543978</pre>
 </div>
 
 </div>
@@ -14775,18 +14754,18 @@ Recent Updates
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>block_number
-12907805    1.005519
-12908175    1.017371
-12908243    1.007141
-12914636    1.001345
-12920910    1.002064
-              ...   
-14661090    0.996706
-14661346    0.996719
-14661614    0.995403
-14661863    0.997365
-14662123    0.998108
-Name: answer, Length: 4432, dtype: object</pre>
+10606572         399.33
+10606572         399.37
+10606572         399.33
+10606573         399.37
+10606573         399.33
+               ...     
+15590706      1302.6112
+15590769        1295.71
+15590794      1302.9245
+15590809    1303.324707
+15590890     1310.71544
+Name: answer, Length: 237346, dtype: object</pre>
 </div>
 
 </div>
@@ -14841,18 +14820,121 @@ Name: answer, Length: 4432, dtype: object</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>block_number
-12907805    1.005519
-12907806    1.005519
-12907807    1.005519
-12907808    1.005519
-12907809    1.005519
-              ...   
-14662171    0.998108
-14662172    0.998108
-14662173    0.998108
-14662174    0.998108
-14662175    0.998108
-Name: answer, Length: 1754371, dtype: float64</pre>
+10606572     399.33000
+10606573     399.32000
+10606574     399.32500
+10606575     399.32000
+10606576     399.32000
+               ...    
+15591003    1310.71544
+15591004    1310.71544
+15591005    1310.71544
+15591006    1310.71544
+15591007    1310.71544
+Name: answer, Length: 4984436, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Get-feed-aggregator-history">Get feed aggregator history<a class="anchor-link" href="#Get-feed-aggregator-history">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">await</span> <span class="n">chainlink_utils</span><span class="o">.</span><span class="n">async_get_feed_previous_aggregators</span><span class="p">(</span><span class="n">feed</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;0xf79d6afbb6da890132f9d7c355e3015f15f3406f&#39;,
+ &#39;0xb103ede8acd6f0c106b7a5772e9d24e34f5ebc2c&#39;,
+ &#39;0x00c7a37b03690fb9f41b5c5af8131735c7275446&#39;,
+ &#39;0xd3fcd40153e56110e6eeae13e12530e26c9cb4fd&#39;,
+ &#39;0x37bc7498f4ff12c19678ee8fe19d713b87f6a9e6&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># blocks where aggregators updated</span>
+
+<span class="k">await</span> <span class="n">chainlink_utils</span><span class="o">.</span><span class="n">async_get_feed_aggregator_history</span><span class="p">(</span><span class="n">feed</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;0xf79d6afbb6da890132f9d7c355e3015f15f3406f&#39;: 10606501,
+ &#39;0xb103ede8acd6f0c106b7a5772e9d24e34f5ebc2c&#39;: 10607120,
+ &#39;0x00c7a37b03690fb9f41b5c5af8131735c7275446&#39;: 11008985,
+ &#39;0xd3fcd40153e56110e6eeae13e12530e26c9cb4fd&#39;: 12187957,
+ &#39;0x37bc7498f4ff12c19678ee8fe19d713b87f6a9e6&#39;: 12453813}</pre>
 </div>
 
 </div>

@@ -15,7 +15,6 @@ Other Subcommands
 
    ./other/cd
    ./other/help
-   ./other/record_help
    ./other/version
 
 

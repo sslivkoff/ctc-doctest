@@ -14633,9 +14633,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;pcv&#39;: 653877821298495051313082711,
- &#39;user_fei&#39;: 280632197839593053703651951,
- &#39;protocol_equity&#39;: 373245623458901997609430760,
+<pre>{&#39;pcv&#39;: 157804493006575954389442810,
+ &#39;user_fei&#39;: 58594123604209130554319954,
+ &#39;protocol_equity&#39;: 99210369402366823835122856,
  &#39;valid&#39;: True}</pre>
 </div>
 
@@ -14742,76 +14742,77 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">RpcException</span>                              Traceback (most recent call last)
+Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> blocks <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(98,98,98)">14000000</span>, <span style="color: rgb(98,98,98)">14100000</span>, <span style="color: rgb(98,98,98)">14200000</span>, <span style="color: rgb(98,98,98)">14300000</span>, <span style="color: rgb(98,98,98)">14400000</span>]
+<span class="ansi-green-fg">----&gt; 2</span> pcv_stats_by_block <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> fei_utils<span style="color: rgb(98,98,98)">.</span>async_get_pcv_stats_by_block(blocks<span style="color: rgb(98,98,98)">=</span>blocks)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> pcv_stats_by_block
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/protocols/fei_utils/coracle/coracle_stats.py:101</span>, in <span class="ansi-cyan-fg">async_get_pcv_stats_by_block</span><span class="ansi-blue-fg">(blocks, wrapper, provider, nullify_invalid)</span>
+<span class="ansi-green-intense-fg ansi-bold">     99</span>     coroutine <span style="color: rgb(98,98,98)">=</span> _wrapped_call(block, to_address)
+<span class="ansi-green-intense-fg ansi-bold">    100</span>     coroutines<span style="color: rgb(98,98,98)">.</span>append(coroutine)
+<span class="ansi-green-fg">--&gt; 101</span> result <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> asyncio<span style="color: rgb(98,98,98)">.</span>gather(<span style="color: rgb(98,98,98)">*</span>coroutines)
+<span class="ansi-green-intense-fg ansi-bold">    103</span> <span style="color: rgb(95,135,135)"># arrange results</span>
+<span class="ansi-green-intense-fg ansi-bold">    104</span> transpose <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">list</span>(<span style="color: rgb(0,135,0)">zip</span>(<span style="color: rgb(98,98,98)">*</span>result))
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/protocols/fei_utils/coracle/coracle_stats.py:91</span>, in <span class="ansi-cyan-fg">async_get_pcv_stats_by_block.&lt;locals&gt;._wrapped_call</span><span class="ansi-blue-fg">(block, to_address)</span>
+<span class="ansi-green-intense-fg ansi-bold">     89</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> [<span class="ansi-bold" style="color: rgb(0,135,0)">None</span>] <span style="color: rgb(98,98,98)">*</span> <span style="color: rgb(98,98,98)">4</span>
+<span class="ansi-green-intense-fg ansi-bold">     90</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">---&gt; 91</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> e
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pcv</th>
-      <th>user_fei</th>
-      <th>protocol_equity</th>
-      <th>valid</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>14000000</th>
-      <td>782812519.953585</td>
-      <td>321723324.105548</td>
-      <td>461089195.848037</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>14100000</th>
-      <td>603411901.290495</td>
-      <td>280650934.8377</td>
-      <td>322760966.452795</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>14200000</th>
-      <td>705091297.303412</td>
-      <td>328680909.169891</td>
-      <td>376410388.133522</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>14300000</th>
-      <td>715244196.847035</td>
-      <td>332565585.596083</td>
-      <td>382678611.250952</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>14400000</th>
-      <td>692683708.720875</td>
-      <td>336072876.273664</td>
-      <td>356610832.447211</td>
-      <td>True</td>
-    </tr>
-  </tbody>
-</table>
+File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/protocols/fei_utils/coracle/coracle_stats.py:72</span>, in <span class="ansi-cyan-fg">async_get_pcv_stats_by_block.&lt;locals&gt;._wrapped_call</span><span class="ansi-blue-fg">(block, to_address)</span>
+<span class="ansi-green-intense-fg ansi-bold">     68</span> <span class="ansi-bold" style="color: rgb(0,135,0)">async</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">_wrapped_call</span>(
+<span class="ansi-green-intense-fg ansi-bold">     69</span>     block: spec<span style="color: rgb(98,98,98)">.</span>BlockNumberReference, to_address: spec<span style="color: rgb(98,98,98)">.</span>Address
+<span class="ansi-green-intense-fg ansi-bold">     70</span> ) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> typing<span style="color: rgb(98,98,98)">.</span>Sequence[<span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span style="color: rgb(98,98,98)">|</span> <span style="color: rgb(0,135,0)">list</span>[typing<span style="color: rgb(98,98,98)">.</span>Any]]:
+<span class="ansi-green-intense-fg ansi-bold">     71</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg">---&gt; 72</span>         result <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> rpc<span style="color: rgb(98,98,98)">.</span>async_eth_call(
+<span class="ansi-green-intense-fg ansi-bold">     73</span>             function_name<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">pcvStats</span><span style="color: rgb(175,0,0)">&#39;</span>,
+<span class="ansi-green-intense-fg ansi-bold">     74</span>             block_number<span style="color: rgb(98,98,98)">=</span>block,
+<span class="ansi-green-intense-fg ansi-bold">     75</span>             provider<span style="color: rgb(98,98,98)">=</span>provider,
+<span class="ansi-green-intense-fg ansi-bold">     76</span>             to_address<span style="color: rgb(98,98,98)">=</span>to_address,
+<span class="ansi-green-intense-fg ansi-bold">     77</span>         )
+<span class="ansi-green-intense-fg ansi-bold">     78</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> typing<span style="color: rgb(98,98,98)">.</span>cast(
+<span class="ansi-green-intense-fg ansi-bold">     79</span>             typing<span style="color: rgb(98,98,98)">.</span>Sequence[typing<span style="color: rgb(98,98,98)">.</span>Optional[typing<span style="color: rgb(98,98,98)">.</span>List[typing<span style="color: rgb(98,98,98)">.</span>Any]]],
+<span class="ansi-green-intense-fg ansi-bold">     80</span>             result,
+<span class="ansi-green-intense-fg ansi-bold">     81</span>         )
+<span class="ansi-green-intense-fg ansi-bold">     82</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> spec<span style="color: rgb(98,98,98)">.</span>RpcException <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> e:
+
+File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/rpc/rpc_executors/rpc_state_executors.py:66</span>, in <span class="ansi-cyan-fg">async_eth_call</span><span class="ansi-blue-fg">(to_address, from_address, gas, gas_price, value_sent, block_number, call_data, function_parameters, provider, decode_response, delist_single_outputs, package_named_outputs, fill_empty, empty_token, function_abi, function_name, contract_abi, n_parameters, parameter_types, function_selector)</span>
+<span class="ansi-green-intense-fg ansi-bold">     53</span> request <span style="color: rgb(98,98,98)">=</span> rpc_constructors<span style="color: rgb(98,98,98)">.</span>construct_eth_call(
+<span class="ansi-green-intense-fg ansi-bold">     54</span>     to_address<span style="color: rgb(98,98,98)">=</span>to_address,
+<span class="ansi-green-intense-fg ansi-bold">     55</span>     from_address<span style="color: rgb(98,98,98)">=</span>from_address,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     62</span>     function_abi<span style="color: rgb(98,98,98)">=</span>function_abi,
+<span class="ansi-green-intense-fg ansi-bold">     63</span> )
+<span class="ansi-green-intense-fg ansi-bold">     65</span> <span style="color: rgb(95,135,135)"># make request</span>
+<span class="ansi-green-fg">---&gt; 66</span> response <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">await</span> rpc_request<span style="color: rgb(98,98,98)">.</span>async_send(request, provider<span style="color: rgb(98,98,98)">=</span>provider)
+<span class="ansi-green-intense-fg ansi-bold">     68</span> <span style="color: rgb(95,135,135)"># digest response</span>
+<span class="ansi-green-intense-fg ansi-bold">     69</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> rpc_digestors<span style="color: rgb(98,98,98)">.</span>digest_eth_call(
+<span class="ansi-green-intense-fg ansi-bold">     70</span>     response,
+<span class="ansi-green-intense-fg ansi-bold">     71</span>     function_abi<span style="color: rgb(98,98,98)">=</span>function_abi,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     76</span>     empty_token<span style="color: rgb(98,98,98)">=</span>empty_token,
+<span class="ansi-green-intense-fg ansi-bold">     77</span> )
+
+File <span class="ansi-green-fg">~/repos/checkthechain/src/ctc/rpc/rpc_request.py:123</span>, in <span class="ansi-cyan-fg">async_send</span><span class="ansi-blue-fg">(request, provider)</span>
+<span class="ansi-green-intense-fg ansi-bold">    119</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> typing<span style="color: rgb(98,98,98)">.</span>TYPE_CHECKING:
+<span class="ansi-green-intense-fg ansi-bold">    120</span>             response <span style="color: rgb(98,98,98)">=</span> typing<span style="color: rgb(98,98,98)">.</span>cast(
+<span class="ansi-green-intense-fg ansi-bold">    121</span>                 spec<span style="color: rgb(98,98,98)">.</span>RpcSingularResponseFailure, response
+<span class="ansi-green-intense-fg ansi-bold">    122</span>             )
+<span class="ansi-green-fg">--&gt; 123</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> spec<span style="color: rgb(98,98,98)">.</span>RpcException(
+<span class="ansi-green-intense-fg ansi-bold">    124</span>             <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">RPC ERROR: </span><span style="color: rgb(175,0,0)">&#39;</span> <span style="color: rgb(98,98,98)">+</span> response[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">error</span><span style="color: rgb(175,0,0)">&#39;</span>][<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">message</span><span style="color: rgb(175,0,0)">&#39;</span>]
+<span class="ansi-green-intense-fg ansi-bold">    125</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    126</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
+<span class="ansi-green-intense-fg ansi-bold">    127</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> typing<span style="color: rgb(98,98,98)">.</span>TYPE_CHECKING:
+
+<span class="ansi-red-fg">RpcException</span>: RPC ERROR: execution aborted (timeout = 5s)</pre>
 </div>
-</div>
-
 </div>
 
 </div>
@@ -14858,25 +14859,48 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>┌────────────────┐
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┌────────────────┐
 │ Fei PCV Assets │
 └────────────────┘
-total $618.37M
+</pre>
 
-  asset  │  amount   │  price      │  total     
-─────────┼───────────┼─────────────┼────────────
-  WETH   │  163.16K  │  $2,863.54  │  $467.22M  
-  DAI    │  15.14M   │  $1.00      │  $15.13M   
-  RAI    │  6.67M    │  $2.99      │  $19.96M   
-  DPI    │  37.89K   │  $166.14    │  $6.29M    
-  LUSD   │  94.71M   │  $1.00      │  $94.74M   
-  CREAM  │  31.78K   │  $39.49     │  $1.25M    
-  agEUR  │  9.01M    │  $1.07      │  $9.61M    
-  BAL    │  258.49K  │  $16.06     │  $4.15M    
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>total $157.80M
 
 </pre>
 </div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  asset  │   amount  │      price  │    total  
+─────────┼───────────┼─────────────┼───────────
+   LUSD  │   17.19K  │      $1.03  │  $17.68K  
+   WETH  │   50.57K  │  $1,329.03  │  $67.21M  
+    DAI  │   89.26M  │      $1.00  │  $89.28M  
+    BAL  │  240.28K  │      $5.41  │   $1.30M  
+</pre>
+
+</div>
+
 </div>
 
 </div>
@@ -14923,66 +14947,89 @@ total $618.37M
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>┌──────────────────┐
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┌──────────────────┐
 │ FEI PCV Deposits │
 └──────────────────┘
-  asset  │  balance   │  name                  │  address                                     
-─────────┼────────────┼────────────────────────┼──────────────────────────────────────────────
-  WETH   │  $28.64M   │  Tokemak tWETH         │  0x0961d2a545e0c1201b313d14c57023682a546b9d  
-  WETH   │  $141.67M  │  Lido stETH            │  0xa271ff86426c7fdaaae72603e6ce68c892d69ed7  
-  WETH   │  $46.96M   │  Compound ETH          │  0x0735e14d28ed395048d5fa4a8dbe6e6eb9fc0470  
-  WETH   │  $155.55M  │  AAVE ETH              │  0x43ef03755991056681f01ee2182234ef6af1f658  
-  WETH   │  $1.22M    │  Uniswap FEI-ETH       │  0x15958381e9e6dc98bd49655e36f524d2203a28bd  
-  WETH   │  $25.34K   │  FEI-ETH PSM           │  0x98e5f5706897074a4664dd3a32eb80242d6e694b  
-  WETH   │  $7.16M    │  Fuse Pool 146 ETH     │  0xc68412b72e68c30d4e6c0854b439cbbe957146e4  
-  WETH   │  $42.95M   │  DAO Timelock ETH      │  0x5e9fa7d783a7f7d4626ce450c8bd2ebbb26dfdb2  
-  WETH   │  $43.05M   │  Balancer FEI-WETH     │  0xc5bb8f0253776bec6ff450c2b40f092f7e7f5b57  
-  DAI    │  $147.13K  │  Compound DAI          │  0xfde7077aaecdaf2c4b85261aa858c96a7e737a61  
-  DAI    │  $9.96M    │  FEI-DAI PSM           │  0x2a188f9eb761f70ecea083ba6c2a40145078dfc2  
-  DAI    │  $5.03M    │  Fuse Pool 8 DAI       │  0x9cc46ab5a714f7cd24c59f33c5769039b5872491  
-  RAI    │  $9.94M    │  Fuse Pool 9 RAI       │  0xcce230c087f31032fc17621a2cf5e425a0b80c96  
-  RAI    │  $10.03M   │  AAVE RAI              │  0x1267b39c93711dd374deab15e0127e4adb259be0  
-  RAI    │  $0.00     │  DAO Timelock RAI      │  0x7339ca4ac94020b83a34f5edfa6e0f26986c434b  
-  DPI    │  $5.85M    │  DAO Timelock DPI      │  0xb250926e75b1cc6c53e77bb9426baac14ab1e24c  
-  DPI    │  $441.48K  │  Fuse Pool 19 DPI      │  0x9a774a1b1208c323eded05e6daf592e6e59caa55  
-  LUSD   │  $78.93K   │  Fuse Pool 91 LUSD     │  0x8c51e4532cc745cf3dfec5cebd835d07e7ba1002  
-  LUSD   │  $10.03M   │  Fuse Pool 7 LUSD      │  0x6026a1559cdd44a63c5ca9a078cc996a9eb68abb  
-  LUSD   │  $79.61M   │  B Protocol LUSD       │  0x374628ebe7ef6aca0574e750b618097531a26ff8  
-  LUSD   │  $1.01K    │  FEI-LUSD PSM          │  0xb0e731f036adfdec12da77c15aab0f90e8e45a0e  
-  LUSD   │  $5.03M    │  Fuse Pool 8 LUSD      │  0xf846ee6e8ee9a6fbf51c7c65105cabc041c048ad  
-  CREAM  │  $1.25M    │  CREAM Hack Repayment  │  0x3a1838ac9eca864054bebb82c32455dd7d7fc89c  
-  agEUR  │  $0.00     │                        │  0xe8633c49ace655eb4a8b720e6b12f09bd3a97812  
-  agEUR  │  $0.00     │  DAO Timelock agEUR    │  0x485d23ce5725ecde46ca9033012984d90b514ffd  
-  agEUR  │  $9.61M    │  Uniswap FEI-agEUR     │  0xd2554839c2e8a87dd2cddd013ef828b6534abc26  
-  BAL    │  $4.15M    │  Balancer BAL-WETH     │  0xcd1ac0014e2ebd972f40f24df1694e6f528b2fd4  
+</pre>
 
-┌─────────────────┐
-│ FEI Deployments │
-└─────────────────┘
-  asset  │  balance   │  name                │  address                                     
-─────────┼────────────┼──────────────────────┼──────────────────────────────────────────────
-  FEI    │  $39.05M   │  OA Account          │  0x7eb88140af813294aedce981b6ac08fcd139d408  
-  FEI    │  $20.79M   │  Fuse Pool 8         │  0xd6598a23418c7fef7c0dc863265515b623b720f9  
-  FEI    │  $333.90K  │  Fuse Pool 90 FEI    │  0xec54148cbc47bff8fcc5e04e5e8083adb8af9ad9  
-  FEI    │  $2.55M    │  Fuse Pool 79 FEI    │  0xb3a026b830796e43bfc8b135553a7573538ab341  
-  FEI    │  $3.17M    │  Fuse Pool 6         │  0x7aa4b1558c3e219cfffd6a356421c071f71966e7  
-  FEI    │  $600.15K  │  Fuse Pool 19        │  0x7e39bba9d0d967ee55524fae9e54900b02d9889a  
-  FEI    │  $453.51K  │  Fuse Pool 24        │  0x508f6fbd78b6569c29e9d75986a51558de9e5865  
-  FEI    │  $50.00K   │  Fuse Pool 25        │  0xb4ffd10c4c290dc13e8e30bf186f1509001515fd  
-  FEI    │  $111.02K  │  Balancer FEI-TRIBE  │  0x89dfbc12001b41985efabd7dfcae6a77b22e4ec3  
-  FEI    │  $1.05M    │  Fuse Pool 27        │  0xe2e35097638f0ff2eeca2ef70f352be37431945f  
-  FEI    │  $808.85K  │  Fuse Pool 18        │  0x07f2dd7e6a78d96c08d0a8212f4097dcc129d629  
-  FEI    │  $50.04K   │  Fuse Pool 31        │  0x05e2e93cfb0b53d36a3151ee727bb581d4b918ce  
-  FEI    │  $16.43M   │  Aave V2 FEI Pool    │  0xfac571b6054619053ac311da8112939c9a374a85  
-  FEI    │  $1.00M    │  Fuse Pool 128 FEI   │  0xa62ddde8f799873e6fcdbb3acbba75da85d9dcde  
-  FEI    │  $150.60K  │  Fuse Pool 22 FEI    │  0xa2bdbcb95d31c85bae6f0fa42d55f65d609d94ee  
-  FEI    │  $151.04K  │  Fuse Pool 72 FEI    │  0x395b1bc1800fa0ad48ae3876e66d4c10d297650c  
-  FEI    │  $10.02M   │  Fuse Pool 156       │  0x1370ca8655c255948d6c6110066d78680601b7c2  
-  FEI    │  $5.00M    │  Compound cFEI       │  0xb80b3dc4f8b30589477b2ba0e4ef2b8224bdf0a5  
-  FEI    │  $11.00M   │                      │  0x2c47fef515d2c70f2427706999e158533f7cf090  
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  asset  │    balance  │               name  │                                     address  
+─────────┼─────────────┼─────────────────────┼──────────────────────────────────────────────
+   LUSD  │    $17.68K  │                     │  0x4378de2f2991fbed6616b34ac7727e7653713712  
+   WETH  │      $0.00  │                     │  0xc6d675ca5217d39c3a5e366141060fc2d1ea2b82  
+   WETH  │  $1.83e-13  │                     │  0xf24401f6992faeacbc5d6c6991db15b5f8364a1b  
+   WETH  │    $66.90M  │                     │  0x6e5f2745c08249a190239763706473be0b72816d  
+   WETH  │   $304.13K  │     Balancer Pool2  │  0xd8eb546726d449fc1ded06dfeca800a2fa8bb930  
+    DAI  │    $82.14M  │                     │  0x8ffae111ab06f532a18418190129373d14570014  
+    DAI  │     $7.15M  │        FEI-DAI PSM  │  0x2a188f9eb761f70ecea083ba6c2a40145078dfc2  
+    DAI  │  $3.56e-12  │                     │  0xdf9ff5c077d9f3427ade67ac2d27a864be6f3187  
+    BAL  │      $0.00  │  Balancer BAL-WETH  │  0xcd1ac0014e2ebd972f40f24df1694e6f528b2fd4  
+    BAL  │     $1.23M  │     Balancer veBAL  │  0x8cba3149b95084a61bbab9e01110b0fb92c9a289  
+    BAL  │    $72.43K  │                     │  0x66977ce30049cd0e443216bf26377966c3a109e2  
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
 </pre>
 </div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┌─────────────────┐
+│ FEI Deployments │
+└─────────────────┘
+</pre>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  asset  │   balance  │              name  │                                     address  
+─────────┼────────────┼────────────────────┼──────────────────────────────────────────────
+    FEI  │    $2.63M  │                    │  0x614d46b7eb2ac1a359b8835d64954f3ee4e6f676  
+    FEI  │  $7.88e-5  │  Fuse Pool 79 FEI  │  0xb3a026b830796e43bfc8b135553a7573538ab341  
+</pre>
+
+</div>
+
 </div>
 
 </div>
@@ -15000,7 +15047,7 @@ total $618.37M
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15014,60 +15061,6 @@ total $618.37M
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>loading events (0.109715MB across 1 files)
-loading events (0.850739MB across 1 files)
-loading events (0.000184MB across 1 files)
-loading events (0.138906MB across 1 files)
-loading events (0.090465MB across 9 files)
-loading events (258.02MB across 28 files)
-loading events (0.752028MB across 1 files)
-loading events (0.325125MB across 1 files)
-getting events from node, block range: [14661683, 14661683]
-getting events from node, block range: [14661683, 14661683]
-getting events from node, block range: [14661683, 14661683]
-getting events from node, block range: [14661683, 14661683]
-getting events from node, block range: [14661683, 14661683]
-getting events from node, block range: [14661683, 14661683]
-getting events from node, block range: [14661683, 14661683]
-getting events from node, block range: [14661683, 14661683]
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0xbaaa1f5dba42c3389bdbc2c9d2de134f5cd0dc89/event__0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140/14661683__to__14661683.csv
-loading events (0.109879MB across 2 files)
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0xdf50fbde8180c8785842c8e316ebe06f542d3443/event__0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67/14661683__to__14661683.csv
-loading events (0.850923MB across 2 files)
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0x8c54aa2a32a779e6f6fbea568ad85a19e0109c26/event__0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67/14661683__to__14661683.csv
-loading events (0.752213MB across 2 files)
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0xba12222222228d8ba445958a75a0704d566bf2c8/event__0x2170c741c41531aec20e7c107c24eecfdd15e69c9bb0a8dd37b1840b9e0b207b/14661683__to__14661683.csv
-loading events (258.02MB across 29 files)
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0xbb2e5c2ff298fd96e166f90c8abacaf714df14f8/event__0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67/14661683__to__14661683.csv
-loading events (0.325309MB across 2 files)
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0xc69ddcd4dfef25d8a793241834d4cc4b3668ead6/event__0xc6c1e0630dbe9130cc068028486c0d118ddcea348550819defd5cb8c257f8a38/14661683__to__14661683.csv
-loading events (0.139066MB across 2 files)
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0x5180545835bd68810fb7e11c7160bb7ea4ae8744/event__0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67/14661683__to__14661683.csv
-loading events (0.000368MB across 2 files)
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0x06cb22615ba53e60d67bf6c341a0fd5e718e1655/event__0xd013ca23e77a65003c2c659c5442c00c805371b7fc1ebd4c206c41d1536bd90b/14661683__to__14661683.csv
-loading events (0.090629MB across 10 files)
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>

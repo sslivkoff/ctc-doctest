@@ -14580,7 +14580,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">evm</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
 </pre></div>
 
      </div>
@@ -14593,7 +14593,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">contract_address</span> <span class="o">=</span> <span class="s1">&#39;0x956f47f50a910163d8bf957cf5846d573e7f87ca&#39;</span>
@@ -14620,10 +14620,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
     <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
     <span class="n">event_name</span><span class="o">=</span><span class="s1">&#39;Transfer&#39;</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -14647,17 +14647,250 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>loading events (92.74MB across 22 files)
-getting events from node, block range: [14658263, 14658591]
-saving events to file: /home/storm/ctc_data/mainnet/events/contract__0x956f47f50a910163d8bf957cf5846d573e7f87ca/event__0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef/14658263__to__14658591.csv
-loading events (92.75MB across 23 files)
-</pre>
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>address</th>
+      <th>block_hash</th>
+      <th>transaction_hash</th>
+      <th>contract_address</th>
+      <th>event_name</th>
+      <th>event_hash</th>
+      <th>arg__from</th>
+      <th>arg__to</th>
+      <th>arg__value</th>
+    </tr>
+    <tr>
+      <th>block_number</th>
+      <th>transaction_index</th>
+      <th>log_index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">12168368</th>
+      <th rowspan="5" valign="top">61</th>
+      <th>29</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
+      <td>1302613195326042426081658189</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
+      <td>1315770904369739824324907262</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
+      <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
+      <td>1315770904369739824324907262</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
+      <td>500000000000000000000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">15582791</th>
+      <th rowspan="2" valign="top">50</th>
+      <th>85</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x12653644a69f57e55fe01d51c3bdf5d128d8ab136566...</td>
+      <td>0x700b6a25cf02613fe77703f9b8f23f5035e7150be9ac...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0xcae4210e6676727ea4e0fd9ba5dfb95831356a16</td>
+      <td>0x82e8936b187d83fd6eb2b7dab5b19556e9deff1c</td>
+      <td>233190782986143967589416</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x12653644a69f57e55fe01d51c3bdf5d128d8ab136566...</td>
+      <td>0x700b6a25cf02613fe77703f9b8f23f5035e7150be9ac...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0xcae4210e6676727ea4e0fd9ba5dfb95831356a16</td>
+      <td>0x82e8936b187d83fd6eb2b7dab5b19556e9deff1c</td>
+      <td>133542755176948029415501</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">15582808</th>
+      <th rowspan="2" valign="top">49</th>
+      <th>48</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xd464a3cdc2642f0f3701a249d06b4325f751f10b841b...</td>
+      <td>0xea1f240af8d2bee25ca262051eb673d3762094d8f42f...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0xf2f400c138f9fb900576263af0bc7fcde2b1b8a8</td>
+      <td>315777705419859103178</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xd464a3cdc2642f0f3701a249d06b4325f751f10b841b...</td>
+      <td>0xea1f240af8d2bee25ca262051eb673d3762094d8f42f...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0xf2f400c138f9fb900576263af0bc7fcde2b1b8a8</td>
+      <td>0xdf50fbde8180c8785842c8e316ebe06f542d3443</td>
+      <td>315777705419859103178</td>
+    </tr>
+    <tr>
+      <th>15582881</th>
+      <th>51</th>
+      <th>96</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x3a3767c5f2b16316bb84703e87af88e38949c8bf816a...</td>
+      <td>0x7c4c1b1e9fd17e61fda7166b9e810e5d71a16696c344...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x82e8936b187d83fd6eb2b7dab5b19556e9deff1c</td>
+      <td>0x2a188f9eb761f70ecea083ba6c2a40145078dfc2</td>
+      <td>366733538163091997004917</td>
+    </tr>
+  </tbody>
+</table>
+<p>275657 rows × 9 columns</p>
 </div>
 </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Get-events-by-hash">Get events by hash<a class="anchor-link" href="#Get-events-by-hash">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
+    <span class="n">event_hash</span><span class="o">=</span><span class="s1">&#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">events</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
@@ -14688,21 +14921,19 @@ loading events (92.75MB across 23 files)
       <th></th>
       <th></th>
       <th>address</th>
-      <th>transaction_hash</th>
       <th>block_hash</th>
+      <th>transaction_hash</th>
       <th>contract_address</th>
       <th>event_name</th>
       <th>event_hash</th>
       <th>arg__from</th>
       <th>arg__to</th>
-      <th>arg__amount</th>
       <th>arg__value</th>
     </tr>
     <tr>
       <th>block_number</th>
       <th>transaction_index</th>
       <th>log_index</th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -14720,67 +14951,62 @@ loading events (92.75MB across 23 files)
       <th rowspan="5" valign="top">61</th>
       <th>29</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
       <td>0x0000000000000000000000000000000000000000</td>
       <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
       <td>1302613195326042426081658189</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>32</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
       <td>0x0000000000000000000000000000000000000000</td>
       <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
       <td>1315770904369739824324907262</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>34</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
       <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
       <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
       <td>1315770904369739824324907262</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>42</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
       <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
       <td>0x0000000000000000000000000000000000000000</td>
       <td>0</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>46</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
       <td>0x0000000000000000000000000000000000000000</td>
       <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
       <td>500000000000000000000</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>...</th>
@@ -14795,343 +15021,76 @@ loading events (92.75MB across 23 files)
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">14658400</th>
-      <th rowspan="2" valign="top">115</th>
-      <th>117</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xda65f32b5e6242108395c3068cc2b7e82942348a8b65...</td>
-      <td>0xfa07d99f6da056a03d3938a6fa546d5151af47390975...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x50e077e4adfddcc376df4e927cd9caeefc860f33</td>
-      <td>0xbad695d1e786ebb49676b2b7e5eb0ba5e9380dcf</td>
-      <td>NaN</td>
-      <td>36371791420118343195266</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xda65f32b5e6242108395c3068cc2b7e82942348a8b65...</td>
-      <td>0xfa07d99f6da056a03d3938a6fa546d5151af47390975...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x50e077e4adfddcc376df4e927cd9caeefc860f33</td>
-      <td>0x3b983b701406010866bd68331aaed374fb9f50c9</td>
-      <td>NaN</td>
-      <td>36997041420118343195</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">14658404</th>
+      <th rowspan="2" valign="top">15582791</th>
       <th rowspan="2" valign="top">50</th>
-      <th>193</th>
+      <th>85</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x4bcde413ec849ef04d6b2b8d5dc6e70e28d6c48446eb...</td>
-      <td>0xb7f374448ed1f7229cb17bc5a3bf8c73977f9b08fd3c...</td>
+      <td>0x12653644a69f57e55fe01d51c3bdf5d128d8ab136566...</td>
+      <td>0x700b6a25cf02613fe77703f9b8f23f5035e7150be9ac...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0xbad695d1e786ebb49676b2b7e5eb0ba5e9380dcf</td>
-      <td>0x50e077e4adfddcc376df4e927cd9caeefc860f33</td>
-      <td>NaN</td>
-      <td>36371791420118343195266</td>
+      <td>0xcae4210e6676727ea4e0fd9ba5dfb95831356a16</td>
+      <td>0x82e8936b187d83fd6eb2b7dab5b19556e9deff1c</td>
+      <td>233190782986143967589416</td>
     </tr>
     <tr>
-      <th>195</th>
+      <th>90</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x4bcde413ec849ef04d6b2b8d5dc6e70e28d6c48446eb...</td>
-      <td>0xb7f374448ed1f7229cb17bc5a3bf8c73977f9b08fd3c...</td>
+      <td>0x12653644a69f57e55fe01d51c3bdf5d128d8ab136566...</td>
+      <td>0x700b6a25cf02613fe77703f9b8f23f5035e7150be9ac...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0xbad695d1e786ebb49676b2b7e5eb0ba5e9380dcf</td>
-      <td>0x3b983b701406010866bd68331aaed374fb9f50c9</td>
-      <td>NaN</td>
-      <td>36997041420118343195</td>
+      <td>0xcae4210e6676727ea4e0fd9ba5dfb95831356a16</td>
+      <td>0x82e8936b187d83fd6eb2b7dab5b19556e9deff1c</td>
+      <td>133542755176948029415501</td>
     </tr>
     <tr>
-      <th>14658570</th>
-      <th>15</th>
-      <th>38</th>
+      <th rowspan="2" valign="top">15582808</th>
+      <th rowspan="2" valign="top">49</th>
+      <th>48</th>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x8dfbbc57f89213b2f49a48bf90b65147fa3bf51479b5...</td>
-      <td>0xf78f607a339754ff2d897ab91f2c8b63fd9325690e19...</td>
+      <td>0xd464a3cdc2642f0f3701a249d06b4325f751f10b841b...</td>
+      <td>0xea1f240af8d2bee25ca262051eb673d3762094d8f42f...</td>
       <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
       <td>Transfer</td>
       <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x6481659f0eb0faf4efa8adf4aae45a0b3358b3a1</td>
       <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>NaN</td>
-      <td>35000000000000000000000</td>
+      <td>0xf2f400c138f9fb900576263af0bc7fcde2b1b8a8</td>
+      <td>315777705419859103178</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xd464a3cdc2642f0f3701a249d06b4325f751f10b841b...</td>
+      <td>0xea1f240af8d2bee25ca262051eb673d3762094d8f42f...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0xf2f400c138f9fb900576263af0bc7fcde2b1b8a8</td>
+      <td>0xdf50fbde8180c8785842c8e316ebe06f542d3443</td>
+      <td>315777705419859103178</td>
+    </tr>
+    <tr>
+      <th>15582881</th>
+      <th>51</th>
+      <th>96</th>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x3a3767c5f2b16316bb84703e87af88e38949c8bf816a...</td>
+      <td>0x7c4c1b1e9fd17e61fda7166b9e810e5d71a16696c344...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x82e8936b187d83fd6eb2b7dab5b19556e9deff1c</td>
+      <td>0x2a188f9eb761f70ecea083ba6c2a40145078dfc2</td>
+      <td>366733538163091997004917</td>
     </tr>
   </tbody>
 </table>
-<p>230832 rows × 10 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Get-events-by-hash">Get events by hash<a class="anchor-link" href="#Get-events-by-hash">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
-    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
-    <span class="n">event_hash</span><span class="o">=</span><span class="s1">&#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;</span><span class="p">,</span>
-    <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">events</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>address</th>
-      <th>transaction_hash</th>
-      <th>block_hash</th>
-      <th>contract_address</th>
-      <th>event_name</th>
-      <th>event_hash</th>
-      <th>arg__from</th>
-      <th>arg__to</th>
-      <th>arg__amount</th>
-      <th>arg__value</th>
-    </tr>
-    <tr>
-      <th>block_number</th>
-      <th>transaction_index</th>
-      <th>log_index</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">12168368</th>
-      <th rowspan="5" valign="top">61</th>
-      <th>29</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
-      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x0000000000000000000000000000000000000000</td>
-      <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
-      <td>1302613195326042426081658189</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
-      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x0000000000000000000000000000000000000000</td>
-      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
-      <td>1315770904369739824324907262</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
-      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
-      <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
-      <td>1315770904369739824324907262</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
-      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
-      <td>0x0000000000000000000000000000000000000000</td>
-      <td>0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
-      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x0000000000000000000000000000000000000000</td>
-      <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
-      <td>500000000000000000000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <th>...</th>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">14658400</th>
-      <th rowspan="2" valign="top">115</th>
-      <th>117</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xda65f32b5e6242108395c3068cc2b7e82942348a8b65...</td>
-      <td>0xfa07d99f6da056a03d3938a6fa546d5151af47390975...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x50e077e4adfddcc376df4e927cd9caeefc860f33</td>
-      <td>0xbad695d1e786ebb49676b2b7e5eb0ba5e9380dcf</td>
-      <td>NaN</td>
-      <td>36371791420118343195266</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0xda65f32b5e6242108395c3068cc2b7e82942348a8b65...</td>
-      <td>0xfa07d99f6da056a03d3938a6fa546d5151af47390975...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x50e077e4adfddcc376df4e927cd9caeefc860f33</td>
-      <td>0x3b983b701406010866bd68331aaed374fb9f50c9</td>
-      <td>NaN</td>
-      <td>36997041420118343195</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">14658404</th>
-      <th rowspan="2" valign="top">50</th>
-      <th>193</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x4bcde413ec849ef04d6b2b8d5dc6e70e28d6c48446eb...</td>
-      <td>0xb7f374448ed1f7229cb17bc5a3bf8c73977f9b08fd3c...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0xbad695d1e786ebb49676b2b7e5eb0ba5e9380dcf</td>
-      <td>0x50e077e4adfddcc376df4e927cd9caeefc860f33</td>
-      <td>NaN</td>
-      <td>36371791420118343195266</td>
-    </tr>
-    <tr>
-      <th>195</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x4bcde413ec849ef04d6b2b8d5dc6e70e28d6c48446eb...</td>
-      <td>0xb7f374448ed1f7229cb17bc5a3bf8c73977f9b08fd3c...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0xbad695d1e786ebb49676b2b7e5eb0ba5e9380dcf</td>
-      <td>0x3b983b701406010866bd68331aaed374fb9f50c9</td>
-      <td>NaN</td>
-      <td>36997041420118343195</td>
-    </tr>
-    <tr>
-      <th>14658570</th>
-      <th>15</th>
-      <th>38</th>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>0x8dfbbc57f89213b2f49a48bf90b65147fa3bf51479b5...</td>
-      <td>0xf78f607a339754ff2d897ab91f2c8b63fd9325690e19...</td>
-      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
-      <td>Transfer</td>
-      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
-      <td>0x6481659f0eb0faf4efa8adf4aae45a0b3358b3a1</td>
-      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
-      <td>NaN</td>
-      <td>35000000000000000000000</td>
-    </tr>
-  </tbody>
-</table>
-<p>230832 rows × 10 columns</p>
+<p>275657 rows × 9 columns</p>
 </div>
 </div>
 
@@ -15157,10 +15116,10 @@ loading events (92.75MB across 23 files)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
     <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
     <span class="n">event_hash</span><span class="o">=</span><span class="s1">&#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -15186,7 +15145,7 @@ loading events (92.75MB across 23 files)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -15219,7 +15178,7 @@ loading events (92.75MB across 23 files)
       <th>event_hash</th>
       <th>arg__from</th>
       <th>arg__to</th>
-      <th>arg__amount</th>
+      <th>arg__value</th>
     </tr>
     <tr>
       <th>block_number</th>
@@ -15388,6 +15347,523 @@ loading events (92.75MB across 23 files)
   </tbody>
 </table>
 <p>11996 rows × 9 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Specify-event-timestamps">Specify event timestamps<a class="anchor-link" href="#Specify-event-timestamps">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># query events over a specific time range</span>
+
+<span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
+    <span class="n">event_hash</span><span class="o">=</span><span class="s1">&#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="s1">&#39;2021-01-01&#39;</span><span class="p">,</span>
+    <span class="n">end_time</span><span class="o">=</span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">events</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>block_hash</th>
+      <th>transaction_hash</th>
+      <th>contract_address</th>
+      <th>event_name</th>
+      <th>arg__from</th>
+      <th>arg__to</th>
+      <th>arg__value</th>
+      <th>address</th>
+      <th>event_hash</th>
+    </tr>
+    <tr>
+      <th>block_number</th>
+      <th>transaction_index</th>
+      <th>log_index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">12168368</th>
+      <th rowspan="5" valign="top">61</th>
+      <th>29</th>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
+      <td>1302613195326042426081658189</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
+      <td>1315770904369739824324907262</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
+      <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
+      <td>1315770904369739824324907262</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x9b0c6299d08fe823f2c0598d97a1141507e4ad86</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>0x3bce142af146fec596340d67569a44688690955a065f...</td>
+      <td>0xc9851f374701f76024c1f44f7166e0ef8a9945675046...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x0000000000000000000000000000000000000000</td>
+      <td>0xbffb152b9392e38cddc275d818a3db7fe364596b</td>
+      <td>500000000000000000000</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>13916105</th>
+      <th>136</th>
+      <th>288</th>
+      <td>0xfaffe0f4333160d4843875f613f2c305b9954d922a41...</td>
+      <td>0x13992e013aae7c7c12298d0d04f3c0f7821ccc26d1c3...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
+      <td>60431153874598879800613</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>13916130</th>
+      <th>95</th>
+      <th>294</th>
+      <td>0xdccb47f7c48fac79c3a3a25fe85be29b27da7df32d0a...</td>
+      <td>0xf3f8518c6dffbbfa98d7be53ef97af330f789159ce46...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xd8553552f8868c1ef160eedf031cf0bcf9686945</td>
+      <td>0x8639f60e8f9b984eaf62b0bd89f62d6161e182f9</td>
+      <td>11000000000000000000000</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">13916150</th>
+      <th>121</th>
+      <th>270</th>
+      <td>0xe5720247372b46b2690ce3b7c22b70ec67cedc348b90...</td>
+      <td>0xa09e7d9a4e93be293a96eed9a4c33762eb77f8c8b00a...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xba12222222228d8ba445958a75a0704d566bf2c8</td>
+      <td>0x8bcf7e0ca3de9ec2637a76184eb746e844d2e2f6</td>
+      <td>8734901588905088209698</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>202</th>
+      <th>505</th>
+      <td>0xe5720247372b46b2690ce3b7c22b70ec67cedc348b90...</td>
+      <td>0xd6c36332d289c8d1cba11c63917392f2a1f665f8a386...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
+      <td>0xf89ce5ed65737da8440411544b0499c9fad323b2</td>
+      <td>9052649229764771959302</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+    <tr>
+      <th>13916163</th>
+      <th>255</th>
+      <th>411</th>
+      <td>0x64d03ba946c50fe026034ff0b650371b2d55dcf7e789...</td>
+      <td>0x75ff937d6002c7fef42ba0244be91afd4073c84f55e6...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0x8639f60e8f9b984eaf62b0bd89f62d6161e182f9</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>11000000000000000000000</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+    </tr>
+  </tbody>
+</table>
+<p>183960 rows × 9 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># include block timestamps in output</span>
+
+<span class="n">events</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_events</span><span class="p">(</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">contract_address</span><span class="p">,</span>
+    <span class="n">event_hash</span><span class="o">=</span><span class="s1">&#39;0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&#39;</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="s1">&#39;2021-06-01&#39;</span><span class="p">,</span>
+    <span class="n">end_time</span><span class="o">=</span><span class="s1">&#39;2021-06-02&#39;</span><span class="p">,</span>
+    <span class="n">include_timestamps</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">events</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>timestamp</th>
+      <th>address</th>
+      <th>block_hash</th>
+      <th>transaction_hash</th>
+      <th>contract_address</th>
+      <th>event_name</th>
+      <th>event_hash</th>
+      <th>arg__from</th>
+      <th>arg__to</th>
+      <th>arg__value</th>
+    </tr>
+    <tr>
+      <th>block_number</th>
+      <th>transaction_index</th>
+      <th>log_index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12545224</th>
+      <th>11</th>
+      <th>28</th>
+      <td>1622505628</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x07f75ee169d207aa0ace5076ec062cbe7a2a28041b0d...</td>
+      <td>0x2b6a1ed787028fe44149d7d8af227176e25bf56e5600...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x4636650a4be0f6bfa226c31b537349e9d43df6c0</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>312396728160777272453828</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">12545238</th>
+      <th>72</th>
+      <th>131</th>
+      <td>1622505778</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x2a490f6f64d65dd0c5149b0569202fc6b3150ed0d6c7...</td>
+      <td>0x5b69c8489ef858798c918470d87f0de750f98013fe61...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0xdf63be2e473ba04c26b1609e51d08cf0d78e0913</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>706291806832338833102925</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">73</th>
+      <th>143</th>
+      <td>1622505778</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x2a490f6f64d65dd0c5149b0569202fc6b3150ed0d6c7...</td>
+      <td>0x31e0c09b21a629be1eb5253dccb38a76322a7fde53ef...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x8c54aa2a32a779e6f6fbea568ad85a19e0109c26</td>
+      <td>0x0000000089341e263b85d84a0eea39f47c37a9d2</td>
+      <td>29987500411601108523301</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>1622505778</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x2a490f6f64d65dd0c5149b0569202fc6b3150ed0d6c7...</td>
+      <td>0x31e0c09b21a629be1eb5253dccb38a76322a7fde53ef...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x0000000089341e263b85d84a0eea39f47c37a9d2</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>29987500411601108523301</td>
+    </tr>
+    <tr>
+      <th>12545241</th>
+      <th>0</th>
+      <th>1</th>
+      <td>1622505809</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0xbb8722c65092712b36742f34dd4199846b6ed5917d3b...</td>
+      <td>0x5bdcbdf814281e7b25e26d7368779f5c2495e05071bd...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x5180545835bd68810fb7e11c7160bb7ea4ae8744</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>78336939301858730694074</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>12551643</th>
+      <th>2</th>
+      <th>7</th>
+      <td>1622591237</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x6034349536a447944a436bf71b357b0dcb9bb7cf39ca...</td>
+      <td>0x16cfa24ef00b2bceb5412bb847206a4a027ca4cd5cd3...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x8c54aa2a32a779e6f6fbea568ad85a19e0109c26</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>8643351664957109664094</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">12551657</th>
+      <th rowspan="2" valign="top">9</th>
+      <th>20</th>
+      <td>1622591362</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x7477d41a8c513746371e96222b141d5e7226556d7567...</td>
+      <td>0x4e164d0531c321ba81835bb2d4daac19a667df8e4c5e...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x8c54aa2a32a779e6f6fbea568ad85a19e0109c26</td>
+      <td>0xfd3dfb524b2da40c8a6d703c62be36b5d8540626</td>
+      <td>1200029161280036122303287</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>1622591362</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x7477d41a8c513746371e96222b141d5e7226556d7567...</td>
+      <td>0x4e164d0531c321ba81835bb2d4daac19a667df8e4c5e...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0xfd3dfb524b2da40c8a6d703c62be36b5d8540626</td>
+      <td>0xc803698a4be31f0b9035b6eba17623698f3e2f82</td>
+      <td>1200029161280036122303287</td>
+    </tr>
+    <tr>
+      <th>12551679</th>
+      <th>4</th>
+      <th>17</th>
+      <td>1622591681</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x7f9e7bd6d750cd845206e2e1179765988f2d865e3ae9...</td>
+      <td>0x827905ca746061556c65e709aaae3acde7997fa19880...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x94b0a3d511b6ecdb17ebf877278ab030acb0a878</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>192589761774079078450234</td>
+    </tr>
+    <tr>
+      <th>12551685</th>
+      <th>0</th>
+      <th>3</th>
+      <td>1622591787</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>0x1ac9e7f913cbbde28ac816106863fd3f75ca909cb99b...</td>
+      <td>0x9a0126898a617db0f8d50d2c168488fa49e470a5bec5...</td>
+      <td>0x956f47f50a910163d8bf957cf5846d573e7f87ca</td>
+      <td>Transfer</td>
+      <td>0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4...</td>
+      <td>0x8c54aa2a32a779e6f6fbea568ad85a19e0109c26</td>
+      <td>0x9928e4046d7c6513326ccea028cd3e7a91c7590a</td>
+      <td>288849857323932058972006</td>
+    </tr>
+  </tbody>
+</table>
+<p>933 rows × 10 columns</p>
 </div>
 </div>
 

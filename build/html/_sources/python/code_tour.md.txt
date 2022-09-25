@@ -28,9 +28,9 @@ events = await ctc.async_get_events(
 Some points to keep in mind while using `ctc`:
 - `ctc` uses functional programming. Instead of custom types or OOP, `ctc` uses simple standard datatypes including python builtins and numpy arrays. There is no need to initialize any objects. Simply `import ctc` and then call functions in the `ctc.*` namespace.
 - `ctc` is asynchronous-first, which allows it to efficiently orchestrate large numbers of interdependent queries. [Special consideration](async_code) is needed to run code in an asynchronous context.
-- `ctc` is designed with historical data analysis in mind. For any query of EVM state, `ctc` aims to support historical versions of that query. This includes both 1) querying specific moments in time, as well as 2) querying broad lengths of time.
+- `ctc` is designed with historical data analysis in mind. For any query of EVM state, `ctc` aims to support historical versions of that query. Most `ctc` query functions take parameters that can specify a block or block range relevant to the query.
 
-The top-level `ctc` package covers generic EVM operations. More specific functionality can be found in `ctc` submodules as described below.
+The top-level `ctc` package covers generic EVM operations, which are described in more detail [here](datatypes). There are also a few other `ctc` subpackages that are relevant to specific use-cases described below.
 
 #### RPC Client Subpackage `ctc.rpc`
 

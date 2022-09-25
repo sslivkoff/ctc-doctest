@@ -70,10 +70,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../async_code.html">Asynchronous Code</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../datatypes.html">Datatypes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="abis.html">ABIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html">Contracts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="binary_data.html">Binary Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contracts.html">Contracts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gas.html">Gas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="erc20s.html">ERC20s</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eth_balances.html">ETH Balances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
@@ -113,6 +112,13 @@
 <h1>Transactions<a class="headerlink" href="#transactions" title="Permalink to this headline"></a></h1>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>These examples are crafted as a <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>. You can download the original notebook file <a class="reference external" href="https://github.com/sslivkoff/ctc-doctest/blob/main/source/python/notebooks/datatypes/transactions.ipynb">here</a>.
+</br>
+</br>
+Also note that inside Jupyter notebooks, <code class="docutils literal notranslate"><span class="pre">await</span></code> can be used freely outside of <code class="docutils literal notranslate"><span class="pre">asyncio.run()</span></code>.</p>
+</div>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -14695,7 +14701,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ctc</span> <span class="kn">import</span> <span class="n">evm</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ctc</span>
 </pre></div>
 
      </div>
@@ -14739,7 +14745,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_transaction</span><span class="p">(</span><span class="n">transaction_hash</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_transaction</span><span class="p">(</span><span class="n">transaction_hash</span><span class="p">)</span>
 
 <span class="n">transaction</span>
 </pre></div>
@@ -14765,9 +14771,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;hash&#39;: &#39;0x6ff0860e202c61189cb2a3a38286bffd694acbc50577df6cb5a7ff40e21ea074&#39;,
- &#39;block_hash&#39;: &#39;0xb7ae60b456f7733ae3d8bb927b03470eb662f0285f6c83d545b735c35634ede3&#39;,
+<pre>{&#39;block_hash&#39;: &#39;0xb7ae60b456f7733ae3d8bb927b03470eb662f0285f6c83d545b735c35634ede3&#39;,
  &#39;block_number&#39;: 318528,
+ &#39;hash&#39;: &#39;0x6ff0860e202c61189cb2a3a38286bffd694acbc50577df6cb5a7ff40e21ea074&#39;,
  &#39;from&#39;: &#39;0xd8da6bf26964af9d7eed9e03e53415d37aa96045&#39;,
  &#39;gas&#39;: 530000,
  &#39;gas_price&#39;: 50000000000,
@@ -14807,7 +14813,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transaction_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_transaction_count</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transaction_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_transaction_count</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
 
 <span class="n">transaction_count</span>
 </pre></div>
@@ -14833,7 +14839,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>781</pre>
+<pre>888</pre>
 </div>
 
 </div>
@@ -14861,9 +14867,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span> <span class="o">=</span> <span class="k">await</span> <span class="n">evm</span><span class="o">.</span><span class="n">async_get_transactions_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctc</span><span class="o">.</span><span class="n">async_get_transactions_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
 
-<span class="nb">len</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span>
+<span class="n">transactions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14887,7 +14893,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>781</pre>
+<pre>{&#39;block_hash&#39;: &#39;0xb7ae60b456f7733ae3d8bb927b03470eb662f0285f6c83d545b735c35634ede3&#39;,
+ &#39;block_number&#39;: 318528,
+ &#39;hash&#39;: &#39;0x6ff0860e202c61189cb2a3a38286bffd694acbc50577df6cb5a7ff40e21ea074&#39;,
+ &#39;from&#39;: &#39;0xd8da6bf26964af9d7eed9e03e53415d37aa96045&#39;,
+ &#39;gas&#39;: 530000,
+ &#39;gas_price&#39;: 50000000000,
+ &#39;input&#39;: &#39;0x5a9809ed000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa960450000000000000000000000005ed8cee6b63b1c6afce3ad7c92f4fd7e1b8fad9f00000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000001b48eb57e00000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000000010000000000000000000000001db3439a222c519ab44bb1144fc28167b4fa6ee600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&#39;,
+ &#39;nonce&#39;: 0,
+ &#39;r&#39;: &#39;0x76e2003e065da19c06351639b48624b7d7ac65c74c76370668d544dee730dd79&#39;,
+ &#39;s&#39;: &#39;0x4a25a8abc8e55a4c254d5019aea129bf02aee6e7a40438c26c83149719ade58f&#39;,
+ &#39;to&#39;: &#39;0x7e2d0fe0ffdd78c264f8d40d19acb7d04390c6e8&#39;,
+ &#39;transaction_index&#39;: 1,
+ &#39;type&#39;: &#39;0x0&#39;,
+ &#39;v&#39;: 27,
+ &#39;value&#39;: 120000000000000}</pre>
 </div>
 
 </div>
@@ -14912,7 +14932,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_transaction">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction_hash</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_transaction" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get transaction</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Transaction</span></code></p>
 </dd>
@@ -14922,7 +14943,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <dl class="py function">
 <dt class="sig sig-object py" id="ctc.evm.async_get_transaction_count">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctc.evm.</span></span><span class="sig-name descname"><span class="pre">async_get_transaction_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctc.evm.async_get_transaction_count" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>get transaction count of address</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
 </dd>

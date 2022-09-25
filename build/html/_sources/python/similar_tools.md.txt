@@ -9,7 +9,7 @@ On the other hand, `ctc` is primarily aimed at historical data analysis. It cont
 
 ## ape
 
-[ape](https://github.com/ApeWorX/ape) is another general purpose EVM library that aims to improve upon web3.py in a variety of areas. Ape features direct integrations with many tools for the development and deployment of smart contracts, including vyper, solidity, foundry, and hardhat.
+[ape](https://github.com/ApeWorX/ape) is another general purpose EVM library that aims to improve upon web3.py in a variety of areas. Ape features direct integrations with many tools for both the development and deployment of smart contracts. Ape has plugins for many popular languages and tools including vyper, solidity, foundry, and hardhat.
 
 ## ethtx
 
