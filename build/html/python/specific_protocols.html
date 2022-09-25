@@ -75,12 +75,18 @@
 <li class="toctree-l2"><a class="reference internal" href="protocols/balancer.html">Balancer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/chainlink.html">Chainlink</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/compound.html">Compound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols/coingecko.html">Gnosis Safe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/curve.html">Curve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols/etherscan.html">Gnosis Safe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/ens.html">ENS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/fei.html">Fei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols/gnosis_safe.html">Gnosis Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols/llama.html">Defi Llama</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols/multicall.html">Multicall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/rari.html">Rari</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/uniswap_v2.html">Uniswap V2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocols/uniswap_v3.html">Uniswap V3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols/yearn.html">Yearn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="similar_tools.html">Similar Python Tools</a></li>
@@ -112,8 +118,96 @@
              
   <div class="section" id="specific-protocols">
 <h1>Specific Protocols<a class="headerlink" href="#specific-protocols" title="Permalink to this headline"></a></h1>
+<p><code class="code docutils literal notranslate"><span class="pre">ctc</span></code> has functions for collecting and analyzing data from many on-chain and off-chain sources</p>
 <div class="toctree-wrapper compound">
 </div>
+<div class="section" id="on-chain-protocols">
+<h2>On-chain Protocols<a class="headerlink" href="#on-chain-protocols" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-center" style="width: 65%">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Protocol</p></th>
+<th class="head"><p>Examples</p></th>
+<th class="head"><p>Reference</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/aave_v2.html">Aave V2</a></p></td>
+<td><p><a class="reference external" href="protocols/aave_v2.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/aave_v2.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/aave_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/balancer.html">Balancer</a></p></td>
+<td><p><a class="reference external" href="protocols/balancer.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/balancer.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/balancer_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/chainlink.html">Chainlink</a></p></td>
+<td><p><a class="reference external" href="protocols/chainlink.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/chainlink.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/chainlink_utils">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/compound.html">Compound</a></p></td>
+<td><p><a class="reference external" href="protocols/compound.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/compound.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/compound_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/curve.html">Curve</a></p></td>
+<td><p><a class="reference external" href="protocols/curve.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/curve.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/curve_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/ens.html">ENS</a></p></td>
+<td><p><a class="reference external" href="protocols/ens.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/ens.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/ens_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/fei.html">Fei</a></p></td>
+<td><p><a class="reference external" href="protocols/fei.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/fei.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fei_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/gnosis_safe.html">Gnosis Safe</a></p></td>
+<td><p><a class="reference external" href="protocols/gnosis_safe.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/gnosis_safe.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/gnosis_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/multicall.html">Multicall</a></p></td>
+<td><p><a class="reference external" href="protocols/multicall.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/multicall.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/multicall_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/rari.html">Rari</a></p></td>
+<td><p><a class="reference external" href="protocols/rari.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/rari.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/rari_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/uniswap_v2.html">Uniswap V2</a></p></td>
+<td><p><a class="reference external" href="protocols/uniswap_v2.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/uniswap_v2.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v2_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/uniswap_v3.html">Uniswap V3</a></p></td>
+<td><p><a class="reference external" href="protocols/uniswap_v3.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/uniswap_v3.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v3_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/yearn.html">Yearn</a></p></td>
+<td><p><a class="reference external" href="protocols/yearn.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/yearn.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/yearn_utils/">Source</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="external-data-sources">
+<h2>External Data Sources<a class="headerlink" href="#external-data-sources" title="Permalink to this headline"></a></h2>
 <table class="colwidths-given docutils align-center" style="width: 65%">
 <colgroup>
 <col style="width: 55%" />
@@ -134,58 +228,24 @@
 <td><p><a class="reference external" href="protocols/4byte.html#reference">Reference</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fourbyte_utils/">Source</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="protocols/aave_v2.html">Aave V2</a></p></td>
-<td><p><a class="reference external" href="protocols/aave_v2.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/aave_v2.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/aave_utils/">Source</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/coingecko.html">Coingecko</a></p></td>
+<td><p><a class="reference external" href="protocols/coingecko.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/coingecko.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/coingecko_utils/">Source</a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="protocols/balancer.html">Balancer</a></p></td>
-<td><p><a class="reference external" href="protocols/balancer.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/balancer.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/balancer_utils/">Source</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="protocols/llama.html">Defi Llama</a></p></td>
+<td><p><a class="reference external" href="protocols/llama.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/llama.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/llama_utils/">Source</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="protocols/chainlink.html">Chainlink</a></p></td>
-<td><p><a class="reference external" href="protocols/chainlink.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/chainlink.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/chainlink_utils">Source</a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference external" href="protocols/compound.html">Compound</a></p></td>
-<td><p><a class="reference external" href="protocols/compound.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/compound.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/compound_utils/">Source</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="protocols/curve.html">Curve</a></p></td>
-<td><p><a class="reference external" href="protocols/curve.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/curve.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/curve_utils/">Source</a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference external" href="protocols/ens.html">ENS</a></p></td>
-<td><p><a class="reference external" href="protocols/ens.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/ens.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/ens_utils/">Source</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="protocols/fei.html">Fei</a></p></td>
-<td><p><a class="reference external" href="protocols/fei.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/fei.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fei_utils/">Source</a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference external" href="protocols/rari.html">Rari</a></p></td>
-<td><p><a class="reference external" href="protocols/rari.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/rari.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/rari_utils/">Source</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="protocols/uniswap_v2.html">Uniswap V2</a></p></td>
-<td><p><a class="reference external" href="protocols/uniswap_v2.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/uniswap_v2.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v2_utils/">Source</a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference external" href="protocols/uniswap_v3.html">Uniswap V3</a></p></td>
-<td><p><a class="reference external" href="protocols/uniswap_v3.html#examples">Examples</a></p></td>
-<td><p><a class="reference external" href="protocols/uniswap_v3.html#reference">Reference</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v3_utils/">Source</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="protocols/etherscan.html">Etherscan</a></p></td>
+<td><p><a class="reference external" href="protocols/etherscan.html#examples">Examples</a></p></td>
+<td><p><a class="reference external" href="protocols/etherscan.html#reference">Reference</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/etherscan_utils/">Source</a></p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 
 

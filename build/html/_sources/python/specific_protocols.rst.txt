@@ -2,6 +2,8 @@
 Specific Protocols
 ==================
 
+:code:`ctc` has functions for collecting and analyzing data from many on-chain and off-chain sources
+
 .. toctree::
    :maxdepth: 2
    :hidden:
@@ -11,13 +13,22 @@ Specific Protocols
    ./protocols/balancer
    ./protocols/chainlink
    ./protocols/compound
+   ./protocols/coingecko
    ./protocols/curve
+   ./protocols/etherscan
    ./protocols/ens
    ./protocols/fei
+   ./protocols/gnosis_safe
+   ./protocols/llama
+   ./protocols/multicall
    ./protocols/rari
    ./protocols/uniswap_v2
    ./protocols/uniswap_v3
+   ./protocols/yearn
 
+
+On-chain Protocols
+------------------
 
 .. list-table::
    :width: 65%
@@ -29,10 +40,6 @@ Specific Protocols
      - Examples
      - Reference
      - Source
-   * - `4byte <protocols/4byte.html>`__
-     - `Examples <protocols/4byte.html#examples>`__
-     - `Reference <protocols/4byte.html#reference>`__
-     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fourbyte_utils/>`__
    * - `Aave V2 <protocols/aave_v2.html>`__
      - `Examples <protocols/aave_v2.html#examples>`__
      - `Reference <protocols/aave_v2.html#reference>`__
@@ -61,6 +68,14 @@ Specific Protocols
      - `Examples <protocols/fei.html#examples>`__
      - `Reference <protocols/fei.html#reference>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fei_utils/>`__
+   * - `Gnosis Safe <protocols/gnosis_safe.html>`__
+     - `Examples <protocols/gnosis_safe.html#examples>`__
+     - `Reference <protocols/gnosis_safe.html#reference>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/gnosis_utils/>`__
+   * - `Multicall <protocols/multicall.html>`__
+     - `Examples <protocols/multicall.html#examples>`__
+     - `Reference <protocols/multicall.html#reference>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/multicall_utils/>`__
    * - `Rari <protocols/rari.html>`__
      - `Examples <protocols/rari.html#examples>`__
      - `Reference <protocols/rari.html#reference>`__
@@ -73,4 +88,38 @@ Specific Protocols
      - `Examples <protocols/uniswap_v3.html#examples>`__
      - `Reference <protocols/uniswap_v3.html#reference>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v3_utils/>`__
+   * - `Yearn <protocols/yearn.html>`__
+     - `Examples <protocols/yearn.html#examples>`__
+     - `Reference <protocols/yearn.html#reference>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/yearn_utils/>`__
 
+
+External Data Sources
+---------------------
+
+.. list-table::
+   :width: 65%
+   :align: center
+   :widths: 55 15 15 15
+   :header-rows: 1
+
+   * - Protocol
+     - Examples
+     - Reference
+     - Source
+   * - `4byte <protocols/4byte.html>`__
+     - `Examples <protocols/4byte.html#examples>`__
+     - `Reference <protocols/4byte.html#reference>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fourbyte_utils/>`__
+   * - `Coingecko <protocols/coingecko.html>`__
+     - `Examples <protocols/coingecko.html#examples>`__
+     - `Reference <protocols/coingecko.html#reference>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/coingecko_utils/>`__
+   * - `Defi Llama <protocols/llama.html>`__
+     - `Examples <protocols/llama.html#examples>`__
+     - `Reference <protocols/llama.html#reference>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/llama_utils/>`__
+   * - `Etherscan <protocols/etherscan.html>`__
+     - `Examples <protocols/etherscan.html#examples>`__
+     - `Reference <protocols/etherscan.html#reference>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/etherscan_utils/>`__

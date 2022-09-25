@@ -1,6 +1,8 @@
 .. note::
    :code:`ctc` is in beta, please report bugs to `the issue tracker <https://github.com/fei-protocol/checkthechain/issues>`_
 
+   These docs are also a work in progress. Some sections are not yet complete. Feel free to report any documentation-related issues to the issue tracker.
+
 
 Check the Chain (:code:`ctc`)
 =============================
@@ -32,7 +34,6 @@ Guide
 - To use ``ctc`` from the command line, see `Command Line Interface <cli/basic_usage.html>`_.
 - To use ``ctc`` in python, see `Python Interface <python/code_tour.html>`_.
 - To use ``ctc`` with specific protocols like Uniswap or Chainlink, see the `Specific Protocols (cli) <cli/subcommands/protocol.html>`_ or `Specific Protocols (python) <python/specific_protocols.html>`_.
-- To see examples of what you can do with ``ctc``, see `Case Studies <case_studies/under_construction.html>`_.
 - To view the ``ctc`` source code, check out the `GitHub Repository <https://github.com/fei-protocol/checkthechain>`_.
 
 
@@ -52,23 +53,19 @@ Datatypes
    * - ABIs
      - `CLI <cli/subcommands/data/abi.html>`__
      - `Python <python/datatypes/abis.html>`__
-     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary/abis>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/abi_utils>`__
+   * - Addresses
+     - `CLI <cli/subcommands/data/address.html>`__
+     - `Python <python/datatypes/addresses.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/address_utils>`__
    * - Binary Data
      - `CLI <cli/subcommands/compute.html>`__
      - `Python <python/datatypes/binary_data.html>`__
-     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/binary_utils>`__
    * - Blocks
      - `CLI <cli/subcommands/data/blocks.html>`__
      - `Python <python/datatypes/blocks.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/block_utils>`__
-   * - Contracts
-     - `CLI <cli/subcommands/data/address.html>`__
-     - `Python <python/datatypes/contracts.html>`__
-     - `Source <https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_creations.py>`__
-   * - Gas
-     - `CLI <cli/subcommands/data/gas.html>`__
-     - `Python <python/datatypes/gas.html>`__
-     - `Source <https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_gas.py>`__
    * - ERC20s
      - `CLI <cli/subcommands/data/erc20_balances.html>`__
      - `Python <python/datatypes/erc20s.html>`__
@@ -82,7 +79,7 @@ Datatypes
      - `Python <python/datatypes/events.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/event_utils>`__
    * - Transactions
-     - `CLI <cli/subcommands/data/transaction.html>`__
+     - `CLI <cli/subcommands/data/tx.html>`__
      - `Python <python/datatypes/transactions.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/transaction_utils>`__
 
@@ -101,11 +98,11 @@ Specific Protocols
      - Python
      - Source
    * - Aave V2
-     - \-
+     - `CLI <cli/subcommands/protocol/aave.html>`__
      - `Python <python/protocols/aave_v2.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/aave_v2_utils/>`__
    * - Balancer
-     - \-
+     - `CLI <cli/subcommands/data/dex_pools.html>`__
      - `Python <python/protocols/balancer.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/balancer_utils/>`__
    * - Chainlink
@@ -117,7 +114,7 @@ Specific Protocols
      - `Python <python/protocols/compound.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/compound_utils/>`__
    * - Curve
-     - \-
+     - `CLI <cli/subcommands/data/dex_pools.html>`__
      - `Python <python/protocols/curve.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/curve_utils/>`__
    * - ENS
@@ -128,6 +125,14 @@ Specific Protocols
      - `CLI <cli/subcommands/protocol/fei_pcv.html>`__
      - `Python <python/protocols/fei.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fei_utils/>`__
+   * - Gnosis Safe
+     - `CLI <cli/subcommands/protocol/gnosis.html>`__
+     - `Python <python/protocols/gnosis_safe.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/gnosis_utils/>`__
+   * - Multicall
+     - `CLI <cli/subcommands/data/calls.html>`__
+     - `Python <python/protocols/multicall.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/multicall_utils/>`__
    * - Rari
      - `CLI <cli/subcommands/protocol/rari.html>`__
      - `Python <python/protocols/rari.html>`__
@@ -140,6 +145,10 @@ Specific Protocols
      - `CLI <cli/subcommands/protocol/uniswap_chart.html>`__
      - `Python <python/protocols/uniswap_v3.html>`__
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v3_utils/>`__
+   * - Yearn
+     - `CLI <cli/subcommands/protocol/yearn.html>`__
+     - `Python <python/protocols/yearn.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/yearn_utils/>`__
 
 External Data Sources
 ---------------------
@@ -160,12 +169,16 @@ External Data Sources
      - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fourbyte_utils>`__
    * - CoinGecko
      - `CLI <cli/subcommands/protocol/cg.html>`__
-     - \-
-     - `Source <https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/cli/commands/data/cg_command.py>`__
+     - `Python <python/protocols/coingecko.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/coingecko_utils>`__
+   * - Defi Llama
+     - `CLI <cli/subcommands/protocol/llama.html>`__
+     - `Python <python/protocols/llama.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/llama_utils>`__
    * - Etherscan
-     - \-
-     - \-
-     - `Source <https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/abi_utils/abi_io/contract_abi_backends/etherscan_contract_abis.py>`__
+     - `CLI <cli/subcommands/protocol/etherscan.html>`__
+     - `Python <python/protocols/etherscan.html>`__
+     - `Source <https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/etherscan_utils>`__
 
 .. toctree::
    :maxdepth: 1
@@ -211,8 +224,3 @@ External Data Sources
    ./python/datatypes
    ./python/specific_protocols
    ./python/similar_tools
-
-.. other case studies
-    gas monitoring
-    crypto market state
-

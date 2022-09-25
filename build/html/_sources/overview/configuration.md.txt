@@ -7,6 +7,14 @@ Run `ctc setup` on the command line to create the config. Run it again to edit t
 
 `ctc` uses a configuration file to control its behavior.
 
+## Setting Config Parameters
+
+Users do not need to directly create or edit `ctc` config files. Instead, all config parameters can be adjusted by using the setup wizard by running `ctc setup` on the command line. This can be used both for creating new configs and modifying the current config.
+
+By default ctc will looks for a config file at `~/.config/ctc/config.json`. But if the `CTC_CONFIG_PATH` environment variable is set, it will use that path instead.
+
+`ctc` can also function under a "no-config" mode, where `ctc setup` does not need to be run. To use this mode, simply set the `ETH_RPC_URL` to an RPC provider url.
+
 ## Config Parameters
 
 The config file consists of key-value pairs. The keys:
@@ -21,12 +29,6 @@ The config file consists of key-value pairs. The keys:
 - **`log_sql_queries`**: whether to log sql queries
 
 A python type specification for the config can be found in [the config typedefs](https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/spec/typedefs/config_types.py) file.
-
-## Setting Config Parameters
-
-By default ctc will looks for a config file at `~/.config/ctc/config.json`. But if the `CTC_CONFIG_PATH` environment variable is set, it will use that path instead.
-
-Users do not need to directly create or edit `ctc` config files. Instead, all config parameters can be adjusted by using the setup wizard by running `ctc setup` on the command line. This can be used both for creating new configs and modifying the current config.
 
 ## Reading Config Parameters
 

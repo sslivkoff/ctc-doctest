@@ -99,6 +99,7 @@
   <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="code docutils literal notranslate"><span class="pre">ctc</span></code> is in beta, please report bugs to <a class="reference external" href="https://github.com/fei-protocol/checkthechain/issues">the issue tracker</a></p>
+<p>These docs are also a work in progress. Some sections are not yet complete. Feel free to report any documentation-related issues to the issue tracker.</p>
 </div>
 <div class="section" id="check-the-chain-ctc">
 <h1>Check the Chain (<code class="code docutils literal notranslate"><span class="pre">ctc</span></code>)<a class="headerlink" href="#check-the-chain-ctc" title="Permalink to this headline"></a></h1>
@@ -124,7 +125,6 @@
 <li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> from the command line, see <a class="reference external" href="cli/basic_usage.html">Command Line Interface</a>.</p></li>
 <li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> in python, see <a class="reference external" href="python/code_tour.html">Python Interface</a>.</p></li>
 <li><p>To use <code class="docutils literal notranslate"><span class="pre">ctc</span></code> with specific protocols like Uniswap or Chainlink, see the <a class="reference external" href="cli/subcommands/protocol.html">Specific Protocols (cli)</a> or <a class="reference external" href="python/specific_protocols.html">Specific Protocols (python)</a>.</p></li>
-<li><p>To see examples of what you can do with <code class="docutils literal notranslate"><span class="pre">ctc</span></code>, see <a class="reference external" href="case_studies/under_construction.html">Case Studies</a>.</p></li>
 <li><p>To view the <code class="docutils literal notranslate"><span class="pre">ctc</span></code> source code, check out the <a class="reference external" href="https://github.com/fei-protocol/checkthechain">GitHub Repository</a>.</p></li>
 </ul>
 </div>
@@ -148,45 +148,40 @@
 <tr class="row-even"><td><p>ABIs</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/abi.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/abis.html">Python</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary/abis">Source</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/abi_utils">Source</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>Binary Data</p></td>
+<tr class="row-odd"><td><p>Addresses</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/address.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/datatypes/addresses.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/address_utils">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Data</p></td>
 <td><p><a class="reference external" href="cli/subcommands/compute.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/binary_data.html">Python</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/binary">Source</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/binary_utils">Source</a></p></td>
 </tr>
-<tr class="row-even"><td><p>Blocks</p></td>
+<tr class="row-odd"><td><p>Blocks</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/blocks.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/blocks.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/block_utils">Source</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>Contracts</p></td>
-<td><p><a class="reference external" href="cli/subcommands/data/address.html">CLI</a></p></td>
-<td><p><a class="reference external" href="python/datatypes/contracts.html">Python</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_creations.py">Source</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Gas</p></td>
-<td><p><a class="reference external" href="cli/subcommands/data/gas.html">CLI</a></p></td>
-<td><p><a class="reference external" href="python/datatypes/gas.html">Python</a></p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/block_utils/block_gas.py">Source</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>ERC20s</p></td>
+<tr class="row-even"><td><p>ERC20s</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/erc20_balances.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/erc20s.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/erc20_utils">Source</a></p></td>
 </tr>
-<tr class="row-even"><td><p>ETH Balances</p></td>
+<tr class="row-odd"><td><p>ETH Balances</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/eth_balances.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/eth_balances.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/eth_utils">Source</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>Events</p></td>
+<tr class="row-even"><td><p>Events</p></td>
 <td><p><a class="reference external" href="cli/subcommands/data/events.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/events.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/event_utils">Source</a></p></td>
 </tr>
-<tr class="row-even"><td><p>Transactions</p></td>
-<td><p><a class="reference external" href="cli/subcommands/data/transaction.html">CLI</a></p></td>
+<tr class="row-odd"><td><p>Transactions</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/tx.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/datatypes/transactions.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/evm/transaction_utils">Source</a></p></td>
 </tr>
@@ -211,12 +206,12 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Aave V2</p></td>
-<td><p>-</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/aave.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/protocols/aave_v2.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/aave_v2_utils/">Source</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Balancer</p></td>
-<td><p>-</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/dex_pools.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/protocols/balancer.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/balancer_utils/">Source</a></p></td>
 </tr>
@@ -231,7 +226,7 @@
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/compound_utils/">Source</a></p></td>
 </tr>
 <tr class="row-even"><td><p>Curve</p></td>
-<td><p>-</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/dex_pools.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/protocols/curve.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/curve_utils/">Source</a></p></td>
 </tr>
@@ -244,6 +239,16 @@
 <td><p><a class="reference external" href="cli/subcommands/protocol/fei_pcv.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/protocols/fei.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/fei_utils/">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Gnosis Safe</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/gnosis.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/gnosis_safe.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/gnosis_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Multicall</p></td>
+<td><p><a class="reference external" href="cli/subcommands/data/calls.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/multicall.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/multicall_utils/">Source</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Rari</p></td>
 <td><p><a class="reference external" href="cli/subcommands/protocol/rari.html">CLI</a></p></td>
@@ -259,6 +264,11 @@
 <td><p><a class="reference external" href="cli/subcommands/protocol/uniswap_chart.html">CLI</a></p></td>
 <td><p><a class="reference external" href="python/protocols/uniswap_v3.html">Python</a></p></td>
 <td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/uniswap_v3_utils/">Source</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Yearn</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/yearn.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/yearn.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/yearn_utils/">Source</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -287,13 +297,18 @@
 </tr>
 <tr class="row-odd"><td><p>CoinGecko</p></td>
 <td><p><a class="reference external" href="cli/subcommands/protocol/cg.html">CLI</a></p></td>
-<td><p>-</p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/cli/commands/data/cg_command.py">Source</a></p></td>
+<td><p><a class="reference external" href="python/protocols/coingecko.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/coingecko_utils">Source</a></p></td>
 </tr>
-<tr class="row-even"><td><p>Etherscan</p></td>
-<td><p>-</p></td>
-<td><p>-</p></td>
-<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/evm/abi_utils/abi_io/contract_abi_backends/etherscan_contract_abis.py">Source</a></p></td>
+<tr class="row-even"><td><p>Defi Llama</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/llama.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/llama.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/llama_utils">Source</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Etherscan</p></td>
+<td><p><a class="reference external" href="cli/subcommands/protocol/etherscan.html">CLI</a></p></td>
+<td><p><a class="reference external" href="python/protocols/etherscan.html">Python</a></p></td>
+<td><p><a class="reference external" href="https://github.com/fei-protocol/checkthechain/tree/main/src/ctc/protocols/etherscan_utils">Source</a></p></td>
 </tr>
 </tbody>
 </table>

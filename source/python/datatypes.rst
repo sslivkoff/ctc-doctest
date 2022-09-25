@@ -2,6 +2,8 @@
 Datatypes
 =========
 
+:code:`ctc` has functions for collecting and analyzing many different EVM datatypes
+
 .. list-table::
    :width: 55%
    :align: center

@@ -104,6 +104,12 @@
 <p>Run <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line to create the config. Run it again to edit the config.</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> uses a configuration file to control its behavior.</p>
+<div class="section" id="setting-config-parameters">
+<h2>Setting Config Parameters<a class="headerlink" href="#setting-config-parameters" title="Permalink to this headline"></a></h2>
+<p>Users do not need to directly create or edit <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config files. Instead, all config parameters can be adjusted by using the setup wizard by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line. This can be used both for creating new configs and modifying the current config.</p>
+<p>By default ctc will looks for a config file at <code class="docutils literal notranslate"><span class="pre">~/.config/ctc/config.json</span></code>. But if the <code class="docutils literal notranslate"><span class="pre">CTC_CONFIG_PATH</span></code> environment variable is set, it will use that path instead.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ctc</span></code> can also function under a “no-config” mode, where <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> does not need to be run. To use this mode, simply set the <code class="docutils literal notranslate"><span class="pre">ETH_RPC_URL</span></code> to an RPC provider url.</p>
+</div>
 <div class="section" id="config-parameters">
 <h2>Config Parameters<a class="headerlink" href="#config-parameters" title="Permalink to this headline"></a></h2>
 <p>The config file consists of key-value pairs. The keys:</p>
@@ -119,11 +125,6 @@
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">log_sql_queries</span></code></strong>: whether to log sql queries</p></li>
 </ul>
 <p>A python type specification for the config can be found in <a class="reference external" href="https://github.com/fei-protocol/checkthechain/blob/main/src/ctc/spec/typedefs/config_types.py">the config typedefs</a> file.</p>
-</div>
-<div class="section" id="setting-config-parameters">
-<h2>Setting Config Parameters<a class="headerlink" href="#setting-config-parameters" title="Permalink to this headline"></a></h2>
-<p>By default ctc will looks for a config file at <code class="docutils literal notranslate"><span class="pre">~/.config/ctc/config.json</span></code>. But if the <code class="docutils literal notranslate"><span class="pre">CTC_CONFIG_PATH</span></code> environment variable is set, it will use that path instead.</p>
-<p>Users do not need to directly create or edit <code class="docutils literal notranslate"><span class="pre">ctc</span></code> config files. Instead, all config parameters can be adjusted by using the setup wizard by running <code class="docutils literal notranslate"><span class="pre">ctc</span> <span class="pre">setup</span></code> on the command line. This can be used both for creating new configs and modifying the current config.</p>
 </div>
 <div class="section" id="reading-config-parameters">
 <h2>Reading Config Parameters<a class="headerlink" href="#reading-config-parameters" title="Permalink to this headline"></a></h2>
